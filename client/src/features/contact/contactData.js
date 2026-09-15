@@ -32,3 +32,30 @@ export const offices = [
     phone: "+1 212 000 0000",
   },
 ];
+
+export const contactFaqs = [
+  {
+    id: 1,
+    question: "How quickly can we get started?",
+    answer:
+      "After your free consultation, we can typically begin a discovery engagement within 1–2 weeks. Full project mobilization depends on scope and current team capacity.",
+  },
+  {
+    id: 2,
+    question: "Do you sign NDAs before initial discussions?",
+    answer:
+      "Yes. We are happy to sign a mutual non-disclosure agreement before discussing sensitive business, technical, or commercial information.",
+  },
+  {
+    id: 3,
+    question: "What is included in the free consultation?",
+    answer:
+      "The free consultation includes an initial discussion of your goals, current challenges, business requirements, possible solution directions, and recommended next steps.",
+  },
+  {
+    id: 4,
+    question: "Do you work with clients outside the Middle East?",
+    answer:
+      "Yes. CyberX Soft works with organizations across multiple regions and supports global delivery through distributed teams and international engagement models.",
+  },
+];

@@ -5,12 +5,17 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import FAQSection from "../../components/FAQSection";
 
 import ContactForm from "./ContactForm";
 import OfficesSection from "./OfficesSection";
 
 import { siteConfig } from "../../config/siteConfig";
-import { contactDetails } from "./contactData";
+
+import {
+  contactDetails,
+  contactFaqs,
+} from "./contactData";
 
 import "./contact.css";
 
@@ -57,6 +62,7 @@ function ContactPage() {
 
                 <div>
                   <span>Email</span>
+
                   <strong>
                     {siteConfig.email}
                   </strong>
@@ -77,6 +83,7 @@ function ContactPage() {
 
                 <div>
                   <span>Phone</span>
+
                   <strong>
                     {siteConfig.phone}
                   </strong>
@@ -94,6 +101,7 @@ function ContactPage() {
 
                 <div>
                   <span>Business Hours</span>
+
                   <strong>
                     {contactDetails.businessHours}
                   </strong>
@@ -105,6 +113,11 @@ function ContactPage() {
       </section>
 
       <OfficesSection />
+
+      <FAQSection
+        items={contactFaqs}
+        title="Contact FAQ"
+      />
     </main>
   );
 }
