@@ -488,3 +488,140 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 }
+/* =========================================
+   FAQ Section
+========================================= */
+
+.faq-section {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-background-soft);
+}
+
+.faq-section__header {
+  margin-bottom: 44px;
+
+  text-align: center;
+}
+
+.faq-section__header .eyebrow {
+  margin-bottom: 14px;
+}
+
+.faq-section__list {
+  width: min(100%, 760px);
+
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================================
+   FAQ Item
+========================================= */
+
+.faq-item {
+  overflow: hidden;
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.faq-item__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  gap: 24px;
+
+  padding: 20px 22px;
+
+  color: var(--color-text);
+
+  background: transparent;
+
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+
+  text-align: left;
+}
+
+.faq-item__trigger span {
+  flex: 1;
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+
+  color: var(--color-text-muted);
+
+  transition: transform var(--transition-normal);
+}
+
+.faq-item--open .faq-item__icon {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   FAQ Answer Animation
+========================================= */
+
+.faq-item__answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  transition: grid-template-rows var(--transition-normal);
+}
+
+.faq-item--open .faq-item__answer-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-item__answer {
+  overflow: hidden;
+}
+
+.faq-item__answer p {
+  margin: 0 22px 20px;
+  padding-top: 18px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.82rem;
+  line-height: 1.7;
+
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* =========================================
+   FAQ Responsive
+========================================= */
+
+@media (max-width: 600px) {
+  .faq-section__header {
+    margin-bottom: 34px;
+
+    text-align: left;
+  }
+
+  .faq-item__trigger {
+    gap: 16px;
+
+    padding: 18px;
+
+    font-size: 0.86rem;
+  }
+
+  .faq-item__answer p {
+    margin: 0 18px 18px;
+
+    font-size: 0.8rem;
+  }
+}

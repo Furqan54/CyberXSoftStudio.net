@@ -1,4 +1,5 @@
 import StatsStrip from "../../components/StatsStrip";
+import FAQSection from "../../components/FAQSection";
 
 import HomeHero from "./HomeHero";
 import ClientsPartners from "./ClientsPartners";
@@ -6,7 +7,7 @@ import HomeServices from "./HomeServices";
 import WhyChooseUs from "./WhyChooseUs";
 import Testimonials from "./Testimonials";
 
-import { homeStats } from "./homeData";
+import { homeStats, homeFaqs } from "./homeData";
 
 import "./home.css";
 
@@ -19,6 +20,7 @@ function HomePage() {
       <WhyChooseUs />
       <StatsStrip items={homeStats} />
       <Testimonials />
+      <FAQSection items={homeFaqs} />
     </main>
   );
 }

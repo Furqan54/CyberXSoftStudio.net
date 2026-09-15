@@ -138,3 +138,29 @@ export const testimonials = [
     initials: "K",
   },
 ];
+export const homeFaqs = [
+  {
+    id: 1,
+    question: "What types of businesses does CyberX Soft work with?",
+    answer:
+      "We work with mid-market and enterprise organizations across key industries including banking, healthcare, manufacturing, retail, government, education, telecommunications, energy, and aviation. Our clients range from regional SMEs to Fortune 500 companies.",
+  },
+  {
+    id: 2,
+    question: "How long does a typical digital transformation project take?",
+    answer:
+      "Project timelines vary based on scope, complexity, integrations, and business requirements. Smaller initiatives may take a few weeks, while larger enterprise transformation programs can run across several months with phased delivery.",
+  },
+  {
+    id: 3,
+    question: "Do you offer ongoing support after project delivery?",
+    answer:
+      "Yes. CyberX Soft provides ongoing support, maintenance, monitoring, optimization, and managed services based on the needs of each engagement.",
+  },
+  {
+    id: 4,
+    question: "How do I start working with CyberX Soft?",
+    answer:
+      "Start by contacting our team for an initial consultation. We will discuss your goals, current challenges, requirements, and the most suitable approach before defining the next steps.",
+  },
+];
