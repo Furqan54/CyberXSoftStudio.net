@@ -106,3 +106,35 @@ export const homeStats = [
     note: "Global SLA coverage",
   },
 ];
+export const testimonials = [
+  {
+    id: 1,
+    rating: 5,
+    quote:
+      "CyberX Soft delivered a complete ERP transformation that reduced our operational costs by 35% and cut processing time in half. The team was professional, responsive, and delivered on time.",
+    name: "Ahmed Al-Rashid",
+    role: "CTO",
+    company: "Emirates Financial Group",
+    initials: "A",
+  },
+  {
+    id: 2,
+    rating: 5,
+    quote:
+      "Their cybersecurity team identified critical vulnerabilities and implemented robust protection frameworks that gave our board complete confidence in our data governance posture.",
+    name: "Sarah Mitchell",
+    role: "CISO",
+    company: "MedTech Solutions",
+    initials: "S",
+  },
+  {
+    id: 3,
+    rating: 5,
+    quote:
+      "The AI-powered analytics platform built by CXS transformed how we make decisions. We now have real-time insights that directly impact our bottom line.",
+    name: "Khalid Ibrahim",
+    role: "VP Operations",
+    company: "Aldar Properties",
+    initials: "K",
+  },
+];
