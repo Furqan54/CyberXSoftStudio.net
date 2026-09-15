@@ -7,6 +7,7 @@ import {
 import PageHero from "../../components/PageHero";
 
 import ContactForm from "./ContactForm";
+import OfficesSection from "./OfficesSection";
 
 import { siteConfig } from "../../config/siteConfig";
 import { contactDetails } from "./contactData";
@@ -56,7 +57,9 @@ function ContactPage() {
 
                 <div>
                   <span>Email</span>
-                  <strong>{siteConfig.email}</strong>
+                  <strong>
+                    {siteConfig.email}
+                  </strong>
                 </div>
               </a>
 
@@ -74,7 +77,9 @@ function ContactPage() {
 
                 <div>
                   <span>Phone</span>
-                  <strong>{siteConfig.phone}</strong>
+                  <strong>
+                    {siteConfig.phone}
+                  </strong>
                 </div>
               </a>
 
@@ -98,6 +103,8 @@ function ContactPage() {
           </aside>
         </div>
       </section>
+
+      <OfficesSection />
     </main>
   );
 }
