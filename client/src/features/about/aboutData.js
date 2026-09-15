@@ -83,3 +83,29 @@ export const companyValues = [
       "Constantly evolving our capabilities to keep clients ahead of the curve.",
   },
 ];
+export const leadershipTeam = [
+  {
+    id: 1,
+    name: "Omar Al-Hassan",
+    role: "Chief Executive Officer",
+    expertise: "Digital Transformation & Strategy",
+  },
+  {
+    id: 2,
+    name: "Priya Sharma",
+    role: "Chief Technology Officer",
+    expertise: "AI, Cloud Architecture & Engineering",
+  },
+  {
+    id: 3,
+    name: "James Whitfield",
+    role: "Technology & Innovation Lead",
+    expertise: "Cybersecurity & Digital Governance",
+  },
+  {
+    id: 4,
+    name: "Layla Mostafa",
+    role: "Chief Growth Officer",
+    expertise: "Brand Strategy & Creative Services",
+  },
+];

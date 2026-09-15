@@ -405,3 +405,138 @@
     min-height: auto;
   }
 }
+/* =========================================
+   Leadership Team
+========================================= */
+
+.leadership-team {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-white);
+}
+
+.leadership-team__header {
+  margin-bottom: 48px;
+
+  text-align: center;
+}
+
+.leadership-team__header .eyebrow {
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   Leadership Grid
+========================================= */
+
+.leadership-team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 30px;
+}
+
+.leadership-card {
+  text-align: center;
+}
+
+/*
+  IMAGE PLACEHOLDER
+  Replace with the final team member photo later.
+*/
+.leadership-card__image-placeholder {
+  width: 112px;
+  height: 112px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-inline: auto;
+
+  overflow: hidden;
+
+  color: var(--color-primary);
+
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+
+  background:
+    linear-gradient(
+      145deg,
+      #e4edf5 0%,
+      #f3f7fa 100%
+    );
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+}
+
+.leadership-card__content {
+  margin-top: 20px;
+}
+
+.leadership-card__content h3 {
+  color: var(--color-text);
+
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.leadership-card__role {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #1676d2;
+
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.leadership-card__content p {
+  max-width: 220px;
+
+  margin: 6px auto 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.65rem;
+  line-height: 1.55;
+}
+
+/* =========================================
+   Leadership Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .leadership-team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    row-gap: 48px;
+  }
+}
+
+@media (max-width: 560px) {
+  .leadership-team__header {
+    margin-bottom: 36px;
+
+    text-align: left;
+  }
+
+  .leadership-team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-card {
+    text-align: left;
+  }
+
+  .leadership-card__image-placeholder {
+    margin-inline: 0;
+  }
+
+  .leadership-card__content p {
+    margin-inline: 0;
+  }
+}

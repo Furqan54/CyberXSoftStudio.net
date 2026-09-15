@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import PageHero from "../../components/PageHero";
 
 import MissionValues from "./MissionValues";
+import LeadershipTeam from "./LeadershipTeam";
 
 import {
   aboutStats,
@@ -94,6 +95,8 @@ function AboutPage() {
       </section>
 
       <MissionValues />
+
+      <LeadershipTeam />
     </main>
   );
 }
