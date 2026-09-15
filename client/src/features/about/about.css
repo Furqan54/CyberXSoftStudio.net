@@ -1,0 +1,234 @@
+/* =========================================
+   About Stats
+========================================= */
+
+.about-stats {
+  background: var(--color-white);
+
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.about-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-stats__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 120px;
+
+  padding-block: 32px;
+}
+
+.about-stats__item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 32px;
+  right: 0;
+  bottom: 32px;
+
+  width: 1px;
+
+  background: var(--color-border);
+}
+
+.about-stats__item strong {
+  color: var(--color-primary);
+
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: var(--font-weight-medium);
+
+  line-height: 1;
+}
+
+.about-stats__item span {
+  margin-top: 7px;
+
+  color: #1676d2;
+
+  font-size: 0.66rem;
+  font-weight: var(--font-weight-medium);
+}
+
+/* =========================================
+   Company Overview
+========================================= */
+
+.about-overview {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-white);
+}
+
+.about-overview__layout {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: clamp(56px, 8vw, 110px);
+}
+
+/* =========================================
+   Company Overview Visual
+========================================= */
+
+.about-overview__visual {
+  min-width: 0;
+}
+
+/*
+  IMAGE PLACEHOLDER
+  Replace with the final About company overview image later.
+*/
+.about-overview__image-placeholder {
+  aspect-ratio: 1.35 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: rgba(16, 36, 77, 0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      #dce8f3 0%,
+      #edf3f8 100%
+    );
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.about-overview__image-placeholder span {
+  padding: 16px;
+
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   Company Overview Content
+========================================= */
+
+.about-overview__content {
+  min-width: 0;
+}
+
+.about-overview__content .eyebrow {
+  margin-bottom: 14px;
+}
+
+.about-overview__description {
+  max-width: 680px;
+
+  margin-top: 18px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.about-overview__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 46px;
+
+  margin-top: 28px;
+  padding-inline: 22px;
+
+  color: var(--color-white);
+
+  font-size: 0.78rem;
+  font-weight: var(--font-weight-semibold);
+
+  background: var(--color-primary);
+
+  border-radius: var(--radius-sm);
+
+  transition:
+    gap var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.about-overview__button:hover {
+  gap: 14px;
+
+  background: var(--color-primary-light);
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .about-stats__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stats__item:nth-child(2)::after {
+    display: none;
+  }
+
+  .about-stats__item:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .about-overview__layout {
+    grid-template-columns: 1fr;
+
+    gap: 44px;
+  }
+
+  .about-overview__visual {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats__item {
+    min-height: auto;
+
+    padding-block: 24px;
+  }
+
+  .about-stats__item:not(:last-child) {
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .about-stats__item::after {
+    display: none;
+  }
+
+  .about-stats__item:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .about-overview__button {
+    width: 100%;
+  }
+}
