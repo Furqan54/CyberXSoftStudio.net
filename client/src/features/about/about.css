@@ -540,3 +540,162 @@
     margin-inline: 0;
   }
 }
+/* =========================================
+   Delivery Process
+========================================= */
+
+.delivery-process {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-primary);
+}
+
+.delivery-process__header {
+  max-width: 720px;
+
+  margin: 0 auto 56px;
+
+  text-align: center;
+}
+
+.delivery-process__header .eyebrow {
+  margin-bottom: 12px;
+}
+
+.delivery-process__title {
+  color: var(--color-white);
+
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.delivery-process__description {
+  margin-top: 16px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   Process Timeline
+========================================= */
+
+.delivery-process__timeline {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+.delivery-process__timeline::before {
+  content: "";
+
+  position: absolute;
+  top: 24px;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.delivery-process__step {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.delivery-process__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin: 0 auto 20px;
+
+  color: var(--color-white);
+
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-semibold);
+
+  background: #1676d2;
+
+  border: 4px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.delivery-process__step h3 {
+  color: var(--color-white);
+
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+.delivery-process__step p {
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.68rem;
+  line-height: 1.65;
+}
+
+/* =========================================
+   Process Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .delivery-process__timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 40px 28px;
+  }
+
+  .delivery-process__timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .delivery-process__header {
+    margin-bottom: 38px;
+
+    text-align: left;
+  }
+
+  .delivery-process__timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-process__step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+
+    column-gap: 16px;
+
+    text-align: left;
+  }
+
+  .delivery-process__number {
+    grid-row: 1 / 3;
+
+    margin: 0;
+  }
+
+  .delivery-process__step p {
+    margin-top: 6px;
+  }
+}

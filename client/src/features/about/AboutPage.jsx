@@ -5,6 +5,7 @@ import PageHero from "../../components/PageHero";
 
 import MissionValues from "./MissionValues";
 import LeadershipTeam from "./LeadershipTeam";
+import ProcessSection from "./ProcessSection";
 
 import {
   aboutStats,
@@ -97,6 +98,8 @@ function AboutPage() {
       <MissionValues />
 
       <LeadershipTeam />
+
+      <ProcessSection />
     </main>
   );
 }

@@ -109,3 +109,40 @@ export const leadershipTeam = [
     expertise: "Brand Strategy & Creative Services",
   },
 ];
+export const deliveryProcess = [
+  {
+    id: 1,
+    number: "01",
+    title: "Discovery & Assessment",
+    description:
+      "Deep-dive into your business goals, existing systems, and digital maturity to establish a clear baseline.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Strategy & Roadmap",
+    description:
+      "Co-create a prioritized transformation roadmap with clear milestones, KPIs, and measurable outcomes.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Design & Build",
+    description:
+      "Agile delivery in focused sprints with continuous stakeholder reviews and quality assurance.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Deploy & Integrate",
+    description:
+      "Seamless deployment into your environment with minimal disruption and full integration testing.",
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Optimize & Scale",
+    description:
+      "Ongoing monitoring, performance optimization, and continuous improvement to maximize ROI.",
+  },
+];
