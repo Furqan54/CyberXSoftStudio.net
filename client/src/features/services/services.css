@@ -1,0 +1,470 @@
+/* =========================================
+   Services Showcase Section
+========================================= */
+
+.services-showcase-section {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-white);
+}
+
+.services-showcase-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(90px, 10vw, 150px);
+}
+
+/* =========================================
+   Individual Service
+========================================= */
+
+.service-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: clamp(56px, 7vw, 100px);
+}
+
+.service-showcase--reverse .service-showcase__content {
+  order: 2;
+}
+
+.service-showcase--reverse .service-showcase__visual {
+  order: 1;
+}
+
+/* =========================================
+   Service Content
+========================================= */
+
+.service-showcase__content {
+  min-width: 0;
+}
+
+.service-showcase__eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: #89a1c3;
+
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.service-showcase__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 36px;
+  height: 24px;
+
+  padding-inline: 9px;
+
+  color: var(--color-accent-dark);
+
+  background: var(--color-accent-light);
+
+  border-radius: var(--radius-pill);
+
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   Heading
+========================================= */
+
+.service-showcase__heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.service-showcase__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  color: var(--color-white);
+
+  background: var(--color-primary);
+
+  border-radius: var(--radius-md);
+}
+
+.service-showcase__heading h2 {
+  color: var(--color-text);
+
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.service-showcase__description {
+  max-width: 650px;
+
+  margin-top: 24px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   Feature List
+========================================= */
+
+.service-showcase__features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+
+  margin-top: 24px;
+}
+
+.service-showcase__features li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.service-showcase__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: var(--color-accent-dark);
+
+  background: var(--color-accent-light);
+
+  border-radius: 50%;
+}
+
+/* =========================================
+   Learn More Button
+========================================= */
+
+.service-showcase__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 46px;
+
+  margin-top: 30px;
+  padding-inline: 22px;
+
+  color: var(--color-white);
+
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-semibold);
+
+  background: var(--color-primary);
+
+  border-radius: var(--radius-pill);
+
+  transition:
+    background-color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.service-showcase__button:hover {
+  gap: 14px;
+
+  background: var(--color-primary-light);
+}
+
+/* =========================================
+   Service Visual
+========================================= */
+
+.service-showcase__visual {
+  position: relative;
+
+  min-width: 0;
+}
+
+/*
+  IMAGE PLACEHOLDER
+  Replace with the final service image later.
+*/
+.service-showcase__image-placeholder {
+  aspect-ratio: 1.42 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: rgba(16, 36, 77, 0.45);
+
+  background:
+    linear-gradient(
+      145deg,
+      #edf3f9 0%,
+      #d9e7f3 100%
+    );
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.service-showcase__image-placeholder span {
+  padding: 16px;
+
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service-showcase__image-number {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+
+  background: var(--color-white);
+
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .services-showcase-list {
+    gap: 90px;
+  }
+
+  .service-showcase {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+  .service-showcase--reverse .service-showcase__content,
+  .service-showcase--reverse .service-showcase__visual {
+    order: initial;
+  }
+
+  .service-showcase__content {
+    order: 1;
+  }
+
+  .service-showcase__visual {
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-showcase-section {
+    padding-block: var(--section-space-md);
+  }
+
+  .services-showcase-list {
+    gap: 72px;
+  }
+
+  .service-showcase {
+    gap: 30px;
+  }
+
+  .service-showcase__heading {
+    align-items: flex-start;
+  }
+
+  .service-showcase__icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .service-showcase__description {
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+  }
+
+  .service-showcase__features li {
+    font-size: 0.84rem;
+  }
+
+  .service-showcase__button {
+    width: 100%;
+  }
+}
+/* =========================================
+   Service Capabilities
+========================================= */
+
+.service-capabilities {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-primary);
+}
+
+.service-capabilities__header {
+  width: min(100%, 760px);
+
+  margin: 0 auto 52px;
+
+  text-align: center;
+}
+
+.service-capabilities__header .eyebrow {
+  margin-bottom: 14px;
+}
+
+.service-capabilities__title {
+  color: var(--color-white);
+
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.service-capabilities__description {
+  max-width: 720px;
+
+  margin: 18px auto 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   Capability Grid
+========================================= */
+
+.service-capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.service-capability-card {
+  min-height: 150px;
+
+  padding: 26px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+
+  transition:
+    transform var(--transition-normal),
+    background-color var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.service-capability-card:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.service-capability-card h3 {
+  color: var(--color-white);
+
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+.service-capability-card p {
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.56);
+
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   Capability Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .service-capabilities__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .service-capabilities__header {
+    margin-bottom: 36px;
+
+    text-align: left;
+  }
+
+  .service-capabilities__description {
+    margin-inline: 0;
+  }
+
+  .service-capabilities__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-capability-card {
+    min-height: auto;
+  }
+}
