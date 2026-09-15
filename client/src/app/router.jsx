@@ -9,42 +9,79 @@ import CaseStudiesPage from "../features/case-studies/CaseStudiesPage";
 import InsightsPage from "../features/insights/InsightsPage";
 import AboutPage from "../features/about/AboutPage";
 import ContactPage from "../features/contact/ContactPage";
+import LegalPage from "../features/legal/LegalPage";
 
 import NotFoundPage from "./NotFoundPage";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <PublicLayout />,
+
     children: [
       {
         index: true,
         element: <HomePage />,
       },
+
       {
         path: "services",
         element: <ServicesPage />,
       },
+
       {
         path: "services/:serviceSlug",
         element: <ServiceDetailPage />,
       },
+
       {
         path: "case-studies",
         element: <CaseStudiesPage />,
       },
+
       {
         path: "insights",
         element: <InsightsPage />,
       },
+
       {
         path: "about",
         element: <AboutPage />,
       },
+
       {
         path: "contact",
         element: <ContactPage />,
       },
+
+      {
+        path: "privacy-policy",
+        element: (
+          <LegalPage legalSlug="privacy-policy" />
+        ),
+      },
+
+      {
+        path: "terms-and-conditions",
+        element: (
+          <LegalPage legalSlug="terms-and-conditions" />
+        ),
+      },
+
+      {
+        path: "cookie-policy",
+        element: (
+          <LegalPage legalSlug="cookie-policy" />
+        ),
+      },
+
+      {
+        path: "disclaimer",
+        element: (
+          <LegalPage legalSlug="disclaimer" />
+        ),
+      },
+
       {
         path: "*",
         element: <NotFoundPage />,
@@ -52,3 +89,5 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+
+export default router;
