@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import PageHero from "../../components/PageHero";
+import CTASection from "../../components/CTASection";
 
 import CaseStudyCard from "./CaseStudyCard";
 
@@ -82,6 +83,13 @@ function CaseStudiesPage() {
           </div>
         </div>
       </section>
+
+      <CTASection
+        title="Ready to Write Your Success Story?"
+        description="Let's discuss how CyberX Soft can drive measurable transformation for your organization."
+        buttonLabel="Explore Our Services"
+        buttonPath="/services"
+      />
     </main>
   );
 }
