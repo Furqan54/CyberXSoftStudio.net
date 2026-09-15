@@ -35,3 +35,51 @@ export const companyOverview = {
   actionLabel: "Work With Us",
   actionPath: "/contact",
 };
+
+export const foundationPillars = [
+  {
+    id: 1,
+    title: "Mission",
+    description:
+      "To empower enterprises with technology solutions that create lasting competitive advantage and measurable business value.",
+  },
+  {
+    id: 2,
+    title: "Vision",
+    description:
+      "To be the most trusted technology partner for enterprises navigating digital transformation in the MENA region and beyond.",
+  },
+  {
+    id: 3,
+    title: "Purpose",
+    description:
+      "We exist to close the gap between world-class technology and real-world business impact — making transformation achievable for every enterprise.",
+  },
+];
+
+export const companyValues = [
+  {
+    id: 1,
+    title: "Client-First",
+    description:
+      "Every decision is made with client outcomes as the primary measure of success.",
+  },
+  {
+    id: 2,
+    title: "Transparency",
+    description:
+      "Open communication, honest timelines, and full visibility into every project.",
+  },
+  {
+    id: 3,
+    title: "Excellence",
+    description:
+      "We hold ourselves to the highest standards in every deliverable we produce.",
+  },
+  {
+    id: 4,
+    title: "Innovation",
+    description:
+      "Constantly evolving our capabilities to keep clients ahead of the curve.",
+  },
+];

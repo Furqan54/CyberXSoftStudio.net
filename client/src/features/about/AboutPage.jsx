@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
 
+import MissionValues from "./MissionValues";
+
 import {
   aboutStats,
   companyOverview,
@@ -90,6 +92,8 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+      <MissionValues />
     </main>
   );
 }
