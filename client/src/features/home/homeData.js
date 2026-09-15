@@ -79,3 +79,30 @@ export const whyChooseUsItems = [
       "Average client ROI of 3.2x within 18 months of project delivery.",
   },
 ];
+
+export const homeStats = [
+  {
+    id: 1,
+    value: "500+",
+    label: "Projects Delivered",
+    note: "Across 30+ countries",
+  },
+  {
+    id: 2,
+    value: "98%",
+    label: "Client Retention",
+    note: "Year-over-year",
+  },
+  {
+    id: 3,
+    value: "3.2x",
+    label: "Average ROI",
+    note: "Within 18 months",
+  },
+  {
+    id: 4,
+    value: "24/7",
+    label: "Support Coverage",
+    note: "Global SLA coverage",
+  },
+];
