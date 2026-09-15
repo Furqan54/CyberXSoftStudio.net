@@ -993,6 +993,94 @@
   padding-block: 68px;
 }
 
+.page-hero__layout {
+  display: block;
+}
+
+/* =========================================
+   Split Page Hero
+========================================= */
+
+.page-hero--split .page-hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+
+  align-items: center;
+
+  gap: clamp(56px, 7vw, 100px);
+}
+
+.page-hero--split .page-hero__content {
+  width: 100%;
+  max-width: 680px;
+}
+
+.page-hero--split .page-hero__title {
+  max-width: 680px;
+}
+
+.page-hero--split .page-hero__description {
+  max-width: 620px;
+}
+
+/*
+  IMAGE PLACEHOLDER
+  Replace with the final right-side page hero image later.
+*/
+.page-hero__split-visual {
+  width: 100%;
+}
+
+.page-hero__split-placeholder {
+  position: relative;
+
+  aspect-ratio: 1.25 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(35, 139, 211, 0.24),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(19, 70, 120, 0.82),
+      rgba(8, 35, 72, 0.95)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.page-hero__split-placeholder::before {
+  content: "";
+
+  position: absolute;
+  inset: 12%;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+.page-hero__split-placeholder span {
+  position: relative;
+  z-index: 1;
+
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* =========================================
    Breadcrumb
 ========================================= */
@@ -1324,6 +1412,40 @@
     width: 100%;
   }
 }
+
+/* =========================================
+   Split Page Hero Responsive
+========================================= */
+
+@media (max-width: 900px) {
+  .page-hero--split .page-hero__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .page-hero--split .page-hero__content {
+    max-width: 720px;
+  }
+
+  .page-hero--split .page-hero__split-visual {
+    max-width: 620px;
+  }
+
+  .page-hero__split-placeholder {
+    aspect-ratio: 1.7 / 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero--split .page-hero__layout {
+    gap: 32px;
+  }
+
+  .page-hero__split-placeholder {
+    aspect-ratio: 1.35 / 1;
+  }
+}
+
 /* =========================================
    Shared CTA Section
 ========================================= */
