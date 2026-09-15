@@ -1,0 +1,108 @@
+:root {
+  /* =========================
+     Brand Colors
+  ========================== */
+
+  --color-primary: #0d2451;
+  --color-primary-dark: #071733;
+  --color-primary-light: #183566;
+
+  --color-accent: #2fc475;
+  --color-accent-dark: #25a862;
+  --color-accent-light: #eaf9f1;
+
+  /* =========================
+     Neutral Colors
+  ========================== */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-text: #10244d;
+  --color-text-secondary: #5e6c84;
+  --color-text-muted: #8290a7;
+
+  --color-background: #ffffff;
+  --color-background-soft: #f7f9fc;
+  --color-background-dark: #07152f;
+
+  --color-border: #e2e7ef;
+  --color-border-light: #edf0f5;
+
+  /* =========================
+     Typography
+  ========================== */
+
+  --font-primary: "Inter", Arial, Helvetica, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3.5rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.65;
+
+  /* =========================
+     Layout
+  ========================== */
+
+  --container-width: 1180px;
+  --container-padding: 24px;
+
+  --section-space-sm: 64px;
+  --section-space-md: 88px;
+  --section-space-lg: 112px;
+
+  /* =========================
+     Spacing
+  ========================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* =========================
+     Radius
+  ========================== */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* =========================
+     Shadows
+  ========================== */
+
+  --shadow-sm: 0 2px 8px rgba(10, 31, 68, 0.06);
+  --shadow-md: 0 8px 24px rgba(10, 31, 68, 0.08);
+  --shadow-lg: 0 18px 48px rgba(10, 31, 68, 0.12);
+
+  /* =========================
+     Transitions
+  ========================== */
+
+  --transition-fast: 160ms ease;
+  --transition-normal: 250ms ease;
+}
