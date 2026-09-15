@@ -1,5 +1,6 @@
 import HomeHero from "./HomeHero";
 import ClientsPartners from "./ClientsPartners";
+import HomeServices from "./HomeServices";
 
 import "./home.css";
 
@@ -8,6 +9,7 @@ function HomePage() {
     <main>
       <HomeHero />
       <ClientsPartners />
+      <HomeServices />
     </main>
   );
 }
