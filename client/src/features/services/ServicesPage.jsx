@@ -1,9 +1,13 @@
 import PageHero from "../../components/PageHero";
+import FAQSection from "../../components/FAQSection";
 
 import ServiceShowcase from "./ServiceShowcase";
 import ServiceCapabilities from "./ServiceCapabilities";
 
-import { services } from "./servicesData";
+import {
+  services,
+  servicesFaqs,
+} from "./servicesData";
 
 import "./services.css";
 
@@ -38,6 +42,11 @@ function ServicesPage() {
       </section>
 
       <ServiceCapabilities />
+
+      <FAQSection
+        items={servicesFaqs}
+        title="Frequently Asked Questions"
+      />
     </main>
   );
 }

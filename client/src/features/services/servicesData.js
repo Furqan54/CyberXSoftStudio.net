@@ -166,3 +166,23 @@ export const serviceCapabilities = [
       "Delivery centers across MENA, Europe, and South Asia with on-site leadership in your market.",
   },
 ];
+export const servicesFaqs = [
+  {
+    id: 1,
+    question: "Can you handle multiple service areas simultaneously?",
+    answer:
+      "Yes. Many clients engage us across multiple service pillars simultaneously. Our integrated delivery model ensures seamless coordination across service teams, shared context, and consistent quality.",
+  },
+  {
+    id: 2,
+    question: "Do you work with existing technology vendors and systems?",
+    answer:
+      "Yes. We can integrate with your existing vendors, platforms, tools, and internal systems. Our approach is technology-agnostic, so we focus on what best supports your business goals rather than forcing a specific technology stack.",
+  },
+  {
+    id: 3,
+    question: "What does the onboarding process look like?",
+    answer:
+      "We begin with discovery and alignment, followed by scope definition, team setup, delivery planning, and kickoff. The exact onboarding process depends on the engagement model and the services involved.",
+  },
+];
