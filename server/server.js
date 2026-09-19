@@ -1,16 +1,8 @@
-const express = require("express");
+require("dotenv").config();
 
-const app = express();
+const app = require("./src/app");
 
-const PORT = 5000;
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.json({
-    message: "CyberX Soft API is running",
-  });
-});
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(
