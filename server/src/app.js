@@ -1,11 +1,15 @@
 const express = require("express");
 const cors = require("cors");
 
+const contactRoutes = require("./routes/contactRoutes");
+
 const app = express();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin:
+      process.env.CLIENT_URL ||
+      "http://localhost:5173",
   })
 );
 
@@ -23,5 +27,7 @@ app.get("/api/health", (req, res) => {
     message: "CyberX Soft API is healthy",
   });
 });
+
+app.use("/api/contact", contactRoutes);
 
 module.exports = app;
