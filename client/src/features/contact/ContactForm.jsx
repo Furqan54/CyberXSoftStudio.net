@@ -1,13 +1,74 @@
+import { useState } from "react";
 import { Send } from "lucide-react";
 
 import { services } from "../services/servicesData";
 
 function ContactForm() {
-  const handleSubmit = (event) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formMessage, setFormMessage] = useState({
+    type: "",
+    text: "",
+  });
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // FORM PLACEHOLDER
-    // Connect this form to the backend/API when the server endpoint is ready.
+    setIsSubmitting(true);
+    setFormMessage({
+      type: "",
+      text: "",
+    });
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      fullName: formData.get("fullName"),
+      workEmail: formData.get("workEmail"),
+      company: formData.get("company"),
+      phone: formData.get("phone"),
+      service: formData.get("service"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.message || "Unable to submit your enquiry."
+        );
+      }
+
+      setFormMessage({
+        type: "success",
+        text:
+          result.message ||
+          "Your enquiry has been received.",
+      });
+
+      form.reset();
+    } catch (error) {
+      setFormMessage({
+        type: "error",
+        text:
+          error.message ||
+          "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -19,7 +80,8 @@ function ContactForm() {
         <h2>Send Us a Message</h2>
 
         <p>
-          Fill in the form below and we'll respond within one business day.
+          Fill in the form below and we'll respond within one
+          business day.
         </p>
       </div>
 
@@ -35,6 +97,7 @@ function ContactForm() {
             type="text"
             placeholder="John Smith"
             autoComplete="name"
+            maxLength="100"
             required
           />
         </div>
@@ -50,6 +113,7 @@ function ContactForm() {
             type="email"
             placeholder="john@company.com"
             autoComplete="email"
+            maxLength="150"
             required
           />
         </div>
@@ -65,6 +129,7 @@ function ContactForm() {
             type="text"
             placeholder="Company Name"
             autoComplete="organization"
+            maxLength="150"
           />
         </div>
 
@@ -79,6 +144,7 @@ function ContactForm() {
             type="tel"
             placeholder="+1 555 000 0000"
             autoComplete="tel"
+            maxLength="50"
           />
         </div>
 
@@ -92,7 +158,7 @@ function ContactForm() {
             name="service"
             defaultValue=""
           >
-            <option value="" disabled>
+            <option value="">
               Select a service...
             </option>
 
@@ -117,14 +183,26 @@ function ContactForm() {
             name="message"
             rows="6"
             placeholder="Tell us about your project or challenge..."
+            maxLength="3000"
             required
           />
         </div>
       </div>
 
+      {formMessage.text && (
+        <div
+          className={`contact-form__message contact-form__message--${formMessage.type}`}
+          role="status"
+          aria-live="polite"
+        >
+          {formMessage.text}
+        </div>
+      )}
+
       <button
         type="submit"
         className="contact-form__submit"
+        disabled={isSubmitting}
       >
         <Send
           size={15}
@@ -132,7 +210,9 @@ function ContactForm() {
           aria-hidden="true"
         />
 
-        Send Message
+        {isSubmitting
+          ? "Sending..."
+          : "Send Message"}
       </button>
     </form>
   );

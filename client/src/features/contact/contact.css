@@ -436,3 +436,38 @@ a.office-card__detail:hover {
     grid-column: auto;
   }
 }
+/* =========================================
+   Contact Form Feedback
+========================================= */
+
+.contact-form__message {
+  margin-top: 20px;
+  padding: 12px 14px;
+
+  font-size: 0.72rem;
+  line-height: 1.55;
+
+  border-radius: var(--radius-sm);
+}
+
+.contact-form__message--success {
+  color: #176b43;
+
+  background: #ecf9f2;
+
+  border: 1px solid #bfe9d1;
+}
+
+.contact-form__message--error {
+  color: #9c2f2f;
+
+  background: #fff1f1;
+
+  border: 1px solid #f0caca;
+}
+
+.contact-form__submit:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.65;
+}
