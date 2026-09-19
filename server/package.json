@@ -1,0 +1,19 @@
+{
+  "name": "cyberxsoft-server",
+  "version": "1.0.0",
+  "description": "Backend API for the CyberX Soft website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
