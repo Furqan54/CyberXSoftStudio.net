@@ -1,7 +1,8 @@
 const dns = require("dns");
 const mongoose = require("mongoose");
 
-// DNS fallback for local networks that refuse MongoDB SRV lookups.
+// Your current network has trouble resolving MongoDB SRV records,
+// so Node will use Google and Cloudflare DNS.
 dns.setServers([
   "8.8.8.8",
   "1.1.1.1",
