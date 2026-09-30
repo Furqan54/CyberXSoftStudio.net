@@ -158,7 +158,7 @@ function Header() {
             to="/contact"
             className="site-header__cta"
           >
-            Book Free Consultation
+            Book a Consultation
           </NavLink>
 
           <button
@@ -290,7 +290,7 @@ function Header() {
             to="/contact"
             className="site-header__mobile-cta"
           >
-            Book Free Consultation
+            Book a Consultation
           </NavLink>
         </nav>
       </div>
