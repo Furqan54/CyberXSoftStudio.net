@@ -1,3 +1,4 @@
+
 export const clientsPartners = [
   {
     id: 1,
@@ -41,45 +42,51 @@ export const clientsPartners = [
   },
 ];
 
+// Block 01: Credibility-safe delivery principles.
+// These replace unsupported experience, certification,
+// overseas-office, and ROI claims.
 export const whyChooseUsItems = [
   {
     id: 1,
-    title: "12+ Years Experience",
+    title: "Business-First Discovery",
     description:
-      "Over a decade delivering enterprise technology solutions across 30+ countries.",
+      "We clarify business objectives and operating constraints before recommending tools or platforms.",
   },
   {
     id: 2,
-    title: "End-to-End Delivery",
+    title: "Coordinated Delivery",
     description:
-      "Strategy through deployment — we own the full project lifecycle.",
+      "We bring strategy, design, engineering, security, and delivery into a coordinated approach.",
   },
   {
     id: 3,
-    title: "Certified Expertise",
+    title: "Flexible Engagement Models",
     description:
-      "ISO 27001, PMP, CISSP, AWS, Azure, and Google Cloud certified professionals.",
+      "Choose a defined project, dedicated specialist, coordinated team, or managed support arrangement.",
   },
   {
     id: 4,
-    title: "Agile & Transparent",
+    title: "Clear Milestones & Ownership",
     description:
-      "Weekly sprint reviews, real-time dashboards, and zero surprises.",
+      "We define responsibilities, review points, milestones, and acceptance criteria before delivery begins.",
   },
   {
     id: 5,
-    title: "Global Delivery",
+    title: "Security & Governance",
     description:
-      "Offices in Dubai, London, and New York, with 24/7 support capabilities.",
+      "We consider security, risk, and governance requirements throughout the delivery lifecycle.",
   },
   {
     id: 6,
-    title: "Proven ROI",
+    title: "Collaboration With Your Team",
     description:
-      "Average client ROI of 3.2x within 18 months of project delivery.",
+      "Our delivery approach accommodates existing teams, systems, technology partners, and operational needs.",
   },
 ];
 
+// PENDING CEO VERIFICATION:
+// These statistics must not remain published without evidence.
+// We will remove their rendered section in Step 1.3C.
 export const homeStats = [
   {
     id: 1,
@@ -106,6 +113,10 @@ export const homeStats = [
     note: "Global SLA coverage",
   },
 ];
+
+// PENDING CEO VERIFICATION:
+// These specimen testimonials will be removed from the
+// rendered Home page in a subsequent cleanup step.
 export const testimonials = [
   {
     id: 1,
@@ -138,6 +149,7 @@ export const testimonials = [
     initials: "K",
   },
 ];
+
 export const homeFaqs = [
   {
     id: 1,

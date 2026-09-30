@@ -1,3 +1,4 @@
+
 import { CheckCircle2 } from "lucide-react";
 
 import { whyChooseUsItems } from "./homeData";
@@ -7,20 +8,26 @@ function WhyChooseUs() {
     <section className="why-choose-us">
       <div className="container">
         <div className="why-choose-us__header">
-          <span className="eyebrow">Why Choose CyberX Soft</span>
+          <span className="eyebrow">
+            Why Choose CyberX Soft
+          </span>
 
           <h2 className="section-title">
-            The Partner That Delivers, Not Just Promises
+            One Team From Strategy Through Delivery
           </h2>
 
           <p className="why-choose-us__description">
-            We measure success by your outcomes, not our outputs.
+            A coordinated approach connecting business strategy,
+            creative execution, engineering, security, and delivery.
           </p>
         </div>
 
         <div className="why-choose-us__grid">
           {whyChooseUsItems.map((item) => (
-            <article className="why-choose-card" key={item.id}>
+            <article
+              className="why-choose-card"
+              key={item.id}
+            >
               <div className="why-choose-card__icon">
                 <CheckCircle2
                   size={18}
@@ -31,7 +38,6 @@ function WhyChooseUs() {
 
               <div className="why-choose-card__content">
                 <h3>{item.title}</h3>
-
                 <p>{item.description}</p>
               </div>
             </article>
