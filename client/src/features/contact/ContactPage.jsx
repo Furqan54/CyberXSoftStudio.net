@@ -1,3 +1,4 @@
+
 import {
   Clock3,
   Mail,
@@ -23,9 +24,9 @@ function ContactPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Contact Us"
-        title="Let's Start a Conversation"
-        description="Whether you're ready to begin a project or just exploring your options, we're here to help. Our team responds within one business day."
+        eyebrow="Contact"
+        title="Tell Us What You Need to Build Improve or Secure"
+        description="Share the objective, current challenge, expected timeline, and any important constraints. Our team will review the requirement and respond with the most useful next step."
         breadcrumbs={[
           {
             label: "Contact",
@@ -63,9 +64,7 @@ function ContactPage() {
                 <div>
                   <span>Email</span>
 
-                  <strong>
-                    {siteConfig.email}
-                  </strong>
+                  <strong>{siteConfig.email}</strong>
                 </div>
               </a>
 
@@ -84,29 +83,29 @@ function ContactPage() {
                 <div>
                   <span>Phone</span>
 
-                  <strong>
-                    {siteConfig.phone}
-                  </strong>
+                  <strong>{siteConfig.phone}</strong>
                 </div>
               </a>
 
-              <div className="contact-info__item">
-                <div className="contact-info__icon">
-                  <Clock3
-                    size={17}
-                    strokeWidth={1.8}
-                    aria-hidden="true"
-                  />
-                </div>
+              {contactDetails.businessHours && (
+                <div className="contact-info__item">
+                  <div className="contact-info__icon">
+                    <Clock3
+                      size={17}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                <div>
-                  <span>Business Hours</span>
+                  <div>
+                    <span>Business Hours</span>
 
-                  <strong>
-                    {contactDetails.businessHours}
-                  </strong>
+                    <strong>
+                      {contactDetails.businessHours}
+                    </strong>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </aside>
         </div>

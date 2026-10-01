@@ -1,3 +1,4 @@
+
 import {
   Building2,
   MapPin,
@@ -7,11 +8,15 @@ import {
 import { offices } from "./contactData";
 
 function OfficesSection() {
+  if (offices.length === 0) {
+    return null;
+  }
+
   return (
     <section className="offices-section">
       <div className="container">
         <div className="offices-section__header">
-          <h2>Our Offices</h2>
+          <h2>Our Office</h2>
         </div>
 
         <div className="offices-section__grid">
@@ -43,9 +48,7 @@ function OfficesSection() {
                     aria-hidden="true"
                   />
 
-                  <span>
-                    {office.address}
-                  </span>
+                  <span>{office.address}</span>
                 </div>
 
                 <a
@@ -58,9 +61,7 @@ function OfficesSection() {
                     aria-hidden="true"
                   />
 
-                  <span>
-                    {office.phone}
-                  </span>
+                  <span>{office.phone}</span>
                 </a>
               </div>
             </article>
