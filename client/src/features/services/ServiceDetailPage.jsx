@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
@@ -38,7 +39,7 @@ function ServiceDetailPage() {
           },
         ]}
         action={{
-          label: "Book Free Consultation",
+          label: "Book a Consultation",
           path: "/contact",
         }}
         showImagePlaceholder
@@ -49,7 +50,7 @@ function ServiceDetailPage() {
       <CTASection
         title="Ready to Turn Strategy Into Results?"
         description="Talk to our specialists about your goals, challenges, and the right delivery approach for your organization."
-        buttonLabel="Book Free Consultation"
+        buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
     </main>
