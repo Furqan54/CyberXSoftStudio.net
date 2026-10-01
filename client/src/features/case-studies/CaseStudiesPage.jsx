@@ -1,3 +1,4 @@
+
 import { useMemo, useState } from "react";
 
 import PageHero from "../../components/PageHero";
@@ -15,6 +16,8 @@ import "./caseStudies.css";
 function CaseStudiesPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
+  const hasApprovedCaseStudies = caseStudies.length > 0;
+
   const filteredCaseStudies = useMemo(() => {
     if (activeCategory === "All") {
       return caseStudies;
@@ -28,14 +31,18 @@ function CaseStudiesPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Case Studies"
-        title="Real Transformations, Measurable Results"
-        description="Explore how we've helped leading enterprises across industries achieve their digital transformation goals through proven methodologies and expert delivery."
+        eyebrow="Work"
+        title="Selected Work Shaped Around Real Operating Needs"
+        description="Our work spans digital platforms, brand development, content ecosystems, business systems, cybersecurity, software, and specialist delivery. Each published case study should explain the problem, scope, approach, deliverables, and verified outcome."
         breadcrumbs={[
           {
-            label: "Case Studies",
+            label: "Work",
           },
         ]}
+        action={{
+          label: "Discuss a Similar Requirement",
+          path: "/contact",
+        }}
         showImagePlaceholder
       />
 
@@ -48,47 +55,76 @@ function CaseStudiesPage() {
               </span>
 
               <h2 className="section-title">
-                Projects Across Every Domain
+                Selected Client Engagements
               </h2>
             </div>
 
-            <div
-              className="case-studies__filters"
-              aria-label="Filter case studies"
-            >
-              {caseStudyCategories.map((category) => (
-                <button
-                  key={category}
-                  type="button"
-                  className={`case-studies__filter ${
-                    activeCategory === category
-                      ? "case-studies__filter--active"
-                      : ""
-                  }`}
-                  onClick={() => setActiveCategory(category)}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+            {hasApprovedCaseStudies && (
+              <div
+                className="case-studies__filters"
+                aria-label="Filter case studies"
+              >
+                {caseStudyCategories.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    className={`case-studies__filter ${
+                      activeCategory === category
+                        ? "case-studies__filter--active"
+                        : ""
+                    }`}
+                    onClick={() => setActiveCategory(category)}
+                    aria-pressed={
+                      activeCategory === category
+                    }
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-          <div className="case-studies__grid">
-            {filteredCaseStudies.map((caseStudy) => (
-              <CaseStudyCard
-                key={caseStudy.id}
-                caseStudy={caseStudy}
-              />
-            ))}
-          </div>
+          {hasApprovedCaseStudies ? (
+            <div className="case-studies__grid">
+              {filteredCaseStudies.map((caseStudy) => (
+                <CaseStudyCard
+                  key={caseStudy.id}
+                  caseStudy={caseStudy}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="case-study-card">
+              <div className="case-study-card__content">
+                <span className="eyebrow">
+                  Project Highlights
+                </span>
+
+                <h3 className="case-study-card__title">
+                  Detailed Project Stories Are Being Prepared
+                </h3>
+
+                <p className="case-study-card__description">
+                  We are reviewing project details,
+                  supporting materials, and client
+                  permissions before publishing individual
+                  case studies. Each published example will
+                  describe the actual requirements, our
+                  involvement, the work delivered, and any
+                  approved outcomes.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
       <CTASection
-        title="Ready to Write Your Success Story?"
-        description="Let's discuss how CyberX Soft can drive measurable transformation for your organization."
-        buttonLabel="Explore Our Services"
-        buttonPath="/services"
+        title="Discuss Your Next Project"
+        description="Tell us what you need to build, improve, secure, or scale. We can discuss your requirements and the most suitable next steps."
+        buttonLabel="Book a Consultation"
+        buttonPath="/contact"
       />
     </main>
   );
