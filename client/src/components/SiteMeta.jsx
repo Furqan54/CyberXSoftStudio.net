@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -8,23 +9,20 @@ const staticMeta = {
   "/": {
     title:
       "CyberX Soft | Enterprise Technology & Digital Solutions",
-
     description:
       "CyberX Soft delivers enterprise technology, software, AI, cybersecurity, creative, digital growth, and talent solutions.",
   },
 
   "/services": {
     title:
-      "Enterprise Digital Services | CyberX Soft",
-
+      "Digital and Technology Services | CyberX Soft",
     description:
-      "Explore CyberX Soft services across brand strategy, creative media, AI, software, cybersecurity, data, digital governance, and talent augmentation.",
+      "Explore CyberX Soft services across brand growth, creative production, AI and software, data and cybersecurity, and specialist delivery support.",
   },
 
   "/case-studies": {
     title:
       "Case Studies | CyberX Soft",
-
     description:
       "Explore enterprise technology, digital transformation, software, cybersecurity, cloud, and AI case studies from CyberX Soft.",
   },
@@ -32,7 +30,6 @@ const staticMeta = {
   "/insights": {
     title:
       "Insights | CyberX Soft",
-
     description:
       "Read research, analysis, and practical guidance from CyberX Soft experts covering AI, cybersecurity, cloud, ERP, and digital strategy.",
   },
@@ -40,7 +37,6 @@ const staticMeta = {
   "/about": {
     title:
       "About CyberX Soft | Enterprise Technology Partner",
-
     description:
       "Learn about CyberX Soft, our mission, leadership, capabilities, delivery model, and approach to enterprise digital transformation.",
   },
@@ -48,7 +44,6 @@ const staticMeta = {
   "/contact": {
     title:
       "Contact CyberX Soft | Start a Conversation",
-
     description:
       "Contact CyberX Soft to discuss technology, software, AI, cybersecurity, creative, digital growth, or enterprise delivery requirements.",
   },
@@ -62,7 +57,10 @@ function getPageMeta(pathname) {
   }
 
   if (pathname.startsWith("/services/")) {
-    const slug = pathname.replace("/services/", "");
+    const slug = pathname.replace(
+      "/services/",
+      ""
+    );
 
     const service = services.find(
       (item) => item.slug === slug
@@ -85,14 +83,14 @@ function getPageMeta(pathname) {
 
   if (legalPage) {
     return {
-      title: `${legalPage.title} | CyberX Soft`,
+      title:
+        `${legalPage.title} | CyberX Soft`,
       description: legalPage.intro,
     };
   }
 
   return {
     title: "Page Not Found | CyberX Soft",
-
     description:
       "The page you requested could not be found on the CyberX Soft website.",
   };
@@ -111,7 +109,8 @@ function SiteMeta() {
     );
 
     if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
+      descriptionTag =
+        document.createElement("meta");
 
       descriptionTag.setAttribute(
         "name",

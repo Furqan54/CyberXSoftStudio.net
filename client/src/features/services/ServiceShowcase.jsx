@@ -1,24 +1,34 @@
+
 import { Link } from "react-router-dom";
+import { ArrowRight, Check } from "lucide-react";
+
 import {
-  ArrowRight,
-  BrainCircuit,
-  Check,
-  Palette,
-  Shield,
-  Star,
-  Users,
-} from "lucide-react";
+  serviceOverviewBySlug,
+} from "./servicesOverviewData";
 
-const serviceIcons = {
-  palette: Palette,
-  star: Star,
-  code: BrainCircuit,
-  shield: Shield,
-  users: Users,
-};
+function ServiceShowcase({
+  service,
+  reverse = false,
+}) {
+  const overview =
+    serviceOverviewBySlug[service.slug] || {};
 
-function ServiceShowcase({ service, reverse = false }) {
-  const Icon = serviceIcons[service.icon];
+  // servicesData.js stores an actual Lucide component,
+  // not an icon-name string.
+  const Icon = service.icon;
+
+  const name = overview.name || service.name;
+
+  const title =
+    overview.showcaseTitle ||
+    service.showcaseTitle;
+
+  const description =
+    overview.showcaseDescription ||
+    service.showcaseDescription;
+
+  const features =
+    overview.features || service.features;
 
   return (
     <article
@@ -32,7 +42,7 @@ function ServiceShowcase({ service, reverse = false }) {
             {service.number}
           </span>
 
-          <span>{service.name}</span>
+          <span>{name}</span>
         </div>
 
         <div className="service-showcase__heading">
@@ -46,15 +56,15 @@ function ServiceShowcase({ service, reverse = false }) {
             )}
           </div>
 
-          <h2>{service.showcaseTitle}</h2>
+          <h2>{title}</h2>
         </div>
 
         <p className="service-showcase__description">
-          {service.showcaseDescription}
+          {description}
         </p>
 
         <ul className="service-showcase__features">
-          {service.features.map((feature) => (
+          {features.map((feature) => (
             <li key={feature}>
               <span className="service-showcase__check">
                 <Check
@@ -72,8 +82,9 @@ function ServiceShowcase({ service, reverse = false }) {
         <Link
           to={`/services/${service.slug}`}
           className="service-showcase__button"
+          aria-label={`Explore ${name}`}
         >
-          Learn More
+          Explore this service
 
           <ArrowRight
             size={16}
@@ -84,8 +95,13 @@ function ServiceShowcase({ service, reverse = false }) {
 
       <div className="service-showcase__visual">
         {/*
-          IMAGE PLACEHOLDER
-          Replace this block with the final service image later.
+          IMAGE PLACEHOLDER — SERVICE OVERVIEW
+
+          Replace with the approved service image.
+          Recommended format: 4:3 landscape.
+
+          Images should show people, products, or
+          technology in the context of actual work.
         */}
         <div className="service-showcase__image-placeholder">
           <span>Service Image Placeholder</span>
