@@ -5,7 +5,6 @@ import HomeHero from "./HomeHero";
 import ClientsPartners from "./ClientsPartners";
 import HomeServices from "./HomeServices";
 import WhyChooseUs from "./WhyChooseUs";
-import Testimonials from "./Testimonials";
 
 import { homeFaqs } from "./homeData";
 
@@ -21,8 +20,6 @@ function HomePage() {
       <HomeServices />
 
       <WhyChooseUs />
-
-      <Testimonials />
 
       <FAQSection items={homeFaqs} />
     </main>
