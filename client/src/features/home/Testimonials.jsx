@@ -1,13 +1,19 @@
 import { Star } from "lucide-react";
 
-import { testimonials } from "./homeData";
+function Testimonials({ items = [] }) {
+  // Do not show the section unless approved testimonials
+  // have been provided.
+  if (items.length === 0) {
+    return null;
+  }
 
-function Testimonials() {
   return (
     <section className="testimonials">
       <div className="container">
         <div className="testimonials__header">
-          <span className="eyebrow">Testimonials</span>
+          <span className="eyebrow">
+            Testimonials
+          </span>
 
           <h2 className="testimonials__title">
             What Our Clients Say
@@ -15,13 +21,18 @@ function Testimonials() {
         </div>
 
         <div className="testimonials__grid">
-          {testimonials.map((testimonial) => (
-            <article className="testimonial-card" key={testimonial.id}>
+          {items.map((testimonial) => (
+            <article
+              className="testimonial-card"
+              key={testimonial.id}
+            >
               <div
                 className="testimonial-card__rating"
                 aria-label={`${testimonial.rating} out of 5 stars`}
               >
-                {Array.from({ length: testimonial.rating }).map((_, index) => (
+                {Array.from({
+                  length: testimonial.rating,
+                }).map((_, index) => (
                   <Star
                     key={index}
                     size={14}
