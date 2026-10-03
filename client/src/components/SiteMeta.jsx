@@ -40,6 +40,13 @@ const staticMeta = {
       "Design and build secure software, AI-enabled workflows, web and mobile applications, integrations, automation, and enterprise digital platforms.",
   },
 
+  "/services/data-cybersecurity-digital-governance": {
+    title:
+      "Data Cybersecurity and Digital Governance | CyberX Soft",
+    description:
+      "Improve data visibility, assess cyber risk, secure cloud and identity environments, and establish practical digital governance and compliance controls.",
+  },
+
   "/services/talent-augmentation-delivery-support": {
     title:
       "IT Staff Augmentation and Dedicated Remote Teams | CyberX Soft",
