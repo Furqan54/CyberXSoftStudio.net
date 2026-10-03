@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -38,14 +37,21 @@ const staticMeta = {
     title:
       "About CyberX Soft | Enterprise Technology Partner",
     description:
-      "Learn about CyberX Soft, our mission, leadership, capabilities, delivery model, and approach to enterprise digital transformation.",
+      "Learn about CyberX Soft, our capabilities, delivery model, working approach, and support for local and international engagements.",
   },
 
   "/contact": {
     title:
       "Contact CyberX Soft | Start a Conversation",
     description:
-      "Contact CyberX Soft to discuss technology, software, AI, cybersecurity, creative, digital growth, or enterprise delivery requirements.",
+      "Contact CyberX Soft to discuss technology, software, AI, cybersecurity, creative, digital growth, or specialist delivery requirements.",
+  },
+
+  "/services/talent-augmentation-delivery-support": {
+    title:
+      "IT Staff Augmentation and Dedicated Remote Teams | CyberX Soft",
+    description:
+      "Add technology, creative, data, cybersecurity, quality, and project specialists through dedicated resources, remote teams, managed pods, and white-label offshore delivery.",
   },
 };
 
@@ -83,8 +89,7 @@ function getPageMeta(pathname) {
 
   if (legalPage) {
     return {
-      title:
-        `${legalPage.title} | CyberX Soft`,
+      title: `${legalPage.title} | CyberX Soft`,
       description: legalPage.intro,
     };
   }
@@ -104,9 +109,10 @@ function SiteMeta() {
 
     document.title = meta.title;
 
-    let descriptionTag = document.querySelector(
-      'meta[name="description"]'
-    );
+    let descriptionTag =
+      document.querySelector(
+        'meta[name="description"]'
+      );
 
     if (!descriptionTag) {
       descriptionTag =
@@ -117,7 +123,9 @@ function SiteMeta() {
         "description"
       );
 
-      document.head.appendChild(descriptionTag);
+      document.head.appendChild(
+        descriptionTag
+      );
     }
 
     descriptionTag.setAttribute(

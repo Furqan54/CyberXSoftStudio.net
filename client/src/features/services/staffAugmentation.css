@@ -1,0 +1,813 @@
+/* =========================================================
+   CYBERX SOFT
+   STAFF AUGMENTATION — DEDICATED SERVICE PAGE
+   ========================================================= */
+
+.staff-augmentation {
+  width: 100%;
+  overflow-x: hidden;
+
+  color: var(--color-text, #102748);
+  background: var(--color-white, #ffffff);
+}
+
+/* =========================================================
+   GENERAL SECTION LAYOUT
+   ========================================================= */
+
+.staff-augmentation__section {
+  padding: clamp(64px, 8vw, 110px) 0;
+}
+
+.staff-augmentation__section--soft {
+  background: var(--color-background-soft, #f5f7fb);
+}
+
+.staff-augmentation__section--dark {
+  background: #102f60;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.staff-augmentation__section-heading {
+  max-width: 760px;
+
+  margin: 0 auto 46px;
+
+  text-align: center;
+}
+
+.staff-augmentation__section-heading .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+}
+
+.staff-augmentation__section-heading h2 {
+  margin: 0;
+
+  color: var(--color-text, #102748);
+
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+  font-weight: 700;
+
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.staff-augmentation__section-heading > p {
+  max-width: 680px;
+
+  margin: 17px auto 0;
+
+  color: var(--color-text-secondary, #637084);
+
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* Dark section headings */
+
+.staff-augmentation__section--dark
+  .staff-augmentation__section-heading h2 {
+  color: #ffffff;
+}
+
+.staff-augmentation__section--dark
+  .staff-augmentation__section-heading > p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================================
+   REUSABLE GRIDS
+   ========================================================= */
+
+.staff-augmentation__grid {
+  display: grid;
+
+  gap: 20px;
+}
+
+.staff-augmentation__grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.staff-augmentation__grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.staff-augmentation__grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* =========================================================
+   GENERAL CARDS
+   ========================================================= */
+
+.staff-augmentation__card {
+  min-width: 0;
+  height: 100%;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.staff-augmentation__card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d1dbe7;
+
+  box-shadow:
+    0 14px 34px
+    rgba(11, 38, 75, 0.08);
+}
+
+.staff-augmentation__card h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.staff-augmentation__card > p {
+  margin: 12px 0 0;
+
+  color: #637084;
+
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+/* =========================================================
+   NUMBER LABEL
+   ========================================================= */
+
+.staff-augmentation__number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 34px;
+  min-height: 29px;
+
+  margin-bottom: 20px;
+  padding: 5px 8px;
+
+  color: #179f6b;
+
+  background: #edf9f4;
+
+  border-radius: 6px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.staff-augmentation__overview {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.staff-augmentation__overview-content .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+}
+
+.staff-augmentation__overview-content h2 {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #102748;
+
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+
+.staff-augmentation__overview-content > p {
+  max-width: 620px;
+
+  margin: 18px 0 0;
+
+  color: #637084;
+
+  font-size: 0.91rem;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   PRIMARY INLINE CTA
+   ========================================================= */
+
+.staff-augmentation__primary-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 44px;
+
+  margin-top: 25px;
+  padding: 11px 17px;
+
+  color: #ffffff;
+
+  background: #102f60;
+
+  border: 1px solid #102f60;
+  border-radius: 5px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.staff-augmentation__primary-link:hover {
+  transform: translateY(-1px);
+
+  background: #16437c;
+}
+
+.staff-augmentation__primary-link:focus-visible {
+  outline: 3px solid rgba(38, 195, 133, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   OVERVIEW POINTS
+   ========================================================= */
+
+.staff-augmentation__overview-points {
+  display: grid;
+
+  gap: 14px;
+}
+
+.staff-augmentation__overview-point {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  padding: 21px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.staff-augmentation__overview-point > svg {
+  flex: 0 0 auto;
+
+  margin-top: 1px;
+
+  color: #26c385;
+}
+
+.staff-augmentation__overview-point h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 0.91rem;
+  font-weight: 700;
+}
+
+.staff-augmentation__overview-point p {
+  margin: 6px 0 0;
+
+  color: #637084;
+
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   ENGAGEMENT MODEL CARDS
+   ========================================================= */
+
+.staff-augmentation__model-card {
+  padding: 30px;
+}
+
+.staff-augmentation__pill {
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 6px 10px;
+
+  color: #179f6b;
+
+  background: #edf9f4;
+
+  border-radius: 999px;
+
+  font-size: 0.67rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   WHITE-LABEL CALLOUT
+   ========================================================= */
+
+.staff-augmentation__callout {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  margin-top: 30px;
+  padding: 34px;
+
+  background: #102f60;
+
+  border-radius: 10px;
+}
+
+.staff-augmentation__callout > div {
+  max-width: 690px;
+}
+
+.staff-augmentation__callout .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+}
+
+.staff-augmentation__callout h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.staff-augmentation__callout p {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+.staff-augmentation__callout-link {
+  display: inline-flex;
+
+  flex: 0 0 auto;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 44px;
+
+  padding: 11px 17px;
+
+  color: #102f60;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.staff-augmentation__callout-link:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 24px
+    rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   DARK BENEFIT CARDS
+   ========================================================= */
+
+.staff-augmentation__dark-card {
+  min-width: 0;
+  height: 100%;
+
+  padding: 28px;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 9px;
+}
+
+.staff-augmentation__dark-card h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.staff-augmentation__dark-card p {
+  margin: 11px 0 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SPECIALIZATION CARDS
+   ========================================================= */
+
+.staff-augmentation__specialization-card {
+  padding: 27px;
+}
+
+.staff-augmentation__check-list {
+  display: grid;
+
+  gap: 11px;
+
+  margin: 20px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.staff-augmentation__check-list li {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: #637084;
+
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.staff-augmentation__check-list svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #26c385;
+}
+
+/* =========================================================
+   GENERAL NOTES
+   ========================================================= */
+
+.staff-augmentation__note {
+  max-width: 830px;
+
+  margin: 28px auto 0;
+
+  color: #7b8798;
+
+  font-size: 0.76rem;
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+.staff-augmentation__dark-note {
+  max-width: 830px;
+
+  margin: 28px auto 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.76rem;
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+/* =========================================================
+   SAFEGUARD CARDS
+   ========================================================= */
+
+.staff-augmentation__safeguard {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 17px;
+}
+
+.staff-augmentation__safeguard > svg {
+  flex: 0 0 auto;
+
+  color: #26c385;
+}
+
+.staff-augmentation__safeguard h3 {
+  margin: 0;
+}
+
+.staff-augmentation__safeguard p {
+  margin-top: 8px;
+}
+
+/* =========================================================
+   STAFF AUGMENTATION PROCESS
+   ========================================================= */
+
+.staff-augmentation__process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.staff-augmentation__process-card {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+}
+
+.staff-augmentation__process-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  background: #168ed1;
+
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.staff-augmentation__process-card h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.staff-augmentation__process-card p {
+  margin: 10px 0 0;
+
+  color: #637084;
+
+  font-size: 0.8rem;
+  line-height: 1.67;
+}
+
+/* =========================================================
+   COMMERCIAL PLANNING / PRICING PLACEHOLDER
+   ========================================================= */
+
+.staff-augmentation__pricing-note {
+  padding: 0 0 clamp(64px, 8vw, 110px);
+
+  background: #ffffff;
+}
+
+.staff-augmentation__pricing-box {
+  padding: clamp(32px, 5vw, 50px);
+
+  text-align: center;
+
+  background: #f5f7fb;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+}
+
+.staff-augmentation__pricing-box .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+}
+
+.staff-augmentation__pricing-box h2 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.staff-augmentation__pricing-box p {
+  max-width: 650px;
+
+  margin: 15px auto 0;
+
+  color: #637084;
+
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .staff-augmentation__grid--four {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .staff-augmentation__grid--three {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .staff-augmentation__process-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .staff-augmentation__overview {
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .staff-augmentation__section {
+    padding: 62px 0;
+  }
+
+  .staff-augmentation__section-heading {
+    margin-bottom: 30px;
+
+    text-align: left;
+  }
+
+  .staff-augmentation__section-heading > p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .staff-augmentation__grid--two,
+  .staff-augmentation__grid--three,
+  .staff-augmentation__grid--four,
+  .staff-augmentation__process-grid,
+  .staff-augmentation__overview {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-augmentation__overview {
+    gap: 34px;
+  }
+
+  .staff-augmentation__card,
+  .staff-augmentation__dark-card,
+  .staff-augmentation__process-card {
+    padding: 23px;
+  }
+
+  .staff-augmentation__callout {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 24px;
+
+    padding: 26px;
+  }
+
+  .staff-augmentation__callout-link {
+    width: 100%;
+  }
+
+  .staff-augmentation__note,
+  .staff-augmentation__dark-note {
+    text-align: left;
+  }
+
+  .staff-augmentation__pricing-box {
+    text-align: left;
+  }
+
+  .staff-augmentation__pricing-box p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .staff-augmentation__section {
+    padding: 52px 0;
+  }
+
+  .staff-augmentation__section-heading h2,
+  .staff-augmentation__overview-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .staff-augmentation__card,
+  .staff-augmentation__dark-card,
+  .staff-augmentation__process-card {
+    padding: 20px;
+  }
+
+  .staff-augmentation__overview-point {
+    padding: 18px;
+  }
+
+  .staff-augmentation__callout {
+    padding: 22px;
+  }
+
+  .staff-augmentation__primary-link,
+  .staff-augmentation__callout-link {
+    width: 100%;
+  }
+}

@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
@@ -7,6 +6,7 @@ import CTASection from "../../components/CTASection";
 import NotFoundPage from "../../app/NotFoundPage";
 
 import ServiceOverview from "./ServiceOverview";
+import StaffAugmentationPage from "./StaffAugmentationPage";
 
 import { getServiceBySlug } from "./servicesData";
 
@@ -21,6 +21,26 @@ function ServiceDetailPage() {
     return <NotFoundPage />;
   }
 
+  /*
+   * Dedicated Staff Augmentation page
+   *
+   * We keep the existing route:
+   * /services/talent-augmentation-delivery-support
+   *
+   * This prevents broken links and keeps the
+   * current website architecture intact.
+   */
+  if (
+    serviceSlug ===
+    "talent-augmentation-delivery-support"
+  ) {
+    return <StaffAugmentationPage />;
+  }
+
+  /*
+   * All other service pages continue using
+   * the existing reusable service template.
+   */
   const { detail } = service;
 
   return (
@@ -42,7 +62,6 @@ function ServiceDetailPage() {
           label: "Book a Consultation",
           path: "/contact",
         }}
-        showImagePlaceholder
       />
 
       <ServiceOverview service={service} />
