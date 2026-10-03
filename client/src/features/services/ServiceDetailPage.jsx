@@ -9,6 +9,7 @@ import ServiceOverview from "./ServiceOverview";
 
 import BrandStrategyPage from "./BrandStrategyPage";
 import CreativeMediaPage from "./CreativeMediaPage";
+import AISoftwarePage from "./AISoftwarePage";
 import StaffAugmentationPage from "./StaffAugmentationPage";
 
 import { getServiceBySlug } from "./servicesData";
@@ -25,62 +26,32 @@ function ServiceDetailPage() {
   }
 
   /*
-   * =========================================
-   * DEDICATED BRAND STRATEGY PAGE
-   * =========================================
+   * Dedicated service pages
    *
-   * Existing route:
-   * /services/brand-strategy-digital-growth
+   * Existing routes remain unchanged.
    */
 
-  if (
-    serviceSlug ===
-    "brand-strategy-digital-growth"
-  ) {
-    return <BrandStrategyPage />;
+  switch (serviceSlug) {
+    case "brand-strategy-digital-growth":
+      return <BrandStrategyPage />;
+
+    case "creative-media-design-animation":
+      return <CreativeMediaPage />;
+
+    case "ai-software-digital-solutions":
+      return <AISoftwarePage />;
+
+    case "talent-augmentation-delivery-support":
+      return <StaffAugmentationPage />;
+
+    default:
+      break;
   }
 
   /*
-   * =========================================
-   * DEDICATED CREATIVE MEDIA PAGE
-   * =========================================
+   * Default service template
    *
-   * Existing route:
-   * /services/creative-media-design-animation
-   */
-
-  if (
-    serviceSlug ===
-    "creative-media-design-animation"
-  ) {
-    return <CreativeMediaPage />;
-  }
-
-  /*
-   * =========================================
-   * DEDICATED STAFF AUGMENTATION PAGE
-   * =========================================
-   *
-   * Existing route:
-   * /services/talent-augmentation-delivery-support
-   */
-
-  if (
-    serviceSlug ===
-    "talent-augmentation-delivery-support"
-  ) {
-    return <StaffAugmentationPage />;
-  }
-
-  /*
-   * =========================================
-   * DEFAULT SERVICE TEMPLATE
-   * =========================================
-   *
-   * These pages continue using the shared
-   * service-detail structure for now:
-   *
-   * - AI, Software & Digital Solutions
+   * Currently still used by:
    * - Data, Cybersecurity & Digital Governance
    */
 
