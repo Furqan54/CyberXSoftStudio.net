@@ -19,9 +19,6 @@ const staticMeta = {
       "Explore CyberX Soft services across brand growth, creative production, AI and software, data and cybersecurity, and specialist delivery support.",
   },
 
-  /*
-   * Dedicated Brand Strategy page
-   */
   "/services/brand-strategy-digital-growth": {
     title:
       "Brand Strategy and Digital Growth | CyberX Soft",
@@ -29,9 +26,6 @@ const staticMeta = {
       "Clarify your brand position, build demand, improve campaign performance, and connect digital marketing activity to business goals.",
   },
 
-  /*
-   * Dedicated Creative Media page
-   */
   "/services/creative-media-design-animation": {
     title:
       "Creative Media Design and Animation | CyberX Soft",
@@ -39,9 +33,13 @@ const staticMeta = {
       "Build coherent brand experiences through identity, campaign design, user experience, video, motion graphics, animation, and scalable content production.",
   },
 
-  /*
-   * Dedicated Staff Augmentation page
-   */
+  "/services/ai-software-digital-solutions": {
+    title:
+      "AI Software and Digital Solutions | CyberX Soft",
+    description:
+      "Design and build secure software, AI-enabled workflows, web and mobile applications, integrations, automation, and enterprise digital platforms.",
+  },
+
   "/services/talent-augmentation-delivery-support": {
     title:
       "IT Staff Augmentation and Dedicated Remote Teams | CyberX Soft",
@@ -85,10 +83,6 @@ function getPageMeta(pathname) {
     return staticPage;
   }
 
-  /*
-   * Fallback metadata for service pages
-   * that do not yet have dedicated SEO.
-   */
   if (pathname.startsWith("/services/")) {
     const slug = pathname.replace(
       "/services/",
@@ -102,7 +96,6 @@ function getPageMeta(pathname) {
     if (service) {
       return {
         title: `${service.name} | CyberX Soft`,
-
         description:
           service.detail?.heroDescription ||
           service.homeDescription,
@@ -110,9 +103,6 @@ function getPageMeta(pathname) {
     }
   }
 
-  /*
-   * Legal pages
-   */
   const legalSlug = pathname.replace("/", "");
 
   const legalPage = getLegalPage(legalSlug);
@@ -124,9 +114,6 @@ function getPageMeta(pathname) {
     };
   }
 
-  /*
-   * Not found
-   */
   return {
     title: "Page Not Found | CyberX Soft",
     description:
