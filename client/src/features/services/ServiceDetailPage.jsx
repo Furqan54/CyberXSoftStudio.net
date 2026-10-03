@@ -6,6 +6,9 @@ import CTASection from "../../components/CTASection";
 import NotFoundPage from "../../app/NotFoundPage";
 
 import ServiceOverview from "./ServiceOverview";
+
+import BrandStrategyPage from "./BrandStrategyPage";
+import CreativeMediaPage from "./CreativeMediaPage";
 import StaffAugmentationPage from "./StaffAugmentationPage";
 
 import { getServiceBySlug } from "./servicesData";
@@ -22,14 +25,46 @@ function ServiceDetailPage() {
   }
 
   /*
-   * Dedicated Staff Augmentation page
+   * =========================================
+   * DEDICATED BRAND STRATEGY PAGE
+   * =========================================
    *
-   * We keep the existing route:
-   * /services/talent-augmentation-delivery-support
-   *
-   * This prevents broken links and keeps the
-   * current website architecture intact.
+   * Existing route:
+   * /services/brand-strategy-digital-growth
    */
+
+  if (
+    serviceSlug ===
+    "brand-strategy-digital-growth"
+  ) {
+    return <BrandStrategyPage />;
+  }
+
+  /*
+   * =========================================
+   * DEDICATED CREATIVE MEDIA PAGE
+   * =========================================
+   *
+   * Existing route:
+   * /services/creative-media-design-animation
+   */
+
+  if (
+    serviceSlug ===
+    "creative-media-design-animation"
+  ) {
+    return <CreativeMediaPage />;
+  }
+
+  /*
+   * =========================================
+   * DEDICATED STAFF AUGMENTATION PAGE
+   * =========================================
+   *
+   * Existing route:
+   * /services/talent-augmentation-delivery-support
+   */
+
   if (
     serviceSlug ===
     "talent-augmentation-delivery-support"
@@ -38,9 +73,17 @@ function ServiceDetailPage() {
   }
 
   /*
-   * All other service pages continue using
-   * the existing reusable service template.
+   * =========================================
+   * DEFAULT SERVICE TEMPLATE
+   * =========================================
+   *
+   * These pages continue using the shared
+   * service-detail structure for now:
+   *
+   * - AI, Software & Digital Solutions
+   * - Data, Cybersecurity & Digital Governance
    */
+
   const { detail } = service;
 
   return (

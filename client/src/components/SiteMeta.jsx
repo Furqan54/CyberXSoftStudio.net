@@ -19,6 +19,36 @@ const staticMeta = {
       "Explore CyberX Soft services across brand growth, creative production, AI and software, data and cybersecurity, and specialist delivery support.",
   },
 
+  /*
+   * Dedicated Brand Strategy page
+   */
+  "/services/brand-strategy-digital-growth": {
+    title:
+      "Brand Strategy and Digital Growth | CyberX Soft",
+    description:
+      "Clarify your brand position, build demand, improve campaign performance, and connect digital marketing activity to business goals.",
+  },
+
+  /*
+   * Dedicated Creative Media page
+   */
+  "/services/creative-media-design-animation": {
+    title:
+      "Creative Media Design and Animation | CyberX Soft",
+    description:
+      "Build coherent brand experiences through identity, campaign design, user experience, video, motion graphics, animation, and scalable content production.",
+  },
+
+  /*
+   * Dedicated Staff Augmentation page
+   */
+  "/services/talent-augmentation-delivery-support": {
+    title:
+      "IT Staff Augmentation and Dedicated Remote Teams | CyberX Soft",
+    description:
+      "Add technology, creative, data, cybersecurity, quality, and project specialists through dedicated resources, remote teams, managed pods, and white-label offshore delivery.",
+  },
+
   "/case-studies": {
     title:
       "Case Studies | CyberX Soft",
@@ -46,13 +76,6 @@ const staticMeta = {
     description:
       "Contact CyberX Soft to discuss technology, software, AI, cybersecurity, creative, digital growth, or specialist delivery requirements.",
   },
-
-  "/services/talent-augmentation-delivery-support": {
-    title:
-      "IT Staff Augmentation and Dedicated Remote Teams | CyberX Soft",
-    description:
-      "Add technology, creative, data, cybersecurity, quality, and project specialists through dedicated resources, remote teams, managed pods, and white-label offshore delivery.",
-  },
 };
 
 function getPageMeta(pathname) {
@@ -62,6 +85,10 @@ function getPageMeta(pathname) {
     return staticPage;
   }
 
+  /*
+   * Fallback metadata for service pages
+   * that do not yet have dedicated SEO.
+   */
   if (pathname.startsWith("/services/")) {
     const slug = pathname.replace(
       "/services/",
@@ -83,6 +110,9 @@ function getPageMeta(pathname) {
     }
   }
 
+  /*
+   * Legal pages
+   */
   const legalSlug = pathname.replace("/", "");
 
   const legalPage = getLegalPage(legalSlug);
@@ -94,6 +124,9 @@ function getPageMeta(pathname) {
     };
   }
 
+  /*
+   * Not found
+   */
   return {
     title: "Page Not Found | CyberX Soft",
     description:

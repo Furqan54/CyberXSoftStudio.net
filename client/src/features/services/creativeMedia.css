@@ -1,0 +1,745 @@
+/* =========================================================
+   CYBERX SOFT
+   CREATIVE MEDIA, DESIGN & ANIMATION
+   Dedicated service-page styles
+   ========================================================= */
+
+.creative-media {
+  width: 100%;
+  overflow-x: hidden;
+
+  color: var(--color-text, #102748);
+  background: var(--color-white, #ffffff);
+}
+
+/* =========================================================
+   GENERAL SECTION LAYOUT
+   ========================================================= */
+
+.creative-media__section {
+  padding: clamp(64px, 8vw, 110px) 0;
+}
+
+.creative-media__section--soft {
+  background: var(--color-background-soft, #f5f7fb);
+}
+
+.creative-media__section--dark {
+  background: #102f60;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.creative-media__section-heading {
+  max-width: 780px;
+
+  margin: 0 auto 46px;
+
+  text-align: center;
+}
+
+.creative-media__section-heading .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+}
+
+.creative-media__section-heading h2 {
+  margin: 0;
+
+  color: var(--color-text, #102748);
+
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+
+.creative-media__section-heading > p {
+  max-width: 690px;
+
+  margin: 17px auto 0;
+
+  color: var(--color-text-secondary, #637084);
+
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   REUSABLE GRID
+   ========================================================= */
+
+.creative-media__grid {
+  display: grid;
+
+  gap: 20px;
+}
+
+.creative-media__grid--two {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.creative-media__grid--three {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+/* =========================================================
+   GENERAL CARDS
+   ========================================================= */
+
+.creative-media__card {
+  min-width: 0;
+  height: 100%;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.creative-media__card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d2dce8;
+
+  box-shadow:
+    0 14px 34px
+    rgba(11, 38, 75, 0.08);
+}
+
+.creative-media__card h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.creative-media__card > p {
+  margin: 12px 0 0;
+
+  color: #637084;
+
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+/* =========================================================
+   NUMBER LABEL
+   ========================================================= */
+
+.creative-media__number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 34px;
+  min-height: 29px;
+
+  margin-bottom: 20px;
+  padding: 5px 8px;
+
+  color: #179f6b;
+
+  background: #edf9f4;
+
+  border-radius: 6px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   SERVICE OVERVIEW
+   ========================================================= */
+
+.creative-media__overview {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+
+  gap: clamp(42px, 6vw, 82px);
+}
+
+.creative-media__overview-content .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+}
+
+.creative-media__overview-content h2 {
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #102748;
+
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+
+.creative-media__overview-content > p {
+  max-width: 620px;
+
+  margin: 18px 0 0;
+
+  color: #637084;
+
+  font-size: 0.91rem;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   PRIMARY INLINE CTA
+   ========================================================= */
+
+.creative-media__primary-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 44px;
+
+  margin-top: 25px;
+  padding: 11px 17px;
+
+  color: #ffffff;
+
+  background: #102f60;
+
+  border: 1px solid #102f60;
+  border-radius: 5px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.creative-media__primary-link:hover {
+  transform: translateY(-1px);
+
+  background: #16437c;
+}
+
+.creative-media__primary-link:focus-visible {
+  outline: 3px solid rgba(38, 195, 133, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   OUTCOMES
+   ========================================================= */
+
+.creative-media__outcomes {
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 11px;
+
+  box-shadow:
+    0 10px 28px
+    rgba(11, 38, 75, 0.05);
+}
+
+.creative-media__outcomes > h3 {
+  margin: 0 0 20px;
+
+  color: #102748;
+
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.creative-media__outcomes-list {
+  display: grid;
+
+  gap: 14px;
+}
+
+.creative-media__outcome {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.creative-media__outcome:first-child {
+  padding-top: 0;
+
+  border-top: 0;
+}
+
+.creative-media__outcome > svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #26c385;
+}
+
+.creative-media__outcome h4 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.creative-media__outcome p {
+  margin: 6px 0 0;
+
+  color: #637084;
+
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   AUDIENCE GRID
+   ========================================================= */
+
+.creative-media__audience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.creative-media__audience-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 18px 20px;
+
+  color: #102748;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 8px;
+
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.creative-media__audience-card > svg {
+  flex: 0 0 auto;
+
+  color: #26c385;
+}
+
+/* =========================================================
+   CORE SERVICE CARDS
+   ========================================================= */
+
+.creative-media__service-card {
+  min-height: 210px;
+}
+
+/* =========================================================
+   DARK CAPABILITIES SECTION
+   ========================================================= */
+
+.creative-media__capabilities-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
+
+  align-items: start;
+
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.creative-media__capabilities-copy .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+}
+
+.creative-media__capabilities-copy h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+}
+
+.creative-media__capabilities-copy p {
+  max-width: 520px;
+
+  margin: 17px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.creative-media__capabilities-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.creative-media__capability-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 17px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.creative-media__capability-item > svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #26c385;
+}
+
+/* =========================================================
+   ENGAGEMENT CALLOUT
+   ========================================================= */
+
+.creative-media__callout {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  margin-top: 30px;
+  padding: 34px;
+
+  background: #102f60;
+
+  border-radius: 10px;
+}
+
+.creative-media__callout > div {
+  max-width: 690px;
+}
+
+.creative-media__callout .eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+}
+
+.creative-media__callout h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.creative-media__callout p {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+.creative-media__callout-link {
+  display: inline-flex;
+
+  flex: 0 0 auto;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 44px;
+
+  padding: 11px 17px;
+
+  color: #102f60;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.creative-media__callout-link:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 24px
+    rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   DELIVERY PROCESS
+   ========================================================= */
+
+.creative-media__process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.creative-media__process-card {
+  min-width: 0;
+
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 9px;
+}
+
+.creative-media__process-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  background: #168ed1;
+
+  border-radius: 50%;
+
+  font-size: 0.69rem;
+  font-weight: 700;
+}
+
+.creative-media__process-card h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.creative-media__process-card p {
+  margin: 10px 0 0;
+
+  color: #637084;
+
+  font-size: 0.77rem;
+  line-height: 1.64;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .creative-media__audience-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .creative-media__grid--three {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .creative-media__process-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .creative-media__capabilities-layout {
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .creative-media__section {
+    padding: 62px 0;
+  }
+
+  .creative-media__section-heading {
+    margin-bottom: 30px;
+
+    text-align: left;
+  }
+
+  .creative-media__section-heading > p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .creative-media__overview,
+  .creative-media__capabilities-layout,
+  .creative-media__grid--two,
+  .creative-media__grid--three,
+  .creative-media__audience-grid,
+  .creative-media__capabilities-grid,
+  .creative-media__process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .creative-media__overview {
+    gap: 34px;
+  }
+
+  .creative-media__card,
+  .creative-media__process-card {
+    padding: 23px;
+  }
+
+  .creative-media__outcomes {
+    padding: 24px;
+  }
+
+  .creative-media__callout {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 24px;
+
+    padding: 26px;
+  }
+
+  .creative-media__callout-link {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .creative-media__section {
+    padding: 52px 0;
+  }
+
+  .creative-media__section-heading h2,
+  .creative-media__overview-content h2,
+  .creative-media__capabilities-copy h2 {
+    font-size: 1.75rem;
+  }
+
+  .creative-media__card,
+  .creative-media__process-card {
+    padding: 20px;
+  }
+
+  .creative-media__audience-card {
+    padding: 16px;
+  }
+
+  .creative-media__outcomes {
+    padding: 20px;
+  }
+
+  .creative-media__callout {
+    padding: 22px;
+  }
+
+  .creative-media__primary-link,
+  .creative-media__callout-link {
+    width: 100%;
+  }
+}
