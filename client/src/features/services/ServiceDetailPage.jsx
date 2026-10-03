@@ -10,6 +10,7 @@ import ServiceOverview from "./ServiceOverview";
 import BrandStrategyPage from "./BrandStrategyPage";
 import CreativeMediaPage from "./CreativeMediaPage";
 import AISoftwarePage from "./AISoftwarePage";
+import DataCybersecurityPage from "./DataCybersecurityPage";
 import StaffAugmentationPage from "./StaffAugmentationPage";
 
 import { getServiceBySlug } from "./servicesData";
@@ -41,6 +42,9 @@ function ServiceDetailPage() {
     case "ai-software-digital-solutions":
       return <AISoftwarePage />;
 
+    case "data-cybersecurity-digital-governance":
+      return <DataCybersecurityPage />;
+
     case "talent-augmentation-delivery-support":
       return <StaffAugmentationPage />;
 
@@ -49,10 +53,11 @@ function ServiceDetailPage() {
   }
 
   /*
-   * Default service template
+   * Generic fallback template
    *
-   * Currently still used by:
-   * - Data, Cybersecurity & Digital Governance
+   * Kept in place for future services
+   * or routes that have not yet been
+   * moved to dedicated page components.
    */
 
   const { detail } = service;
