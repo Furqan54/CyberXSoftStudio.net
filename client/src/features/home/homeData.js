@@ -74,6 +74,29 @@ export const audienceNeeds = [
   },
 ];
 
+export const staffAugmentationHighlights = [
+  {
+    id: 1,
+    text:
+      "Start with one resource and add complementary skills as the workload becomes clearer.",
+  },
+  {
+    id: 2,
+    text:
+      "Choose monthly, hourly, milestone-based, project, or partnership structures according to the requirement.",
+  },
+  {
+    id: 3,
+    text:
+      "Agree working-hour overlap for the United Kingdom, North America, the Gulf, or another operating market.",
+  },
+  {
+    id: 4,
+    text:
+      "Define confidentiality, intellectual property, access, performance review, continuity, and replacement terms before onboarding.",
+  },
+];
+
 export const whyChooseUsItems = [
   {
     id: 1,

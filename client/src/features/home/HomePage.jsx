@@ -4,6 +4,7 @@ import HomeHero from "./HomeHero";
 import ClientsPartners from "./ClientsPartners";
 import HomeServices from "./HomeServices";
 import AudienceNeeds from "./AudienceNeeds";
+import StaffAugmentationHighlight from "./StaffAugmentationHighlight";
 import WhyChooseUs from "./WhyChooseUs";
 
 import { homeFaqs } from "./homeData";
@@ -20,6 +21,8 @@ function HomePage() {
       <HomeServices />
 
       <AudienceNeeds />
+
+      <StaffAugmentationHighlight />
 
       <WhyChooseUs />
 
