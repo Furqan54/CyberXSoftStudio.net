@@ -24,32 +24,51 @@ function HomeServices() {
       <div className="container">
         <div className="home-services__header">
           <div className="home-services__heading">
-            <span className="eyebrow">Our Services</span>
+            <span className="eyebrow">
+              Our Services
+            </span>
 
             <h2 className="section-title">
-              Complete Digital Solutions for the Modern Enterprise
+              Integrated Capabilities for Digital Growth and Delivery
             </h2>
 
             <p className="section-description">
-              Five integrated service pillars designed to cover every aspect of
-              your digital transformation journey.
+              Choose a focused service or combine capabilities into a coordinated
+              program. Each engagement is shaped around your priorities, operating
+              environment, timeline, and internal capacity.
             </p>
           </div>
 
-          <NavLink to="/services" className="home-services__view-all">
+          <NavLink
+            to="/services"
+            className="home-services__view-all"
+          >
             View All Services
-            <ArrowRight size={16} aria-hidden="true" />
+            <ArrowRight
+              size={16}
+              aria-hidden="true"
+            />
           </NavLink>
         </div>
 
         <div className="home-services__grid">
           {services.map((service) => {
-            const Icon = serviceIcons[service.icon];
+            const Icon =
+              serviceIcons[service.icon];
 
             return (
-              <article className="home-service-card" key={service.id}>
+              <article
+                className="home-service-card"
+                key={service.id}
+              >
                 <div className="home-service-card__icon">
-                  {Icon && <Icon size={20} strokeWidth={1.8} />}
+                  {Icon && (
+                    <Icon
+                      size={20}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  )}
                 </div>
 
                 <h3 className="home-service-card__title">
@@ -64,8 +83,11 @@ function HomeServices() {
                   to={`/services/${service.slug}`}
                   className="home-service-card__link"
                 >
-                  Learn More
-                  <ArrowRight size={14} aria-hidden="true" />
+                  Explore This Service
+                  <ArrowRight
+                    size={14}
+                    aria-hidden="true"
+                  />
                 </NavLink>
               </article>
             );
