@@ -1,305 +1,548 @@
 export const legalPages = {
+  /* =========================================================
+     PRIVACY POLICY
+  ========================================================= */
+
   "privacy-policy": {
     eyebrow: "Legal",
+
     title: "Privacy Policy",
-    updated: "August 1, 2026",
+
+    updated: "Pending final legal review",
 
     intro:
-      "Learn how CyberX Soft collects, uses, stores, and protects personal information.",
+      "Read how CyberX Soft collects, uses, protects, retains, and shares personal information submitted through this website and its business interactions.",
 
     sections: [
       {
-        title: "Introduction",
+        title: "Important Notice",
+
         paragraphs: [
-          'CyberX Soft FZ LLC ("CXS", "we", "our", or "us") is committed to protecting the privacy of individuals who interact with our website, services, and communications. This Privacy Policy describes how we collect, use, store, and share personal information.',
+          "This Privacy Policy is a practical website baseline and remains subject to final legal review. The website operator's legal name, registration details, jurisdiction, retention schedule, data-processing arrangements, analytics tools, advertising tools, and cross-border processing arrangements must be confirmed before final publication.",
+        ],
+      },
+
+      {
+        title: "Who Operates This Website",
+
+        paragraphs: [
+          "The full legal name, registered address, registration details, tax information, and relationship between the website operator and the CyberX Soft brand are pending confirmation.",
+          "Privacy enquiries may currently be sent to info@cyberxsoft.net.",
         ],
       },
 
       {
         title: "Information We Collect",
+
         paragraphs: [
-          "We collect information you provide directly, information collected automatically, and information from third parties:",
+          "We may collect information you provide directly when you contact us, submit an enquiry, communicate with our team, or interact with our services.",
         ],
 
         bullets: [
           {
             label: "Contact information",
-            text: "name, work email, phone number, company name",
+
+            text:
+              "such as your name, work email address, phone number, organization, and role",
           },
+
           {
-            label: "Usage data",
-            text: "pages visited, time on site, browser and device type, IP address",
+            label: "Enquiry information",
+
+            text:
+              "such as your objectives, requirements, timelines, project details, and other information you choose to provide",
           },
+
           {
-            label: "Communication data",
-            text: "emails, messages, and enquiry content",
+            label: "Correspondence",
+
+            text:
+              "such as emails, messages, documents, and other communications with CyberX Soft",
           },
+
           {
-            text: "Cookies and tracking technologies as described in our Cookie Policy",
+            label: "Technical information",
+
+            text:
+              "such as IP address, browser type, device information, referring page, pages visited, and similar technical information where collected",
+          },
+
+          {
+            label: "Cookie or analytics information",
+
+            text:
+              "where relevant technologies are deployed and the required notice or consent has been provided",
           },
         ],
       },
 
       {
-        title: "How We Use Your Information",
+        title: "How We Use Information",
+
         paragraphs: [
-          "We use personal information to:",
+          "We may use personal information for legitimate business and operational purposes, including:",
         ],
 
         bullets: [
           {
-            text: "Respond to enquiries and provide our services",
+            text:
+              "Responding to enquiries and assessing requirements",
           },
+
           {
-            text: "Send marketing communications (with consent)",
+            text:
+              "Preparing proposals, scopes, estimates, and engagement recommendations",
           },
+
           {
-            text: "Improve our website and service quality",
+            text:
+              "Delivering and supporting agreed services",
           },
+
           {
-            text: "Comply with legal obligations",
+            text:
+              "Managing client, supplier, partner, and prospective-client relationships",
           },
+
           {
-            text: "Prevent fraud and protect security",
+            text:
+              "Protecting our website, systems, communications, and business operations",
           },
-        ],
-      },
 
-      {
-        title: "Legal Basis for Processing",
-        paragraphs: [
-          "Where applicable under GDPR and similar regulations, we process personal data on the basis of your consent, the performance of a contract, our legitimate interests, or compliance with a legal obligation.",
-        ],
-      },
-
-      {
-        title: "Data Retention",
-        paragraphs: [
-          "We retain personal data for as long as necessary to fulfil the purposes for which it was collected, including legal, accounting, or reporting requirements. Contact records are typically retained for 2 years.",
-        ],
-      },
-
-      {
-        title: "Data Sharing",
-        paragraphs: [
-          "We do not sell personal information. We may share data with trusted service providers, legal authorities when required, and professional advisors. All processors are contractually bound to protect your data.",
-        ],
-      },
-
-      {
-        title: "Your Rights",
-        paragraphs: [
-          "Depending on your jurisdiction, you may have the right to access, correct, delete, restrict, or object to our processing of your personal data. To exercise these rights, contact privacy@cyberxsoft.com.",
-        ],
-      },
-
-      {
-        title: "Contact",
-        paragraphs: [
-          "For privacy-related questions, contact our Data Protection Officer at privacy@cyberxsoft.com or by post to CyberX Soft, Level 14, Boulevard Plaza Tower 1, Downtown Dubai, UAE.",
-        ],
-      },
-    ],
-  },
-
-  "terms-and-conditions": {
-    eyebrow: "Legal",
-    title: "Terms & Conditions",
-    updated: "August 1, 2026",
-
-    intro:
-      "Review the terms governing access to and use of the CyberX Soft website and services.",
-
-    sections: [
-      {
-        title: "Acceptance of Terms",
-        paragraphs: [
-          "By accessing or using the CyberX Soft website or services, you agree to be bound by these Terms & Conditions. If you do not agree, please do not use our website or services.",
-        ],
-      },
-
-      {
-        title: "Services",
-        paragraphs: [
-          "CyberX Soft provides technology consulting, software development, cybersecurity, creative, and talent services as described on this website. Specific project terms are governed by separate service agreements and statements of work.",
-        ],
-      },
-
-      {
-        title: "Intellectual Property",
-        paragraphs: [
-          "All content on this website — including text, graphics, logos, and software — is the property of CyberX Soft or its content suppliers and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works without prior written permission.",
-        ],
-      },
-
-      {
-        title: "Limitation of Liability",
-        paragraphs: [
-          "To the maximum extent permitted by law, CyberX Soft shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our website or services. Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim.",
-        ],
-      },
-
-      {
-        title: "Confidentiality",
-        paragraphs: [
-          "Any information shared with CyberX Soft during the sales process or project engagement is treated as confidential. We will not disclose your confidential information to third parties without your consent, except as required by law.",
-        ],
-      },
-
-      {
-        title: "Governing Law",
-        paragraphs: [
-          "These terms are governed by the laws of the Dubai International Financial Centre (DIFC). Any disputes shall be subject to the exclusive jurisdiction of the DIFC Courts.",
-        ],
-      },
-
-      {
-        title: "Changes to Terms",
-        paragraphs: [
-          "We reserve the right to update these terms at any time. Continued use of our website after changes constitutes acceptance of the revised terms. We will notify existing clients of material changes.",
-        ],
-      },
-
-      {
-        title: "Contact",
-        paragraphs: [
-          "For questions about these terms, contact legal@cyberxsoft.com.",
-        ],
-      },
-    ],
-  },
-
-  "cookie-policy": {
-    eyebrow: "Legal",
-    title: "Cookie Policy",
-    updated: "August 1, 2026",
-
-    intro:
-      "Learn how CyberX Soft uses cookies and similar technologies across our website.",
-
-    sections: [
-      {
-        title: "What Are Cookies?",
-        paragraphs: [
-          "Cookies are small text files placed on your device when you visit a website. They allow the website to remember your preferences and improve your experience over time.",
-        ],
-      },
-
-      {
-        title: "Cookies We Use",
-        paragraphs: [
-          "We use the following categories of cookies:",
-        ],
-
-        bullets: [
           {
-            label: "Strictly Necessary",
-            text: "Essential for the website to function. Cannot be disabled.",
+            text:
+              "Maintaining appropriate business records",
           },
+
           {
-            label: "Analytics",
-            text: "Help us understand how visitors interact with our website (Google Analytics 4).",
+            text:
+              "Meeting legal, regulatory, contractual, or security obligations where applicable",
           },
+
           {
-            label: "Marketing",
-            text: "Used to deliver relevant advertising and track campaign performance (Google Ads, LinkedIn).",
-          },
-          {
-            label: "Preference",
-            text: "Remember your settings and preferences for a better experience.",
+            text:
+              "Sending business communications where permitted",
           },
         ],
       },
 
       {
-        title: "Third-Party Cookies",
+        title: "Legal Basis and Consent",
+
         paragraphs: [
-          "Our website may include cookies from trusted third parties including Google, LinkedIn, HubSpot, and Hotjar. These parties have their own privacy policies governing the use of those cookies.",
+          "Where applicable, personal information may be processed to take requested steps, perform a contract, meet legal obligations, protect legitimate business or security interests, or act on consent where consent is required.",
+          "The applicable legal basis depends on the information involved, the relationship with the individual, and the relevant jurisdiction.",
         ],
       },
 
       {
-        title: "Managing Cookies",
+        title: "How We Share Information",
+
         paragraphs: [
-          "You can control and delete cookies through your browser settings. You can also opt out of specific analytics and marketing cookies using our cookie preference center (accessible via the cookie banner). Note that disabling certain cookies may affect website functionality.",
+          "We may share information with authorized team members, professional advisers, hosting or cloud providers, communication services, security providers, delivery partners, and other service providers where reasonably necessary for their role.",
+          "CyberX Soft does not sell personal information. Service providers should receive only the information needed for their responsibilities and should protect that information appropriately.",
         ],
       },
 
       {
-        title: "Cookie Duration",
+        title: "International Processing",
+
         paragraphs: [
-          "Session cookies expire when you close your browser. Persistent cookies remain on your device for the period specified in the cookie (typically 30 days to 2 years depending on purpose).",
+          "Some service providers, systems, or project teams may process information in another country. Where applicable law requires safeguards for cross-border processing, appropriate contractual, organizational, or legal measures should be used.",
         ],
       },
 
       {
-        title: "Updates",
+        title: "Retention",
+
         paragraphs: [
-          "This Cookie Policy may be updated periodically. We will display a notice on our website when significant changes are made.",
+          "Personal information should be retained only for as long as reasonably required for the purpose for which it was collected, contractual and support requirements, dispute management, security, record keeping, and applicable legal obligations.",
+          "The final retention schedule, including the retention period for website enquiries, is pending confirmation and should be documented before final publication of this policy.",
         ],
       },
 
       {
-        title: "Contact",
+        title: "Security",
+
         paragraphs: [
-          "For questions about our cookie practices, contact privacy@cyberxsoft.com.",
-        ],
-      },
-    ],
-  },
-
-  disclaimer: {
-    eyebrow: "Legal",
-    title: "Disclaimer",
-    updated: "August 1, 2026",
-
-    intro:
-      "Important information regarding the use of content and materials available on the CyberX Soft website.",
-
-    sections: [
-      {
-        title: "Website Information",
-        paragraphs: [
-          "The information provided on this website is for general informational purposes only. While CyberX Soft endeavors to keep the information up to date and accurate, we make no representations or warranties of any kind about the completeness, accuracy, reliability, or availability of the information.",
+          "Reasonable administrative, technical, and organizational measures should be used to protect information against unauthorized access, loss, misuse, alteration, or disclosure.",
+          "No internet transmission, system, or storage method can be guaranteed to be completely secure.",
         ],
       },
 
       {
-        title: "Professional Advice",
+        title: "Your Choices and Rights",
+
         paragraphs: [
-          "The content on this website does not constitute professional advice of any kind, including legal, financial, technical, or security advice. You should seek appropriate professional guidance before making decisions based on information from this website.",
+          "Depending on applicable law, you may have rights relating to access, correction, deletion, restriction, objection, portability, or withdrawal of consent.",
+          "You may also opt out of marketing communications where applicable. Identity verification or lawful record-retention requirements may apply when responding to a request.",
+        ],
+      },
+
+      {
+        title: "Cookies and Analytics",
+
+        paragraphs: [
+          "The website may use essential cookies and, where deployed with the required notice or consent, analytics, marketing, or similar technologies.",
+          "The actual providers, purposes, cookie names, durations, and consent requirements must be confirmed through a technical review before final publication. See the Cookie Policy for additional information.",
         ],
       },
 
       {
         title: "Third-Party Links",
+
         paragraphs: [
-          "Our website may contain links to third-party websites. These links are provided for convenience only. CyberX Soft has no control over the content of these sites and accepts no responsibility for them or for any loss or damage that may arise from your use of them.",
+          "The website may link to third-party websites or services. Their privacy practices are governed by their own policies, and CyberX Soft is not responsible for their content or data-handling practices.",
         ],
       },
 
       {
-        title: "Case Studies and Results",
-        paragraphs: [
-          "Case studies and results presented on this website reflect specific client engagements under specific conditions. Past performance does not guarantee similar results for future engagements. Actual outcomes depend on many factors unique to each organization.",
-        ],
-      },
+        title: "Changes to This Policy",
 
-      {
-        title: "Availability",
         paragraphs: [
-          "CyberX Soft does not warrant that the website will be available continuously or that it will be free from errors or viruses. We reserve the right to modify or discontinue the website at any time without notice.",
+          "This policy may be updated as our website, services, legal obligations, or information-handling practices change. The effective date should be updated when a legally reviewed version is published.",
         ],
       },
 
       {
         title: "Contact",
+
         paragraphs: [
-          "If you have questions about this disclaimer, please contact us at legal@cyberxsoft.com.",
+          "For privacy questions or requests, contact info@cyberxsoft.net. The verified legal address of the website operator should be added after the legal operator and registration details are confirmed.",
+        ],
+      },
+    ],
+  },
+
+  /* =========================================================
+     TERMS AND CONDITIONS
+  ========================================================= */
+
+  "terms-and-conditions": {
+    eyebrow: "Legal",
+
+    title: "Terms & Conditions",
+
+    updated: "Pending final legal review",
+
+    intro:
+      "Review the terms governing use of the CyberX Soft website, its content, enquiries, links, intellectual property, and limitations of liability.",
+
+    sections: [
+      {
+        title: "Important Notice",
+
+        paragraphs: [
+          "These Terms & Conditions are a practical website baseline and remain subject to legal review. The website operator's legal identity, registered address, jurisdiction, governing law, dispute process, and other legal details must be confirmed before final publication.",
+        ],
+      },
+
+      {
+        title: "Use of This Website",
+
+        paragraphs: [
+          "These terms govern use of the CyberX Soft website. By using the website, you agree to these terms. If you do not agree, please do not use the website.",
+          "Separate written agreements govern paid services, projects, support, licensing, confidentiality, intellectual property, deliverables, pricing, and other commercial arrangements.",
+        ],
+      },
+
+      {
+        title: "Website Operator",
+
+        paragraphs: [
+          "The website operator's full legal name, registered address, registration details, tax information, and relationship to the CyberX Soft brand are pending confirmation and should be inserted following legal review.",
+        ],
+      },
+
+      {
+        title: "Permitted Use",
+
+        paragraphs: [
+          "You may use this website for lawful business and informational purposes.",
+          "You must not interfere with the website's operation, attempt unauthorized access, introduce malicious code, unlawfully scrape or reproduce content, misrepresent your identity, or use the website to infringe the rights of another party.",
+        ],
+      },
+
+      {
+        title: "Information and Enquiries",
+
+        paragraphs: [
+          "Website content is provided for general information and does not create a client, advisory, fiduciary, employment, partnership, or supplier relationship.",
+          "An enquiry, consultation, estimate, proposal, or discussion does not bind either party unless an appropriately authorized written agreement is entered into.",
+        ],
+      },
+
+      {
+        title: "Services and Proposals",
+
+        paragraphs: [
+          "Service descriptions on this website are indicative and may change.",
+          "Scope, assumptions, pricing, taxes, expenses, milestones, acceptance criteria, intellectual property, warranties, support, confidentiality, data protection, and liability should be agreed separately for each engagement.",
+        ],
+      },
+
+      {
+        title: "Intellectual Property",
+
+        paragraphs: [
+          "Website text, graphics, interfaces, designs, media, brand elements, and other materials may be owned by or licensed to the website operator or other relevant rights holders unless stated otherwise.",
+          "Website content may be viewed for reasonable internal evaluation but should not be republished, modified, sold, or commercially exploited without appropriate permission.",
+        ],
+      },
+
+      {
+        title: "Third-Party Names and Materials",
+
+        paragraphs: [
+          "Client, partner, platform, product, and technology names belong to their respective owners.",
+          "Their appearance on the website does not imply endorsement or a broader commercial relationship beyond what is specifically described.",
+        ],
+      },
+
+      {
+        title: "Website Availability",
+
+        paragraphs: [
+          "We aim to keep the website accurate and available but do not guarantee uninterrupted access, error-free operation, or that every item will always remain current.",
+          "Website content or functionality may be updated, suspended, or removed where reasonably required.",
+        ],
+      },
+
+      {
+        title: "No Professional or Security Guarantee",
+
+        paragraphs: [
+          "Website content is not legal, financial, regulatory, investment, or formal cybersecurity advice.",
+          "Security-related information describes general practices and does not guarantee that any system will remain free from incidents, vulnerabilities, or other risks.",
+        ],
+      },
+
+      {
+        title: "Limitation of Liability",
+
+        paragraphs: [
+          "To the extent permitted by applicable law, the website operator should not be responsible for indirect, incidental, consequential, or special loss arising from use of, inability to use, or reliance on this website.",
+          "The final limitation-of-liability wording must be reviewed against the applicable governing law before publication.",
+        ],
+      },
+
+      {
+        title: "External Links",
+
+        paragraphs: [
+          "Links to third-party websites may be provided for convenience. CyberX Soft does not control their content, availability, security, or privacy practices unless explicitly stated.",
+        ],
+      },
+
+      {
+        title: "Changes",
+
+        paragraphs: [
+          "These terms may be updated from time to time. The effective date should be updated when a legally reviewed version is published.",
+        ],
+      },
+
+      {
+        title: "Governing Law and Disputes",
+
+        paragraphs: [
+          "The governing law, courts, and any required dispute-resolution process remain pending legal confirmation and must be added before these Terms & Conditions are finalized.",
+        ],
+      },
+
+      {
+        title: "Contact",
+
+        paragraphs: [
+          "Questions about these terms may be sent to info@cyberxsoft.net. The verified legal address of the website operator should be added after the operator details are confirmed.",
+        ],
+      },
+    ],
+  },
+
+  /* =========================================================
+     COOKIE POLICY
+  ========================================================= */
+
+  "cookie-policy": {
+    eyebrow: "Legal",
+
+    title: "Cookie Policy",
+
+    updated: "Pending technical and legal review",
+
+    intro:
+      "Learn what cookies and similar technologies the CyberX Soft website uses, why they are used, and how visitors can manage their choices.",
+
+    sections: [
+      {
+        title: "Important Notice",
+
+        paragraphs: [
+          "The final Cookie Policy must match the technologies actually deployed on the website.",
+          "A technical cookie scan and review of the website's consent platform, analytics tools, advertising tools, embedded media, and third-party services should be completed before final publication.",
+        ],
+      },
+
+      {
+        title: "What Cookies Are",
+
+        paragraphs: [
+          "Cookies are small files stored on a device when a website is visited.",
+          "Similar technologies may use local storage, pixels, software development kits, or identifiers to remember choices, operate features, measure use, or support communications.",
+        ],
+      },
+
+      {
+        title: "Essential Technologies",
+
+        paragraphs: [
+          "Essential cookies or similar technologies may support functions such as security, network management, form operation, session continuity, and consent choices where those functions are deployed.",
+        ],
+      },
+
+      {
+        title: "Analytics Technologies",
+
+        paragraphs: [
+          "If analytics tools are deployed, and where required notice or consent has been obtained, they may help us understand visits, page use, traffic sources, device types, and website performance.",
+          "The actual analytics providers, cookie names, purposes, and durations are pending technical confirmation.",
+        ],
+      },
+
+      {
+        title: "Marketing Technologies",
+
+        paragraphs: [
+          "Marketing or advertising technologies should only be described here if they are actually deployed on the website.",
+          "Where used, appropriate notice, consent controls, provider information, purposes, and durations should be documented before publication.",
+        ],
+      },
+
+      {
+        title: "Embedded and Third-Party Content",
+
+        paragraphs: [
+          "Maps, videos, social content, chat services, scheduling tools, or other embedded features may use third-party technologies.",
+          "Only services actually deployed on the website should be listed in the final policy.",
+        ],
+      },
+
+      {
+        title: "Managing Choices",
+
+        paragraphs: [
+          "Where the website provides a cookie-preference control, visitors can use it to manage available choices.",
+          "Visitors can also manage cookies through browser settings, although blocking some technologies may affect website functionality.",
+        ],
+      },
+
+      {
+        title: "Cookie Register",
+
+        paragraphs: [
+          "Before final publication, a current technical scan should be completed and a cookie register prepared containing the technology or cookie name, provider, purpose, category, and duration.",
+        ],
+      },
+
+      {
+        title: "Updates and Contact",
+
+        paragraphs: [
+          "This policy may be updated when the website or the technologies it uses change.",
+          "Questions about website cookie practices may be sent to info@cyberxsoft.net.",
+        ],
+      },
+    ],
+  },
+
+  /* =========================================================
+     DISCLAIMER
+  ========================================================= */
+
+  disclaimer: {
+    eyebrow: "Legal",
+
+    title: "Disclaimer",
+
+    updated: "Pending final legal review",
+
+    intro:
+      "Read important limitations concerning the information, examples, results, links, and technology content published on the CyberX Soft website.",
+
+    sections: [
+      {
+        title: "General Information",
+
+        paragraphs: [
+          "Content on this website is provided for general business and informational purposes.",
+          "It does not constitute legal, financial, regulatory, investment, or other professional advice.",
+        ],
+      },
+
+      {
+        title: "No Guaranteed Outcome",
+
+        paragraphs: [
+          "Examples, approaches, methods, technologies, and potential benefits described on this website do not guarantee a particular result.",
+          "Outcomes depend on factors including scope, data, users, internal capability, implementation, market conditions, third parties, and the operating environment.",
+        ],
+      },
+
+      {
+        title: "Case Studies and Results",
+
+        paragraphs: [
+          "Published case studies should clearly identify whether names or details have been anonymized.",
+          "Statistics and outcomes apply only to the stated engagement, baseline, and measurement period and should not be treated as a promise of similar performance in another engagement.",
+        ],
+      },
+
+      {
+        title: "Technology Information",
+
+        paragraphs: [
+          "Technology, platform, cybersecurity, artificial-intelligence, and compliance information may change over time.",
+          "Readers should obtain advice appropriate to their systems, risks, obligations, and jurisdiction before acting on material decisions.",
+        ],
+      },
+
+      {
+        title: "Artificial Intelligence",
+
+        paragraphs: [
+          "Where AI-supported content or services are used, outputs may contain errors and may require human review.",
+          "Sensitive or confidential information should not be submitted to a public AI service unless that use is authorized and appropriately protected.",
+        ],
+      },
+
+      {
+        title: "Third-Party Content",
+
+        paragraphs: [
+          "References or links to third-party products, platforms, websites, or organizations do not constitute endorsement unless expressly stated.",
+          "Third-party names and trademarks belong to their respective owners.",
+        ],
+      },
+
+      {
+        title: "Availability and Accuracy",
+
+        paragraphs: [
+          "Reasonable care is taken when preparing website content, but the website does not warrant that all information will always be complete, current, error-free, or continuously available.",
+        ],
+      },
+
+      {
+        title: "Contact",
+
+        paragraphs: [
+          "Questions about this disclaimer may be sent to info@cyberxsoft.net.",
         ],
       },
     ],
   },
 };
 
-export const getLegalPage = (slug) => legalPages[slug];
+export const getLegalPage = (slug) =>
+  legalPages[slug];
