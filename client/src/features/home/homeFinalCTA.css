@@ -1,0 +1,260 @@
+/* =========================================
+   Home Final CTA
+========================================= */
+
+.home-final-cta {
+  padding-block: var(--section-space-lg);
+
+  background: var(--color-white);
+}
+
+.home-final-cta__panel {
+  position: relative;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(300px, 0.85fr);
+
+  align-items: center;
+
+  min-height: 430px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(20, 127, 209, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      125deg,
+      #061326 0%,
+      #092449 55%,
+      #071a33 100%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+/* =========================================
+   Content
+========================================= */
+
+.home-final-cta__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 700px;
+
+  padding: clamp(38px, 6vw, 72px);
+}
+
+.home-final-cta__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--color-accent);
+
+  font-size: 0.74rem;
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.home-final-cta__content h2 {
+  max-width: 650px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.home-final-cta__content p {
+  max-width: 590px;
+
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   Button
+========================================= */
+
+.home-final-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 48px;
+
+  margin-top: 30px;
+  padding-inline: 22px;
+
+  color: var(--color-white);
+
+  font-size: 0.84rem;
+  font-weight: var(--font-weight-semibold);
+
+  background: var(--color-accent);
+
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.home-final-cta__button:hover {
+  transform: translateY(-1px);
+
+  color: var(--color-white);
+
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.home-final-cta__button:focus-visible {
+  outline: 3px solid rgba(38, 195, 133, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Decorative Visual
+========================================= */
+
+.home-final-cta__visual {
+  position: relative;
+
+  min-height: 100%;
+  height: 100%;
+}
+
+.home-final-cta__orb {
+  position: absolute;
+
+  width: 13px;
+  height: 13px;
+
+  background: rgba(37, 196, 131, 0.8);
+
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 10px rgba(37, 196, 131, 0.06),
+    0 0 30px rgba(37, 196, 131, 0.18);
+}
+
+.home-final-cta__orb--one {
+  top: 28%;
+  left: 20%;
+}
+
+.home-final-cta__orb--two {
+  top: 62%;
+  left: 38%;
+}
+
+.home-final-cta__orb--three {
+  top: 39%;
+  right: 26%;
+}
+
+.home-final-cta__path {
+  position: absolute;
+
+  top: 24%;
+  left: 16%;
+
+  width: 65%;
+  height: 46%;
+
+  opacity: 0.45;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(37, 196, 131, 0.38);
+
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+
+.home-final-cta__focus {
+  position: absolute;
+
+  top: 50%;
+  right: 18%;
+
+  width: 120px;
+  height: 120px;
+
+  transform: translateY(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(37, 196, 131, 0.24) 0%,
+      rgba(20, 127, 209, 0.1) 45%,
+      transparent 72%
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 820px) {
+  .home-final-cta__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .home-final-cta__content {
+    max-width: 760px;
+  }
+
+  .home-final-cta__visual {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-final-cta__panel {
+    min-height: auto;
+  }
+
+  .home-final-cta__content {
+    padding: 38px 24px;
+  }
+
+  .home-final-cta__content h2 {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+  }
+
+  .home-final-cta__content p {
+    font-size: 0.9rem;
+  }
+
+  .home-final-cta__button {
+    width: 100%;
+  }
+}

@@ -8,6 +8,7 @@ import StaffAugmentationHighlight from "./StaffAugmentationHighlight";
 import WhyChooseUs from "./WhyChooseUs";
 import HomeProof from "./HomeProof";
 import HomeApproach from "./HomeApproach";
+import HomeFinalCTA from "./HomeFinalCTA";
 
 import { homeFaqs } from "./homeData";
 
@@ -33,6 +34,8 @@ function HomePage() {
       <HomeApproach />
 
       <FAQSection items={homeFaqs} />
+
+      <HomeFinalCTA />
     </main>
   );
 }

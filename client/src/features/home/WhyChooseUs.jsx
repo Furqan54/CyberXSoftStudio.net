@@ -1,4 +1,3 @@
-
 import { CheckCircle2 } from "lucide-react";
 
 import { whyChooseUsItems } from "./homeData";
@@ -17,8 +16,11 @@ function WhyChooseUs() {
           </h2>
 
           <p className="why-choose-us__description">
-            A coordinated approach connecting business strategy,
-            creative execution, engineering, security, and delivery.
+            Complex initiatives often stall between strategy, creative
+            execution, engineering, security, and operational handover.
+            CyberX Soft coordinates these disciplines through a single
+            delivery model, giving clients clearer ownership and fewer
+            handoffs.
           </p>
         </div>
 
@@ -38,6 +40,7 @@ function WhyChooseUs() {
 
               <div className="why-choose-card__content">
                 <h3>{item.title}</h3>
+
                 <p>{item.description}</p>
               </div>
             </article>

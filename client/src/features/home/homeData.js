@@ -6,7 +6,7 @@ export const clientsPartners = [
   },
   {
     id: 2,
-    name: "Lagfam",
+    name: "Lagaam",
     logo: null,
   },
   {
@@ -46,7 +46,10 @@ export const audienceNeeds = [
     id: 1,
     need: "Launch or improve a digital product",
     service: "AI Software and Digital Solutions",
-    path: "/services/ai-software-digital-solutions",
+    path: "/services/ai-software-digital-sololutions".replace(
+      "sololutions",
+      "solutions"
+    ),
   },
   {
     id: 2,
@@ -177,26 +180,37 @@ export const homeApproachSteps = [
 export const homeFaqs = [
   {
     id: 1,
-    question: "What types of businesses does CyberX Soft work with?",
+    question:
+      "What types of organizations does CyberX Soft work with?",
     answer:
-      "CyberX Soft works with organizations looking for support with digital products, platforms, security, data, brand experiences, and delivery teams. We discuss each organization's goals and requirements before recommending a suitable approach.",
+      "We work with organizations that need practical support across digital products, technology, security, data, creative work, marketing, or delivery capacity. Engagement suitability depends on the requirement, timeline, operating environment, and available expertise.",
   },
   {
     id: 2,
-    question: "How long does a typical digital transformation project take?",
+    question:
+      "Can CyberX Soft combine several services in one engagement?",
     answer:
-      "Project timelines depend on the scope of work, complexity, integrations, and business requirements. After discussing your needs, we can agree on a delivery approach, milestones, and an estimated timeline.",
+      "Yes. Many requirements cross disciplines. A program can combine strategy, design, software, AI, data, cybersecurity, marketing, and specialist delivery while keeping responsibilities and governance clear.",
   },
   {
     id: 3,
-    question: "Do you offer ongoing support after project delivery?",
+    question:
+      "Can you work with our existing team and suppliers?",
     answer:
-      "Ongoing support can be discussed as part of an engagement. We review your requirements for maintenance, monitoring, or continued assistance and confirm the scope before work begins.",
+      "Yes. We can work alongside internal teams, agencies, software vendors, cloud providers, and specialist advisers. The engagement plan defines interfaces, decision rights, deliverables, dependencies, and handover.",
   },
   {
     id: 4,
-    question: "How do I start working with CyberX Soft?",
+    question:
+      "How do you decide the right delivery model?",
     answer:
-      "Start by contacting our team for an initial consultation. We will discuss your goals, current challenges, requirements, and the most suitable approach before defining the next steps.",
+      "We assess the objective, scope clarity, urgency, internal ownership, required skills, duration, security needs, and delivery risk. We then recommend a project, discovery, dedicated team, managed support, or augmentation model.",
+  },
+  {
+    id: 5,
+    question:
+      "What happens after the first consultation?",
+    answer:
+      "If there is a suitable fit, we agree the next step. This may be a focused discovery, a written scope and estimate, a technical assessment, a workshop, or a request for additional information.",
   },
 ];
