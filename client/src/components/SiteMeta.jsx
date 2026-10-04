@@ -7,9 +7,9 @@ import { getLegalPage } from "../features/legal/legalData";
 const staticMeta = {
   "/": {
     title:
-      "CyberX Soft | Enterprise Technology & Digital Solutions",
+      "CyberX Soft | Technology, Software, Cybersecurity and Digital Growth",
     description:
-      "CyberX Soft delivers enterprise technology, software, AI, cybersecurity, creative, digital growth, and talent solutions.",
+      "CyberX Soft helps organizations build digital products, strengthen cybersecurity, grow brands, use data and AI, and extend delivery capacity.",
   },
 
   "/services": {
