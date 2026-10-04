@@ -41,6 +41,39 @@ export const clientsPartners = [
   },
 ];
 
+export const audienceNeeds = [
+  {
+    id: 1,
+    need: "Launch or improve a digital product",
+    service: "AI Software and Digital Solutions",
+    path: "/services/ai-software-digital-solutions",
+  },
+  {
+    id: 2,
+    need: "Strengthen a brand or generate qualified demand",
+    service: "Brand Strategy and Digital Growth",
+    path: "/services/brand-strategy-digital-growth",
+  },
+  {
+    id: 3,
+    need: "Produce recurring design, video, or animation",
+    service: "Creative Media Design and Animation",
+    path: "/services/creative-media-design-animation",
+  },
+  {
+    id: 4,
+    need: "Improve data visibility, security, or governance",
+    service: "Data Cybersecurity and Digital Governance",
+    path: "/services/data-cybersecurity-digital-governance",
+  },
+  {
+    id: 5,
+    need: "Add specialists or a complete remote team",
+    service: "Staff Augmentation and Delivery Support",
+    path: "/services/talent-augmentation-delivery-support",
+  },
+];
+
 export const whyChooseUsItems = [
   {
     id: 1,

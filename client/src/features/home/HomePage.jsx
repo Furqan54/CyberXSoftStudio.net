@@ -1,9 +1,9 @@
-
 import FAQSection from "../../components/FAQSection";
 
 import HomeHero from "./HomeHero";
 import ClientsPartners from "./ClientsPartners";
 import HomeServices from "./HomeServices";
+import AudienceNeeds from "./AudienceNeeds";
 import WhyChooseUs from "./WhyChooseUs";
 
 import { homeFaqs } from "./homeData";
@@ -18,6 +18,8 @@ function HomePage() {
       <ClientsPartners />
 
       <HomeServices />
+
+      <AudienceNeeds />
 
       <WhyChooseUs />
 
