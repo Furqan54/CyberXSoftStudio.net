@@ -1,8 +1,8 @@
-
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
+import CTASection from "../../components/CTASection";
 
 import MissionValues from "./MissionValues";
 import ProcessSection from "./ProcessSection";
@@ -42,7 +42,9 @@ function AboutPage() {
               Recommended aspect ratio: 3:2.
             */}
             <div className="about-overview__image-placeholder">
-              <span>Company Overview Image</span>
+              <span>
+                Company Overview Image
+              </span>
             </div>
           </div>
 
@@ -60,7 +62,9 @@ function AboutPage() {
             </p>
 
             <p className="about-overview__description">
-              {companyOverview.secondaryDescription}
+              {
+                companyOverview.secondaryDescription
+              }
             </p>
 
             <Link
@@ -82,6 +86,13 @@ function AboutPage() {
       <MissionValues />
 
       <ProcessSection />
+
+      <CTASection
+        title="Discuss Your Next Initiative"
+        description="Tell us what you need to build, improve, secure, or scale. We will help define a practical route forward."
+        buttonLabel="Contact CyberX Soft"
+        buttonPath="/contact"
+      />
     </main>
   );
 }
