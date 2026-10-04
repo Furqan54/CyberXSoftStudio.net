@@ -77,9 +77,9 @@ const staticMeta = {
 
   "/contact": {
     title:
-      "Contact CyberX Soft | Start a Conversation",
+      "Contact CyberX Soft | Book a Consultation",
     description:
-      "Contact CyberX Soft to discuss technology, software, AI, cybersecurity, creative, digital growth, or specialist delivery requirements.",
+      "Contact CyberX Soft to discuss software, AI, cybersecurity, data, creative, digital growth, or specialist delivery requirements.",
   },
 };
 
