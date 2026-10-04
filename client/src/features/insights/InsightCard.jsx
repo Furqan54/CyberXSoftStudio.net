@@ -1,9 +1,13 @@
 function InsightCard({ insight }) {
+  const isComingSoon =
+    insight.date === "Coming soon";
+
   return (
     <article className="insight-card">
       {/*
         IMAGE PLACEHOLDER
-        Replace this block with the final insight/article image later.
+        Replace this block with the final
+        editorial article image later.
       */}
       <div className="insight-card__image-placeholder">
         <span>Insight Image</span>
@@ -23,9 +27,33 @@ function InsightCard({ insight }) {
         </p>
 
         <div className="insight-card__meta">
-          <span>{insight.date}</span>
-          <span aria-hidden="true">•</span>
-          <span>{insight.readTime}</span>
+          {isComingSoon ? (
+            <>
+              <span>Coming soon</span>
+
+              <span aria-hidden="true">
+                •
+              </span>
+
+              <span>
+                {insight.readTime}
+              </span>
+            </>
+          ) : (
+            <>
+              <span>
+                {insight.date}
+              </span>
+
+              <span aria-hidden="true">
+                •
+              </span>
+
+              <span>
+                {insight.readTime}
+              </span>
+            </>
+          )}
         </div>
       </div>
     </article>
