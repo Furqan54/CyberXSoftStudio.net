@@ -13,18 +13,49 @@ import {
 import "./insights.css";
 
 function InsightsPage() {
-  const [activeCategory, setActiveCategory] = useState(
-    insightCategories[0]
-  );
+  const allCategory = "All Insights";
 
-  const filteredInsights = useMemo(
-    () =>
-      insights.filter(
-        (insight) =>
-          insight.type === activeCategory
-      ),
-    [activeCategory]
-  );
+  const categories = [
+    allCategory,
+    ...insightCategories,
+  ];
+
+  const [activeCategory, setActiveCategory] =
+    useState(allCategory);
+
+  const filteredInsights = useMemo(() => {
+    if (activeCategory === allCategory) {
+      return insights;
+    }
+
+    return insights.filter(
+      (insight) =>
+        insight.type === activeCategory
+    );
+  }, [activeCategory]);
+
+  const categoryDescriptions = {
+    "All Insights":
+      "Explore practical perspectives across AI, software, cybersecurity, data, creative work, digital growth, and delivery.",
+
+    "AI & Automation":
+      "Use cases, readiness, data, governance, integration, risk, and adoption.",
+
+    "Software & Platforms":
+      "Product decisions, architecture, integration, modernization, quality, and maintainability.",
+
+    "Cybersecurity & Governance":
+      "Risk priorities, identity, cloud, resilience, compliance, and management accountability.",
+
+    "Data & Business Intelligence":
+      "Data foundations, reporting quality, dashboards, decision support, and responsible use.",
+
+    "Brand Growth & Creative":
+      "Positioning, campaign planning, content systems, design, animation, and performance.",
+
+    "Delivery & Talent":
+      "Team models, project controls, quality assurance, augmentation, and knowledge transfer.",
+  };
 
   return (
     <main>
@@ -56,7 +87,7 @@ function InsightsPage() {
             role="tablist"
             aria-label="Insight categories"
           >
-            {insightCategories.map(
+            {categories.map(
               (category) => (
                 <button
                   key={category}
@@ -94,29 +125,11 @@ function InsightsPage() {
             </h2>
 
             <p className="insights-section__description">
-              {activeCategory ===
-                "AI & Automation" &&
-                "Use cases, readiness, data, governance, integration, risk, and adoption."}
-
-              {activeCategory ===
-                "Software & Platforms" &&
-                "Product decisions, architecture, integration, modernization, quality, and maintainability."}
-
-              {activeCategory ===
-                "Cybersecurity & Governance" &&
-                "Risk priorities, identity, cloud, resilience, compliance, and management accountability."}
-
-              {activeCategory ===
-                "Data & Business Intelligence" &&
-                "Data foundations, reporting quality, dashboards, decision support, and responsible use."}
-
-              {activeCategory ===
-                "Brand Growth & Creative" &&
-                "Positioning, campaign planning, content systems, design, animation, and performance."}
-
-              {activeCategory ===
-                "Delivery & Talent" &&
-                "Team models, project controls, quality assurance, augmentation, and knowledge transfer."}
+              {
+                categoryDescriptions[
+                  activeCategory
+                ]
+              }
             </p>
           </div>
 
