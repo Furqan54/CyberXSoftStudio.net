@@ -70,9 +70,9 @@ const staticMeta = {
 
   "/about": {
     title:
-      "About CyberX Soft | Enterprise Technology Partner",
+      "About CyberX Soft | Integrated Technology and Digital Delivery",
     description:
-      "Learn about CyberX Soft, our capabilities, delivery model, working approach, and support for local and international engagements.",
+      "Learn how CyberX Soft combines business understanding, software, AI, cybersecurity, data, creative capability, and specialist delivery support.",
   },
 
   "/contact": {
