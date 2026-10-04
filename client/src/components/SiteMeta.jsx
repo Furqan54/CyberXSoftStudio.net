@@ -63,9 +63,9 @@ const staticMeta = {
 
   "/insights": {
     title:
-      "Insights | CyberX Soft",
+      "Insights on AI Software Cybersecurity and Digital Growth | CyberX Soft",
     description:
-      "Read research, analysis, and practical guidance from CyberX Soft experts covering AI, cybersecurity, cloud, ERP, and digital strategy.",
+      "Practical perspectives from CyberX Soft on AI, software, cybersecurity, data, digital governance, brand growth, creative production, and delivery.",
   },
 
   "/about": {
