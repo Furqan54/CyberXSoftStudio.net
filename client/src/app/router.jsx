@@ -5,7 +5,7 @@ import PublicLayout from "../layout/PublicLayout";
 import HomePage from "../features/home/HomePage";
 import ServicesPage from "../features/services/ServicesPage";
 import ServiceDetailPage from "../features/services/ServiceDetailPage";
-import CaseStudiesPage from "../features/case-studies/CaseStudiesPage";
+import WorkPage from "../features/case-studies/WorkPage";
 import InsightsPage from "../features/insights/InsightsPage";
 import AboutPage from "../features/about/AboutPage";
 import ContactPage from "../features/contact/ContactPage";
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 
       {
         path: "case-studies",
-        element: <CaseStudiesPage />,
+        element: <WorkPage />,
       },
 
       {
