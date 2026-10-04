@@ -56,9 +56,9 @@ const staticMeta = {
 
   "/case-studies": {
     title:
-      "Case Studies | CyberX Soft",
+      "Selected Work and Case Studies | CyberX Soft",
     description:
-      "Explore enterprise technology, digital transformation, software, cybersecurity, cloud, and AI case studies from CyberX Soft.",
+      "See how CyberX Soft applies strategy, technology, creative, data, cybersecurity, and delivery capabilities to practical client and platform needs.",
   },
 
   "/insights": {
