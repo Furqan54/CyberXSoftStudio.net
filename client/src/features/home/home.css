@@ -43,7 +43,10 @@
 
 .home-hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(380px, 0.9fr);
+
   align-items: center;
 
   gap: clamp(48px, 7vw, 100px);
@@ -61,6 +64,7 @@
   margin-bottom: 22px;
 
   color: var(--color-accent);
+
   font-size: 0.75rem;
   font-weight: var(--font-weight-bold);
 
@@ -72,8 +76,8 @@
 
   font-size: clamp(2.8rem, 5vw, 4.6rem);
   font-weight: var(--font-weight-semibold);
-  line-height: 1.06;
 
+  line-height: 1.06;
   letter-spacing: -0.035em;
 }
 
@@ -82,11 +86,12 @@
 
   margin-top: 4px;
 
-  background: linear-gradient(
-    90deg,
-    #147fd1 0%,
-    #25c483 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #147fd1 0%,
+      #25c483 100%
+    );
 
   -webkit-background-clip: text;
   background-clip: text;
@@ -105,6 +110,20 @@
   line-height: 1.75;
 }
 
+/* =========================================
+   Hero Actions
+========================================= */
+
+.home-hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 34px;
+}
+
 .home-hero__button {
   display: inline-flex;
   align-items: center;
@@ -114,7 +133,6 @@
 
   min-height: 48px;
 
-  margin-top: 34px;
   padding: 0 22px;
 
   color: var(--color-white);
@@ -122,17 +140,46 @@
   font-size: 0.875rem;
   font-weight: var(--font-weight-medium);
 
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: var(--color-accent);
+
+  border: 1px solid var(--color-accent);
   border-radius: var(--radius-sm);
 
   transition:
+    transform var(--transition-fast),
+    color var(--transition-fast),
     background-color var(--transition-fast),
     border-color var(--transition-fast);
 }
 
 .home-hero__button:hover {
+  transform: translateY(-1px);
+
+  color: var(--color-white);
+
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.home-hero__button--secondary {
+  color: var(--color-white);
+
+  background: transparent;
+
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+.home-hero__button--secondary:hover {
+  color: var(--color-white);
+
   background: rgba(255, 255, 255, 0.1);
+
   border-color: var(--color-white);
+}
+
+.home-hero__button:focus-visible {
+  outline: 3px solid rgba(38, 195, 133, 0.36);
+  outline-offset: 3px;
 }
 
 /* =========================================
@@ -202,6 +249,7 @@
 
 .home-hero__image-placeholder span {
   font-size: 0.8rem;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -243,6 +291,7 @@
   color: var(--color-accent-dark);
 
   background: var(--color-accent-light);
+
   border-radius: 50%;
 }
 
@@ -267,7 +316,7 @@
 }
 
 /* =========================================
-   Responsive
+   Hero Responsive
 ========================================= */
 
 @media (max-width: 1024px) {
@@ -323,6 +372,19 @@
     font-size: 0.925rem;
   }
 
+  .home-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+  .home-hero__button {
+    width: 100%;
+  }
+
   .home-hero__stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -345,6 +407,7 @@
     bottom: -20px;
   }
 }
+
 /* =========================================
    Clients & Partners
 ========================================= */
@@ -370,7 +433,8 @@
 
 .clients-partners__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
 
   align-items: center;
 
@@ -400,8 +464,8 @@
   align-items: center;
   justify-content: center;
 
-  min-height: 58px;
   width: 100%;
+  min-height: 58px;
 
   padding: 10px;
 
@@ -419,7 +483,8 @@
 
 @media (max-width: 900px) {
   .clients-partners__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -429,7 +494,8 @@
   }
 
   .clients-partners__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
     column-gap: 22px;
     row-gap: 22px;
@@ -444,6 +510,7 @@
     max-height: 58px;
   }
 }
+
 /* =========================================
    Home Services
 ========================================= */
@@ -496,6 +563,7 @@
 
 .home-services__view-all:hover {
   color: var(--color-white);
+
   background: var(--color-primary);
 }
 
@@ -505,7 +573,8 @@
 
 .home-services__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
   gap: 24px;
 }
@@ -533,6 +602,7 @@
   transform: translateY(-4px);
 
   border-color: rgba(16, 36, 77, 0.15);
+
   box-shadow: var(--shadow-md);
 }
 
@@ -549,6 +619,7 @@
   color: var(--color-primary);
 
   background: var(--color-background-soft);
+
   border-radius: var(--radius-md);
 }
 
@@ -599,7 +670,8 @@
 
 @media (max-width: 1024px) {
   .home-services__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -627,6 +699,7 @@
     min-height: auto;
   }
 }
+
 /* =========================================
    Why Choose CyberX Soft
 ========================================= */
@@ -670,7 +743,8 @@
 
 .why-choose-us__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
   gap: 22px;
 }
@@ -700,6 +774,7 @@
   transform: translateY(-3px);
 
   border-color: var(--color-border);
+
   box-shadow: var(--shadow-sm);
 }
 
@@ -749,7 +824,8 @@
 
 @media (max-width: 960px) {
   .why-choose-us__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -772,6 +848,7 @@
     min-height: auto;
   }
 }
+
 /* =========================================
    Testimonials
 ========================================= */
@@ -807,7 +884,8 @@
 
 .testimonials__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
   gap: 24px;
 }
@@ -897,7 +975,6 @@
   color: var(--color-text-muted);
 
   font-size: 0.66rem;
-
   line-height: 1.4;
 }
 
@@ -907,7 +984,8 @@
 
 @media (max-width: 900px) {
   .testimonials__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .testimonial-card:last-child {
