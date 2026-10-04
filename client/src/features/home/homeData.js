@@ -136,6 +136,44 @@ export const whyChooseUsItems = [
   },
 ];
 
+export const homeApproachSteps = [
+  {
+    id: 1,
+    number: "01",
+    title: "Understand",
+    description:
+      "Understand the business objective, users, constraints, systems, and success measures.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Define",
+    description:
+      "Define the scope, solution direction, delivery model, risks, milestones, and responsibilities.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Design & Build",
+    description:
+      "Design and build in visible increments with regular stakeholder review and quality checks.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Deploy & Handover",
+    description:
+      "Deploy, document, transfer knowledge, and support adoption within the operating environment.",
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Measure & Improve",
+    description:
+      "Measure performance and improve the solution as business needs change.",
+  },
+];
+
 export const homeFaqs = [
   {
     id: 1,

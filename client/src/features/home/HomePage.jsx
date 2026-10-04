@@ -7,6 +7,7 @@ import AudienceNeeds from "./AudienceNeeds";
 import StaffAugmentationHighlight from "./StaffAugmentationHighlight";
 import WhyChooseUs from "./WhyChooseUs";
 import HomeProof from "./HomeProof";
+import HomeApproach from "./HomeApproach";
 
 import { homeFaqs } from "./homeData";
 
@@ -28,6 +29,8 @@ function HomePage() {
       <WhyChooseUs />
 
       <HomeProof />
+
+      <HomeApproach />
 
       <FAQSection items={homeFaqs} />
     </main>
