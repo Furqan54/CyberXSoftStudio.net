@@ -12,15 +12,18 @@ import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
 import {
-  staffingChallenges,
   staffingOverviewPoints,
+  staffingBuyerGroups,
+  staffingChallenges,
   staffingModels,
+  staffingResponsibilities,
   staffingBenefits,
   staffingSpecializations,
   staffingCollaboration,
   staffingSafeguards,
   staffingProcess,
   staffingPerformance,
+  staffingCommercialStructures,
   staffingFaqs,
 } from "./staffAugmentationData";
 
@@ -54,35 +57,149 @@ function StaffAugmentationPage() {
       ======================================== */}
 
       <PageHero
-        eyebrow="Staff Augmentation & Delivery Support"
-        title="Build the Delivery Capacity You Need"
-        description="Flexible technology and delivery specialists for organizations that need additional capacity, specific expertise, and a clear working model without waiting for a lengthy permanent hiring cycle."
+        eyebrow="Staff Augmentation and Delivery Support"
+        title="IT Staff Augmentation and Dedicated Remote Teams"
+        description="CyberX Soft helps international organizations add technology, product, data, cybersecurity, cloud, quality, creative, and delivery professionals through individual assignments, dedicated remote teams, managed pods, and white-label offshore delivery."
         breadcrumbs={[
           {
             label: "Services",
             path: "/services",
           },
           {
-            label: "Staff Augmentation",
+            label:
+              "Staff Augmentation and Delivery Support",
           },
         ]}
         action={{
-          label: "Book a Consultation",
+          label: "Request Talent Profiles",
           path: "/contact",
         }}
         showImagePlaceholder
       />
 
       {/* ========================================
-          CHALLENGES
+          SERVICE OVERVIEW
+      ======================================== */}
+
+      <section className="staff-augmentation__section staff-augmentation__section--soft">
+        <div className="container staff-augmentation__overview">
+          <div className="staff-augmentation__overview-content">
+            <span className="eyebrow">
+              Service Overview
+            </span>
+
+            <h2>
+              Increase Capacity Without Losing
+              Delivery Control
+            </h2>
+
+            <p>
+              Organizations often need specialist
+              skills faster than conventional
+              recruitment can provide, or additional
+              capacity for a defined delivery phase.
+            </p>
+
+            <p>
+              Staff augmentation places external
+              professionals into your delivery
+              environment while your team normally
+              retains day-to-day direction. CyberX
+              Soft structures the engagement around
+              required skills, responsibilities,
+              working hours, security requirements,
+              reporting, governance, and the level
+              of management support required.
+            </p>
+
+            <Link
+              to="/contact"
+              className="staff-augmentation__primary-link"
+            >
+              Schedule a Staff Augmentation Discussion
+
+              <ArrowRight
+                size={17}
+                strokeWidth={1.8}
+                aria-hidden="true"
+              />
+            </Link>
+          </div>
+
+          <div className="staff-augmentation__overview-points">
+            {staffingOverviewPoints.map((point) => (
+              <article
+                className="staff-augmentation__overview-point"
+                key={point.id}
+              >
+                <CheckCircle2
+                  size={22}
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                />
+
+                <div>
+                  <h3>{point.title}</h3>
+                  <p>{point.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================
+          WHO THIS SERVICE IS FOR
       ======================================== */}
 
       <section className="staff-augmentation__section">
         <div className="container">
           <SectionHeading
-            eyebrow="Why Staff Augmentation"
-            title="Your Roadmap Cannot Wait for a Lengthy Hiring Cycle"
-            description="Delivery requirements can appear faster than permanent recruitment can respond. Staff augmentation provides a practical way to add relevant capacity while keeping your internal team close to the work."
+            eyebrow="Who This Service Is For"
+            title="Built for Organizations That Need Reliable Delivery Capacity"
+            description="The service is designed for international organizations that need specialist capability, commercial flexibility, confidentiality, suitable working-hour overlap, and a clear division of management responsibility."
+          />
+
+          <div className="staff-augmentation__grid staff-augmentation__grid--four">
+            {staffingBuyerGroups.map((buyer) => (
+              <article
+                className="staff-augmentation__card"
+                key={buyer}
+              >
+                <Check
+                  size={17}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+
+                <h3>{buyer}</h3>
+              </article>
+            ))}
+          </div>
+
+          <p className="staff-augmentation__note">
+            Engagements can support organizations in
+            the United Kingdom, United States,
+            Canada, United Arab Emirates, Saudi
+            Arabia, and other international markets,
+            subject to the agreed working model,
+            availability, contractual requirements,
+            and applicable jurisdictional
+            considerations.
+          </p>
+        </div>
+      </section>
+
+      {/* ========================================
+          BUYER CHALLENGES
+      ======================================== */}
+
+      <section className="staff-augmentation__section staff-augmentation__section--soft">
+        <div className="container">
+          <SectionHeading
+            eyebrow="What Buyers Are Usually Trying to Solve"
+            title="Add Capacity Where the Delivery Plan Needs It"
+            description="Staff augmentation can be useful when recruitment, specialist availability, changing workloads, or delivery responsibilities are limiting progress."
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--three">
@@ -108,85 +225,15 @@ function StaffAugmentationPage() {
       </section>
 
       {/* ========================================
-          DELIVERY TEAM OVERVIEW
-      ======================================== */}
-
-      <section className="staff-augmentation__section staff-augmentation__section--soft">
-        <div className="container staff-augmentation__overview">
-          <div className="staff-augmentation__overview-content">
-            <span className="eyebrow">
-              Our Approach
-            </span>
-
-            <h2>
-              A Dependable Extension of Your
-              Delivery Team
-            </h2>
-
-            <p>
-              CyberX Soft provides dedicated
-              specialists and managed delivery support
-              for organizations that need additional
-              capacity, specific expertise, and a
-              clearly defined operating model.
-            </p>
-
-            <p>
-              In a conventional augmentation model,
-              your internal leaders retain product,
-              technical, and commercial direction.
-              CyberX Soft provides the agreed
-              specialist capacity and operational
-              support around it.
-            </p>
-
-            <Link
-              to="/contact"
-              className="staff-augmentation__primary-link"
-            >
-              Discuss Your Requirements
-
-              <ArrowRight
-                size={17}
-                strokeWidth={1.8}
-                aria-hidden="true"
-              />
-            </Link>
-          </div>
-
-          <div className="staff-augmentation__overview-points">
-            {staffingOverviewPoints.map((point) => (
-              <article
-                className="staff-augmentation__overview-point"
-                key={point.id}
-              >
-                <CheckCircle2
-                  size={22}
-                  strokeWidth={1.8}
-                  aria-hidden="true"
-                />
-
-                <div>
-                  <h3>{point.title}</h3>
-
-                  <p>{point.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================
           ENGAGEMENT MODELS
       ======================================== */}
 
       <section className="staff-augmentation__section">
         <div className="container">
           <SectionHeading
-            eyebrow="Engagement Models"
-            title="Flexible Support That Matches How You Work"
-            description="Each engagement begins with a clear requirement, expected responsibilities, working arrangement, and delivery cadence."
+            eyebrow="Five Engagement Models"
+            title="Choose the Operating Model That Fits the Requirement"
+            description="The right structure depends on the required skills, client control, delivery responsibility, duration, security needs, working arrangements, and level of CyberX Soft coordination."
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--two">
@@ -201,7 +248,20 @@ function StaffAugmentationPage() {
 
                 <h3>{model.title}</h3>
 
-                <p>{model.description}</p>
+                <p>
+                  <strong>Client control: </strong>
+                  {model.clientControl}
+                </p>
+
+                <p>
+                  <strong>CyberX Soft role: </strong>
+                  {model.cyberxRole}
+                </p>
+
+                <p>
+                  <strong>Best fit: </strong>
+                  {model.bestFit}
+                </p>
               </article>
             ))}
           </div>
@@ -209,7 +269,7 @@ function StaffAugmentationPage() {
           <div className="staff-augmentation__callout">
             <div>
               <span className="eyebrow">
-                White-Label Delivery
+                White-Label Offshore Delivery
               </span>
 
               <h3>
@@ -219,11 +279,14 @@ function StaffAugmentationPage() {
 
               <p>
                 Software firms, agencies,
-                consultancies, and other delivery
-                partners can discuss confidential
-                offshore support where responsibilities,
-                client interaction, and delivery scope
-                are clearly agreed.
+                consultancies, managed-service
+                providers, staffing firms, and
+                system integrators can discuss
+                confidential offshore delivery where
+                branding, client interaction,
+                responsibilities, ownership, and
+                commercial terms are agreed before
+                delivery begins.
               </p>
             </div>
 
@@ -231,7 +294,7 @@ function StaffAugmentationPage() {
               to="/contact"
               className="staff-augmentation__callout-link"
             >
-              Discuss Your Requirements
+              Explore White Label Offshore Delivery
 
               <ArrowRight
                 size={17}
@@ -244,7 +307,52 @@ function StaffAugmentationPage() {
       </section>
 
       {/* ========================================
-          BENEFITS
+          RESPONSIBILITY SPLIT
+      ======================================== */}
+
+      <section className="staff-augmentation__section staff-augmentation__section--soft">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Clear Responsibilities"
+            title="Know Who Manages What Before Delivery Begins"
+            description="Responsibilities differ between conventional augmentation, managed pods, white-label delivery, placement, and EOR-supported arrangements. The agreement should make the division of responsibility explicit."
+          />
+
+          <div className="staff-augmentation__grid staff-augmentation__grid--two">
+            {staffingResponsibilities.map(
+              (responsibility) => (
+                <article
+                  className="staff-augmentation__card"
+                  key={responsibility.id}
+                >
+                  <h3>
+                    {responsibility.title}
+                  </h3>
+
+                  <ul className="staff-augmentation__check-list">
+                    {responsibility.points.map(
+                      (point) => (
+                        <li key={point}>
+                          <Check
+                            size={15}
+                            strokeWidth={2}
+                            aria-hidden="true"
+                          />
+
+                          <span>{point}</span>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </article>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================
+          DELIVERY BENEFITS
       ======================================== */}
 
       <section className="staff-augmentation__section staff-augmentation__section--dark">
@@ -284,9 +392,9 @@ function StaffAugmentationPage() {
       <section className="staff-augmentation__section staff-augmentation__section--soft">
         <div className="container">
           <SectionHeading
-            eyebrow="Relevant Delivery Expertise"
+            eyebrow="Specialist Coverage"
             title="Build a Focused Role or Combine Complementary Skills"
-            description="CyberX Soft can discuss specialist requirements across technology, enterprise systems, cybersecurity, data, creative delivery, growth, and operational support."
+            description="CyberX Soft can discuss specialist requirements across technology, product, data, cybersecurity, cloud, quality, enterprise platforms, automation, design, growth, creative production, and delivery management."
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--three">
@@ -296,6 +404,12 @@ function StaffAugmentationPage() {
                   className="staff-augmentation__card staff-augmentation__specialization-card"
                   key={specialization.id}
                 >
+                  <span className="staff-augmentation__number">
+                    {String(
+                      specialization.id
+                    ).padStart(2, "0")}
+                  </span>
+
                   <h3>
                     {specialization.title}
                   </h3>
@@ -324,15 +438,16 @@ function StaffAugmentationPage() {
             Specific technologies, platforms,
             seniority, availability, and assessment
             requirements are confirmed when reviewing
-            each role. Technology names do not imply an
-            official vendor partnership or guaranteed
-            specialist availability.
+            each role. Technology names do not imply
+            an official vendor partnership,
+            certification, or guaranteed specialist
+            availability.
           </p>
         </div>
       </section>
 
       {/* ========================================
-          COLLABORATION
+          INTERNATIONAL COLLABORATION
       ======================================== */}
 
       <section className="staff-augmentation__section">
@@ -340,7 +455,7 @@ function StaffAugmentationPage() {
           <SectionHeading
             eyebrow="International Collaboration"
             title="Flexible Collaboration. Extended Delivery."
-            description="Working arrangements can be designed around suitable overlap between your internal team and the assigned remote specialists."
+            description="Working arrangements can be structured around suitable overlap between your internal team and assigned remote specialists."
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--two">
@@ -382,7 +497,7 @@ function StaffAugmentationPage() {
           <SectionHeading
             eyebrow="Security & Continuity"
             title="Client Control Supported by Clear Safeguards"
-            description="Security, access, confidentiality, intellectual property, and continuity requirements should be agreed before specialists enter the client environment."
+            description="Security, access, confidentiality, intellectual property, continuity, and offboarding requirements should be agreed before specialists enter the client environment."
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--two">
@@ -407,10 +522,12 @@ function StaffAugmentationPage() {
           </div>
 
           <p className="staff-augmentation__dark-note">
-            Regulatory requirements are reviewed for
-            relevant engagements. References to
-            regulations do not represent a general
-            CyberX Soft certification or guarantee of
+            Regulatory and data-handling
+            requirements are reviewed for relevant
+            engagements. References to regulations,
+            controls, or security practices do not
+            represent a general CyberX Soft
+            certification or guarantee of
             compliance.
           </p>
         </div>
@@ -425,7 +542,7 @@ function StaffAugmentationPage() {
           <SectionHeading
             eyebrow="How It Works"
             title="From Requirement to an Agreed Working Team"
-            description="A structured process helps both sides understand the role, responsibilities, access requirements, working schedule, and delivery expectations before onboarding."
+            description="A structured process helps both sides understand the role, responsibilities, commercial structure, access requirements, working schedule, and delivery expectations before onboarding."
           />
 
           <div className="staff-augmentation__process-grid">
@@ -453,9 +570,12 @@ function StaffAugmentationPage() {
           <p className="staff-augmentation__note">
             Shortlisting and mobilisation timelines
             are confirmed after the required skills,
-            availability, assessments, contractual
-            requirements, and onboarding arrangements
-            are understood.
+            seniority, availability, assessments,
+            notice periods, security checks,
+            contractual requirements, and onboarding
+            arrangements are understood. No fixed
+            public mobilisation target is being
+            presented.
           </p>
         </div>
       </section>
@@ -495,7 +615,7 @@ function StaffAugmentationPage() {
       </section>
 
       {/* ========================================
-          PUBLIC PRICING STATUS
+          COMMERCIAL STRUCTURES
       ======================================== */}
 
       <section className="staff-augmentation__pricing-note">
@@ -506,15 +626,40 @@ function StaffAugmentationPage() {
             </span>
 
             <h2>
-              Pricing Built Around the Requirement
+              Commercial Structure Built Around
+              the Requirement
             </h2>
 
             <p>
-              Rates depend on the required role,
+              Depending on the role and operating
+              model, an engagement can use one of
+              several commercial structures.
+            </p>
+
+            <ul className="staff-augmentation__check-list">
+              {staffingCommercialStructures.map(
+                (structure) => (
+                  <li key={structure}>
+                    <Check
+                      size={15}
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    />
+
+                    <span>{structure}</span>
+                  </li>
+                )
+              )}
+            </ul>
+
+            <p>
+              Pricing is prepared after the role,
               seniority, workload, duration,
-              working-hour overlap, security
-              requirements, and level of management
-              support.
+              working-hour overlap, security needs,
+              responsibilities, and level of
+              management support are understood.
+              No public rate or savings claim is
+              being presented on this page.
             </p>
 
             <Link
@@ -539,7 +684,7 @@ function StaffAugmentationPage() {
 
       <FAQSection
         items={staffingFaqs}
-        title="Staff Augmentation FAQs"
+        title="Staff Augmentation and Dedicated Remote Teams FAQs"
       />
 
       {/* ========================================
@@ -547,9 +692,9 @@ function StaffAugmentationPage() {
       ======================================== */}
 
       <CTASection
-        title="Let's Shape the Team You Need"
-        description="Tell us about the skills, workload, working hours, and delivery requirements you need support with. We can help define a suitable engagement model and next step."
-        buttonLabel="Book a Consultation"
+        title="Tell Us the Role or Team You Need"
+        description="Send the role or team requirement, core skills, seniority, number of resources, expected duration, preferred start date, working-hour overlap, and a short description of the work. We can then recommend a suitable sourcing and engagement route."
+        buttonLabel="Request Talent Profiles"
         buttonPath="/contact"
       />
     </main>
