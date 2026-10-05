@@ -468,8 +468,8 @@ function BrandStrategyPage() {
       ======================================== */}
 
       <CTASection
-        title="Build a Clearer Route to Growth"
-        description="Share the challenge, timeline, current capabilities, and expected outcome. We can help define a practical starting point and engagement model."
+        title="Discuss Your Requirements"
+        description="Share the challenge, timeline, current capabilities, and expected outcome. We will recommend a practical starting point and engagement model."
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
