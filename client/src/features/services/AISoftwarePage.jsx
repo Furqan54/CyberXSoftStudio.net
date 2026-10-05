@@ -52,7 +52,7 @@ function AISoftwarePage() {
       ======================================== */}
 
       <PageHero
-        eyebrow="AI, Software & Digital Solutions"
+        eyebrow="AI Software and Digital Solutions"
         title="Build Digital Solutions That Fit the Way Your Business Works"
         description="CyberX Soft designs and develops software, AI-enabled workflows, web and mobile products, integrations, and digital platforms around real operational needs, user requirements, and measurable outcomes."
         breadcrumbs={[
@@ -62,14 +62,14 @@ function AISoftwarePage() {
           },
           {
             label:
-              "AI, Software & Digital Solutions",
+              "AI Software and Digital Solutions",
           },
         ]}
         action={{
           label: "Book a Consultation",
           path: "/contact",
         }}
-        visualLabel="AI, Software & Digital Solutions Hero Image"
+        visualLabel="AI Software and Digital Solutions Hero Image"
       />
 
       {/* ========================================
@@ -460,7 +460,7 @@ function AISoftwarePage() {
 
       <FAQSection
         items={aiSoftwareFaqs}
-        title="AI, Software & Digital Solutions FAQs"
+        title="AI Software and Digital Solutions FAQs"
       />
 
       {/* ========================================
@@ -468,8 +468,8 @@ function AISoftwarePage() {
       ======================================== */}
 
       <CTASection
-        title="Build the Right Solution From the Right Starting Point"
-        description="Share the problem, current systems, users, timeline, constraints, and expected outcome. We can help define a practical discovery or delivery approach."
+        title="Discuss Your Requirements"
+        description="Share the challenge, timeline, current capabilities, and expected outcome. We will recommend a practical starting point and engagement model."
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
