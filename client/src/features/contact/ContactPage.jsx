@@ -1,4 +1,3 @@
-
 import {
   Clock3,
   Mail,
@@ -81,7 +80,7 @@ function ContactPage() {
                 </div>
 
                 <div>
-                  <span>Phone</span>
+                  <span>Phone and WhatsApp</span>
 
                   <strong>{siteConfig.phone}</strong>
                 </div>
