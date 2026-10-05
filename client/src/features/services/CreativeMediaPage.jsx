@@ -52,7 +52,7 @@ function CreativeMediaPage() {
       ======================================== */}
 
       <PageHero
-        eyebrow="Creative Media, Design & Animation"
+        eyebrow="Creative Media Design and Animation"
         title="Creative Work That Makes Complex Ideas Clear and Memorable"
         description="Our designers, animators, writers, and producers translate strategy into brand systems, campaigns, interfaces, video, animation, and digital content designed for the channels where your audience engages."
         breadcrumbs={[
@@ -62,14 +62,14 @@ function CreativeMediaPage() {
           },
           {
             label:
-              "Creative Media, Design & Animation",
+              "Creative Media Design and Animation",
           },
         ]}
         action={{
           label: "Book a Consultation",
           path: "/contact",
         }}
-        visualLabel="Creative Media, Design & Animation Hero Image"
+        visualLabel="Creative Media Design and Animation Hero Image"
       />
 
       {/* ========================================
@@ -457,7 +457,7 @@ function CreativeMediaPage() {
 
       <FAQSection
         items={creativeMediaFaqs}
-        title="Creative Media, Design & Animation FAQs"
+        title="Creative Media Design and Animation FAQs"
       />
 
       {/* ========================================
@@ -465,8 +465,8 @@ function CreativeMediaPage() {
       ======================================== */}
 
       <CTASection
-        title="Turn the Brief Into a Clear Creative System"
-        description="Share the audience, message, channels, timeline, and type of creative support you need. We can help define a practical production approach and engagement model."
+        title="Discuss Your Requirements"
+        description="Share the challenge, timeline, current capabilities, and expected outcome. We will recommend a practical starting point and engagement model."
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
