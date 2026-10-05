@@ -4,11 +4,11 @@ function InsightCard({ insight }) {
 
   return (
     <article className="insight-card">
-      {/*
-        IMAGE PLACEHOLDER
-        Replace this block with the final
-        editorial article image later.
-      */}
+      {/**
+       * IMAGE PLACEHOLDER
+       * Replace this block with the final
+       * editorial article image later.
+       */}
       <div className="insight-card__image-placeholder">
         <span>Insight Image</span>
       </div>
@@ -18,9 +18,9 @@ function InsightCard({ insight }) {
           {insight.category}
         </span>
 
-        <h2 className="insight-card__title">
+        <h3 className="insight-card__title">
           {insight.title}
-        </h2>
+        </h3>
 
         <p className="insight-card__excerpt">
           {insight.excerpt}

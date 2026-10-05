@@ -84,16 +84,15 @@ function InsightsPage() {
         <div className="container">
           <div
             className="insights-tabs"
-            role="tablist"
-            aria-label="Insight categories"
+            role="group"
+            aria-label="Filter insights by category"
           >
             {categories.map(
               (category) => (
                 <button
                   key={category}
                   type="button"
-                  role="tab"
-                  aria-selected={
+                  aria-pressed={
                     activeCategory === category
                   }
                   className={`insights-tabs__button ${
@@ -120,7 +119,10 @@ function InsightsPage() {
               Editorial Focus
             </span>
 
-            <h2 className="section-title">
+            <h2
+              className="section-title"
+              id="insights-active-heading"
+            >
               {activeCategory}
             </h2>
 
@@ -137,7 +139,10 @@ function InsightsPage() {
               ARTICLE CARDS
           ==================================== */}
 
-          <div className="insights-grid">
+          <div
+            className="insights-grid"
+            aria-labelledby="insights-active-heading"
+          >
             {filteredInsights.map(
               (insight) => (
                 <InsightCard
