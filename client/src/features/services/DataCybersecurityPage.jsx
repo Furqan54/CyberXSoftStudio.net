@@ -52,7 +52,7 @@ function DataCybersecurityPage() {
       ======================================== */}
 
       <PageHero
-        eyebrow="Data, Cybersecurity & Digital Governance"
+        eyebrow="Data Cybersecurity and Digital Governance"
         title="Use Data With Confidence and Manage Digital Risk With Clarity"
         description="We help organizations improve data foundations, strengthen cybersecurity, secure cloud and identity environments, and establish governance that supports accountable digital operations."
         breadcrumbs={[
@@ -62,14 +62,14 @@ function DataCybersecurityPage() {
           },
           {
             label:
-              "Data, Cybersecurity & Digital Governance",
+              "Data Cybersecurity and Digital Governance",
           },
         ]}
         action={{
           label: "Book a Consultation",
           path: "/contact",
         }}
-        visualLabel="Data, Cybersecurity & Digital Governance Hero Image"
+        visualLabel="Data Cybersecurity and Digital Governance Hero Image"
       />
 
       {/* ========================================
@@ -84,7 +84,7 @@ function DataCybersecurityPage() {
             </span>
 
             <h2>
-              Treat Security, Data and Governance
+              Treat Security Data and Governance
               as Connected Responsibilities
             </h2>
 
@@ -461,7 +461,7 @@ function DataCybersecurityPage() {
 
       <FAQSection
         items={dataCybersecurityFaqs}
-        title="Data, Cybersecurity & Digital Governance FAQs"
+        title="Data Cybersecurity and Digital Governance FAQs"
       />
 
       {/* ========================================
@@ -469,8 +469,8 @@ function DataCybersecurityPage() {
       ======================================== */}
 
       <CTASection
-        title="Strengthen Visibility, Controls and Accountability"
-        description="Share the challenge, current environment, timeline, internal capabilities, and expected outcome. We can help define a practical starting point and engagement model."
+        title="Discuss Your Requirements"
+        description="Share the challenge, timeline, current capabilities, and expected outcome. We will recommend a practical starting point and engagement model."
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
