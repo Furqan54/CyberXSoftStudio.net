@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -184,7 +183,7 @@ function ServicesPage() {
 
       <CTASection
         title="Start With the Outcome"
-        description="You do not need to define the technology or delivery model before contacting us. Share your business objective, current challenge, timeline, and available internal capacity. We will help you identify a practical starting point."
+        description="You do not need to define the technology or delivery model before contacting us. Share the business objective, current constraint, timeline, and available internal capacity; we will help structure the engagement."
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
