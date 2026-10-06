@@ -1,4 +1,4 @@
-/*
+/**
  * CYBERX SOFT
  * WORK / CASE STUDIES
  *
@@ -69,63 +69,19 @@ export const caseStudyStructure = [
   },
 ];
 
-/*
- * Published case studies remain empty until
- * relationship, scope, client approval, and
- * outcome evidence are confirmed.
+/**
+ * Published case studies remain empty until:
+ * - the client or engagement relationship is confirmed,
+ * - CyberX Soft's scope is verified,
+ * - publication approval is received,
+ * - supporting evidence is available, and
+ * - any stated outcomes are approved.
+ *
+ * Potential case-study candidates must be maintained
+ * outside the public frontend until they are approved
+ * for publication.
  */
 export const publishedCaseStudies = [];
-
-/*
- * Internal preparation list.
- *
- * These should NOT be rendered publicly until
- * approval and evidence have been confirmed.
- */
-export const pendingCaseStudyCandidates = [
-  {
-    id: 1,
-    name: "Guide to Pakistan",
-    context: "Tourism information and services",
-    suggestedScope:
-      "Digital platform, content structure, destination storytelling, search visibility, and visitor journey.",
-    evidenceNeeded:
-      "Verified platform milestones, content volume, audience reach, enquiry growth, or other approved outcomes.",
-    publish: false,
-  },
-  {
-    id: 2,
-    name: "Lagaam",
-    context: "Digital media and editorial content",
-    suggestedScope:
-      "Editorial positioning, story development, production workflows, visual communication, and digital distribution.",
-    evidenceNeeded:
-      "Approved publishing frequency, audience metrics, production outcomes, or other verified evidence.",
-    publish: false,
-  },
-  {
-    id: 3,
-    name: "Mediabuzz Global",
-    context:
-      "Real estate marketing and business enablement",
-    suggestedScope:
-      "Brand communication, campaign support, digital materials, lead-generation infrastructure, and project collaboration.",
-    evidenceNeeded:
-      "Approved campaign, lead, delivery, or other measurable results.",
-    publish: false,
-  },
-  {
-    id: 4,
-    name: "Confidential Enterprise Engagement",
-    context:
-      "Technology or delivery support",
-    suggestedScope:
-      "Describe the business problem, CyberX Soft role, delivery model, and solution without revealing protected client information.",
-    evidenceNeeded:
-      "An approved anonymized metric or qualitative client outcome.",
-    publish: false,
-  },
-];
 
 export const workPublishingPrinciples = [
   "Use authentic project images, approved interfaces, or accurate mockups rather than unrelated stock photography.",
