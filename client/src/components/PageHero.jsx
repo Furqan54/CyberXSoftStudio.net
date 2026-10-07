@@ -7,37 +7,71 @@ function PageHero({
   description,
   breadcrumbs = [],
   action = null,
+
+  // Keep support for a future full-background
+  // hero image if we ever need one.
   showImagePlaceholder = false,
-  splitVisual = false,
-  visualLabel = "Page Hero Image",
+
+  // Every standard website page now uses
+  // the right-side hero image layout by default.
+  splitVisual = true,
+
+  // Can still be customized per page.
+  visualLabel = null,
 }) {
+  const resolvedVisualLabel =
+    visualLabel ||
+    `${eyebrow || "Page"} Hero Image`;
+
   return (
     <section
       className={`page-hero ${
-        showImagePlaceholder ? "page-hero--with-image" : ""
-      } ${splitVisual ? "page-hero--split" : ""}`}
+        showImagePlaceholder
+          ? "page-hero--with-image"
+          : ""
+      } ${
+        splitVisual
+          ? "page-hero--split"
+          : ""
+      }`}
     >
       {/*
-        IMAGE PLACEHOLDER
-        Full-background hero image placeholder.
-        Replace with the final page hero image later.
+        IMAGE PLACEHOLDER — FULL BACKGROUND
+
+        This mode is retained for future use.
+
+        It is only displayed when:
+        showImagePlaceholder = true
+        AND
+        splitVisual = false
       */}
-      {showImagePlaceholder && !splitVisual && (
-        <div
-          className="page-hero__image-placeholder"
-          aria-hidden="true"
-        />
-      )}
+      {showImagePlaceholder &&
+        !splitVisual && (
+          <div
+            className="page-hero__image-placeholder"
+            aria-hidden="true"
+          />
+        )}
 
       <div className="page-hero__overlay" />
 
       <div className="container page-hero__inner">
+        {/* ===================================
+            BREADCRUMBS
+        =================================== */}
+
         <nav
           className="page-hero__breadcrumbs"
           aria-label="Breadcrumb"
         >
-          <Link to="/" aria-label="Home">
-            <Home size={13} strokeWidth={1.8} />
+          <Link
+            to="/"
+            aria-label="Home"
+          >
+            <Home
+              size={13}
+              strokeWidth={1.8}
+            />
           </Link>
 
           {breadcrumbs.map((item) => (
@@ -62,7 +96,15 @@ function PageHero({
           ))}
         </nav>
 
+        {/* ===================================
+            HERO LAYOUT
+        =================================== */}
+
         <div className="page-hero__layout">
+          {/* ===============================
+              HERO COPY
+          =============================== */}
+
           <div className="page-hero__content">
             {eyebrow && (
               <span className="page-hero__eyebrow">
@@ -90,14 +132,27 @@ function PageHero({
             )}
           </div>
 
+          {/* ===============================
+              HERO IMAGE AREA
+
+              IMAGE PLACEHOLDER —
+              PAGE-SPECIFIC HERO IMAGE
+
+              Replace this placeholder with
+              the approved image for each page.
+
+              Recommended:
+              - 16:9 or 4:3 landscape
+              - authentic project/team imagery
+              - meaningful alt text once replaced
+          =============================== */}
+
           {splitVisual && (
             <div className="page-hero__split-visual">
-              {/*
-                IMAGE PLACEHOLDER
-                Replace this block with the final right-side hero image later.
-              */}
               <div className="page-hero__split-placeholder">
-                <span>{visualLabel}</span>
+                <span>
+                  {resolvedVisualLabel}
+                </span>
               </div>
             </div>
           )}

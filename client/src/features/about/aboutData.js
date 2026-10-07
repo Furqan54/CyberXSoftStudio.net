@@ -1,148 +1,113 @@
-export const aboutStats = [
-  {
-    id: 1,
-    value: "12+",
-    label: "Years in Business",
-  },
-  {
-    id: 2,
-    value: "500+",
-    label: "Projects Delivered",
-  },
-  {
-    id: 3,
-    value: "50+",
-    label: "Enterprise Clients",
-  },
-  {
-    id: 4,
-    value: "150+",
-    label: "Tech Specialists",
-  },
-];
 
 export const companyOverview = {
   eyebrow: "Company Overview",
 
-  title: "Where Technology Meets Business Strategy",
+  title: "Business Understanding With Hands-On Delivery",
 
   description:
-    "CyberX Soft (CXS) is a premium enterprise technology and digital solutions company. We specialize in the intersection of strategy, technology, creativity, and security — delivering integrated solutions that drive real business outcomes.",
+    "We begin with the operating need: what must change, who depends on it, what constraints matter, and how success will be assessed. From there, we assemble the right combination of strategy, design, engineering, security, data, marketing, and project delivery skills.",
 
   secondaryDescription:
-    "With headquarters in Dubai and offices in London and New York, we serve enterprises across the Middle East, Europe, and North America. Our team of 150+ certified specialists combines deep technical expertise with industry knowledge across 9 major sectors.",
+    "Our delivery base in Pakistan supports local and international engagements through flexible project, dedicated team, managed support, and augmentation models. We work alongside client teams and existing technology partners, with clear responsibilities and documented handover.",
 
-  actionLabel: "Work With Us",
+  actionLabel: "Contact CyberX Soft",
   actionPath: "/contact",
 };
 
+// These pillars describe the purpose and approach set out
+// in the CEO brief. They are not presented as separately
+// approved corporate mission or vision statements.
 export const foundationPillars = [
   {
     id: 1,
-    title: "Mission",
+    title: "Purpose",
     description:
-      "To empower enterprises with technology solutions that create lasting competitive advantage and measurable business value.",
+      "To help organizations use technology and creative capability with greater clarity, control, and practical value.",
   },
   {
     id: 2,
-    title: "Vision",
+    title: "Business Understanding",
     description:
-      "To be the most trusted technology partner for enterprises navigating digital transformation in the MENA region and beyond.",
+      "We work to understand the business requirement before recommending a solution.",
   },
   {
     id: 3,
-    title: "Purpose",
+    title: "Coordinated Delivery",
     description:
-      "We exist to close the gap between world-class technology and real-world business impact — making transformation achievable for every enterprise.",
+      "We bring the relevant disciplines together around a clear delivery plan, with defined responsibilities.",
   },
 ];
 
+// Practical commitments based on the CEO's
+// "What we aim to be known for" guidance.
 export const companyValues = [
   {
     id: 1,
-    title: "Client-First",
+    title: "Clear Communication",
     description:
-      "Every decision is made with client outcomes as the primary measure of success.",
+      "Communicate progress, risks, choices, and responsibilities clearly throughout the engagement.",
   },
   {
     id: 2,
-    title: "Transparency",
+    title: "Maintainable Results",
     description:
-      "Open communication, honest timelines, and full visibility into every project.",
+      "Build solutions that clients can operate, maintain, and improve.",
   },
   {
     id: 3,
-    title: "Excellence",
+    title: "Responsible Practice",
     description:
-      "We hold ourselves to the highest standards in every deliverable we produce.",
+      "Protect trust through responsible handling of systems, data, content, and commitments.",
   },
   {
     id: 4,
-    title: "Innovation",
+    title: "Continuous Improvement",
     description:
-      "Constantly evolving our capabilities to keep clients ahead of the curve.",
+      "Review performance and make improvements where feedback and evidence support change.",
   },
 ];
-export const leadershipTeam = [
-  {
-    id: 1,
-    name: "Omar Al-Hassan",
-    role: "Chief Executive Officer",
-    expertise: "Digital Transformation & Strategy",
-  },
-  {
-    id: 2,
-    name: "Priya Sharma",
-    role: "Chief Technology Officer",
-    expertise: "AI, Cloud Architecture & Engineering",
-  },
-  {
-    id: 3,
-    name: "James Whitfield",
-    role: "Technology & Innovation Lead",
-    expertise: "Cybersecurity & Digital Governance",
-  },
-  {
-    id: 4,
-    name: "Layla Mostafa",
-    role: "Chief Growth Officer",
-    expertise: "Brand Strategy & Creative Services",
-  },
-];
+
+// Keep the data export available for the reusable
+// LeadershipTeam component.
+//
+// Add actual profiles only after names, roles,
+// photographs, and public-display approval are confirmed.
+export const leadershipTeam = [];
+
 export const deliveryProcess = [
   {
     id: 1,
     number: "01",
-    title: "Discovery & Assessment",
+    title: "Discover & Assess",
     description:
-      "Deep-dive into your business goals, existing systems, and digital maturity to establish a clear baseline.",
+      "Understand the objective, users, current environment, risks, and constraints.",
   },
   {
     id: 2,
     number: "02",
-    title: "Strategy & Roadmap",
+    title: "Define & Plan",
     description:
-      "Co-create a prioritized transformation roadmap with clear milestones, KPIs, and measurable outcomes.",
+      "Define the scope, priorities, architecture, delivery model, and success measures.",
   },
   {
     id: 3,
     number: "03",
     title: "Design & Build",
     description:
-      "Agile delivery in focused sprints with continuous stakeholder reviews and quality assurance.",
+      "Develop solutions in visible increments with stakeholder review.",
   },
   {
     id: 4,
     number: "04",
-    title: "Deploy & Integrate",
+    title: "Test & Deploy",
     description:
-      "Seamless deployment into your environment with minimal disruption and full integration testing.",
+      "Test, deploy, document, and support adoption.",
   },
   {
     id: 5,
     number: "05",
-    title: "Optimize & Scale",
+    title: "Measure & Improve",
     description:
-      "Ongoing monitoring, performance optimization, and continuous improvement to maximize ROI.",
+      "Review performance and improve where the evidence supports change.",
   },
 ];

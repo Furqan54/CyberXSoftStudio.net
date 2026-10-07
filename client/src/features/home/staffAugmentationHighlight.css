@@ -1,0 +1,327 @@
+/* =========================================
+   Home Staff Augmentation Highlight
+========================================= */
+
+.staff-highlight {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-block: var(--section-space-lg);
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(20, 127, 209, 0.22),
+      transparent 34%
+    ),
+    linear-gradient(
+      125deg,
+      #061326 0%,
+      #092449 56%,
+      #071a33 100%
+    );
+}
+
+.staff-highlight__inner {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(360px, 0.95fr);
+
+  align-items: center;
+
+  gap: clamp(48px, 7vw, 90px);
+}
+
+/* =========================================
+   Content
+========================================= */
+
+.staff-highlight__content {
+  max-width: 680px;
+}
+
+.staff-highlight__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--color-accent);
+
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.staff-highlight__title {
+  max-width: 660px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.staff-highlight__description {
+  max-width: 650px;
+
+  margin-top: 24px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   Actions
+========================================= */
+
+.staff-highlight__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.staff-highlight__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding-inline: 21px;
+
+  font-size: 0.84rem;
+  font-weight: var(--font-weight-semibold);
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  transition:
+    transform var(--transition-fast),
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.staff-highlight__button:hover {
+  transform: translateY(-1px);
+}
+
+.staff-highlight__button--primary {
+  color: var(--color-white);
+
+  background: var(--color-accent);
+
+  border-color: var(--color-accent);
+}
+
+.staff-highlight__button--primary:hover {
+  color: var(--color-white);
+
+  background: var(--color-accent-dark);
+
+  border-color: var(--color-accent-dark);
+}
+
+.staff-highlight__button--secondary {
+  color: var(--color-white);
+
+  background: transparent;
+
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.staff-highlight__button--secondary:hover {
+  color: var(--color-white);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: var(--color-white);
+}
+
+.staff-highlight__button:focus-visible {
+  outline: 3px solid rgba(38, 195, 133, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   Detail Panel
+========================================= */
+
+.staff-highlight__panel {
+  padding: clamp(28px, 4vw, 38px);
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+
+  backdrop-filter: blur(8px);
+}
+
+.staff-highlight__panel-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.staff-highlight__panel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  color: var(--color-accent);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.staff-highlight__panel-heading div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.staff-highlight__panel-heading span {
+  color: rgba(255, 255, 255, 0.56);
+
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-medium);
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.staff-highlight__panel-heading strong {
+  color: var(--color-white);
+
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.4;
+}
+
+/* =========================================
+   Highlight List
+========================================= */
+
+.staff-highlight__list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+.staff-highlight__item {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+
+  gap: 13px;
+
+  padding-block: 19px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.staff-highlight__item:last-child {
+  padding-bottom: 0;
+
+  border-bottom: 0;
+}
+
+.staff-highlight__item svg {
+  margin-top: 2px;
+
+  color: var(--color-accent);
+}
+
+.staff-highlight__item p {
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 960px) {
+  .staff-highlight__inner {
+    grid-template-columns: 1fr;
+
+    gap: 44px;
+  }
+
+  .staff-highlight__content {
+    max-width: 760px;
+  }
+
+  .staff-highlight__panel {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 600px) {
+  .staff-highlight__title {
+    font-size: clamp(1.85rem, 9vw, 2.6rem);
+  }
+
+  .staff-highlight__description {
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+  }
+
+  .staff-highlight__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+  .staff-highlight__button {
+    width: 100%;
+  }
+
+  .staff-highlight__panel {
+    padding: 24px 20px;
+  }
+
+  .staff-highlight__panel-heading {
+    align-items: flex-start;
+  }
+
+  .staff-highlight__item {
+    padding-block: 17px;
+  }
+}

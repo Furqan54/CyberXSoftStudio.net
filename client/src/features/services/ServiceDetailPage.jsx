@@ -7,6 +7,12 @@ import NotFoundPage from "../../app/NotFoundPage";
 
 import ServiceOverview from "./ServiceOverview";
 
+import BrandStrategyPage from "./BrandStrategyPage";
+import CreativeMediaPage from "./CreativeMediaPage";
+import AISoftwarePage from "./AISoftwarePage";
+import DataCybersecurityPage from "./DataCybersecurityPage";
+import StaffAugmentationPage from "./StaffAugmentationPage";
+
 import { getServiceBySlug } from "./servicesData";
 
 import "./services.css";
@@ -19,6 +25,40 @@ function ServiceDetailPage() {
   if (!service) {
     return <NotFoundPage />;
   }
+
+  /*
+   * Dedicated service pages
+   *
+   * Existing routes remain unchanged.
+   */
+
+  switch (serviceSlug) {
+    case "brand-strategy-digital-growth":
+      return <BrandStrategyPage />;
+
+    case "creative-media-design-animation":
+      return <CreativeMediaPage />;
+
+    case "ai-software-digital-solutions":
+      return <AISoftwarePage />;
+
+    case "data-cybersecurity-digital-governance":
+      return <DataCybersecurityPage />;
+
+    case "talent-augmentation-delivery-support":
+      return <StaffAugmentationPage />;
+
+    default:
+      break;
+  }
+
+  /*
+   * Generic fallback template
+   *
+   * Kept in place for future services
+   * or routes that have not yet been
+   * moved to dedicated page components.
+   */
 
   const { detail } = service;
 
@@ -38,10 +78,9 @@ function ServiceDetailPage() {
           },
         ]}
         action={{
-          label: "Book Free Consultation",
+          label: "Book a Consultation",
           path: "/contact",
         }}
-        showImagePlaceholder
       />
 
       <ServiceOverview service={service} />
@@ -49,7 +88,7 @@ function ServiceDetailPage() {
       <CTASection
         title="Ready to Turn Strategy Into Results?"
         description="Talk to our specialists about your goals, challenges, and the right delivery approach for your organization."
-        buttonLabel="Book Free Consultation"
+        buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
     </main>

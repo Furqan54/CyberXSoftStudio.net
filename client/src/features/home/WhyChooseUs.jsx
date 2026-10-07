@@ -7,20 +7,29 @@ function WhyChooseUs() {
     <section className="why-choose-us">
       <div className="container">
         <div className="why-choose-us__header">
-          <span className="eyebrow">Why Choose CyberX Soft</span>
+          <span className="eyebrow">
+            Why Choose CyberX Soft
+          </span>
 
           <h2 className="section-title">
-            The Partner That Delivers, Not Just Promises
+            One Team From Strategy Through Delivery
           </h2>
 
           <p className="why-choose-us__description">
-            We measure success by your outcomes, not our outputs.
+            Complex initiatives often stall between strategy, creative
+            execution, engineering, security, and operational handover.
+            CyberX Soft coordinates these disciplines through a single
+            delivery model, giving clients clearer ownership and fewer
+            handoffs.
           </p>
         </div>
 
         <div className="why-choose-us__grid">
           {whyChooseUsItems.map((item) => (
-            <article className="why-choose-card" key={item.id}>
+            <article
+              className="why-choose-card"
+              key={item.id}
+            >
               <div className="why-choose-card__icon">
                 <CheckCircle2
                   size={18}

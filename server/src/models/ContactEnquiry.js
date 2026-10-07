@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose");
 
 const allowedServices = [
@@ -6,6 +7,14 @@ const allowedServices = [
   "ai-software-digital-solutions",
   "data-cybersecurity-digital-governance",
   "talent-augmentation-delivery-support",
+  "not-sure-yet",
+];
+
+const allowedContactMethods = [
+  "",
+  "email",
+  "phone",
+  "whatsapp",
 ];
 
 const contactEnquirySchema = new mongoose.Schema(
@@ -57,6 +66,29 @@ const contactEnquirySchema = new mongoose.Schema(
       trim: true,
       minlength: 10,
       maxlength: 3000,
+    },
+
+    preferredContactMethod: {
+      type: String,
+      trim: true,
+      enum: allowedContactMethods,
+      default: "",
+    },
+
+    privacyConsent: {
+      type: Boolean,
+      required: true,
+
+      validate: {
+        validator: (value) => value === true,
+        message:
+          "Privacy consent is required.",
+      },
+    },
+
+    privacyConsentAt: {
+      type: Date,
+      required: true,
     },
 
     status: {

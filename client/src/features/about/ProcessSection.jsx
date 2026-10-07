@@ -1,3 +1,4 @@
+
 import { deliveryProcess } from "./aboutData";
 
 function ProcessSection() {
@@ -10,12 +11,13 @@ function ProcessSection() {
           </span>
 
           <h2 className="delivery-process__title">
-            How We Deliver Results
+            How We Work
           </h2>
 
           <p className="delivery-process__description">
-            A proven 5-step engagement model that ensures every project delivers
-            measurable value.
+            From understanding your requirements to delivery
+            and ongoing improvement, our approach keeps
+            priorities, responsibilities, and progress clear.
           </p>
         </div>
 

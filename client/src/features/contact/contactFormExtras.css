@@ -1,0 +1,68 @@
+
+/* =========================================
+   Contact Form — Privacy Consent
+========================================= */
+
+.contact-form__privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-top: 22px;
+  padding: 16px;
+
+  background: var(--color-background-soft);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.contact-form__privacy input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+
+  margin: 2px 0 0;
+
+  flex-shrink: 0;
+
+  accent-color: #16865f;
+  cursor: pointer;
+}
+
+.contact-form__privacy input[type="checkbox"]:focus-visible {
+  outline: 2px solid #1676d2;
+  outline-offset: 3px;
+}
+
+.contact-form__privacy label {
+  color: var(--color-text-secondary);
+
+  font-size: 0.73rem;
+  line-height: 1.7;
+
+  cursor: pointer;
+}
+
+.contact-form__privacy label a {
+  color: #1676d2;
+  font-weight: var(--font-weight-semibold);
+
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-form__privacy label a:hover {
+  color: var(--color-primary);
+}
+
+.contact-form__privacy label span {
+  color: #d14343;
+}
+
+@media (max-width: 640px) {
+  .contact-form__privacy {
+    padding: 13px;
+    gap: 10px;
+  }
+}

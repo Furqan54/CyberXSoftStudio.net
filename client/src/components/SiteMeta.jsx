@@ -7,50 +7,79 @@ import { getLegalPage } from "../features/legal/legalData";
 const staticMeta = {
   "/": {
     title:
-      "CyberX Soft | Enterprise Technology & Digital Solutions",
-
+      "CyberX Soft | Technology, Software, Cybersecurity and Digital Growth",
     description:
-      "CyberX Soft delivers enterprise technology, software, AI, cybersecurity, creative, digital growth, and talent solutions.",
+      "CyberX Soft helps organizations build digital products, strengthen cybersecurity, grow brands, use data and AI, and extend delivery capacity.",
   },
 
   "/services": {
     title:
-      "Enterprise Digital Services | CyberX Soft",
-
+      "Digital and Technology Services | CyberX Soft",
     description:
-      "Explore CyberX Soft services across brand strategy, creative media, AI, software, cybersecurity, data, digital governance, and talent augmentation.",
+      "Explore CyberX Soft services across brand growth, creative production, AI and software, data and cybersecurity, and specialist delivery support.",
+  },
+
+  "/services/brand-strategy-digital-growth": {
+    title:
+      "Brand Strategy and Digital Growth | CyberX Soft",
+    description:
+      "Clarify your brand position, build demand, improve campaign performance, and connect digital marketing activity to business goals.",
+  },
+
+  "/services/creative-media-design-animation": {
+    title:
+      "Creative Media Design and Animation | CyberX Soft",
+    description:
+      "Build coherent brand experiences through identity, campaign design, user experience, video, motion graphics, animation, and scalable content production.",
+  },
+
+  "/services/ai-software-digital-solutions": {
+    title:
+      "AI Software and Digital Solutions | CyberX Soft",
+    description:
+      "Design and build secure software, AI-enabled workflows, web and mobile applications, integrations, automation, and enterprise digital platforms.",
+  },
+
+  "/services/data-cybersecurity-digital-governance": {
+    title:
+      "Data Cybersecurity and Digital Governance | CyberX Soft",
+    description:
+      "Improve data visibility, assess cyber risk, secure cloud and identity environments, and establish practical digital governance and compliance controls.",
+  },
+
+  "/services/talent-augmentation-delivery-support": {
+    title:
+      "IT Staff Augmentation and Dedicated Remote Teams | CyberX Soft",
+    description:
+      "Add technology, creative, data, cybersecurity, quality, and project specialists through dedicated resources, remote teams, managed pods, and white-label offshore delivery.",
   },
 
   "/case-studies": {
     title:
-      "Case Studies | CyberX Soft",
-
+      "Selected Work and Case Studies | CyberX Soft",
     description:
-      "Explore enterprise technology, digital transformation, software, cybersecurity, cloud, and AI case studies from CyberX Soft.",
+      "See how CyberX Soft applies strategy, technology, creative, data, cybersecurity, and delivery capabilities to practical client and platform needs.",
   },
 
   "/insights": {
     title:
-      "Insights | CyberX Soft",
-
+      "Insights on AI Software Cybersecurity and Digital Growth | CyberX Soft",
     description:
-      "Read research, analysis, and practical guidance from CyberX Soft experts covering AI, cybersecurity, cloud, ERP, and digital strategy.",
+      "Practical perspectives from CyberX Soft on AI, software, cybersecurity, data, digital governance, brand growth, creative production, and delivery.",
   },
 
   "/about": {
     title:
-      "About CyberX Soft | Enterprise Technology Partner",
-
+      "About CyberX Soft | Integrated Technology and Digital Delivery",
     description:
-      "Learn about CyberX Soft, our mission, leadership, capabilities, delivery model, and approach to enterprise digital transformation.",
+      "Learn how CyberX Soft combines business understanding, software, AI, cybersecurity, data, creative capability, and specialist delivery support.",
   },
 
   "/contact": {
     title:
-      "Contact CyberX Soft | Start a Conversation",
-
+      "Contact CyberX Soft | Book a Consultation",
     description:
-      "Contact CyberX Soft to discuss technology, software, AI, cybersecurity, creative, digital growth, or enterprise delivery requirements.",
+      "Contact CyberX Soft to discuss software, AI, cybersecurity, data, creative, digital growth, or specialist delivery requirements.",
   },
 };
 
@@ -62,7 +91,10 @@ function getPageMeta(pathname) {
   }
 
   if (pathname.startsWith("/services/")) {
-    const slug = pathname.replace("/services/", "");
+    const slug = pathname.replace(
+      "/services/",
+      ""
+    );
 
     const service = services.find(
       (item) => item.slug === slug
@@ -71,7 +103,6 @@ function getPageMeta(pathname) {
     if (service) {
       return {
         title: `${service.name} | CyberX Soft`,
-
         description:
           service.detail?.heroDescription ||
           service.homeDescription,
@@ -92,7 +123,6 @@ function getPageMeta(pathname) {
 
   return {
     title: "Page Not Found | CyberX Soft",
-
     description:
       "The page you requested could not be found on the CyberX Soft website.",
   };
@@ -106,19 +136,23 @@ function SiteMeta() {
 
     document.title = meta.title;
 
-    let descriptionTag = document.querySelector(
-      'meta[name="description"]'
-    );
+    let descriptionTag =
+      document.querySelector(
+        'meta[name="description"]'
+      );
 
     if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
+      descriptionTag =
+        document.createElement("meta");
 
       descriptionTag.setAttribute(
         "name",
         "description"
       );
 
-      document.head.appendChild(descriptionTag);
+      document.head.appendChild(
+        descriptionTag
+      );
     }
 
     descriptionTag.setAttribute(

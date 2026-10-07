@@ -2,15 +2,12 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
+import CTASection from "../../components/CTASection";
 
 import MissionValues from "./MissionValues";
-import LeadershipTeam from "./LeadershipTeam";
 import ProcessSection from "./ProcessSection";
 
-import {
-  aboutStats,
-  companyOverview,
-} from "./aboutData";
+import { companyOverview } from "./aboutData";
 
 import "./about.css";
 
@@ -19,46 +16,35 @@ function AboutPage() {
     <main>
       <PageHero
         eyebrow="About CyberX Soft"
-        title="The Technology Partner Built for Enterprise Success"
-        description="Founded with a mission to make enterprise-grade digital transformation accessible, CyberX Soft has grown into a full-spectrum technology partner trusted by leading organizations across 30+ countries."
+        title="A Practical Partner for Digital Growth and Delivery"
+        description="CyberX Soft brings technology, cybersecurity, data, creative, marketing, and delivery capability into one coordinated team. We work with organizations that need to build, improve, protect, or scale digital operations without adding unnecessary complexity."
         breadcrumbs={[
           {
             label: "About",
           },
         ]}
         action={{
-          label: "View Case Studies",
+          label: "Explore Our Work",
           path: "/case-studies",
         }}
         showImagePlaceholder
       />
 
-      <section
-        className="about-stats"
-        aria-label="CyberX Soft company statistics"
-      >
-        <div className="container about-stats__grid">
-          {aboutStats.map((stat) => (
-            <article
-              className="about-stats__item"
-              key={stat.id}
-            >
-              <strong>{stat.value}</strong>
-              <span>{stat.label}</span>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="about-overview">
         <div className="container about-overview__layout">
           <div className="about-overview__visual">
             {/*
-              IMAGE PLACEHOLDER
-              Replace this block with the final company overview image later.
+              IMAGE PLACEHOLDER — COMPANY OVERVIEW
+
+              Replace with an authentic CyberX Soft office,
+              workshop, or team collaboration photograph.
+
+              Recommended aspect ratio: 3:2.
             */}
             <div className="about-overview__image-placeholder">
-              <span>Company Overview Image</span>
+              <span>
+                Company Overview Image
+              </span>
             </div>
           </div>
 
@@ -76,7 +62,9 @@ function AboutPage() {
             </p>
 
             <p className="about-overview__description">
-              {companyOverview.secondaryDescription}
+              {
+                companyOverview.secondaryDescription
+              }
             </p>
 
             <Link
@@ -97,9 +85,14 @@ function AboutPage() {
 
       <MissionValues />
 
-      <LeadershipTeam />
-
       <ProcessSection />
+
+      <CTASection
+        title="Discuss Your Next Initiative"
+        description="Tell us what you need to build, improve, secure, or scale. We will help define a practical route forward."
+        buttonLabel="Contact CyberX Soft"
+        buttonPath="/contact"
+      />
     </main>
   );
 }

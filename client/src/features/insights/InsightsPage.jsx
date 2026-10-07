@@ -13,84 +13,157 @@ import {
 import "./insights.css";
 
 function InsightsPage() {
-  const [activeCategory, setActiveCategory] = useState("Blog");
+  const allCategory = "All Insights";
 
-  const filteredInsights = useMemo(
-    () =>
-      insights.filter(
-        (insight) => insight.type === activeCategory
-      ),
-    [activeCategory]
-  );
+  const categories = [
+    allCategory,
+    ...insightCategories,
+  ];
+
+  const [activeCategory, setActiveCategory] =
+    useState(allCategory);
+
+  const filteredInsights = useMemo(() => {
+    if (activeCategory === allCategory) {
+      return insights;
+    }
+
+    return insights.filter(
+      (insight) =>
+        insight.type === activeCategory
+    );
+  }, [activeCategory]);
+
+  const categoryDescriptions = {
+    "All Insights":
+      "Explore practical perspectives across AI, software, cybersecurity, data, creative work, digital growth, and delivery.",
+
+    "AI & Automation":
+      "Use cases, readiness, data, governance, integration, risk, and adoption.",
+
+    "Software & Platforms":
+      "Product decisions, architecture, integration, modernization, quality, and maintainability.",
+
+    "Cybersecurity & Governance":
+      "Risk priorities, identity, cloud, resilience, compliance, and management accountability.",
+
+    "Data & Business Intelligence":
+      "Data foundations, reporting quality, dashboards, decision support, and responsible use.",
+
+    "Brand Growth & Creative":
+      "Positioning, campaign planning, content systems, design, animation, and performance.",
+
+    "Delivery & Talent":
+      "Team models, project controls, quality assurance, augmentation, and knowledge transfer.",
+  };
 
   return (
     <main>
+      {/* ========================================
+          HERO
+      ======================================== */}
+
       <PageHero
         eyebrow="Insights"
-        title="Thought Leadership from the Front Lines of Digital Transformation"
-        description="Research, analysis, and practical guidance from CXS experts — covering AI, cybersecurity, cloud, ERP, and digital strategy."
+        title="Practical Thinking for Digital Decisions"
+        description="Explore clear, experience-led perspectives on technology, security, data, creative work, digital growth, and delivery. Our aim is to help leaders understand the decision, the trade-offs, and the next practical step."
         breadcrumbs={[
           {
             label: "Insights",
           },
         ]}
         splitVisual
-        visualLabel="Insights Hero Image"
+        visualLabel="Insights Editorial Hero Image"
       />
+
+      {/* ========================================
+          INSIGHT CATEGORIES
+      ======================================== */}
 
       <section className="insights-section">
         <div className="container">
           <div
             className="insights-tabs"
-            role="tablist"
-            aria-label="Insight categories"
+            role="group"
+            aria-label="Filter insights by category"
           >
-            {insightCategories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                role="tab"
-                aria-selected={activeCategory === category}
-                className={`insights-tabs__button ${
-                  activeCategory === category
-                    ? "insights-tabs__button--active"
-                    : ""
-                }`}
-                onClick={() => setActiveCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map(
+              (category) => (
+                <button
+                  key={category}
+                  type="button"
+                  aria-pressed={
+                    activeCategory === category
+                  }
+                  className={`insights-tabs__button ${
+                    activeCategory === category
+                      ? "insights-tabs__button--active"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    setActiveCategory(category)
+                  }
+                >
+                  {category}
+                </button>
+              )
+            )}
           </div>
+
+          {/* ====================================
+              ACTIVE CATEGORY
+          ==================================== */}
 
           <div className="insights-section__header">
             <span className="eyebrow">
-              {activeCategory}
+              Editorial Focus
             </span>
 
-            <h2 className="section-title">
-              {activeCategory === "Blog"
-                ? "Latest Articles"
-                : activeCategory}
+            <h2
+              className="section-title"
+              id="insights-active-heading"
+            >
+              {activeCategory}
             </h2>
+
+            <p className="insights-section__description">
+              {
+                categoryDescriptions[
+                  activeCategory
+                ]
+              }
+            </p>
           </div>
 
-          <div className="insights-grid">
-            {filteredInsights.map((insight) => (
-              <InsightCard
-                key={insight.id}
-                insight={insight}
-              />
-            ))}
+          {/* ====================================
+              ARTICLE CARDS
+          ==================================== */}
+
+          <div
+            className="insights-grid"
+            aria-labelledby="insights-active-heading"
+          >
+            {filteredInsights.map(
+              (insight) => (
+                <InsightCard
+                  key={insight.id}
+                  insight={insight}
+                />
+              )
+            )}
           </div>
         </div>
       </section>
 
+      {/* ========================================
+          FINAL CTA
+      ======================================== */}
+
       <CTASection
-        title="Want Expert Guidance for Your Organization?"
-        description="Our consultants can translate our research directly into an action plan for your business."
-        buttonLabel="Explore Our Services"
-        buttonPath="/services"
+        title="Expert Guidance for a Live Requirement"
+        description="If an insight reflects a challenge inside your organization, speak with our team about the context, constraints, and next practical step."
+        buttonLabel="Book a Consultation"
+        buttonPath="/contact"
       />
     </main>
   );

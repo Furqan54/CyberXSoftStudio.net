@@ -1,0 +1,732 @@
+/* =========================================================
+   CYBERX SOFT
+   DATA, CYBERSECURITY & DIGITAL GOVERNANCE
+   Dedicated service-page styles
+   ========================================================= */
+
+.data-cybersecurity {
+  width: 100%;
+  overflow-x: hidden;
+
+  color: var(--color-text, #102748);
+  background: var(--color-white, #ffffff);
+}
+
+/* =========================================================
+   GENERAL SECTION LAYOUT
+   ========================================================= */
+
+.data-cybersecurity__section {
+  padding: clamp(64px, 8vw, 110px) 0;
+}
+
+.data-cybersecurity__section--soft {
+  background: var(--color-background-soft, #f5f7fb);
+}
+
+.data-cybersecurity__section--dark {
+  background: #102f60;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.data-cybersecurity__section-heading {
+  max-width: 780px;
+  margin: 0 auto 46px;
+
+  text-align: center;
+}
+
+.data-cybersecurity__section-heading .eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.data-cybersecurity__section-heading h2 {
+  margin: 0;
+
+  color: var(--color-text, #102748);
+
+  font-size: clamp(1.9rem, 3vw, 2.65rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+
+.data-cybersecurity__section-heading > p {
+  max-width: 690px;
+  margin: 17px auto 0;
+
+  color: var(--color-text-secondary, #637084);
+
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   REUSABLE GRID
+   ========================================================= */
+
+.data-cybersecurity__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.data-cybersecurity__grid--two {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+.data-cybersecurity__grid--three {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+/* =========================================================
+   GENERAL CARDS
+   ========================================================= */
+
+.data-cybersecurity__card {
+  min-width: 0;
+  height: 100%;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 10px;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.data-cybersecurity__card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d2dce8;
+
+  box-shadow:
+    0 14px 34px
+    rgba(11, 38, 75, 0.08);
+}
+
+.data-cybersecurity__card h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.data-cybersecurity__card > p {
+  margin: 12px 0 0;
+
+  color: #637084;
+
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+/* =========================================================
+   NUMBER LABEL
+   ========================================================= */
+
+.data-cybersecurity__number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 34px;
+  min-height: 29px;
+
+  margin-bottom: 20px;
+  padding: 5px 8px;
+
+  color: #179f6b;
+
+  background: #edf9f4;
+
+  border-radius: 6px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   SERVICE OVERVIEW
+   ========================================================= */
+
+.data-cybersecurity__overview {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+
+  gap: clamp(42px, 6vw, 82px);
+}
+
+.data-cybersecurity__overview-content .eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.data-cybersecurity__overview-content h2 {
+  max-width: 590px;
+  margin: 0;
+
+  color: #102748;
+
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+
+.data-cybersecurity__overview-content > p {
+  max-width: 620px;
+  margin: 18px 0 0;
+
+  color: #637084;
+
+  font-size: 0.91rem;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   PRIMARY INLINE CTA
+   ========================================================= */
+
+.data-cybersecurity__primary-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 44px;
+
+  margin-top: 25px;
+  padding: 11px 17px;
+
+  color: #ffffff;
+
+  background: #102f60;
+
+  border: 1px solid #102f60;
+  border-radius: 5px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.data-cybersecurity__primary-link:hover {
+  transform: translateY(-1px);
+
+  background: #16437c;
+}
+
+.data-cybersecurity__primary-link:focus-visible {
+  outline: 3px solid rgba(38, 195, 133, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   OUTCOMES
+   ========================================================= */
+
+.data-cybersecurity__outcomes {
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 11px;
+
+  box-shadow:
+    0 10px 28px
+    rgba(11, 38, 75, 0.05);
+}
+
+.data-cybersecurity__outcomes > h3 {
+  margin: 0 0 20px;
+
+  color: #102748;
+
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.data-cybersecurity__outcomes-list {
+  display: grid;
+  gap: 14px;
+}
+
+.data-cybersecurity__outcome {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.data-cybersecurity__outcome:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.data-cybersecurity__outcome > svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #26c385;
+}
+
+.data-cybersecurity__outcome h4 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.data-cybersecurity__outcome p {
+  margin: 6px 0 0;
+
+  color: #637084;
+
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   AUDIENCE
+   ========================================================= */
+
+.data-cybersecurity__audience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.data-cybersecurity__audience-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 18px 20px;
+
+  color: #102748;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 8px;
+
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.data-cybersecurity__audience-card > svg {
+  flex: 0 0 auto;
+
+  color: #26c385;
+}
+
+/* =========================================================
+   CORE SERVICES
+   ========================================================= */
+
+.data-cybersecurity__service-card {
+  min-height: 210px;
+}
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.data-cybersecurity__capabilities-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
+
+  align-items: start;
+
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.data-cybersecurity__capabilities-copy .eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.data-cybersecurity__capabilities-copy h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  font-weight: 700;
+
+  line-height: 1.16;
+}
+
+.data-cybersecurity__capabilities-copy p {
+  max-width: 520px;
+  margin: 17px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.data-cybersecurity__capabilities-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.data-cybersecurity__capability-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 17px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.data-cybersecurity__capability-item > svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #26c385;
+}
+
+/* =========================================================
+   ASSURANCE CALLOUT
+   ========================================================= */
+
+.data-cybersecurity__callout {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 32px;
+
+  margin-top: 30px;
+  padding: 34px;
+
+  background: #102f60;
+
+  border-radius: 10px;
+}
+
+.data-cybersecurity__callout > div {
+  max-width: 700px;
+}
+
+.data-cybersecurity__callout .eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.data-cybersecurity__callout h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+
+  line-height: 1.25;
+}
+
+.data-cybersecurity__callout p {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+.data-cybersecurity__callout-link {
+  display: inline-flex;
+
+  flex: 0 0 auto;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 44px;
+
+  padding: 11px 17px;
+
+  color: #102f60;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.data-cybersecurity__callout-link:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 24px
+    rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================
+   DELIVERY PROCESS
+   ========================================================= */
+
+.data-cybersecurity__process-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.data-cybersecurity__process-card {
+  min-width: 0;
+
+  padding: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 9px;
+}
+
+.data-cybersecurity__process-number {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+
+  background: #168ed1;
+
+  border-radius: 50%;
+
+  font-size: 0.69rem;
+  font-weight: 700;
+}
+
+.data-cybersecurity__process-card h3 {
+  margin: 0;
+
+  color: #102748;
+
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+.data-cybersecurity__process-card p {
+  margin: 10px 0 0;
+
+  color: #637084;
+
+  font-size: 0.77rem;
+  line-height: 1.64;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .data-cybersecurity__audience-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .data-cybersecurity__grid--three {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .data-cybersecurity__process-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .data-cybersecurity__capabilities-layout {
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .data-cybersecurity__section {
+    padding: 62px 0;
+  }
+
+  .data-cybersecurity__section-heading {
+    margin-bottom: 30px;
+
+    text-align: left;
+  }
+
+  .data-cybersecurity__section-heading > p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .data-cybersecurity__overview,
+  .data-cybersecurity__capabilities-layout,
+  .data-cybersecurity__grid--two,
+  .data-cybersecurity__grid--three,
+  .data-cybersecurity__audience-grid,
+  .data-cybersecurity__capabilities-grid,
+  .data-cybersecurity__process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .data-cybersecurity__overview {
+    gap: 34px;
+  }
+
+  .data-cybersecurity__card,
+  .data-cybersecurity__process-card {
+    padding: 23px;
+  }
+
+  .data-cybersecurity__outcomes {
+    padding: 24px;
+  }
+
+  .data-cybersecurity__callout {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 24px;
+
+    padding: 26px;
+  }
+
+  .data-cybersecurity__callout-link {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .data-cybersecurity__section {
+    padding: 52px 0;
+  }
+
+  .data-cybersecurity__section-heading h2,
+  .data-cybersecurity__overview-content h2,
+  .data-cybersecurity__capabilities-copy h2 {
+    font-size: 1.75rem;
+  }
+
+  .data-cybersecurity__card,
+  .data-cybersecurity__process-card {
+    padding: 20px;
+  }
+
+  .data-cybersecurity__audience-card {
+    padding: 16px;
+  }
+
+  .data-cybersecurity__outcomes {
+    padding: 20px;
+  }
+
+  .data-cybersecurity__callout {
+    padding: 22px;
+  }
+
+  .data-cybersecurity__primary-link,
+  .data-cybersecurity__callout-link {
+    width: 100%;
+  }
+}

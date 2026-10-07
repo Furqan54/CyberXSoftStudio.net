@@ -16,7 +16,7 @@ export const serviceNavigation = [
     path: "/services/data-cybersecurity-digital-governance",
   },
   {
-    label: "Talent Augmentation & Delivery Support",
+    label: "Staff Augmentation & Delivery Support",
     path: "/services/talent-augmentation-delivery-support",
   },
 ];
@@ -28,7 +28,7 @@ export const mainNavigation = [
     children: serviceNavigation,
   },
   {
-    label: "Case Studies",
+    label: "Work",
     path: "/case-studies",
   },
   {

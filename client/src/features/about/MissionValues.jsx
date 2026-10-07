@@ -1,5 +1,6 @@
+
 import {
-  Eye,
+  CheckCircle2,
   Lightbulb,
   ShieldCheck,
   Sparkles,
@@ -14,16 +15,16 @@ import {
 } from "./aboutData";
 
 const pillarIcons = {
-  Mission: Target,
-  Vision: Eye,
   Purpose: Lightbulb,
+  "Business Understanding": Target,
+  "Coordinated Delivery": Workflow,
 };
 
 const valueIcons = {
-  "Client-First": Users,
-  Transparency: Workflow,
-  Excellence: ShieldCheck,
-  Innovation: Sparkles,
+  "Clear Communication": Users,
+  "Maintainable Results": CheckCircle2,
+  "Responsible Practice": ShieldCheck,
+  "Continuous Improvement": Sparkles,
 };
 
 function MissionValues() {
@@ -36,7 +37,7 @@ function MissionValues() {
           </span>
 
           <h2 className="mission-values__title">
-            Mission, Vision & Values
+            Our Purpose and Working Principles
           </h2>
         </div>
 

@@ -1,25 +1,32 @@
-import { serviceCapabilities } from "./servicesData";
+
+import {
+  overviewCapabilities,
+} from "./servicesOverviewData";
 
 function ServiceCapabilities() {
   return (
     <section className="service-capabilities">
       <div className="container">
         <div className="service-capabilities__header">
-          <span className="eyebrow">Why CyberX Soft</span>
+          <span className="eyebrow">
+            Why CyberX Soft
+          </span>
 
           <h2 className="service-capabilities__title">
-            One Partner. Every Capability.
+            Practical Delivery, Clear Responsibilities
           </h2>
 
           <p className="service-capabilities__description">
-            Rather than coordinating five different vendors, CXS gives you a
-            single accountable partner across all five service pillars — with
-            integrated delivery and unified leadership.
+            Different projects need different skills
+            and ways of working. We help bring the
+            relevant capabilities together around an
+            agreed scope, responsibilities, and
+            delivery approach.
           </p>
         </div>
 
         <div className="service-capabilities__grid">
-          {serviceCapabilities.map((capability) => (
+          {overviewCapabilities.map((capability) => (
             <article
               className="service-capability-card"
               key={capability.id}

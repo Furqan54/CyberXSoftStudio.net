@@ -6,7 +6,7 @@ export const clientsPartners = [
   },
   {
     id: 2,
-    name: "Lagfam",
+    name: "Lagaam",
     logo: null,
   },
   {
@@ -41,126 +41,176 @@ export const clientsPartners = [
   },
 ];
 
-export const whyChooseUsItems = [
+export const audienceNeeds = [
   {
     id: 1,
-    title: "12+ Years Experience",
-    description:
-      "Over a decade delivering enterprise technology solutions across 30+ countries.",
+    need: "Launch or improve a digital product",
+    service: "AI Software and Digital Solutions",
+    path: "/services/ai-software-digital-sololutions".replace(
+      "sololutions",
+      "solutions"
+    ),
   },
   {
     id: 2,
-    title: "End-to-End Delivery",
-    description:
-      "Strategy through deployment — we own the full project lifecycle.",
+    need: "Strengthen a brand or generate qualified demand",
+    service: "Brand Strategy and Digital Growth",
+    path: "/services/brand-strategy-digital-growth",
   },
   {
     id: 3,
-    title: "Certified Expertise",
-    description:
-      "ISO 27001, PMP, CISSP, AWS, Azure, and Google Cloud certified professionals.",
+    need: "Produce recurring design, video, or animation",
+    service: "Creative Media Design and Animation",
+    path: "/services/creative-media-design-animation",
   },
   {
     id: 4,
-    title: "Agile & Transparent",
-    description:
-      "Weekly sprint reviews, real-time dashboards, and zero surprises.",
+    need: "Improve data visibility, security, or governance",
+    service: "Data Cybersecurity and Digital Governance",
+    path: "/services/data-cybersecurity-digital-governance",
   },
   {
     id: 5,
-    title: "Global Delivery",
-    description:
-      "Offices in Dubai, London, and New York, with 24/7 support capabilities.",
-  },
-  {
-    id: 6,
-    title: "Proven ROI",
-    description:
-      "Average client ROI of 3.2x within 18 months of project delivery.",
+    need: "Add specialists or a complete remote team",
+    service: "Staff Augmentation and Delivery Support",
+    path: "/services/talent-augmentation-delivery-support",
   },
 ];
 
-export const homeStats = [
+export const staffAugmentationHighlights = [
   {
     id: 1,
-    value: "500+",
-    label: "Projects Delivered",
-    note: "Across 30+ countries",
+    text:
+      "Start with one resource and add complementary skills as the workload becomes clearer.",
   },
   {
     id: 2,
-    value: "98%",
-    label: "Client Retention",
-    note: "Year-over-year",
+    text:
+      "Choose monthly, hourly, milestone-based, project, or partnership structures according to the requirement.",
   },
   {
     id: 3,
-    value: "3.2x",
-    label: "Average ROI",
-    note: "Within 18 months",
+    text:
+      "Agree working-hour overlap for the United Kingdom, North America, the Gulf, or another operating market.",
   },
   {
     id: 4,
-    value: "24/7",
-    label: "Support Coverage",
-    note: "Global SLA coverage",
+    text:
+      "Define confidentiality, intellectual property, access, performance review, continuity, and replacement terms before onboarding.",
   },
 ];
-export const testimonials = [
+
+export const whyChooseUsItems = [
   {
     id: 1,
-    rating: 5,
-    quote:
-      "CyberX Soft delivered a complete ERP transformation that reduced our operational costs by 35% and cut processing time in half. The team was professional, responsive, and delivered on time.",
-    name: "Ahmed Al-Rashid",
-    role: "CTO",
-    company: "Emirates Financial Group",
-    initials: "A",
+    title: "Business-First Discovery",
+    description:
+      "We clarify business objectives and operating constraints before recommending tools or platforms.",
   },
   {
     id: 2,
-    rating: 5,
-    quote:
-      "Their cybersecurity team identified critical vulnerabilities and implemented robust protection frameworks that gave our board complete confidence in our data governance posture.",
-    name: "Sarah Mitchell",
-    role: "CISO",
-    company: "MedTech Solutions",
-    initials: "S",
+    title: "Coordinated Delivery",
+    description:
+      "We bring strategy, design, engineering, security, and delivery into a coordinated approach.",
   },
   {
     id: 3,
-    rating: 5,
-    quote:
-      "The AI-powered analytics platform built by CXS transformed how we make decisions. We now have real-time insights that directly impact our bottom line.",
-    name: "Khalid Ibrahim",
-    role: "VP Operations",
-    company: "Aldar Properties",
-    initials: "K",
+    title: "Flexible Engagement Models",
+    description:
+      "Choose a defined project, dedicated specialist, coordinated team, or managed support arrangement.",
+  },
+  {
+    id: 4,
+    title: "Clear Milestones & Ownership",
+    description:
+      "We define responsibilities, review points, milestones, and acceptance criteria before delivery begins.",
+  },
+  {
+    id: 5,
+    title: "Security & Governance",
+    description:
+      "We consider security, risk, and governance requirements throughout the delivery lifecycle.",
+  },
+  {
+    id: 6,
+    title: "Collaboration With Your Team",
+    description:
+      "Our delivery approach accommodates existing teams, systems, technology partners, and operational needs.",
   },
 ];
+
+export const homeApproachSteps = [
+  {
+    id: 1,
+    number: "01",
+    title: "Understand",
+    description:
+      "Understand the business objective, users, constraints, systems, and success measures.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Define",
+    description:
+      "Define the scope, solution direction, delivery model, risks, milestones, and responsibilities.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Design & Build",
+    description:
+      "Design and build in visible increments with regular stakeholder review and quality checks.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Deploy & Handover",
+    description:
+      "Deploy, document, transfer knowledge, and support adoption within the operating environment.",
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Measure & Improve",
+    description:
+      "Measure performance and improve the solution as business needs change.",
+  },
+];
+
 export const homeFaqs = [
   {
     id: 1,
-    question: "What types of businesses does CyberX Soft work with?",
+    question:
+      "What types of organizations does CyberX Soft work with?",
     answer:
-      "We work with mid-market and enterprise organizations across key industries including banking, healthcare, manufacturing, retail, government, education, telecommunications, energy, and aviation. Our clients range from regional SMEs to Fortune 500 companies.",
+      "We work with organizations that need practical support across digital products, technology, security, data, creative work, marketing, or delivery capacity. Engagement suitability depends on the requirement, timeline, operating environment, and available expertise.",
   },
   {
     id: 2,
-    question: "How long does a typical digital transformation project take?",
+    question:
+      "Can CyberX Soft combine several services in one engagement?",
     answer:
-      "Project timelines vary based on scope, complexity, integrations, and business requirements. Smaller initiatives may take a few weeks, while larger enterprise transformation programs can run across several months with phased delivery.",
+      "Yes. Many requirements cross disciplines. A program can combine strategy, design, software, AI, data, cybersecurity, marketing, and specialist delivery while keeping responsibilities and governance clear.",
   },
   {
     id: 3,
-    question: "Do you offer ongoing support after project delivery?",
+    question:
+      "Can you work with our existing team and suppliers?",
     answer:
-      "Yes. CyberX Soft provides ongoing support, maintenance, monitoring, optimization, and managed services based on the needs of each engagement.",
+      "Yes. We can work alongside internal teams, agencies, software vendors, cloud providers, and specialist advisers. The engagement plan defines interfaces, decision rights, deliverables, dependencies, and handover.",
   },
   {
     id: 4,
-    question: "How do I start working with CyberX Soft?",
+    question:
+      "How do you decide the right delivery model?",
     answer:
-      "Start by contacting our team for an initial consultation. We will discuss your goals, current challenges, requirements, and the most suitable approach before defining the next steps.",
+      "We assess the objective, scope clarity, urgency, internal ownership, required skills, duration, security needs, and delivery risk. We then recommend a project, discovery, dedicated team, managed support, or augmentation model.",
+  },
+  {
+    id: 5,
+    question:
+      "What happens after the first consultation?",
+    answer:
+      "If there is a suitable fit, we agree the next step. This may be a focused discovery, a written scope and estimate, a technical assessment, a workshop, or a request for additional information.",
   },
 ];
