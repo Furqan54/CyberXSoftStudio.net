@@ -1,0 +1,151 @@
+
+/* =========================================
+   CYBERX SOFT — HERO BUTTON INTERACTIONS
+   Shared across Home and standard page heroes
+========================================= */
+
+/* Shared animation foundation */
+
+.page-hero a.page-hero__action,
+.home-hero a.home-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  text-decoration: none;
+
+  transition:
+    color 240ms ease,
+    background-color 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* =========================================
+   HOME HERO — PRIMARY BUTTON
+========================================= */
+
+.home-hero a.home-hero__button:not(
+  .home-hero__button--secondary
+) {
+  color: #ffffff;
+  background-color: #25c483;
+  border-color: #25c483;
+}
+
+/* =========================================
+   HOME HERO — SECONDARY BUTTON
+========================================= */
+
+.home-hero a.home-hero__button--secondary {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.76);
+}
+
+/* =========================================
+   SHARED PAGE HERO — OUTLINE BUTTON
+========================================= */
+
+.page-hero a.page-hero__action {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.76);
+}
+
+/* =========================================
+   ARROW ANIMATION
+========================================= */
+
+.home-hero a.home-hero__button svg,
+.page-hero a.page-hero__action svg {
+  flex-shrink: 0;
+
+  transition:
+    transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* =========================================
+   HOVER — DEVICES WITH MOUSE / TRACKPAD
+========================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  /* Primary green button */
+
+  .home-hero a.home-hero__button:not(
+    .home-hero__button--secondary
+  ):hover {
+    color: #ffffff;
+    background-color: #159b72;
+    border-color: #159b72;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 10px 26px rgba(25, 196, 130, 0.25);
+  }
+
+  /* Outline buttons */
+
+  .home-hero a.home-hero__button--secondary:hover,
+  .page-hero a.page-hero__action:hover {
+    color: #0b2143;
+    background-color: #ffffff;
+    border-color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Arrow moves independently */
+
+  .home-hero a.home-hero__button:hover svg,
+  .page-hero a.page-hero__action:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+.page-hero a.page-hero__action:focus-visible,
+.home-hero a.home-hero__button:focus-visible {
+  outline: 3px solid #75eac7;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TOUCH / ACTIVE FEEDBACK
+========================================= */
+
+.page-hero a.page-hero__action:active,
+.home-hero a.home-hero__button:active {
+  transform: translateY(1px);
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .page-hero a.page-hero__action,
+  .home-hero a.home-hero__button,
+  .page-hero a.page-hero__action svg,
+  .home-hero a.home-hero__button svg {
+    transition: none;
+  }
+
+  .page-hero a.page-hero__action:hover,
+  .home-hero a.home-hero__button:hover,
+  .page-hero a.page-hero__action:active,
+  .home-hero a.home-hero__button:active {
+    transform: none;
+  }
+}

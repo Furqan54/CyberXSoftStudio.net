@@ -1,20 +1,20 @@
+
 /* =========================================================
    CYBERX SOFT
    AI, SOFTWARE & DIGITAL SOLUTIONS
-   Dedicated service-page styles
-   ========================================================= */
+   Complete page stylesheet
+========================================================= */
 
 .ai-software {
   width: 100%;
   overflow-x: hidden;
-
   color: var(--color-text, #102748);
   background: var(--color-white, #ffffff);
 }
 
-/* =========================================================
+/* =========================================
    GENERAL SECTION LAYOUT
-   ========================================================= */
+========================================= */
 
 .ai-software__section {
   padding: clamp(64px, 8vw, 110px) 0;
@@ -28,30 +28,52 @@
   background: #102f60;
 }
 
-/* =========================================================
-   SECTION HEADINGS
-   ========================================================= */
+/* =========================================
+   SECTION HEADINGS AND PILLS
+========================================= */
 
 .ai-software__section-heading {
   max-width: 780px;
   margin: 0 auto 46px;
-
   text-align: center;
 }
 
-.ai-software__section-heading .eyebrow {
-  display: inline-block;
+.ai-software
+.ai-software__section-heading .eyebrow,
+.ai-software
+.ai-software__overview-content .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
   margin-bottom: 12px;
+  padding: 8px 16px;
+
+  color: #087766;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    105deg,
+    rgba(8, 121, 186, 0.10),
+    rgba(30, 196, 117, 0.13)
+  );
+
+  border: 1px solid rgba(8, 121, 186, 0.27);
+  border-radius: 999px;
 }
 
 .ai-software__section-heading h2 {
   margin: 0;
-
   color: var(--color-text, #102748);
-
   font-size: clamp(1.9rem, 3vw, 2.65rem);
   font-weight: 700;
-
   line-height: 1.16;
   letter-spacing: -0.025em;
 }
@@ -59,16 +81,14 @@
 .ai-software__section-heading > p {
   max-width: 690px;
   margin: 17px auto 0;
-
   color: var(--color-text-secondary, #637084);
-
   font-size: 0.94rem;
   line-height: 1.75;
 }
 
-/* =========================================================
-   REUSABLE GRID
-   ========================================================= */
+/* =========================================
+   REUSABLE GRIDS
+========================================= */
 
 .ai-software__grid {
   display: grid;
@@ -76,111 +96,87 @@
 }
 
 .ai-software__grid--two {
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .ai-software__grid--three {
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* =========================================================
+/* =========================================
    GENERAL CARDS
-   ========================================================= */
+========================================= */
 
 .ai-software__card {
   min-width: 0;
   height: 100%;
-
   padding: 28px;
 
   background: #ffffff;
-
   border: 1px solid #e1e7ef;
   border-radius: 10px;
 
   transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .ai-software__card:hover {
   transform: translateY(-3px);
-
   border-color: #d2dce8;
-
-  box-shadow:
-    0 14px 34px
-    rgba(11, 38, 75, 0.08);
+  box-shadow: 0 14px 34px rgba(11, 38, 75, 0.08);
 }
 
 .ai-software__card h3 {
   margin: 0;
-
   color: #102748;
-
   font-size: 1rem;
   font-weight: 700;
-
   line-height: 1.4;
 }
 
 .ai-software__card > p {
   margin: 12px 0 0;
-
   color: #637084;
-
   font-size: 0.84rem;
   line-height: 1.72;
 }
 
-/* =========================================================
-   NUMBER LABEL
-   ========================================================= */
+/* =========================================
+   NUMBER LABELS
+========================================= */
 
 .ai-software__number {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   min-width: 34px;
   min-height: 29px;
-
   margin-bottom: 20px;
   padding: 5px 8px;
 
   color: #179f6b;
-
   background: #edf9f4;
-
   border-radius: 6px;
 
   font-size: 0.7rem;
   font-weight: 700;
 }
 
-/* =========================================================
+/* =========================================
    SERVICE OVERVIEW
-   ========================================================= */
+========================================= */
 
 .ai-software__overview {
   display: grid;
-
   grid-template-columns:
     minmax(0, 0.95fr)
     minmax(0, 1.05fr);
 
   align-items: center;
-
   gap: clamp(42px, 6vw, 82px);
-}
-
-.ai-software__overview-content .eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
 }
 
 .ai-software__overview-content h2 {
@@ -188,10 +184,8 @@
   margin: 0;
 
   color: #102748;
-
   font-size: clamp(1.9rem, 3vw, 2.55rem);
   font-weight: 700;
-
   line-height: 1.16;
   letter-spacing: -0.025em;
 }
@@ -201,38 +195,31 @@
   margin: 18px 0 0;
 
   color: #637084;
-
   font-size: 0.91rem;
   line-height: 1.78;
 }
 
-/* =========================================================
-   PRIMARY INLINE CTA
-   ========================================================= */
+/* =========================================
+   PRIMARY CTA
+========================================= */
 
 .ai-software__primary-link {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 10px;
-
   min-height: 44px;
-
   margin-top: 25px;
   padding: 11px 17px;
 
   color: #ffffff;
-
   background: #102f60;
-
   border: 1px solid #102f60;
   border-radius: 5px;
 
   font-size: 0.78rem;
   font-weight: 600;
-
   text-decoration: none;
 
   transition:
@@ -242,7 +229,6 @@
 
 .ai-software__primary-link:hover {
   transform: translateY(-1px);
-
   background: #16437c;
 }
 
@@ -251,28 +237,21 @@
   outline-offset: 3px;
 }
 
-/* =========================================================
+/* =========================================
    OUTCOMES
-   ========================================================= */
+========================================= */
 
 .ai-software__outcomes {
   padding: 32px;
-
   background: #ffffff;
-
   border: 1px solid #e1e7ef;
   border-radius: 11px;
-
-  box-shadow:
-    0 10px 28px
-    rgba(11, 38, 75, 0.05);
+  box-shadow: 0 10px 28px rgba(11, 38, 75, 0.05);
 }
 
 .ai-software__outcomes > h3 {
   margin: 0 0 20px;
-
   color: #102748;
-
   font-size: 1.12rem;
   font-weight: 700;
 }
@@ -284,13 +263,9 @@
 
 .ai-software__outcome {
   display: flex;
-
   align-items: flex-start;
-
   gap: 14px;
-
   padding: 17px 0;
-
   border-top: 1px solid #edf1f5;
 }
 
@@ -301,82 +276,448 @@
 
 .ai-software__outcome > svg {
   flex: 0 0 auto;
-
   margin-top: 2px;
-
   color: #26c385;
 }
 
 .ai-software__outcome h4 {
   margin: 0;
-
   color: #102748;
-
   font-size: 0.9rem;
   font-weight: 700;
 }
 
 .ai-software__outcome p {
   margin: 6px 0 0;
-
   color: #637084;
-
   font-size: 0.8rem;
   line-height: 1.65;
 }
 
 /* =========================================================
-   AUDIENCE GRID
-   ========================================================= */
+   IMPROVED — WHO THIS SERVICE IS FOR
+   PREMIUM BLUE-GREEN CARD DESIGN
+========================================================= */
+
+/* Distinct backdrop for this section only */
+
+.ai-software__section--soft:has(
+  .ai-software__audience-grid
+) {
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(61, 147, 226, 0.10),
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(37, 196, 131, 0.07),
+      transparent 43%
+    ),
+    linear-gradient(
+      135deg,
+      #edf4fc 0%,
+      #f6f9fe 48%,
+      #eaf3fc 100%
+    );
+}
+
+/* Grid panel */
 
 .ai-software__audience-grid {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 18px;
 
-  gap: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(204, 227, 249, 0.40),
+    rgba(234, 248, 244, 0.48)
+  );
+
+  border: 1px solid rgba(59, 130, 201, 0.14);
+  border-radius: 24px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 18px 46px rgba(23, 79, 138, 0.05);
 }
 
-.ai-software__audience-card {
-  display: flex;
+/* Individual cards */
 
+.ai-software__audience-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
   align-items: center;
 
-  gap: 10px;
-
   min-width: 0;
+  min-height: 112px;
 
-  padding: 18px 20px;
+  gap: 15px;
+  padding: 23px 21px;
+
+  overflow: hidden;
 
   color: #102748;
 
-  background: #ffffff;
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  );
 
-  border: 1px solid #e1e7ef;
-  border-radius: 8px;
+  border: 1px solid rgba(54, 124, 195, 0.20);
+  border-radius: 16px;
 
-  font-size: 0.84rem;
-  font-weight: 600;
+  box-shadow:
+    0 8px 22px rgba(21, 75, 137, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.90);
+
+  font-size: 0.90rem;
+  font-weight: 650;
+  line-height: 1.55;
+
+  transform: translateY(0);
+
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    background-color 280ms ease;
 }
+
+/* Left-side gradient accent */
+
+.ai-software__audience-card::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 0;
+
+  width: 3px;
+
+  background: linear-gradient(
+    180deg,
+    #168de0 0%,
+    #2ac58b 100%
+  );
+
+  border-radius: 0 999px 999px 0;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 280ms ease,
+    top 280ms ease,
+    bottom 280ms ease;
+}
+
+/* Small decorative corner light */
+
+.ai-software__audience-card::after {
+  content: "";
+
+  position: absolute;
+  top: -65px;
+  right: -65px;
+
+  width: 150px;
+  height: 150px;
+
+  background: radial-gradient(
+    circle,
+    rgba(41, 139, 228, 0.08),
+    transparent 70%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Blue-green circular check icons */
 
 .ai-software__audience-card > svg {
+  position: relative;
+  z-index: 1;
+
+  box-sizing: content-box;
   flex: 0 0 auto;
 
-  color: #26c385;
+  width: 18px;
+  height: 18px;
+
+  padding: 10px;
+
+  color: #087cbd;
+
+  background: linear-gradient(
+    145deg,
+    #e0f1ff 0%,
+    #e3f9ef 100%
+  );
+
+  border: 1px solid rgba(26, 133, 200, 0.19);
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 12px rgba(29, 122, 195, 0.07);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
-/* =========================================================
-   CORE SERVICE CARDS
-   ========================================================= */
+.ai-software__audience-card > span {
+  position: relative;
+  z-index: 1;
+
+  min-width: 0;
+}
+
+/* Premium hover */
+
+.ai-software__audience-card:hover {
+  transform: translateY(-6px);
+
+  background-color: #ffffff;
+
+  border-color: rgba(30, 132, 221, 0.52);
+
+  box-shadow:
+    0 20px 38px rgba(23, 89, 165, 0.14),
+    0 0 0 1px rgba(31, 142, 229, 0.04);
+}
+
+.ai-software__audience-card:hover::before {
+  top: 12px;
+  bottom: 12px;
+  opacity: 1;
+}
+
+.ai-software__audience-card:hover > svg {
+  transform: scale(1.09);
+
+  border-color: rgba(25, 153, 199, 0.42);
+
+  box-shadow:
+    0 7px 18px rgba(29, 122, 195, 0.17);
+}
+
+/* =========================================
+   CORE SERVICES
+========================================= */
 
 .ai-software__service-card {
   min-height: 210px;
 }
 
 /* =========================================================
+   WHEN IT BECOMES USEFUL
+   NAVY HERO-INSPIRED SECTION
+========================================================= */
+
+.ai-software__section--use-cases {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 18%,
+      rgba(28, 118, 207, 0.28),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 92% 85%,
+      rgba(32, 189, 145, 0.13),
+      transparent 39%
+    ),
+    linear-gradient(
+      120deg,
+      #061326 0%,
+      #092449 55%,
+      #071a33 100%
+    );
+}
+
+.ai-software__section--use-cases .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-software__section--use-cases
+.ai-software__section-heading h2 {
+  color: #ffffff;
+}
+
+.ai-software__section--use-cases
+.ai-software__section-heading > p {
+  color: rgba(232, 241, 253, 0.82);
+}
+
+.ai-software
+.ai-software__section--use-cases
+.ai-software__section-heading .eyebrow {
+  color: #ffffff;
+
+  background: linear-gradient(
+    110deg,
+    rgba(20, 127, 209, 0.38),
+    rgba(37, 196, 131, 0.23)
+  );
+
+  border-color: rgba(118, 231, 197, 0.58);
+}
+
+/* =========================================
+   USE-CASE GLASS CARDS
+========================================= */
+
+.ai-software__use-case-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 190px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.57);
+
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 36px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.ai-software__use-case-card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 58px;
+  height: 3px;
+
+  border-radius: 999px 999px 0 0;
+
+  background: linear-gradient(
+    90deg,
+    #178beb,
+    #2bd99b
+  );
+
+  transition: width 300ms ease;
+}
+
+.ai-software__use-case-card .ai-software__number {
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+
+  color: #ffffff;
+  background: rgba(50, 139, 225, 0.28);
+
+  border: 1px solid rgba(157, 217, 255, 0.58);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px rgba(67, 157, 240, 0.08);
+}
+
+.ai-software__use-case-card h3 {
+  color: #ffffff;
+}
+
+.ai-software__use-case-card > p {
+  color: rgba(229, 239, 252, 0.80);
+}
+
+.ai-software__use-case-card:hover {
+  transform: translateY(-7px);
+
+  background-color: rgba(30, 77, 130, 0.70);
+  border-color: rgba(110, 203, 255, 0.62);
+
+  box-shadow:
+    0 24px 48px rgba(0, 9, 28, 0.28),
+    0 0 22px rgba(30, 144, 255, 0.12);
+}
+
+.ai-software__use-case-card:hover::after {
+  width: 105px;
+}
+
+/* =========================================================
+   HIGH-CONTRAST PILLS ON NAVY BACKGROUNDS
+========================================================= */
+
+.ai-software
+.ai-software__section--dark
+.ai-software__capabilities-copy
+.eyebrow.ai-software__eyebrow--light,
+.ai-software
+.ai-software__callout
+.eyebrow.ai-software__eyebrow--light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 14px;
+  padding: 8px 16px;
+
+  color: #ffffff;
+
+  font-size: 0.83rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    110deg,
+    rgba(17, 132, 212, 0.41),
+    rgba(36, 190, 143, 0.26)
+  );
+
+  border: 1px solid rgba(153, 243, 218, 0.63);
+  border-radius: 999px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 6px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================
    DARK CAPABILITIES SECTION
-   ========================================================= */
+========================================= */
 
 .ai-software__capabilities-layout {
   display: grid;
@@ -386,23 +727,15 @@
     minmax(0, 1.2fr);
 
   align-items: start;
-
   gap: clamp(40px, 6vw, 80px);
-}
-
-.ai-software__capabilities-copy .eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
 }
 
 .ai-software__capabilities-copy h2 {
   margin: 0;
-
   color: #ffffff;
 
   font-size: clamp(1.9rem, 3vw, 2.55rem);
   font-weight: 700;
-
   line-height: 1.16;
 }
 
@@ -410,41 +743,29 @@
   max-width: 520px;
   margin: 17px 0 0;
 
-  color: rgba(255, 255, 255, 0.68);
-
+  color: rgba(255, 255, 255, 0.76);
   font-size: 0.88rem;
   line-height: 1.75;
 }
 
 .ai-software__capabilities-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
 .ai-software__capability-item {
   display: flex;
-
   align-items: flex-start;
 
   gap: 10px;
-
   min-width: 0;
-
   padding: 17px;
 
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(255, 255, 255, 0.89);
+  background: rgba(255, 255, 255, 0.06);
 
-  background:
-    rgba(255, 255, 255, 0.06);
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.1);
-
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 8px;
 
   font-size: 0.8rem;
@@ -453,29 +774,24 @@
 
 .ai-software__capability-item > svg {
   flex: 0 0 auto;
-
   margin-top: 2px;
-
   color: #26c385;
 }
 
-/* =========================================================
+/* =========================================
    ENGAGEMENT CALLOUT
-   ========================================================= */
+========================================= */
 
 .ai-software__callout {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
   gap: 32px;
-
   margin-top: 30px;
   padding: 34px;
 
   background: #102f60;
-
   border-radius: 10px;
 }
 
@@ -483,54 +799,39 @@
   max-width: 690px;
 }
 
-.ai-software__callout .eyebrow {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
 .ai-software__callout h3 {
   margin: 0;
-
   color: #ffffff;
 
   font-size: clamp(1.3rem, 2.2vw, 1.8rem);
   font-weight: 700;
-
   line-height: 1.25;
 }
 
 .ai-software__callout p {
   margin: 12px 0 0;
 
-  color: rgba(255, 255, 255, 0.72);
-
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.84rem;
   line-height: 1.72;
 }
 
 .ai-software__callout-link {
   display: inline-flex;
-
   flex: 0 0 auto;
-
   align-items: center;
   justify-content: center;
 
   gap: 9px;
-
   min-height: 44px;
-
   padding: 11px 17px;
 
   color: #102f60;
-
   background: #ffffff;
-
   border-radius: 5px;
 
   font-size: 0.76rem;
   font-weight: 700;
-
   text-decoration: none;
 
   transition:
@@ -540,92 +841,416 @@
 
 .ai-software__callout-link:hover {
   transform: translateY(-2px);
-
   box-shadow:
-    0 8px 24px
-    rgba(0, 0, 0, 0.15);
+    0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ai-software__callout-link:focus-visible {
+  outline: 3px solid #67dfb9;
+  outline-offset: 3px;
 }
 
 /* =========================================================
-   DELIVERY PROCESS
-   ========================================================= */
+   PREMIUM ENGAGEMENT OPTION CARDS
+========================================================= */
 
-.ai-software__process-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 18px;
+.ai-software__section--engagement .ai-software__grid {
+  align-items: stretch;
+  gap: 20px;
 }
 
-.ai-software__process-card {
-  min-width: 0;
+.ai-software__engagement-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 
-  padding: 26px;
+  min-height: 205px;
 
-  background: #ffffff;
+  background: linear-gradient(
+    150deg,
+    #ffffff 0%,
+    #f3f9ff 100%
+  );
 
-  border: 1px solid #e1e7ef;
-  border-radius: 9px;
+  border: 1px solid rgba(28, 109, 197, 0.19);
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 24px rgba(17, 77, 145, 0.05);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
-.ai-software__process-number {
+.ai-software__engagement-card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 58px;
+  height: 3px;
+
+  border-radius: 999px 999px 0 0;
+
+  background:
+    linear-gradient(90deg, #178beb, #2bd99b);
+
+  transition: width 280ms ease;
+}
+
+.ai-software__engagement-icon {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
-  width: 35px;
-  height: 35px;
-
+  width: 44px;
+  height: 44px;
   margin-bottom: 18px;
 
-  color: #ffffff;
+  color: #1379c8;
 
-  background: #168ed1;
+  background: linear-gradient(
+    145deg,
+    #deefff,
+    #ecf8ff
+  );
 
-  border-radius: 50%;
+  border: 1px solid rgba(26, 127, 214, 0.23);
+  border-radius: 13px;
 
-  font-size: 0.69rem;
-  font-weight: 700;
+  box-shadow:
+    0 5px 12px rgba(16, 106, 194, 0.06);
+
+  transition:
+    transform 280ms ease,
+    background 280ms ease;
 }
 
-.ai-software__process-card h3 {
-  margin: 0;
+.ai-software__engagement-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(31, 132, 229, 0.58);
 
-  color: #102748;
-
-  font-size: 0.92rem;
-  font-weight: 700;
-
-  line-height: 1.4;
+  box-shadow:
+    0 22px 46px rgba(16, 88, 169, 0.15),
+    0 0 0 1px rgba(39, 153, 242, 0.06);
 }
 
-.ai-software__process-card p {
-  margin: 10px 0 0;
+.ai-software__engagement-card:hover
+.ai-software__engagement-icon {
+  transform: translateY(-3px) scale(1.06);
 
-  color: #637084;
+  background: linear-gradient(
+    145deg,
+    #cfe7ff,
+    #e2f5ff
+  );
+}
 
-  font-size: 0.77rem;
-  line-height: 1.64;
+.ai-software__engagement-card:hover::after {
+  width: 105px;
 }
 
 /* =========================================================
-   TABLET
-   ========================================================= */
+   HOW WE WORK
+   PREMIUM NAVY GLASSMORPHISM SECTION
+========================================================= */
+
+.ai-software__section--delivery {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 8% 14%,
+      rgba(23, 109, 198, 0.27),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 90% 86%,
+      rgba(29, 191, 143, 0.13),
+      transparent 36%
+    ),
+    linear-gradient(
+      125deg,
+      #07172f 0%,
+      #0b2750 52%,
+      #0d345b 100%
+    );
+}
+
+.ai-software__section--delivery::before {
+  content: "";
+
+  position: absolute;
+  top: -185px;
+  right: -155px;
+
+  width: 460px;
+  height: 460px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(46, 142, 235, 0.17),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.ai-software__section--delivery > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-software__section--delivery
+.ai-software__section-heading h2 {
+  color: #ffffff;
+}
+
+.ai-software__section--delivery
+.ai-software__section-heading > p {
+  color: rgba(230, 239, 251, 0.81);
+}
+
+.ai-software
+.ai-software__section--delivery
+.ai-software__section-heading .eyebrow {
+  color: #ffffff;
+
+  background: linear-gradient(
+    110deg,
+    rgba(20, 127, 209, 0.36),
+    rgba(37, 196, 131, 0.21)
+  );
+
+  border-color: rgba(118, 231, 197, 0.59);
+}
+
+/* =========================================
+   DELIVERY GRID
+========================================= */
+
+.ai-software__process-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+  gap: 22px;
+}
+
+/* =========================================
+   DELIVERY GLASS CARDS
+========================================= */
+
+.ai-software__process-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 275px;
+  padding: 28px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.54);
+
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 38px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transform: translateY(0);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* Card lighting */
+
+.ai-software__process-card::before {
+  content: "";
+
+  position: absolute;
+  top: -90px;
+  right: -90px;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(66, 157, 243, 0.15),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* Blue-green bottom accent */
+
+.ai-software__process-card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 62px;
+  height: 4px;
+
+  border-radius: 999px 999px 0 0;
+
+  background:
+    linear-gradient(90deg, #178beb, #2bd99b);
+
+  box-shadow:
+    0 0 14px rgba(43, 217, 155, 0.20);
+
+  pointer-events: none;
+  transition: width 300ms ease;
+}
+
+/* =========================================
+   BLUE GLASS NUMBER CIRCLES
+========================================= */
+
+.ai-software__process-number {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+  margin-bottom: 25px;
+
+  color: #ffffff;
+
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+  line-height: 1;
+
+  background: linear-gradient(
+    145deg,
+    rgba(116, 196, 255, 0.38),
+    rgba(30, 107, 205, 0.18)
+  );
+
+  border: 1px solid rgba(169, 222, 255, 0.68);
+  border-radius: 50%;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.43),
+    0 8px 24px rgba(11, 109, 225, 0.24),
+    0 0 0 5px rgba(72, 158, 243, 0.09);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transform: scale(1);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.ai-software__process-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   DELIVERY CARD TEXT
+========================================= */
+
+.ai-software__process-card h3 {
+  margin: 0;
+  color: #ffffff;
+
+  font-size: clamp(1.1rem, 1.5vw, 1.33rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ai-software__process-card p {
+  margin: 14px 0 0;
+
+  color: rgba(228, 237, 250, 0.80);
+
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   DELIVERY CARD HOVER
+========================================= */
+
+.ai-software__process-card:hover {
+  transform: translateY(-8px);
+
+  background-color: rgba(31, 83, 140, 0.74);
+  border-color: rgba(100, 198, 255, 0.79);
+
+  box-shadow:
+    0 26px 55px rgba(0, 10, 30, 0.36),
+    0 0 28px rgba(28, 144, 255, 0.16);
+}
+
+.ai-software__process-card:hover::after {
+  width: 105px;
+}
+
+.ai-software__process-card:hover
+.ai-software__process-number {
+  transform: translateY(-3px) scale(1.06);
+
+  border-color: rgba(205, 239, 255, 0.95);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 12px 26px rgba(11, 109, 225, 0.36),
+    0 0 0 6px rgba(72, 158, 243, 0.17);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media (max-width: 1050px) {
-  .ai-software__audience-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-  .ai-software__grid--three {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
+  .ai-software__audience-grid,
+  .ai-software__grid--three,
   .ai-software__process-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
@@ -637,8 +1262,8 @@
 }
 
 /* =========================================================
-   MOBILE / SMALL TABLET
-   ========================================================= */
+   RESPONSIVE — SMALL TABLET AND MOBILE
+========================================================= */
 
 @media (max-width: 760px) {
   .ai-software__section {
@@ -647,7 +1272,6 @@
 
   .ai-software__section-heading {
     margin-bottom: 30px;
-
     text-align: left;
   }
 
@@ -675,28 +1299,42 @@
     padding: 23px;
   }
 
+  .ai-software__audience-grid {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 18px;
+  }
+
+  .ai-software__audience-card {
+    min-height: 86px;
+    padding: 19px 18px;
+  }
+
   .ai-software__outcomes {
     padding: 24px;
   }
 
   .ai-software__callout {
     flex-direction: column;
-
     align-items: stretch;
-
     gap: 24px;
-
     padding: 26px;
   }
 
   .ai-software__callout-link {
     width: 100%;
   }
+
+  .ai-software__use-case-card::after,
+  .ai-software__engagement-card::after,
+  .ai-software__process-card::after {
+    left: 23px;
+  }
 }
 
 /* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
 
 @media (max-width: 480px) {
   .ai-software__section {
@@ -714,8 +1352,22 @@
     padding: 20px;
   }
 
+  .ai-software__audience-grid {
+    padding: 11px;
+    gap: 11px;
+  }
+
   .ai-software__audience-card {
-    padding: 16px;
+    gap: 12px;
+    padding: 17px 15px;
+    border-radius: 13px;
+    font-size: 0.85rem;
+  }
+
+  .ai-software__audience-card > svg {
+    width: 17px;
+    height: 17px;
+    padding: 8px;
   }
 
   .ai-software__outcomes {
@@ -729,5 +1381,61 @@
   .ai-software__primary-link,
   .ai-software__callout-link {
     width: 100%;
+  }
+
+  .ai-software__use-case-card::after,
+  .ai-software__engagement-card::after,
+  .ai-software__process-card::after {
+    left: 20px;
+  }
+
+  .ai-software__process-card {
+    min-height: auto;
+  }
+
+  .ai-software__process-number {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 22px;
+    font-size: 0.8rem;
+  }
+
+  .ai-software
+  .ai-software__section-heading .eyebrow,
+  .ai-software
+  .ai-software__overview-content .eyebrow {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.075em;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-software__card,
+  .ai-software__audience-card,
+  .ai-software__audience-card::before,
+  .ai-software__audience-card > svg,
+  .ai-software__engagement-icon,
+  .ai-software__engagement-card::after,
+  .ai-software__use-case-card::after,
+  .ai-software__process-number,
+  .ai-software__process-card,
+  .ai-software__process-card::after {
+    transition: none;
+  }
+
+  .ai-software__card:hover,
+  .ai-software__audience-card:hover,
+  .ai-software__audience-card:hover > svg,
+  .ai-software__process-card:hover,
+  .ai-software__process-card:hover
+  .ai-software__process-number,
+  .ai-software__engagement-card:hover
+  .ai-software__engagement-icon {
+    transform: none;
   }
 }

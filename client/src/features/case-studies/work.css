@@ -1,3 +1,4 @@
+
 /* =========================================================
    CYBERX SOFT
    WORK / CASE STUDIES
@@ -290,6 +291,14 @@
   gap: clamp(40px, 6vw, 80px);
 
   align-items: start;
+}
+
+/* FIX: Publication Standard pill text color */
+
+.work-page
+.work-page__section--dark
+.work-page__dark-copy .eyebrow {
+  color: #ffffff;
 }
 
 .work-page__dark-copy h2 {

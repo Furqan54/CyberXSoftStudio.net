@@ -1,5 +1,8 @@
+
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+
+import "../../styles/heroButtons.css";
 
 function HomeHero() {
   return (
@@ -51,16 +54,17 @@ function HomeHero() {
           {/*
             IMAGE PLACEHOLDER — HOME HERO
 
-            Replace with the approved Home hero image.
+            Replace with approved imagery.
 
             Recommended direction:
-            A business and delivery discussion with subtle
-            interface or systems context.
+            A business and delivery discussion with
+            subtle interface or systems context.
 
             Keep the left side calm enough for headline copy.
           */}
+
           <div className="home-hero__image-placeholder">
-            <span>Home Hero Image</span>
+            <span>Home Hero Image</span>les 
           </div>
         </div>
       </div>

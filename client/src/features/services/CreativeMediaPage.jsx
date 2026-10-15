@@ -1,9 +1,15 @@
+
 import { Link } from "react-router-dom";
 
 import {
   ArrowRight,
   Check,
   CheckCircle2,
+  SearchCheck,
+  Clapperboard,
+  UserRound,
+  UsersRound,
+  Workflow,
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
@@ -23,6 +29,22 @@ import {
 } from "./creativeMediaData";
 
 import "./creativeMedia.css";
+
+/* ========================================
+   ENGAGEMENT OPTION ICONS
+======================================== */
+
+const engagementOptionIcons = [
+  SearchCheck,
+  Clapperboard,
+  UserRound,
+  UsersRound,
+  Workflow,
+];
+
+/* ========================================
+   REUSABLE SECTION HEADING
+======================================== */
 
 function SectionHeading({
   eyebrow,
@@ -47,6 +69,7 @@ function SectionHeading({
 function CreativeMediaPage() {
   return (
     <main className="creative-media">
+
       {/* ========================================
           HERO
       ======================================== */}
@@ -61,8 +84,7 @@ function CreativeMediaPage() {
             path: "/services",
           },
           {
-            label:
-              "Creative Media Design and Animation",
+            label: "Creative Media Design and Animation",
           },
         ]}
         action={{
@@ -78,6 +100,7 @@ function CreativeMediaPage() {
 
       <section className="creative-media__section">
         <div className="container creative-media__overview">
+
           <div className="creative-media__overview-content">
             <span className="eyebrow">
               Service Overview
@@ -121,32 +144,26 @@ function CreativeMediaPage() {
             </h3>
 
             <div className="creative-media__outcomes-list">
-              {creativeMediaOutcomes.map(
-                (outcome) => (
-                  <article
-                    className="creative-media__outcome"
-                    key={outcome.id}
-                  >
-                    <CheckCircle2
-                      size={21}
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                    />
+              {creativeMediaOutcomes.map((outcome) => (
+                <article
+                  className="creative-media__outcome"
+                  key={outcome.id}
+                >
+                  <CheckCircle2
+                    size={21}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
 
-                    <div>
-                      <h4>
-                        {outcome.title}
-                      </h4>
-
-                      <p>
-                        {outcome.description}
-                      </p>
-                    </div>
-                  </article>
-                )
-              )}
+                  <div>
+                    <h4>{outcome.title}</h4>
+                    <p>{outcome.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
+
         </div>
       </section>
 
@@ -156,6 +173,7 @@ function CreativeMediaPage() {
 
       <section className="creative-media__section creative-media__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Who This Service Is For"
             title="For Teams With Ongoing Creative and Communication Needs"
@@ -163,32 +181,33 @@ function CreativeMediaPage() {
           />
 
           <div className="creative-media__audience-grid">
-            {creativeMediaAudiences.map(
-              (audience) => (
-                <div
-                  className="creative-media__audience-card"
-                  key={audience}
-                >
-                  <Check
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {creativeMediaAudiences.map((audience) => (
+              <div
+                className="creative-media__audience-card"
+                key={audience}
+              >
+                <Check
+                  size={16}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>{audience}</span>
-                </div>
-              )
-            )}
+                <span>{audience}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           WHEN THIS SERVICE IS USEFUL
+          NAVY BACKGROUND + GLASS CARDS
       ======================================== */}
 
-      <section className="creative-media__section">
+      <section className="creative-media__section creative-media__section--use-cases">
         <div className="container">
+
           <SectionHeading
             eyebrow="When It Becomes Useful"
             title="Recognize When Creative Delivery Needs More Structure"
@@ -196,26 +215,22 @@ function CreativeMediaPage() {
           />
 
           <div className="creative-media__grid creative-media__grid--two">
-            {creativeMediaUseCases.map(
-              (item) => (
-                <article
-                  className="creative-media__card"
-                  key={item.id}
-                >
-                  <span className="creative-media__number">
-                    {String(item.id).padStart(
-                      2,
-                      "0"
-                    )}
-                  </span>
+            {creativeMediaUseCases.map((item) => (
+              <article
+                className="creative-media__card creative-media__use-case-card"
+                key={item.id}
+              >
+                <span className="creative-media__number">
+                  {String(item.id).padStart(2, "0")}
+                </span>
 
-                  <h3>{item.title}</h3>
+                <h3>{item.title}</h3>
 
-                  <p>{item.description}</p>
-                </article>
-              )
-            )}
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -225,6 +240,7 @@ function CreativeMediaPage() {
 
       <section className="creative-media__section creative-media__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Core Services"
             title="What We Deliver"
@@ -232,40 +248,35 @@ function CreativeMediaPage() {
           />
 
           <div className="creative-media__grid creative-media__grid--two">
-            {creativeMediaCoreServices.map(
-              (service) => (
-                <article
-                  className="creative-media__card creative-media__service-card"
-                  key={service.id}
-                >
-                  <span className="creative-media__number">
-                    {String(
-                      service.id
-                    ).padStart(2, "0")}
-                  </span>
+            {creativeMediaCoreServices.map((service) => (
+              <article
+                className="creative-media__card creative-media__service-card"
+                key={service.id}
+              >
+                <span className="creative-media__number">
+                  {String(service.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {service.title}
-                  </h3>
+                <h3>{service.title}</h3>
 
-                  <p>
-                    {service.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{service.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           CAPABILITIES
+          HIGH-CONTRAST PILL
       ======================================== */}
 
       <section className="creative-media__section creative-media__section--dark">
         <div className="container creative-media__capabilities-layout">
+
           <div className="creative-media__capabilities-copy">
-            <span className="eyebrow">
+            <span className="eyebrow creative-media__eyebrow--light">
               Capabilities
             </span>
 
@@ -283,34 +294,32 @@ function CreativeMediaPage() {
           </div>
 
           <div className="creative-media__capabilities-grid">
-            {creativeMediaCapabilities.map(
-              (capability) => (
-                <div
-                  className="creative-media__capability-item"
-                  key={capability}
-                >
-                  <Check
-                    size={15}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {creativeMediaCapabilities.map((capability) => (
+              <div
+                className="creative-media__capability-item"
+                key={capability}
+              >
+                <Check
+                  size={15}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>
-                    {capability}
-                  </span>
-                </div>
-              )
-            )}
+                <span>{capability}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
-          DELIVERABLES
+          TYPICAL DELIVERABLES
       ======================================== */}
 
       <section className="creative-media__section">
         <div className="container">
+
           <SectionHeading
             eyebrow="Typical Deliverables"
             title="Practical Creative Outputs for Reuse and Delivery"
@@ -318,38 +327,33 @@ function CreativeMediaPage() {
           />
 
           <div className="creative-media__grid creative-media__grid--three">
-            {creativeMediaDeliverables.map(
-              (deliverable) => (
-                <article
-                  className="creative-media__card"
-                  key={deliverable.id}
-                >
-                  <span className="creative-media__number">
-                    {String(
-                      deliverable.id
-                    ).padStart(2, "0")}
-                  </span>
+            {creativeMediaDeliverables.map((deliverable) => (
+              <article
+                className="creative-media__card"
+                key={deliverable.id}
+              >
+                <span className="creative-media__number">
+                  {String(deliverable.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {deliverable.title}
-                  </h3>
+                <h3>{deliverable.title}</h3>
 
-                  <p>
-                    {deliverable.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{deliverable.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           ENGAGEMENT OPTIONS
+          PREMIUM ICON CARDS
       ======================================== */}
 
-      <section className="creative-media__section creative-media__section--soft">
+      <section className="creative-media__section creative-media__section--soft creative-media__section--engagement">
         <div className="container">
+
           <SectionHeading
             eyebrow="Engagement Options"
             title="Choose a Creative Delivery Model That Fits the Work"
@@ -357,27 +361,38 @@ function CreativeMediaPage() {
           />
 
           <div className="creative-media__grid creative-media__grid--three">
-            {creativeMediaEngagementOptions.map(
-              (option) => (
+            {creativeMediaEngagementOptions.map((option, index) => {
+              const Icon =
+                engagementOptionIcons[
+                  index % engagementOptionIcons.length
+                ];
+
+              return (
                 <article
-                  className="creative-media__card"
+                  className="creative-media__card creative-media__engagement-card"
                   key={option.id}
                 >
-                  <h3>
-                    {option.title}
-                  </h3>
+                  <div className="creative-media__engagement-icon">
+                    <Icon
+                      size={21}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                  <p>
-                    {option.description}
-                  </p>
+                  <h3>{option.title}</h3>
+
+                  <p>{option.description}</p>
                 </article>
-              )
-            )}
+              );
+            })}
           </div>
+
+          {/* ENGAGEMENT CALLOUT */}
 
           <div className="creative-media__callout">
             <div>
-              <span className="eyebrow">
+              <span className="eyebrow creative-media__eyebrow--light">
                 Recurring Creative Support
               </span>
 
@@ -407,15 +422,18 @@ function CreativeMediaPage() {
               />
             </Link>
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           DELIVERY PROCESS
+          PREMIUM NAVY GLASSMORPHISM
       ======================================== */}
 
-      <section className="creative-media__section">
+      <section className="creative-media__section creative-media__section--delivery">
         <div className="container">
+
           <SectionHeading
             eyebrow="Delivery"
             title="How We Work"
@@ -423,31 +441,24 @@ function CreativeMediaPage() {
           />
 
           <div className="creative-media__process-grid">
-            {creativeMediaProcess.map(
-              (step) => (
-                <article
-                  className="creative-media__process-card"
-                  key={step.id}
-                >
-                  <span className="creative-media__process-number">
-                    {String(
-                      step.id
-                    ).padStart(2, "0")}
-                  </span>
+            {creativeMediaProcess.map((step) => (
+              <article
+                className="creative-media__process-card"
+                key={step.id}
+              >
+                <span className="creative-media__process-number">
+                  {String(step.id).padStart(2, "0")}
+                </span>
 
-                  <div>
-                    <h3>
-                      {step.title}
-                    </h3>
+                <div className="creative-media__process-content">
+                  <h3>{step.title}</h3>
 
-                    <p>
-                      {step.description}
-                    </p>
-                  </div>
-                </article>
-              )
-            )}
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -470,6 +481,7 @@ function CreativeMediaPage() {
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
+
     </main>
   );
 }

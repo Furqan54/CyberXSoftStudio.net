@@ -1,3 +1,4 @@
+
 import { clientsPartners } from "./homeData";
 
 import "./clientsPartners.css";
@@ -25,17 +26,18 @@ function ClientsPartners() {
               client.logo ===
               "/logos/tactical-trading-recreated-gray.png";
 
+            // Apply matching backgrounds to special logos.
             const logoFrameStyle = isMediabuzz
               ? {
                   background: "#202020",
                   borderColor: "rgba(255, 181, 55, 0.35)",
                 }
               : isTacticalTrading
-              ? {
-                  background: "#1f6a43",
-                  borderColor: "rgba(255, 255, 255, 0.18)",
-                }
-              : undefined;
+                ? {
+                    background: "#656564",
+                    borderColor: "#656564",
+                  }
+                : undefined;
 
             return (
               <div

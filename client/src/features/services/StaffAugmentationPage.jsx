@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -5,6 +7,24 @@ import {
   Check,
   CheckCircle2,
   ShieldCheck,
+  UserRound,
+  UsersRound,
+  Workflow,
+  Briefcase,
+  Globe2,
+  ChevronDown,
+  ChevronUp,
+  BrainCircuit,
+  Database,
+  CloudCog,
+  Code2,
+  ClipboardCheck,
+  Boxes,
+  ListTodo,
+  Network,
+  PenTool,
+  Megaphone,
+  Clapperboard,
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
@@ -29,32 +49,59 @@ import {
 
 import "./staffAugmentation.css";
 
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-}) {
+const engagementModelIcons = [
+  UserRound,
+  UsersRound,
+  Workflow,
+  Briefcase,
+  Globe2,
+];
+
+const specialistIcons = [
+  BrainCircuit,
+  Database,
+  ShieldCheck,
+  CloudCog,
+  Code2,
+  ClipboardCheck,
+  Boxes,
+  Workflow,
+  ListTodo,
+  Network,
+  PenTool,
+  Megaphone,
+  Clapperboard,
+];
+
+const INITIAL_SPECIALIZATIONS = 6;
+
+function SectionHeading({ eyebrow, title, description }) {
   return (
     <div className="staff-augmentation__section-heading">
-      <span className="eyebrow">
-        {eyebrow}
-      </span>
-
+      <span className="eyebrow">{eyebrow}</span>
       <h2>{title}</h2>
-
-      {description && (
-        <p>{description}</p>
-      )}
+      {description && <p>{description}</p>}
     </div>
   );
 }
 
 function StaffAugmentationPage() {
+  const [showAllSpecializations, setShowAllSpecializations] =
+    useState(false);
+
+  const visibleSpecializations = showAllSpecializations
+    ? staffingSpecializations
+    : staffingSpecializations.slice(
+        0,
+        INITIAL_SPECIALIZATIONS
+      );
+
+  const hasMoreSpecializations =
+    staffingSpecializations.length > INITIAL_SPECIALIZATIONS;
+
   return (
     <main className="staff-augmentation">
-      {/* ========================================
-          HERO
-      ======================================== */}
+      {/* HERO */}
 
       <PageHero
         eyebrow="Staff Augmentation and Delivery Support"
@@ -66,8 +113,7 @@ function StaffAugmentationPage() {
             path: "/services",
           },
           {
-            label:
-              "Staff Augmentation and Delivery Support",
+            label: "Staff Augmentation and Delivery Support",
           },
         ]}
         action={{
@@ -77,11 +123,9 @@ function StaffAugmentationPage() {
         showImagePlaceholder
       />
 
-      {/* ========================================
-          SERVICE OVERVIEW
-      ======================================== */}
+      {/* SERVICE OVERVIEW */}
 
-      <section className="staff-augmentation__section staff-augmentation__section--soft">
+      <section className="staff-augmentation__section staff-augmentation__section--overview">
         <div className="container staff-augmentation__overview">
           <div className="staff-augmentation__overview-content">
             <span className="eyebrow">
@@ -117,7 +161,6 @@ function StaffAugmentationPage() {
               className="staff-augmentation__primary-link"
             >
               Schedule a Staff Augmentation Discussion
-
               <ArrowRight
                 size={17}
                 strokeWidth={1.8}
@@ -148,11 +191,9 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          WHO THIS SERVICE IS FOR
-      ======================================== */}
+      {/* WHO THIS SERVICE IS FOR */}
 
-      <section className="staff-augmentation__section">
+      <section className="staff-augmentation__section staff-augmentation__section--soft staff-augmentation__section--audience">
         <div className="container">
           <SectionHeading
             eyebrow="Who This Service Is For"
@@ -160,10 +201,10 @@ function StaffAugmentationPage() {
             description="The service is designed for international organizations that need specialist capability, commercial flexibility, confidentiality, suitable working-hour overlap, and a clear division of management responsibility."
           />
 
-          <div className="staff-augmentation__grid staff-augmentation__grid--four">
+          <div className="staff-augmentation__grid staff-augmentation__grid--four staff-augmentation__audience-grid">
             {staffingBuyerGroups.map((buyer) => (
               <article
-                className="staff-augmentation__card"
+                className="staff-augmentation__card staff-augmentation__audience-card"
                 key={buyer}
               >
                 <Check
@@ -171,7 +212,6 @@ function StaffAugmentationPage() {
                   strokeWidth={2}
                   aria-hidden="true"
                 />
-
                 <h3>{buyer}</h3>
               </article>
             ))}
@@ -190,11 +230,9 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          BUYER CHALLENGES
-      ======================================== */}
+      {/* BUYER CHALLENGES */}
 
-      <section className="staff-augmentation__section staff-augmentation__section--soft">
+      <section className="staff-augmentation__section staff-augmentation__section--challenges">
         <div className="container">
           <SectionHeading
             eyebrow="What Buyers Are Usually Trying to Solve"
@@ -205,18 +243,13 @@ function StaffAugmentationPage() {
           <div className="staff-augmentation__grid staff-augmentation__grid--three">
             {staffingChallenges.map((challenge) => (
               <article
-                className="staff-augmentation__card"
+                className="staff-augmentation__card staff-augmentation__challenge-card"
                 key={challenge.id}
               >
                 <span className="staff-augmentation__number">
-                  {String(challenge.id).padStart(
-                    2,
-                    "0"
-                  )}
+                  {String(challenge.id).padStart(2, "0")}
                 </span>
-
                 <h3>{challenge.title}</h3>
-
                 <p>{challenge.description}</p>
               </article>
             ))}
@@ -224,11 +257,9 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          ENGAGEMENT MODELS
-      ======================================== */}
+      {/* FIVE ENGAGEMENT MODELS */}
 
-      <section className="staff-augmentation__section">
+      <section className="staff-augmentation__section staff-augmentation__section--engagement">
         <div className="container">
           <SectionHeading
             eyebrow="Five Engagement Models"
@@ -237,33 +268,48 @@ function StaffAugmentationPage() {
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--two">
-            {staffingModels.map((model) => (
-              <article
-                className="staff-augmentation__card staff-augmentation__model-card"
-                key={model.id}
-              >
-                <span className="staff-augmentation__pill">
-                  {model.label}
-                </span>
+            {staffingModels.map((model, index) => {
+              const Icon =
+                engagementModelIcons[
+                  index % engagementModelIcons.length
+                ];
 
-                <h3>{model.title}</h3>
+              return (
+                <article
+                  className="staff-augmentation__card staff-augmentation__model-card"
+                  key={model.id}
+                >
+                  <div className="staff-augmentation__model-top">
+                    <div className="staff-augmentation__model-icon">
+                      <Icon
+                        size={22}
+                        strokeWidth={1.8}
+                        aria-hidden="true"
+                      />
+                    </div>
 
-                <p>
-                  <strong>Client control: </strong>
-                  {model.clientControl}
-                </p>
+                    <span className="staff-augmentation__pill">
+                      {model.label}
+                    </span>
+                  </div>
 
-                <p>
-                  <strong>CyberX Soft role: </strong>
-                  {model.cyberxRole}
-                </p>
+                  <h3>{model.title}</h3>
 
-                <p>
-                  <strong>Best fit: </strong>
-                  {model.bestFit}
-                </p>
-              </article>
-            ))}
+                  <p>
+                    <strong>Client control: </strong>
+                    {model.clientControl}
+                  </p>
+                  <p>
+                    <strong>CyberX Soft role: </strong>
+                    {model.cyberxRole}
+                  </p>
+                  <p>
+                    <strong>Best fit: </strong>
+                    {model.bestFit}
+                  </p>
+                </article>
+              );
+            })}
           </div>
 
           <div className="staff-augmentation__callout">
@@ -295,7 +341,6 @@ function StaffAugmentationPage() {
               className="staff-augmentation__callout-link"
             >
               Explore White Label Offshore Delivery
-
               <ArrowRight
                 size={17}
                 strokeWidth={1.8}
@@ -306,9 +351,7 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          RESPONSIBILITY SPLIT
-      ======================================== */}
+      {/* CLEAR RESPONSIBILITIES */}
 
       <section className="staff-augmentation__section staff-augmentation__section--soft">
         <div className="container">
@@ -319,43 +362,34 @@ function StaffAugmentationPage() {
           />
 
           <div className="staff-augmentation__grid staff-augmentation__grid--two">
-            {staffingResponsibilities.map(
-              (responsibility) => (
-                <article
-                  className="staff-augmentation__card"
-                  key={responsibility.id}
-                >
-                  <h3>
-                    {responsibility.title}
-                  </h3>
+            {staffingResponsibilities.map((responsibility) => (
+              <article
+                className="staff-augmentation__card"
+                key={responsibility.id}
+              >
+                <h3>{responsibility.title}</h3>
 
-                  <ul className="staff-augmentation__check-list">
-                    {responsibility.points.map(
-                      (point) => (
-                        <li key={point}>
-                          <Check
-                            size={15}
-                            strokeWidth={2}
-                            aria-hidden="true"
-                          />
-
-                          <span>{point}</span>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </article>
-              )
-            )}
+                <ul className="staff-augmentation__check-list">
+                  {responsibility.points.map((point) => (
+                    <li key={point}>
+                      <Check
+                        size={15}
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ========================================
-          DELIVERY BENEFITS
-      ======================================== */}
+      {/* DELIVERY BENEFITS */}
 
-      <section className="staff-augmentation__section staff-augmentation__section--dark">
+      <section className="staff-augmentation__section staff-augmentation__section--dark staff-augmentation__section--benefits">
         <div className="container">
           <SectionHeading
             eyebrow="Delivery Benefits"
@@ -370,14 +404,9 @@ function StaffAugmentationPage() {
                 key={benefit.id}
               >
                 <span className="staff-augmentation__number">
-                  {String(benefit.id).padStart(
-                    2,
-                    "0"
-                  )}
+                  {String(benefit.id).padStart(2, "0")}
                 </span>
-
                 <h3>{benefit.title}</h3>
-
                 <p>{benefit.description}</p>
               </article>
             ))}
@@ -385,11 +414,9 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          SPECIALIST COVERAGE
-      ======================================== */}
+      {/* SPECIALIST COVERAGE — EXPANDABLE */}
 
-      <section className="staff-augmentation__section staff-augmentation__section--soft">
+      <section className="staff-augmentation__section staff-augmentation__section--soft staff-augmentation__section--specializations">
         <div className="container">
           <SectionHeading
             eyebrow="Specialist Coverage"
@@ -397,42 +424,114 @@ function StaffAugmentationPage() {
             description="CyberX Soft can discuss specialist requirements across technology, product, data, cybersecurity, cloud, quality, enterprise platforms, automation, design, growth, creative production, and delivery management."
           />
 
-          <div className="staff-augmentation__grid staff-augmentation__grid--three">
-            {staffingSpecializations.map(
-              (specialization) => (
+          <div className="staff-augmentation__specialist-toolbar">
+            <p className="staff-augmentation__specialist-count">
+              Showing{" "}
+              <strong>{visibleSpecializations.length}</strong>
+              {" "}of{" "}
+              <strong>{staffingSpecializations.length}</strong>
+              {" "}specialist areas
+            </p>
+
+            {hasMoreSpecializations && (
+              <button
+                type="button"
+                className="staff-augmentation__specialist-toggle"
+                aria-expanded={showAllSpecializations}
+                aria-controls="staff-specialist-coverage-grid"
+                onClick={() =>
+                  setShowAllSpecializations((current) => !current)
+                }
+              >
+                <span>
+                  {showAllSpecializations
+                    ? "Show Less"
+                    : `View All ${staffingSpecializations.length} Specializations`}
+                </span>
+
+                {showAllSpecializations ? (
+                  <ChevronUp
+                    size={18}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <ChevronDown
+                    size={18}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
+                )}
+              </button>
+            )}
+          </div>
+
+          <div
+            id="staff-specialist-coverage-grid"
+            className="staff-augmentation__grid staff-augmentation__grid--three staff-augmentation__specialist-grid"
+          >
+            {visibleSpecializations.map((specialization, index) => {
+              const Icon =
+                specialistIcons[index] || Briefcase;
+
+              return (
                 <article
                   className="staff-augmentation__card staff-augmentation__specialization-card"
                   key={specialization.id}
                 >
-                  <span className="staff-augmentation__number">
-                    {String(
-                      specialization.id
-                    ).padStart(2, "0")}
-                  </span>
+                  <div className="staff-augmentation__specialization-top">
+                    <span className="staff-augmentation__number">
+                      {String(specialization.id).padStart(2, "0")}
+                    </span>
 
-                  <h3>
-                    {specialization.title}
-                  </h3>
+                    <span className="staff-augmentation__specialization-icon">
+                      <Icon
+                        size={21}
+                        strokeWidth={1.8}
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+
+                  <h3>{specialization.title}</h3>
 
                   <ul className="staff-augmentation__check-list">
-                    {specialization.roles.map(
-                      (role) => (
-                        <li key={role}>
-                          <Check
-                            size={15}
-                            strokeWidth={2}
-                            aria-hidden="true"
-                          />
-
-                          <span>{role}</span>
-                        </li>
-                      )
-                    )}
+                    {specialization.roles.map((role) => (
+                      <li key={role}>
+                        <Check
+                          size={15}
+                          strokeWidth={2}
+                          aria-hidden="true"
+                        />
+                        <span>{role}</span>
+                      </li>
+                    ))}
                   </ul>
                 </article>
-              )
-            )}
+              );
+            })}
           </div>
+
+          {showAllSpecializations && hasMoreSpecializations && (
+            <div className="staff-augmentation__specialist-bottom">
+              <button
+                type="button"
+                className="staff-augmentation__specialist-toggle staff-augmentation__specialist-toggle--secondary"
+                aria-expanded={showAllSpecializations}
+                aria-controls="staff-specialist-coverage-grid"
+                onClick={() =>
+                  setShowAllSpecializations(false)
+                }
+              >
+                Show Less
+                <ChevronUp
+                  size={18}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
+          )}
 
           <p className="staff-augmentation__note">
             Specific technologies, platforms,
@@ -446,9 +545,7 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          INTERNATIONAL COLLABORATION
-      ======================================== */}
+      {/* INTERNATIONAL COLLABORATION */}
 
       <section className="staff-augmentation__section">
         <div className="container">
@@ -465,14 +562,9 @@ function StaffAugmentationPage() {
                 key={item.id}
               >
                 <span className="staff-augmentation__number">
-                  {String(item.id).padStart(
-                    2,
-                    "0"
-                  )}
+                  {String(item.id).padStart(2, "0")}
                 </span>
-
                 <h3>{item.title}</h3>
-
                 <p>{item.description}</p>
               </article>
             ))}
@@ -488,11 +580,9 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          SECURITY & CONTINUITY
-      ======================================== */}
+      {/* SECURITY & CONTINUITY */}
 
-      <section className="staff-augmentation__section staff-augmentation__section--dark">
+      <section className="staff-augmentation__section staff-augmentation__section--soft staff-augmentation__section--safeguards">
         <div className="container">
           <SectionHeading
             eyebrow="Security & Continuity"
@@ -503,7 +593,7 @@ function StaffAugmentationPage() {
           <div className="staff-augmentation__grid staff-augmentation__grid--two">
             {staffingSafeguards.map((item) => (
               <article
-                className="staff-augmentation__dark-card staff-augmentation__safeguard"
+                className="staff-augmentation__safeguard"
                 key={item.id}
               >
                 <ShieldCheck
@@ -514,14 +604,13 @@ function StaffAugmentationPage() {
 
                 <div>
                   <h3>{item.title}</h3>
-
                   <p>{item.description}</p>
                 </div>
               </article>
             ))}
           </div>
 
-          <p className="staff-augmentation__dark-note">
+          <p className="staff-augmentation__note">
             Regulatory and data-handling
             requirements are reviewed for relevant
             engagements. References to regulations,
@@ -533,11 +622,9 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          AUGMENTATION PROCESS
-      ======================================== */}
+      {/* HOW IT WORKS */}
 
-      <section className="staff-augmentation__section staff-augmentation__section--soft">
+      <section className="staff-augmentation__section staff-augmentation__section--process">
         <div className="container">
           <SectionHeading
             eyebrow="How It Works"
@@ -552,22 +639,18 @@ function StaffAugmentationPage() {
                 key={step.id}
               >
                 <span className="staff-augmentation__process-number">
-                  {String(step.id).padStart(
-                    2,
-                    "0"
-                  )}
+                  {String(step.id).padStart(2, "0")}
                 </span>
 
-                <div>
+                <div className="staff-augmentation__process-content">
                   <h3>{step.title}</h3>
-
                   <p>{step.description}</p>
                 </div>
               </article>
             ))}
           </div>
 
-          <p className="staff-augmentation__note">
+          <p className="staff-augmentation__dark-note">
             Shortlisting and mobilisation timelines
             are confirmed after the required skills,
             seniority, availability, assessments,
@@ -580,9 +663,7 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          PERFORMANCE MANAGEMENT
-      ======================================== */}
+      {/* PERFORMANCE MANAGEMENT */}
 
       <section className="staff-augmentation__section">
         <div className="container">
@@ -599,14 +680,9 @@ function StaffAugmentationPage() {
                 key={item.id}
               >
                 <span className="staff-augmentation__number">
-                  {String(item.id).padStart(
-                    2,
-                    "0"
-                  )}
+                  {String(item.id).padStart(2, "0")}
                 </span>
-
                 <h3>{item.title}</h3>
-
                 <p>{item.description}</p>
               </article>
             ))}
@@ -614,9 +690,7 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          COMMERCIAL STRUCTURES
-      ======================================== */}
+      {/* COMMERCIAL PLANNING */}
 
       <section className="staff-augmentation__pricing-note">
         <div className="container">
@@ -637,19 +711,16 @@ function StaffAugmentationPage() {
             </p>
 
             <ul className="staff-augmentation__check-list">
-              {staffingCommercialStructures.map(
-                (structure) => (
-                  <li key={structure}>
-                    <Check
-                      size={15}
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    />
-
-                    <span>{structure}</span>
-                  </li>
-                )
-              )}
+              {staffingCommercialStructures.map((structure) => (
+                <li key={structure}>
+                  <Check
+                    size={15}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
+                  <span>{structure}</span>
+                </li>
+              ))}
             </ul>
 
             <p>
@@ -667,7 +738,6 @@ function StaffAugmentationPage() {
               className="staff-augmentation__primary-link"
             >
               Request a Quote
-
               <ArrowRight
                 size={17}
                 strokeWidth={1.8}
@@ -678,18 +748,14 @@ function StaffAugmentationPage() {
         </div>
       </section>
 
-      {/* ========================================
-          FAQ
-      ======================================== */}
+      {/* FAQ */}
 
       <FAQSection
         items={staffingFaqs}
         title="Staff Augmentation and Dedicated Remote Teams FAQs"
       />
 
-      {/* ========================================
-          FINAL CTA
-      ======================================== */}
+      {/* FINAL CTA */}
 
       <CTASection
         title="Tell Us the Role or Team You Need"

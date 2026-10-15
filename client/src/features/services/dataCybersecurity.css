@@ -1,8 +1,9 @@
+
 /* =========================================================
    CYBERX SOFT
    DATA, CYBERSECURITY & DIGITAL GOVERNANCE
-   Dedicated service-page styles
-   ========================================================= */
+   Complete page stylesheet
+========================================================= */
 
 .data-cybersecurity {
   width: 100%;
@@ -12,9 +13,9 @@
   background: var(--color-white, #ffffff);
 }
 
-/* =========================================================
+/* =========================================
    GENERAL SECTION LAYOUT
-   ========================================================= */
+========================================= */
 
 .data-cybersecurity__section {
   padding: clamp(64px, 8vw, 110px) 0;
@@ -28,30 +29,55 @@
   background: #102f60;
 }
 
-/* =========================================================
-   SECTION HEADINGS
-   ========================================================= */
+/* =========================================
+   SECTION HEADINGS AND PILLS
+========================================= */
 
 .data-cybersecurity__section-heading {
   max-width: 780px;
   margin: 0 auto 46px;
-
   text-align: center;
 }
 
-.data-cybersecurity__section-heading .eyebrow {
-  display: inline-block;
+.data-cybersecurity
+.data-cybersecurity__section-heading .eyebrow,
+.data-cybersecurity
+.data-cybersecurity__overview-content .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+
   margin-bottom: 12px;
+  padding: 8px 16px;
+
+  color: #087766;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    105deg,
+    rgba(8, 121, 186, 0.10),
+    rgba(30, 196, 117, 0.13)
+  );
+
+  border: 1px solid rgba(8, 121, 186, 0.27);
+  border-radius: 999px;
 }
 
 .data-cybersecurity__section-heading h2 {
   margin: 0;
 
   color: var(--color-text, #102748);
-
   font-size: clamp(1.9rem, 3vw, 2.65rem);
   font-weight: 700;
-
   line-height: 1.16;
   letter-spacing: -0.025em;
 }
@@ -61,14 +87,13 @@
   margin: 17px auto 0;
 
   color: var(--color-text-secondary, #637084);
-
   font-size: 0.94rem;
   line-height: 1.75;
 }
 
-/* =========================================================
-   REUSABLE GRID
-   ========================================================= */
+/* =========================================
+   REUSABLE GRIDS
+========================================= */
 
 .data-cybersecurity__grid {
   display: grid;
@@ -76,23 +101,20 @@
 }
 
 .data-cybersecurity__grid--two {
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .data-cybersecurity__grid--three {
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-/* =========================================================
+/* =========================================
    GENERAL CARDS
-   ========================================================= */
+========================================= */
 
 .data-cybersecurity__card {
   min-width: 0;
   height: 100%;
-
   padding: 28px;
 
   background: #ffffff;
@@ -101,29 +123,25 @@
   border-radius: 10px;
 
   transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .data-cybersecurity__card:hover {
   transform: translateY(-3px);
-
   border-color: #d2dce8;
 
   box-shadow:
-    0 14px 34px
-    rgba(11, 38, 75, 0.08);
+    0 14px 34px rgba(11, 38, 75, 0.08);
 }
 
 .data-cybersecurity__card h3 {
   margin: 0;
 
   color: #102748;
-
   font-size: 1rem;
   font-weight: 700;
-
   line-height: 1.4;
 }
 
@@ -131,18 +149,16 @@
   margin: 12px 0 0;
 
   color: #637084;
-
   font-size: 0.84rem;
   line-height: 1.72;
 }
 
-/* =========================================================
-   NUMBER LABEL
-   ========================================================= */
+/* =========================================
+   NUMBER LABELS
+========================================= */
 
 .data-cybersecurity__number {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
@@ -153,7 +169,6 @@
   padding: 5px 8px;
 
   color: #179f6b;
-
   background: #edf9f4;
 
   border-radius: 6px;
@@ -162,9 +177,9 @@
   font-weight: 700;
 }
 
-/* =========================================================
+/* =========================================
    SERVICE OVERVIEW
-   ========================================================= */
+========================================= */
 
 .data-cybersecurity__overview {
   display: grid;
@@ -178,11 +193,6 @@
   gap: clamp(42px, 6vw, 82px);
 }
 
-.data-cybersecurity__overview-content .eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
 .data-cybersecurity__overview-content h2 {
   max-width: 590px;
   margin: 0;
@@ -191,7 +201,6 @@
 
   font-size: clamp(1.9rem, 3vw, 2.55rem);
   font-weight: 700;
-
   line-height: 1.16;
   letter-spacing: -0.025em;
 }
@@ -206,25 +215,22 @@
   line-height: 1.78;
 }
 
-/* =========================================================
-   PRIMARY INLINE CTA
-   ========================================================= */
+/* =========================================
+   PRIMARY CTA
+========================================= */
 
 .data-cybersecurity__primary-link {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 10px;
 
   min-height: 44px;
-
   margin-top: 25px;
   padding: 11px 17px;
 
   color: #ffffff;
-
   background: #102f60;
 
   border: 1px solid #102f60;
@@ -232,7 +238,6 @@
 
   font-size: 0.78rem;
   font-weight: 600;
-
   text-decoration: none;
 
   transition:
@@ -242,7 +247,6 @@
 
 .data-cybersecurity__primary-link:hover {
   transform: translateY(-1px);
-
   background: #16437c;
 }
 
@@ -251,9 +255,9 @@
   outline-offset: 3px;
 }
 
-/* =========================================================
+/* =========================================
    OUTCOMES
-   ========================================================= */
+========================================= */
 
 .data-cybersecurity__outcomes {
   padding: 32px;
@@ -264,15 +268,13 @@
   border-radius: 11px;
 
   box-shadow:
-    0 10px 28px
-    rgba(11, 38, 75, 0.05);
+    0 10px 28px rgba(11, 38, 75, 0.05);
 }
 
 .data-cybersecurity__outcomes > h3 {
   margin: 0 0 20px;
 
   color: #102748;
-
   font-size: 1.12rem;
   font-weight: 700;
 }
@@ -284,11 +286,9 @@
 
 .data-cybersecurity__outcome {
   display: flex;
-
   align-items: flex-start;
 
   gap: 14px;
-
   padding: 17px 0;
 
   border-top: 1px solid #edf1f5;
@@ -301,7 +301,6 @@
 
 .data-cybersecurity__outcome > svg {
   flex: 0 0 auto;
-
   margin-top: 2px;
 
   color: #26c385;
@@ -311,7 +310,6 @@
   margin: 0;
 
   color: #102748;
-
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -320,14 +318,36 @@
   margin: 6px 0 0;
 
   color: #637084;
-
   font-size: 0.8rem;
   line-height: 1.65;
 }
 
 /* =========================================================
-   AUDIENCE
-   ========================================================= */
+   WHO THIS SERVICE IS FOR
+   PREMIUM AUDIENCE CARDS
+========================================================= */
+
+.data-cybersecurity__section--audience {
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(61, 147, 226, 0.10),
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(37, 196, 131, 0.07),
+      transparent 43%
+    ),
+    linear-gradient(
+      135deg,
+      #edf4fc 0%,
+      #f6f9fe 48%,
+      #eaf3fc 100%
+    );
+}
+
+/* Audience grid panel */
 
 .data-cybersecurity__audience-grid {
   display: grid;
@@ -335,48 +355,403 @@
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 16px;
+  gap: 18px;
+  padding: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(204, 227, 249, 0.40),
+    rgba(234, 248, 244, 0.48)
+  );
+
+  border: 1px solid rgba(59, 130, 201, 0.14);
+  border-radius: 24px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 18px 46px rgba(23, 79, 138, 0.05);
 }
 
-.data-cybersecurity__audience-card {
-  display: flex;
+/* Individual audience cards */
 
+.data-cybersecurity__audience-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
   align-items: center;
 
-  gap: 10px;
-
   min-width: 0;
+  min-height: 112px;
 
-  padding: 18px 20px;
+  gap: 15px;
+  padding: 23px 21px;
+
+  overflow: hidden;
 
   color: #102748;
 
-  background: #ffffff;
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  );
 
-  border: 1px solid #e1e7ef;
-  border-radius: 8px;
+  border: 1px solid rgba(54, 124, 195, 0.20);
+  border-radius: 16px;
 
-  font-size: 0.84rem;
+  box-shadow:
+    0 8px 22px rgba(21, 75, 137, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.90);
+
+  font-size: 0.90rem;
   font-weight: 600;
+  line-height: 1.55;
+
+  transform: translateY(0);
+
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    background-color 280ms ease;
 }
+
+/* Left blue-green accent */
+
+.data-cybersecurity__audience-card::before {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 0;
+
+  width: 3px;
+
+  background: linear-gradient(
+    180deg,
+    #168de0,
+    #2ac58b
+  );
+
+  border-radius: 0 999px 999px 0;
+
+  opacity: 0.55;
+
+  transition:
+    opacity 280ms ease,
+    top 280ms ease,
+    bottom 280ms ease;
+}
+
+/* Decorative corner light */
+
+.data-cybersecurity__audience-card::after {
+  content: "";
+
+  position: absolute;
+  top: -65px;
+  right: -65px;
+
+  width: 150px;
+  height: 150px;
+
+  background: radial-gradient(
+    circle,
+    rgba(41, 139, 228, 0.08),
+    transparent 70%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Circular check icons */
 
 .data-cybersecurity__audience-card > svg {
+  position: relative;
+  z-index: 1;
+
+  box-sizing: content-box;
   flex: 0 0 auto;
 
-  color: #26c385;
+  width: 18px;
+  height: 18px;
+
+  padding: 10px;
+
+  color: #087cbd;
+
+  background: linear-gradient(
+    145deg,
+    #e0f1ff,
+    #e3f9ef
+  );
+
+  border: 1px solid rgba(26, 133, 200, 0.19);
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 12px rgba(29, 122, 195, 0.07);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
-/* =========================================================
+.data-cybersecurity__audience-card > span {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+/* Audience hover */
+
+.data-cybersecurity__audience-card:hover {
+  transform: translateY(-6px);
+
+  background-color: #ffffff;
+
+  border-color: rgba(30, 132, 221, 0.52);
+
+  box-shadow:
+    0 20px 38px rgba(23, 89, 165, 0.14),
+    0 0 0 1px rgba(31, 142, 229, 0.04);
+}
+
+.data-cybersecurity__audience-card:hover::before {
+  top: 12px;
+  bottom: 12px;
+  opacity: 1;
+}
+
+.data-cybersecurity__audience-card:hover > svg {
+  transform: scale(1.09);
+
+  border-color: rgba(25, 153, 199, 0.42);
+
+  box-shadow:
+    0 7px 18px rgba(29, 122, 195, 0.17);
+}
+
+/* =========================================
    CORE SERVICES
-   ========================================================= */
+========================================= */
 
 .data-cybersecurity__service-card {
   min-height: 210px;
 }
 
 /* =========================================================
-   CAPABILITIES
-   ========================================================= */
+   WHEN IT BECOMES USEFUL
+   NAVY HERO-INSPIRED SECTION
+========================================================= */
+
+.data-cybersecurity__section--use-cases {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 18%,
+      rgba(28, 118, 207, 0.28),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 92% 85%,
+      rgba(32, 189, 145, 0.13),
+      transparent 39%
+    ),
+    linear-gradient(
+      120deg,
+      #061326 0%,
+      #092449 55%,
+      #071a33 100%
+    );
+}
+
+.data-cybersecurity__section--use-cases .container {
+  position: relative;
+  z-index: 1;
+}
+
+.data-cybersecurity__section--use-cases
+.data-cybersecurity__section-heading h2 {
+  color: #ffffff;
+}
+
+.data-cybersecurity__section--use-cases
+.data-cybersecurity__section-heading > p {
+  color: rgba(232, 241, 253, 0.82);
+}
+
+.data-cybersecurity
+.data-cybersecurity__section--use-cases
+.data-cybersecurity__section-heading .eyebrow {
+  color: #ffffff;
+
+  background: linear-gradient(
+    110deg,
+    rgba(20, 127, 209, 0.38),
+    rgba(37, 196, 131, 0.23)
+  );
+
+  border-color: rgba(118, 231, 197, 0.58);
+}
+
+/* =========================================
+   USE-CASE GLASS CARDS
+========================================= */
+
+.data-cybersecurity__use-case-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 190px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.57);
+
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 36px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* Bottom accent */
+
+.data-cybersecurity__use-case-card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 58px;
+  height: 3px;
+
+  border-radius: 999px 999px 0 0;
+
+  background: linear-gradient(
+    90deg,
+    #178beb,
+    #2bd99b
+  );
+
+  transition: width 300ms ease;
+}
+
+/* Number circles */
+
+.data-cybersecurity__use-case-card
+.data-cybersecurity__number {
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+
+  color: #ffffff;
+  background: rgba(50, 139, 225, 0.28);
+
+  border: 1px solid rgba(157, 217, 255, 0.58);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px rgba(67, 157, 240, 0.08);
+}
+
+.data-cybersecurity__use-case-card h3 {
+  color: #ffffff;
+}
+
+.data-cybersecurity__use-case-card > p {
+  color: rgba(229, 239, 252, 0.80);
+}
+
+/* Use-case hover */
+
+.data-cybersecurity__use-case-card:hover {
+  transform: translateY(-7px);
+
+  background-color: rgba(30, 77, 130, 0.70);
+
+  border-color: rgba(110, 203, 255, 0.62);
+
+  box-shadow:
+    0 24px 48px rgba(0, 9, 28, 0.28),
+    0 0 22px rgba(30, 144, 255, 0.12);
+}
+
+.data-cybersecurity__use-case-card:hover::after {
+  width: 105px;
+}
+
+/* =========================================================
+   HIGH-CONTRAST PILLS ON NAVY BACKGROUNDS
+========================================================= */
+
+.data-cybersecurity
+.data-cybersecurity__section--dark
+.data-cybersecurity__capabilities-copy
+.eyebrow.data-cybersecurity__eyebrow--light,
+.data-cybersecurity
+.data-cybersecurity__callout
+.eyebrow.data-cybersecurity__eyebrow--light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin-bottom: 14px;
+  padding: 8px 16px;
+
+  color: #ffffff;
+
+  font-size: 0.83rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    110deg,
+    rgba(17, 132, 212, 0.41),
+    rgba(36, 190, 143, 0.26)
+  );
+
+  border: 1px solid rgba(153, 243, 218, 0.63);
+  border-radius: 999px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 6px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================
+   DARK CAPABILITIES SECTION
+========================================= */
 
 .data-cybersecurity__capabilities-layout {
   display: grid;
@@ -390,11 +765,6 @@
   gap: clamp(40px, 6vw, 80px);
 }
 
-.data-cybersecurity__capabilities-copy .eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
 .data-cybersecurity__capabilities-copy h2 {
   margin: 0;
 
@@ -402,7 +772,6 @@
 
   font-size: clamp(1.9rem, 3vw, 2.55rem);
   font-weight: 700;
-
   line-height: 1.16;
 }
 
@@ -410,8 +779,7 @@
   max-width: 520px;
   margin: 17px 0 0;
 
-  color: rgba(255, 255, 255, 0.68);
-
+  color: rgba(255, 255, 255, 0.76);
   font-size: 0.88rem;
   line-height: 1.75;
 }
@@ -427,23 +795,16 @@
 
 .data-cybersecurity__capability-item {
   display: flex;
-
   align-items: flex-start;
 
   gap: 10px;
-
   min-width: 0;
-
   padding: 17px;
 
-  color: rgba(255, 255, 255, 0.84);
-
+  color: rgba(255, 255, 255, 0.89);
   background: rgba(255, 255, 255, 0.06);
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.1);
-
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 8px;
 
   font-size: 0.8rem;
@@ -452,19 +813,16 @@
 
 .data-cybersecurity__capability-item > svg {
   flex: 0 0 auto;
-
   margin-top: 2px;
-
   color: #26c385;
 }
 
-/* =========================================================
+/* =========================================
    ASSURANCE CALLOUT
-   ========================================================= */
+========================================= */
 
 .data-cybersecurity__callout {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
@@ -474,17 +832,11 @@
   padding: 34px;
 
   background: #102f60;
-
   border-radius: 10px;
 }
 
 .data-cybersecurity__callout > div {
   max-width: 700px;
-}
-
-.data-cybersecurity__callout .eyebrow {
-  display: inline-block;
-  margin-bottom: 10px;
 }
 
 .data-cybersecurity__callout h3 {
@@ -494,42 +846,35 @@
 
   font-size: clamp(1.3rem, 2.2vw, 1.8rem);
   font-weight: 700;
-
   line-height: 1.25;
 }
 
 .data-cybersecurity__callout p {
   margin: 12px 0 0;
 
-  color: rgba(255, 255, 255, 0.72);
-
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.84rem;
   line-height: 1.72;
 }
 
 .data-cybersecurity__callout-link {
   display: inline-flex;
-
   flex: 0 0 auto;
-
   align-items: center;
   justify-content: center;
 
   gap: 9px;
 
   min-height: 44px;
-
   padding: 11px 17px;
 
   color: #102f60;
-
   background: #ffffff;
 
   border-radius: 5px;
 
   font-size: 0.76rem;
   font-weight: 700;
-
   text-decoration: none;
 
   transition:
@@ -541,13 +886,216 @@
   transform: translateY(-2px);
 
   box-shadow:
-    0 8px 24px
-    rgba(0, 0, 0, 0.15);
+    0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.data-cybersecurity__callout-link:focus-visible {
+  outline: 3px solid #67dfb9;
+  outline-offset: 3px;
 }
 
 /* =========================================================
-   DELIVERY PROCESS
-   ========================================================= */
+   PREMIUM ENGAGEMENT OPTION CARDS
+========================================================= */
+
+.data-cybersecurity__section--engagement
+.data-cybersecurity__grid {
+  align-items: stretch;
+  gap: 20px;
+}
+
+.data-cybersecurity__engagement-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 205px;
+
+  background: linear-gradient(
+    150deg,
+    #ffffff 0%,
+    #f3f9ff 100%
+  );
+
+  border: 1px solid rgba(28, 109, 197, 0.19);
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 24px rgba(17, 77, 145, 0.05);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+/* Bottom accent */
+
+.data-cybersecurity__engagement-card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 58px;
+  height: 3px;
+
+  border-radius: 999px 999px 0 0;
+
+  background: linear-gradient(
+    90deg,
+    #178beb,
+    #2bd99b
+  );
+
+  transition: width 280ms ease;
+}
+
+/* Engagement icons */
+
+.data-cybersecurity__engagement-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  margin-bottom: 18px;
+
+  color: #1379c8;
+
+  background: linear-gradient(
+    145deg,
+    #deefff,
+    #ecf8ff
+  );
+
+  border: 1px solid rgba(26, 127, 214, 0.23);
+  border-radius: 13px;
+
+  box-shadow:
+    0 5px 12px rgba(16, 106, 194, 0.06);
+
+  transition:
+    transform 280ms ease,
+    background 280ms ease;
+}
+
+/* Engagement hover */
+
+.data-cybersecurity__engagement-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(31, 132, 229, 0.58);
+
+  box-shadow:
+    0 22px 46px rgba(16, 88, 169, 0.15),
+    0 0 0 1px rgba(39, 153, 242, 0.06);
+}
+
+.data-cybersecurity__engagement-card:hover
+.data-cybersecurity__engagement-icon {
+  transform: translateY(-3px) scale(1.06);
+
+  background: linear-gradient(
+    145deg,
+    #cfe7ff,
+    #e2f5ff
+  );
+}
+
+.data-cybersecurity__engagement-card:hover::after {
+  width: 105px;
+}
+
+/* =========================================================
+   HOW WE WORK
+   PREMIUM NAVY GLASSMORPHISM
+========================================================= */
+
+.data-cybersecurity__section--delivery {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 8% 14%,
+      rgba(23, 109, 198, 0.27),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 90% 86%,
+      rgba(29, 191, 143, 0.13),
+      transparent 36%
+    ),
+    linear-gradient(
+      125deg,
+      #07172f 0%,
+      #0b2750 52%,
+      #0d345b 100%
+    );
+}
+
+/* Decorative section lighting */
+
+.data-cybersecurity__section--delivery::before {
+  content: "";
+
+  position: absolute;
+  top: -185px;
+  right: -155px;
+
+  width: 460px;
+  height: 460px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(46, 142, 235, 0.17),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.data-cybersecurity__section--delivery > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading and description */
+
+.data-cybersecurity__section--delivery
+.data-cybersecurity__section-heading h2 {
+  color: #ffffff;
+}
+
+.data-cybersecurity__section--delivery
+.data-cybersecurity__section-heading > p {
+  color: rgba(230, 239, 251, 0.81);
+}
+
+.data-cybersecurity
+.data-cybersecurity__section--delivery
+.data-cybersecurity__section-heading .eyebrow {
+  color: #ffffff;
+
+  background: linear-gradient(
+    110deg,
+    rgba(20, 127, 209, 0.36),
+    rgba(37, 196, 131, 0.21)
+  );
+
+  border-color: rgba(118, 231, 197, 0.59);
+}
+
+/* =========================================
+   DELIVERY GRID
+========================================= */
 
 .data-cybersecurity__process-grid {
   display: grid;
@@ -555,76 +1103,223 @@
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 18px;
+  align-items: stretch;
+  gap: 22px;
 }
+
+/* =========================================
+   DELIVERY GLASS CARDS
+========================================= */
 
 .data-cybersecurity__process-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
+
   min-width: 0;
+  min-height: 275px;
 
-  padding: 26px;
+  padding: 28px;
 
-  background: #ffffff;
+  overflow: hidden;
 
-  border: 1px solid #e1e7ef;
-  border-radius: 9px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.54);
+
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 38px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transform: translateY(0);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
 }
 
-.data-cybersecurity__process-number {
-  display: inline-flex;
+/* Decorative card lighting */
 
-  align-items: center;
-  justify-content: center;
+.data-cybersecurity__process-card::before {
+  content: "";
 
-  width: 35px;
-  height: 35px;
+  position: absolute;
+  top: -90px;
+  right: -90px;
 
-  margin-bottom: 18px;
-
-  color: #ffffff;
-
-  background: #168ed1;
+  width: 230px;
+  height: 230px;
 
   border-radius: 50%;
 
-  font-size: 0.69rem;
-  font-weight: 700;
+  background: radial-gradient(
+    circle,
+    rgba(66, 157, 243, 0.15),
+    transparent 70%
+  );
+
+  pointer-events: none;
 }
+
+/* Bottom blue-green accent */
+
+.data-cybersecurity__process-card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 62px;
+  height: 4px;
+
+  border-radius: 999px 999px 0 0;
+
+  background: linear-gradient(
+    90deg,
+    #178beb,
+    #2bd99b
+  );
+
+  box-shadow:
+    0 0 14px rgba(43, 217, 155, 0.20);
+
+  pointer-events: none;
+
+  transition: width 300ms ease;
+}
+
+/* =========================================
+   BLUE GLASS NUMBER CIRCLES
+========================================= */
+
+.data-cybersecurity__process-number {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 25px;
+
+  color: #ffffff;
+
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+  line-height: 1;
+
+  background: linear-gradient(
+    145deg,
+    rgba(116, 196, 255, 0.38),
+    rgba(30, 107, 205, 0.18)
+  );
+
+  border: 1px solid rgba(169, 222, 255, 0.68);
+  border-radius: 50%;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.43),
+    0 8px 24px rgba(11, 109, 225, 0.24),
+    0 0 0 5px rgba(72, 158, 243, 0.09);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transform: scale(1);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.data-cybersecurity__process-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   DELIVERY CARD TEXT
+========================================= */
 
 .data-cybersecurity__process-card h3 {
   margin: 0;
 
-  color: #102748;
+  color: #ffffff;
 
-  font-size: 0.92rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.33rem);
   font-weight: 700;
-
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .data-cybersecurity__process-card p {
-  margin: 10px 0 0;
+  margin: 14px 0 0;
 
-  color: #637084;
+  color: rgba(228, 237, 250, 0.80);
 
-  font-size: 0.77rem;
-  line-height: 1.64;
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+/* =========================================
+   DELIVERY CARD HOVER
+========================================= */
+
+.data-cybersecurity__process-card:hover {
+  transform: translateY(-8px);
+
+  background-color: rgba(31, 83, 140, 0.74);
+
+  border-color: rgba(100, 198, 255, 0.79);
+
+  box-shadow:
+    0 26px 55px rgba(0, 10, 30, 0.36),
+    0 0 28px rgba(28, 144, 255, 0.16);
+}
+
+.data-cybersecurity__process-card:hover::after {
+  width: 105px;
+}
+
+.data-cybersecurity__process-card:hover
+.data-cybersecurity__process-number {
+  transform: translateY(-3px) scale(1.06);
+
+  border-color: rgba(205, 239, 255, 0.95);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 12px 26px rgba(11, 109, 225, 0.36),
+    0 0 0 6px rgba(72, 158, 243, 0.17);
 }
 
 /* =========================================================
-   TABLET
-   ========================================================= */
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media (max-width: 1050px) {
-  .data-cybersecurity__audience-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-  .data-cybersecurity__grid--three {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
+  .data-cybersecurity__audience-grid,
+  .data-cybersecurity__grid--three,
   .data-cybersecurity__process-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
@@ -636,8 +1331,8 @@
 }
 
 /* =========================================================
-   MOBILE / SMALL TABLET
-   ========================================================= */
+   RESPONSIVE — MOBILE
+========================================================= */
 
 @media (max-width: 760px) {
   .data-cybersecurity__section {
@@ -646,7 +1341,6 @@
 
   .data-cybersecurity__section-heading {
     margin-bottom: 30px;
-
     text-align: left;
   }
 
@@ -674,28 +1368,44 @@
     padding: 23px;
   }
 
+  .data-cybersecurity__audience-grid {
+    padding: 14px;
+    gap: 12px;
+
+    border-radius: 18px;
+  }
+
+  .data-cybersecurity__audience-card {
+    min-height: 86px;
+    padding: 19px 18px;
+  }
+
   .data-cybersecurity__outcomes {
     padding: 24px;
   }
 
   .data-cybersecurity__callout {
     flex-direction: column;
-
     align-items: stretch;
 
     gap: 24px;
-
     padding: 26px;
   }
 
   .data-cybersecurity__callout-link {
     width: 100%;
   }
+
+  .data-cybersecurity__use-case-card::after,
+  .data-cybersecurity__engagement-card::after,
+  .data-cybersecurity__process-card::after {
+    left: 23px;
+  }
 }
 
 /* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
 
 @media (max-width: 480px) {
   .data-cybersecurity__section {
@@ -713,8 +1423,23 @@
     padding: 20px;
   }
 
+  .data-cybersecurity__audience-grid {
+    padding: 11px;
+    gap: 11px;
+  }
+
   .data-cybersecurity__audience-card {
-    padding: 16px;
+    gap: 12px;
+    padding: 17px 15px;
+
+    border-radius: 13px;
+    font-size: 0.85rem;
+  }
+
+  .data-cybersecurity__audience-card > svg {
+    width: 17px;
+    height: 17px;
+    padding: 8px;
   }
 
   .data-cybersecurity__outcomes {
@@ -728,5 +1453,63 @@
   .data-cybersecurity__primary-link,
   .data-cybersecurity__callout-link {
     width: 100%;
+  }
+
+  .data-cybersecurity__use-case-card::after,
+  .data-cybersecurity__engagement-card::after,
+  .data-cybersecurity__process-card::after {
+    left: 20px;
+  }
+
+  .data-cybersecurity__process-card {
+    min-height: auto;
+  }
+
+  .data-cybersecurity__process-number {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 22px;
+    font-size: 0.8rem;
+  }
+
+  .data-cybersecurity
+  .data-cybersecurity__section-heading .eyebrow,
+  .data-cybersecurity
+  .data-cybersecurity__overview-content .eyebrow {
+    padding: 7px 12px;
+
+    font-size: 0.78rem;
+    letter-spacing: 0.075em;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .data-cybersecurity__card,
+  .data-cybersecurity__audience-card,
+  .data-cybersecurity__audience-card::before,
+  .data-cybersecurity__audience-card > svg,
+  .data-cybersecurity__engagement-icon,
+  .data-cybersecurity__engagement-card::after,
+  .data-cybersecurity__use-case-card::after,
+  .data-cybersecurity__process-number,
+  .data-cybersecurity__process-card,
+  .data-cybersecurity__process-card::after {
+    transition: none;
+  }
+
+  .data-cybersecurity__card:hover,
+  .data-cybersecurity__audience-card:hover,
+  .data-cybersecurity__audience-card:hover > svg,
+  .data-cybersecurity__process-card:hover,
+  .data-cybersecurity__process-card:hover
+  .data-cybersecurity__process-number,
+  .data-cybersecurity__engagement-card:hover
+  .data-cybersecurity__engagement-icon {
+    transform: none;
   }
 }

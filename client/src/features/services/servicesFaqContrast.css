@@ -1,0 +1,106 @@
+
+/* =========================================
+   CYBERX SOFT — SERVICES OVERVIEW FAQ
+   Soft contrasting background
+   Scoped to Services Overview only
+========================================= */
+
+.services-overview-page .faq-section {
+  position: relative;
+
+  background:
+    radial-gradient(
+      ellipse at 8% 12%,
+      rgba(125, 153, 211, 0.13),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 92% 85%,
+      rgba(75, 175, 172, 0.08),
+      transparent 42%
+    ),
+    linear-gradient(
+      130deg,
+      #e1e7f4 0%,
+      #edf1fa 48%,
+      #dbe6f3 100%
+    );
+
+  border-top: 1px solid rgba(94, 128, 173, 0.15);
+  border-bottom: 1px solid rgba(94, 128, 173, 0.12);
+}
+
+/* Preserve clear heading contrast */
+
+.services-overview-page
+.faq-section__header {
+  position: relative;
+  z-index: 1;
+}
+
+.services-overview-page
+.faq-section__header .section-title {
+  color: #102748;
+}
+
+/* White accordion cards stand out
+   from the lavender-blue background */
+
+.services-overview-page .faq-item {
+  background: #ffffff;
+
+  border: 1px solid rgba(87, 123, 168, 0.20);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 16px rgba(27, 60, 109, 0.055);
+
+  transition:
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+/* Subtle interactive emphasis */
+
+.services-overview-page .faq-item:hover {
+  border-color: rgba(36, 111, 198, 0.35);
+
+  box-shadow:
+    0 8px 22px rgba(27, 60, 109, 0.085);
+}
+
+/* Highlight expanded questions */
+
+.services-overview-page .faq-item--open {
+  border-color: rgba(36, 111, 198, 0.40);
+
+  box-shadow:
+    0 10px 26px rgba(27, 60, 109, 0.09);
+}
+
+/* Maintain comfortable text contrast */
+
+.services-overview-page .faq-item__trigger {
+  color: #17345e;
+}
+
+.services-overview-page .faq-item__answer p {
+  color: #536680;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .services-overview-page .faq-item {
+    border-radius: 10px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .services-overview-page .faq-item {
+    transition: none;
+  }
+}

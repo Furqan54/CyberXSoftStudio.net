@@ -1,5 +1,8 @@
-import { ChevronRight, Home } from "lucide-react";
+
+import { ArrowRight, ChevronRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
+
+import "../styles/heroButtons.css";
 
 function PageHero({
   eyebrow,
@@ -9,14 +12,13 @@ function PageHero({
   action = null,
 
   // Keep support for a future full-background
-  // hero image if we ever need one.
+  // hero image if needed.
   showImagePlaceholder = false,
 
-  // Every standard website page now uses
-  // the right-side hero image layout by default.
+  // Standard page hero uses a split layout.
   splitVisual = true,
 
-  // Can still be customized per page.
+  // Can be customized per page.
   visualLabel = null,
 }) {
   const resolvedVisualLabel =
@@ -38,27 +40,21 @@ function PageHero({
       {/*
         IMAGE PLACEHOLDER — FULL BACKGROUND
 
-        This mode is retained for future use.
-
-        It is only displayed when:
+        Displayed when:
         showImagePlaceholder = true
-        AND
-        splitVisual = false
+        AND splitVisual = false
       */}
-      {showImagePlaceholder &&
-        !splitVisual && (
-          <div
-            className="page-hero__image-placeholder"
-            aria-hidden="true"
-          />
-        )}
+      {showImagePlaceholder && !splitVisual && (
+        <div
+          className="page-hero__image-placeholder"
+          aria-hidden="true"
+        />
+      )}
 
       <div className="page-hero__overlay" />
 
       <div className="container page-hero__inner">
-        {/* ===================================
-            BREADCRUMBS
-        =================================== */}
+        {/* BREADCRUMBS */}
 
         <nav
           className="page-hero__breadcrumbs"
@@ -71,6 +67,7 @@ function PageHero({
             <Home
               size={13}
               strokeWidth={1.8}
+              aria-hidden="true"
             />
           </Link>
 
@@ -96,14 +93,10 @@ function PageHero({
           ))}
         </nav>
 
-        {/* ===================================
-            HERO LAYOUT
-        =================================== */}
+        {/* HERO LAYOUT */}
 
         <div className="page-hero__layout">
-          {/* ===============================
-              HERO COPY
-          =============================== */}
+          {/* HERO CONTENT */}
 
           <div className="page-hero__content">
             {eyebrow && (
@@ -127,25 +120,30 @@ function PageHero({
                 to={action.path}
                 className="page-hero__action"
               >
-                {action.label}
+                <span>{action.label}</span>
+
+                <ArrowRight
+                  size={16}
+                  strokeWidth={1.8}
+                  aria-hidden="true"
+                />
               </Link>
             )}
           </div>
 
-          {/* ===============================
-              HERO IMAGE AREA
+          {/* HERO IMAGE AREA */}
 
-              IMAGE PLACEHOLDER —
-              PAGE-SPECIFIC HERO IMAGE
+          {/*
+            IMAGE PLACEHOLDER —
+            PAGE-SPECIFIC HERO IMAGE
 
-              Replace this placeholder with
-              the approved image for each page.
+            Replace with an approved image.
 
-              Recommended:
-              - 16:9 or 4:3 landscape
-              - authentic project/team imagery
-              - meaningful alt text once replaced
-          =============================== */}
+            Recommended:
+            - 16:9 or 4:3
+            - authentic project/team imagery
+            - meaningful alt text when replaced
+          */}
 
           {splitVisual && (
             <div className="page-hero__split-visual">

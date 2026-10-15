@@ -1,9 +1,16 @@
+
 import { Link } from "react-router-dom";
 
 import {
   ArrowRight,
   Check,
   CheckCircle2,
+  SearchCheck,
+  ClipboardCheck,
+  UserRound,
+  UsersRound,
+  Settings2,
+  Handshake,
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
@@ -23,6 +30,23 @@ import {
 } from "./brandStrategyData";
 
 import "./brandStrategy.css";
+
+/* ========================================
+   ENGAGEMENT OPTION ICONS
+======================================== */
+
+const engagementOptionIcons = [
+  SearchCheck,
+  ClipboardCheck,
+  UserRound,
+  UsersRound,
+  Settings2,
+  Handshake,
+];
+
+/* ========================================
+   REUSABLE SECTION HEADING
+======================================== */
 
 function SectionHeading({
   eyebrow,
@@ -47,6 +71,7 @@ function SectionHeading({
 function BrandStrategyPage() {
   return (
     <main className="brand-strategy">
+
       {/* ========================================
           HERO
       ======================================== */}
@@ -61,8 +86,7 @@ function BrandStrategyPage() {
             path: "/services",
           },
           {
-            label:
-              "Brand Strategy & Digital Growth",
+            label: "Brand Strategy & Digital Growth",
           },
         ]}
         action={{
@@ -78,6 +102,7 @@ function BrandStrategyPage() {
 
       <section className="brand-strategy__section">
         <div className="container brand-strategy__overview">
+
           <div className="brand-strategy__overview-content">
             <span className="eyebrow">
               Service Overview
@@ -123,32 +148,26 @@ function BrandStrategyPage() {
             </h3>
 
             <div className="brand-strategy__outcomes-list">
-              {brandStrategyOutcomes.map(
-                (outcome) => (
-                  <article
-                    className="brand-strategy__outcome"
-                    key={outcome.id}
-                  >
-                    <CheckCircle2
-                      size={21}
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                    />
+              {brandStrategyOutcomes.map((outcome) => (
+                <article
+                  className="brand-strategy__outcome"
+                  key={outcome.id}
+                >
+                  <CheckCircle2
+                    size={21}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
 
-                    <div>
-                      <h4>
-                        {outcome.title}
-                      </h4>
-
-                      <p>
-                        {outcome.description}
-                      </p>
-                    </div>
-                  </article>
-                )
-              )}
+                  <div>
+                    <h4>{outcome.title}</h4>
+                    <p>{outcome.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
+
         </div>
       </section>
 
@@ -158,6 +177,7 @@ function BrandStrategyPage() {
 
       <section className="brand-strategy__section brand-strategy__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Who This Service Is For"
             title="For Teams That Need Clearer Positioning and Better Growth Decisions"
@@ -165,32 +185,38 @@ function BrandStrategyPage() {
           />
 
           <div className="brand-strategy__audience-grid">
-            {brandStrategyAudiences.map(
-              (audience) => (
-                <div
-                  className="brand-strategy__audience-card"
-                  key={audience}
-                >
-                  <Check
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {brandStrategyAudiences.map((audience) => (
+              <div
+                className="brand-strategy__audience-card"
+                key={audience}
+              >
+                <Check
+                  size={16}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>{audience}</span>
-                </div>
-              )
-            )}
+                <span>{audience}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           WHEN THIS SERVICE IS USEFUL
+          CHANGE 01: NAVY BACKGROUND
       ======================================== */}
 
-      <section className="brand-strategy__section">
+      <section
+        className="
+          brand-strategy__section
+          brand-strategy__section--use-cases
+        "
+      >
         <div className="container">
+
           <SectionHeading
             eyebrow="When It Becomes Useful"
             title="Recognize the Signals That Strategy and Growth Need to Reconnect"
@@ -198,26 +224,22 @@ function BrandStrategyPage() {
           />
 
           <div className="brand-strategy__grid brand-strategy__grid--two">
-            {brandStrategyUseCases.map(
-              (item) => (
-                <article
-                  className="brand-strategy__card"
-                  key={item.id}
-                >
-                  <span className="brand-strategy__number">
-                    {String(item.id).padStart(
-                      2,
-                      "0"
-                    )}
-                  </span>
+            {brandStrategyUseCases.map((item) => (
+              <article
+                className="brand-strategy__card brand-strategy__use-case-card"
+                key={item.id}
+              >
+                <span className="brand-strategy__number">
+                  {String(item.id).padStart(2, "0")}
+                </span>
 
-                  <h3>{item.title}</h3>
+                <h3>{item.title}</h3>
 
-                  <p>{item.description}</p>
-                </article>
-              )
-            )}
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -227,6 +249,7 @@ function BrandStrategyPage() {
 
       <section className="brand-strategy__section brand-strategy__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Core Services"
             title="What We Deliver"
@@ -234,40 +257,35 @@ function BrandStrategyPage() {
           />
 
           <div className="brand-strategy__grid brand-strategy__grid--two">
-            {brandStrategyCoreServices.map(
-              (service) => (
-                <article
-                  className="brand-strategy__card brand-strategy__service-card"
-                  key={service.id}
-                >
-                  <span className="brand-strategy__number">
-                    {String(
-                      service.id
-                    ).padStart(2, "0")}
-                  </span>
+            {brandStrategyCoreServices.map((service) => (
+              <article
+                className="brand-strategy__card brand-strategy__service-card"
+                key={service.id}
+              >
+                <span className="brand-strategy__number">
+                  {String(service.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {service.title}
-                  </h3>
+                <h3>{service.title}</h3>
 
-                  <p>
-                    {service.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{service.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           CAPABILITIES
+          CHANGE 02: HIGH CONTRAST PILL
       ======================================== */}
 
       <section className="brand-strategy__section brand-strategy__section--dark">
         <div className="container brand-strategy__capabilities-layout">
+
           <div className="brand-strategy__capabilities-copy">
-            <span className="eyebrow">
+            <span className="eyebrow brand-strategy__eyebrow--light">
               Capabilities
             </span>
 
@@ -285,25 +303,22 @@ function BrandStrategyPage() {
           </div>
 
           <div className="brand-strategy__capabilities-grid">
-            {brandStrategyCapabilities.map(
-              (capability) => (
-                <div
-                  className="brand-strategy__capability-item"
-                  key={capability}
-                >
-                  <Check
-                    size={15}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {brandStrategyCapabilities.map((capability) => (
+              <div
+                className="brand-strategy__capability-item"
+                key={capability}
+              >
+                <Check
+                  size={15}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>
-                    {capability}
-                  </span>
-                </div>
-              )
-            )}
+                <span>{capability}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -313,6 +328,7 @@ function BrandStrategyPage() {
 
       <section className="brand-strategy__section">
         <div className="container">
+
           <SectionHeading
             eyebrow="Typical Deliverables"
             title="Practical Outputs Your Team Can Use"
@@ -320,38 +336,39 @@ function BrandStrategyPage() {
           />
 
           <div className="brand-strategy__grid brand-strategy__grid--three">
-            {brandStrategyDeliverables.map(
-              (deliverable) => (
-                <article
-                  className="brand-strategy__card"
-                  key={deliverable.id}
-                >
-                  <span className="brand-strategy__number">
-                    {String(
-                      deliverable.id
-                    ).padStart(2, "0")}
-                  </span>
+            {brandStrategyDeliverables.map((deliverable) => (
+              <article
+                className="brand-strategy__card"
+                key={deliverable.id}
+              >
+                <span className="brand-strategy__number">
+                  {String(deliverable.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {deliverable.title}
-                  </h3>
+                <h3>{deliverable.title}</h3>
 
-                  <p>
-                    {deliverable.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{deliverable.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           ENGAGEMENT OPTIONS
+          ADDITIONAL CHANGE: PREMIUM CARDS
       ======================================== */}
 
-      <section className="brand-strategy__section brand-strategy__section--soft">
+      <section
+        className="
+          brand-strategy__section
+          brand-strategy__section--soft
+          brand-strategy__section--engagement
+        "
+      >
         <div className="container">
+
           <SectionHeading
             eyebrow="Engagement Options"
             title="Choose a Starting Point That Fits the Requirement"
@@ -359,27 +376,40 @@ function BrandStrategyPage() {
           />
 
           <div className="brand-strategy__grid brand-strategy__grid--three">
-            {brandStrategyEngagementOptions.map(
-              (option) => (
+            {brandStrategyEngagementOptions.map((option, index) => {
+              const Icon =
+                engagementOptionIcons[
+                  index % engagementOptionIcons.length
+                ];
+
+              return (
                 <article
-                  className="brand-strategy__card"
+                  className="brand-strategy__card brand-strategy__engagement-card"
                   key={option.id}
                 >
-                  <h3>
-                    {option.title}
-                  </h3>
+                  <div className="brand-strategy__engagement-icon">
+                    <Icon
+                      size={21}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                  <p>
-                    {option.description}
-                  </p>
+                  <h3>{option.title}</h3>
+
+                  <p>{option.description}</p>
                 </article>
-              )
-            )}
+              );
+            })}
           </div>
+
+          {/* ====================================
+              ENGAGEMENT CALLOUT
+          ==================================== */}
 
           <div className="brand-strategy__callout">
             <div>
-              <span className="eyebrow">
+              <span className="eyebrow brand-strategy__eyebrow--light">
                 Not Sure Where to Begin?
               </span>
 
@@ -410,15 +440,23 @@ function BrandStrategyPage() {
               />
             </Link>
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           DELIVERY PROCESS
+          CHANGE 03: PREMIUM GLASSMORPHISM
       ======================================== */}
 
-      <section className="brand-strategy__section">
+      <section
+        className="
+          brand-strategy__section
+          brand-strategy__section--delivery
+        "
+      >
         <div className="container">
+
           <SectionHeading
             eyebrow="Delivery"
             title="How We Work"
@@ -426,31 +464,24 @@ function BrandStrategyPage() {
           />
 
           <div className="brand-strategy__process-grid">
-            {brandStrategyProcess.map(
-              (step) => (
-                <article
-                  className="brand-strategy__process-card"
-                  key={step.id}
-                >
-                  <span className="brand-strategy__process-number">
-                    {String(
-                      step.id
-                    ).padStart(2, "0")}
-                  </span>
+            {brandStrategyProcess.map((step) => (
+              <article
+                className="brand-strategy__process-card"
+                key={step.id}
+              >
+                <span className="brand-strategy__process-number">
+                  {String(step.id).padStart(2, "0")}
+                </span>
 
-                  <div>
-                    <h3>
-                      {step.title}
-                    </h3>
+                <div className="brand-strategy__process-content">
+                  <h3>{step.title}</h3>
 
-                    <p>
-                      {step.description}
-                    </p>
-                  </div>
-                </article>
-              )
-            )}
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -473,6 +504,7 @@ function BrandStrategyPage() {
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
+
     </main>
   );
 }

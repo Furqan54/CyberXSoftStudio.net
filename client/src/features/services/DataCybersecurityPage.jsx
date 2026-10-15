@@ -1,9 +1,16 @@
+
 import { Link } from "react-router-dom";
 
 import {
   ArrowRight,
   Check,
   CheckCircle2,
+  SearchCheck,
+  ShieldCheck,
+  ClipboardCheck,
+  UsersRound,
+  FileCheck2,
+  Settings2,
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
@@ -23,6 +30,23 @@ import {
 } from "./dataCybersecurityData";
 
 import "./dataCybersecurity.css";
+
+/* ========================================
+   ENGAGEMENT OPTION ICONS
+======================================== */
+
+const engagementOptionIcons = [
+  SearchCheck,
+  ShieldCheck,
+  ClipboardCheck,
+  UsersRound,
+  FileCheck2,
+  Settings2,
+];
+
+/* ========================================
+   REUSABLE SECTION HEADING
+======================================== */
 
 function SectionHeading({
   eyebrow,
@@ -47,6 +71,7 @@ function SectionHeading({
 function DataCybersecurityPage() {
   return (
     <main className="data-cybersecurity">
+
       {/* ========================================
           HERO
       ======================================== */}
@@ -78,6 +103,7 @@ function DataCybersecurityPage() {
 
       <section className="data-cybersecurity__section">
         <div className="container data-cybersecurity__overview">
+
           <div className="data-cybersecurity__overview-content">
             <span className="eyebrow">
               Service Overview
@@ -122,41 +148,37 @@ function DataCybersecurityPage() {
             </h3>
 
             <div className="data-cybersecurity__outcomes-list">
-              {dataCybersecurityOutcomes.map(
-                (outcome) => (
-                  <article
-                    className="data-cybersecurity__outcome"
-                    key={outcome.id}
-                  >
-                    <CheckCircle2
-                      size={21}
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                    />
+              {dataCybersecurityOutcomes.map((outcome) => (
+                <article
+                  className="data-cybersecurity__outcome"
+                  key={outcome.id}
+                >
+                  <CheckCircle2
+                    size={21}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
 
-                    <div>
-                      <h4>
-                        {outcome.title}
-                      </h4>
-
-                      <p>
-                        {outcome.description}
-                      </p>
-                    </div>
-                  </article>
-                )
-              )}
+                  <div>
+                    <h4>{outcome.title}</h4>
+                    <p>{outcome.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           WHO THIS SERVICE IS FOR
+          PREMIUM AUDIENCE CARDS
       ======================================== */}
 
-      <section className="data-cybersecurity__section data-cybersecurity__section--soft">
+      <section className="data-cybersecurity__section data-cybersecurity__section--soft data-cybersecurity__section--audience">
         <div className="container">
+
           <SectionHeading
             eyebrow="Who This Service Is For"
             title="For Teams Responsible for Data, Risk, Security and Accountability"
@@ -164,32 +186,33 @@ function DataCybersecurityPage() {
           />
 
           <div className="data-cybersecurity__audience-grid">
-            {dataCybersecurityAudiences.map(
-              (audience) => (
-                <div
-                  className="data-cybersecurity__audience-card"
-                  key={audience}
-                >
-                  <Check
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {dataCybersecurityAudiences.map((audience) => (
+              <div
+                className="data-cybersecurity__audience-card"
+                key={audience}
+              >
+                <Check
+                  size={16}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>{audience}</span>
-                </div>
-              )
-            )}
+                <span>{audience}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
-          WHEN THIS SERVICE IS USEFUL
+          WHEN IT BECOMES USEFUL
+          NAVY BACKGROUND + GLASS CARDS
       ======================================== */}
 
-      <section className="data-cybersecurity__section">
+      <section className="data-cybersecurity__section data-cybersecurity__section--use-cases">
         <div className="container">
+
           <SectionHeading
             eyebrow="When It Becomes Useful"
             title="Recognize When Risk, Data or Governance Needs Attention"
@@ -197,26 +220,22 @@ function DataCybersecurityPage() {
           />
 
           <div className="data-cybersecurity__grid data-cybersecurity__grid--two">
-            {dataCybersecurityUseCases.map(
-              (item) => (
-                <article
-                  className="data-cybersecurity__card"
-                  key={item.id}
-                >
-                  <span className="data-cybersecurity__number">
-                    {String(item.id).padStart(
-                      2,
-                      "0"
-                    )}
-                  </span>
+            {dataCybersecurityUseCases.map((item) => (
+              <article
+                className="data-cybersecurity__card data-cybersecurity__use-case-card"
+                key={item.id}
+              >
+                <span className="data-cybersecurity__number">
+                  {String(item.id).padStart(2, "0")}
+                </span>
 
-                  <h3>{item.title}</h3>
+                <h3>{item.title}</h3>
 
-                  <p>{item.description}</p>
-                </article>
-              )
-            )}
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -226,6 +245,7 @@ function DataCybersecurityPage() {
 
       <section className="data-cybersecurity__section data-cybersecurity__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Core Services"
             title="What We Deliver"
@@ -233,40 +253,35 @@ function DataCybersecurityPage() {
           />
 
           <div className="data-cybersecurity__grid data-cybersecurity__grid--two">
-            {dataCybersecurityCoreServices.map(
-              (service) => (
-                <article
-                  className="data-cybersecurity__card data-cybersecurity__service-card"
-                  key={service.id}
-                >
-                  <span className="data-cybersecurity__number">
-                    {String(
-                      service.id
-                    ).padStart(2, "0")}
-                  </span>
+            {dataCybersecurityCoreServices.map((service) => (
+              <article
+                className="data-cybersecurity__card data-cybersecurity__service-card"
+                key={service.id}
+              >
+                <span className="data-cybersecurity__number">
+                  {String(service.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {service.title}
-                  </h3>
+                <h3>{service.title}</h3>
 
-                  <p>
-                    {service.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{service.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           CAPABILITIES
+          HIGH-CONTRAST PILL
       ======================================== */}
 
       <section className="data-cybersecurity__section data-cybersecurity__section--dark">
         <div className="container data-cybersecurity__capabilities-layout">
+
           <div className="data-cybersecurity__capabilities-copy">
-            <span className="eyebrow">
+            <span className="eyebrow data-cybersecurity__eyebrow--light">
               Capabilities
             </span>
 
@@ -284,34 +299,32 @@ function DataCybersecurityPage() {
           </div>
 
           <div className="data-cybersecurity__capabilities-grid">
-            {dataCybersecurityCapabilities.map(
-              (capability) => (
-                <div
-                  className="data-cybersecurity__capability-item"
-                  key={capability}
-                >
-                  <Check
-                    size={15}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {dataCybersecurityCapabilities.map((capability) => (
+              <div
+                className="data-cybersecurity__capability-item"
+                key={capability}
+              >
+                <Check
+                  size={15}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>
-                    {capability}
-                  </span>
-                </div>
-              )
-            )}
+                <span>{capability}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
-          DELIVERABLES
+          TYPICAL DELIVERABLES
       ======================================== */}
 
       <section className="data-cybersecurity__section">
         <div className="container">
+
           <SectionHeading
             eyebrow="Typical Deliverables"
             title="Practical Outputs for Risk, Data and Governance Improvement"
@@ -319,38 +332,33 @@ function DataCybersecurityPage() {
           />
 
           <div className="data-cybersecurity__grid data-cybersecurity__grid--three">
-            {dataCybersecurityDeliverables.map(
-              (deliverable) => (
-                <article
-                  className="data-cybersecurity__card"
-                  key={deliverable.id}
-                >
-                  <span className="data-cybersecurity__number">
-                    {String(
-                      deliverable.id
-                    ).padStart(2, "0")}
-                  </span>
+            {dataCybersecurityDeliverables.map((deliverable) => (
+              <article
+                className="data-cybersecurity__card"
+                key={deliverable.id}
+              >
+                <span className="data-cybersecurity__number">
+                  {String(deliverable.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {deliverable.title}
-                  </h3>
+                <h3>{deliverable.title}</h3>
 
-                  <p>
-                    {deliverable.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{deliverable.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           ENGAGEMENT OPTIONS
+          PREMIUM ICON CARDS
       ======================================== */}
 
-      <section className="data-cybersecurity__section data-cybersecurity__section--soft">
+      <section className="data-cybersecurity__section data-cybersecurity__section--soft data-cybersecurity__section--engagement">
         <div className="container">
+
           <SectionHeading
             eyebrow="Engagement Options"
             title="Structure the Work Around the Requirement"
@@ -358,32 +366,46 @@ function DataCybersecurityPage() {
           />
 
           <div className="data-cybersecurity__grid data-cybersecurity__grid--three">
-            {dataCybersecurityEngagementOptions.map(
-              (option) => (
+            {dataCybersecurityEngagementOptions.map((option, index) => {
+              const Icon =
+                engagementOptionIcons[
+                  index % engagementOptionIcons.length
+                ];
+
+              return (
                 <article
-                  className="data-cybersecurity__card"
+                  className="data-cybersecurity__card data-cybersecurity__engagement-card"
                   key={option.id}
                 >
-                  <h3>
-                    {option.title}
-                  </h3>
+                  <div className="data-cybersecurity__engagement-icon">
+                    <Icon
+                      size={21}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                  <p>
-                    {option.description}
-                  </p>
+                  <h3>{option.title}</h3>
+
+                  <p>{option.description}</p>
                 </article>
-              )
-            )}
+              );
+            })}
           </div>
+
+          {/* ====================================
+              ASSURANCE CALLOUT
+          ==================================== */}
 
           <div className="data-cybersecurity__callout">
             <div>
-              <span className="eyebrow">
-                Assurance & Readiness
+              <span className="eyebrow data-cybersecurity__eyebrow--light">
+                Assurance &amp; Readiness
               </span>
 
               <h3>
-                Prepare for Assurance Without Making Unsupported Certification Claims
+                Prepare for Assurance Without Making
+                Unsupported Certification Claims
               </h3>
 
               <p>
@@ -411,15 +433,18 @@ function DataCybersecurityPage() {
               />
             </Link>
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           DELIVERY PROCESS
+          PREMIUM NAVY GLASSMORPHISM
       ======================================== */}
 
-      <section className="data-cybersecurity__section">
+      <section className="data-cybersecurity__section data-cybersecurity__section--delivery">
         <div className="container">
+
           <SectionHeading
             eyebrow="Delivery"
             title="How We Work"
@@ -427,31 +452,24 @@ function DataCybersecurityPage() {
           />
 
           <div className="data-cybersecurity__process-grid">
-            {dataCybersecurityProcess.map(
-              (step) => (
-                <article
-                  className="data-cybersecurity__process-card"
-                  key={step.id}
-                >
-                  <span className="data-cybersecurity__process-number">
-                    {String(
-                      step.id
-                    ).padStart(2, "0")}
-                  </span>
+            {dataCybersecurityProcess.map((step) => (
+              <article
+                className="data-cybersecurity__process-card"
+                key={step.id}
+              >
+                <span className="data-cybersecurity__process-number">
+                  {String(step.id).padStart(2, "0")}
+                </span>
 
-                  <div>
-                    <h3>
-                      {step.title}
-                    </h3>
+                <div className="data-cybersecurity__process-content">
+                  <h3>{step.title}</h3>
 
-                    <p>
-                      {step.description}
-                    </p>
-                  </div>
-                </article>
-              )
-            )}
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -474,6 +492,7 @@ function DataCybersecurityPage() {
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
+
     </main>
   );
 }

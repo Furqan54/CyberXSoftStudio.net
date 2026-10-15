@@ -1,22 +1,27 @@
+
 /* =========================================================
    CYBERX SOFT
-   STAFF AUGMENTATION — DEDICATED SERVICE PAGE
-   ========================================================= */
+   STAFF AUGMENTATION & DELIVERY SUPPORT
+   Complete page stylesheet
+========================================================= */
 
 .staff-augmentation {
   width: 100%;
   overflow-x: hidden;
-
   color: var(--color-text, #102748);
-  background: var(--color-white, #ffffff);
+  background: #ffffff;
 }
 
-/* =========================================================
+/* =========================================
    GENERAL SECTION LAYOUT
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__section {
   padding: clamp(64px, 8vw, 110px) 0;
+}
+
+.staff-augmentation__section--overview {
+  background: #ffffff;
 }
 
 .staff-augmentation__section--soft {
@@ -27,66 +32,76 @@
   background: #102f60;
 }
 
-/* =========================================================
+/* =========================================
    SECTION HEADINGS
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__section-heading {
-  max-width: 760px;
-
+  max-width: 780px;
   margin: 0 auto 46px;
-
   text-align: center;
-}
-
-.staff-augmentation__section-heading .eyebrow {
-  display: inline-block;
-
-  margin-bottom: 12px;
 }
 
 .staff-augmentation__section-heading h2 {
   margin: 0;
-
-  color: var(--color-text, #102748);
-
+  color: #102748;
   font-size: clamp(1.9rem, 3vw, 2.65rem);
   font-weight: 700;
-
-  line-height: 1.15;
+  line-height: 1.16;
   letter-spacing: -0.025em;
 }
 
 .staff-augmentation__section-heading > p {
-  max-width: 680px;
-
+  max-width: 690px;
   margin: 17px auto 0;
-
-  color: var(--color-text-secondary, #637084);
-
+  color: #637084;
   font-size: 0.94rem;
   line-height: 1.75;
 }
 
-/* Dark section headings */
+/* =========================================
+   SECTION LABEL PILLS
+========================================= */
 
-.staff-augmentation__section--dark
-  .staff-augmentation__section-heading h2 {
-  color: #ffffff;
+.staff-augmentation
+.staff-augmentation__section-heading .eyebrow,
+.staff-augmentation
+.staff-augmentation__overview-content .eyebrow,
+.staff-augmentation
+.staff-augmentation__pricing-box .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+
+  color: #087766;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    105deg,
+    rgba(8, 121, 186, 0.10),
+    rgba(30, 196, 117, 0.13)
+  );
+
+  border: 1px solid rgba(8, 121, 186, 0.27);
+  border-radius: 999px;
 }
 
-.staff-augmentation__section--dark
-  .staff-augmentation__section-heading > p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-/* =========================================================
+/* =========================================
    REUSABLE GRIDS
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__grid {
   display: grid;
-
   gap: 20px;
 }
 
@@ -102,270 +117,643 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-/* =========================================================
+/* =========================================
    GENERAL CARDS
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__card {
+  position: relative;
   min-width: 0;
   height: 100%;
-
   padding: 28px;
 
   background: #ffffff;
-
   border: 1px solid #e1e7ef;
-  border-radius: 10px;
+  border-radius: 12px;
 
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
 .staff-augmentation__card:hover {
-  transform: translateY(-3px);
-
-  border-color: #d1dbe7;
-
-  box-shadow:
-    0 14px 34px
-    rgba(11, 38, 75, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(31, 132, 229, 0.40);
+  box-shadow: 0 16px 36px rgba(16, 88, 169, 0.10);
 }
 
 .staff-augmentation__card h3 {
   margin: 0;
-
   color: #102748;
-
   font-size: 1rem;
   font-weight: 700;
-
   line-height: 1.4;
 }
 
 .staff-augmentation__card > p {
   margin: 12px 0 0;
-
   color: #637084;
-
   font-size: 0.84rem;
   line-height: 1.72;
 }
 
-/* =========================================================
-   NUMBER LABEL
-   ========================================================= */
+/* =========================================
+   NUMBER LABELS
+========================================= */
 
 .staff-augmentation__number {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   min-width: 34px;
   min-height: 29px;
-
   margin-bottom: 20px;
   padding: 5px 8px;
 
   color: #179f6b;
-
   background: #edf9f4;
-
   border-radius: 6px;
 
   font-size: 0.7rem;
   font-weight: 700;
 }
 
-/* =========================================================
-   OVERVIEW
-   ========================================================= */
+/* =========================================
+   SERVICE OVERVIEW
+========================================= */
 
 .staff-augmentation__overview {
   display: grid;
-
   grid-template-columns:
     minmax(0, 0.95fr)
     minmax(0, 1.05fr);
-
   align-items: center;
-
   gap: clamp(40px, 6vw, 80px);
-}
-
-.staff-augmentation__overview-content .eyebrow {
-  display: inline-block;
-
-  margin-bottom: 12px;
 }
 
 .staff-augmentation__overview-content h2 {
   max-width: 560px;
-
   margin: 0;
-
   color: #102748;
-
   font-size: clamp(1.9rem, 3vw, 2.55rem);
   font-weight: 700;
-
   line-height: 1.16;
   letter-spacing: -0.025em;
 }
 
 .staff-augmentation__overview-content > p {
   max-width: 620px;
-
   margin: 18px 0 0;
-
   color: #637084;
-
   font-size: 0.91rem;
   line-height: 1.78;
 }
 
-/* =========================================================
-   PRIMARY INLINE CTA
-   ========================================================= */
+/* =========================================
+   PRIMARY CTA
+========================================= */
 
 .staff-augmentation__primary-link {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 10px;
-
   min-height: 44px;
-
   margin-top: 25px;
   padding: 11px 17px;
 
   color: #ffffff;
-
   background: #102f60;
-
   border: 1px solid #102f60;
   border-radius: 5px;
 
   font-size: 0.78rem;
   font-weight: 600;
-
+  text-align: center;
   text-decoration: none;
 
   transition:
-    background 180ms ease,
-    transform 180ms ease;
+    transform 180ms ease,
+    background 180ms ease;
 }
 
 .staff-augmentation__primary-link:hover {
-  transform: translateY(-1px);
-
+  transform: translateY(-2px);
   background: #16437c;
 }
 
 .staff-augmentation__primary-link:focus-visible {
-  outline: 3px solid rgba(38, 195, 133, 0.35);
+  outline: 3px solid rgba(38, 195, 133, 0.55);
   outline-offset: 3px;
 }
 
-/* =========================================================
+/* =========================================
    OVERVIEW POINTS
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__overview-points {
   display: grid;
-
   gap: 14px;
 }
 
 .staff-augmentation__overview-point {
   display: flex;
-
   align-items: flex-start;
 
   gap: 15px;
-
   padding: 21px;
 
   background: #ffffff;
-
   border: 1px solid #e2e8f0;
-  border-radius: 9px;
+  border-radius: 11px;
+
+  box-shadow: 0 8px 22px rgba(21, 75, 137, 0.045);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.staff-augmentation__overview-point:hover {
+  transform: translateY(-3px);
+  border-color: rgba(31, 132, 229, 0.38);
+  box-shadow: 0 15px 30px rgba(21, 75, 137, 0.09);
 }
 
 .staff-augmentation__overview-point > svg {
   flex: 0 0 auto;
-
   margin-top: 1px;
-
   color: #26c385;
 }
 
 .staff-augmentation__overview-point h3 {
   margin: 0;
-
   color: #102748;
-
   font-size: 0.91rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .staff-augmentation__overview-point p {
   margin: 6px 0 0;
-
   color: #637084;
-
   font-size: 0.8rem;
   line-height: 1.65;
 }
 
-/* =========================================================
+/* =========================================
+   AUDIENCE SECTION
+========================================= */
+
+.staff-augmentation__section--audience {
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(61, 147, 226, 0.10),
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(37, 196, 131, 0.07),
+      transparent 43%
+    ),
+    linear-gradient(
+      135deg,
+      #edf4fc 0%,
+      #f6f9fe 48%,
+      #eaf3fc 100%
+    );
+}
+
+.staff-augmentation__audience-grid {
+  gap: 18px;
+  padding: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(204, 227, 249, 0.40),
+    rgba(234, 248, 244, 0.48)
+  );
+
+  border: 1px solid rgba(59, 130, 201, 0.14);
+  border-radius: 24px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 18px 46px rgba(23, 79, 138, 0.05);
+}
+
+.staff-augmentation__audience-card {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+  min-height: 122px;
+  gap: 15px;
+  padding: 23px 21px;
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #ffffff, #f8fbff);
+  border: 1px solid rgba(54, 124, 195, 0.20);
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 22px rgba(21, 75, 137, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.90);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.staff-augmentation__audience-card::before {
+  content: "";
+  position: absolute;
+
+  top: 20px;
+  bottom: 20px;
+  left: 0;
+  width: 3px;
+
+  background: linear-gradient(180deg, #168de0, #2ac58b);
+  border-radius: 0 999px 999px 0;
+  opacity: 0.55;
+
+  transition:
+    top 280ms ease,
+    bottom 280ms ease,
+    opacity 280ms ease;
+}
+
+.staff-augmentation__audience-card > svg {
+  box-sizing: content-box;
+  flex: 0 0 auto;
+
+  width: 18px;
+  height: 18px;
+  padding: 10px;
+
+  color: #087cbd;
+  background: linear-gradient(145deg, #e0f1ff, #e3f9ef);
+
+  border: 1px solid rgba(26, 133, 200, 0.19);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(29, 122, 195, 0.07);
+
+  transition: transform 280ms ease;
+}
+
+.staff-augmentation__audience-card h3 {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.staff-augmentation__audience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(30, 132, 221, 0.52);
+  box-shadow: 0 20px 38px rgba(23, 89, 165, 0.14);
+}
+
+.staff-augmentation__audience-card:hover::before {
+  top: 12px;
+  bottom: 12px;
+  opacity: 1;
+}
+
+.staff-augmentation__audience-card:hover > svg {
+  transform: scale(1.09);
+}
+
+/* =========================================
+   NAVY BACKGROUND SYSTEM
+========================================= */
+
+.staff-augmentation__section--challenges,
+.staff-augmentation__section--process {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 18%,
+      rgba(28, 118, 207, 0.28),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 92% 85%,
+      rgba(32, 189, 145, 0.13),
+      transparent 39%
+    ),
+    linear-gradient(
+      120deg,
+      #061326 0%,
+      #092449 55%,
+      #071a33 100%
+    );
+}
+
+.staff-augmentation__section--dark {
+  position: relative;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      ellipse at 8% 14%,
+      rgba(23, 109, 198, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 90% 86%,
+      rgba(29, 191, 143, 0.12),
+      transparent 36%
+    ),
+    linear-gradient(
+      125deg,
+      #07172f 0%,
+      #0b2750 52%,
+      #0d345b 100%
+    );
+}
+
+.staff-augmentation__section--challenges
+.staff-augmentation__section-heading h2,
+.staff-augmentation__section--process
+.staff-augmentation__section-heading h2,
+.staff-augmentation__section--dark
+.staff-augmentation__section-heading h2 {
+  color: #ffffff;
+}
+
+.staff-augmentation__section--challenges
+.staff-augmentation__section-heading > p,
+.staff-augmentation__section--process
+.staff-augmentation__section-heading > p,
+.staff-augmentation__section--dark
+.staff-augmentation__section-heading > p {
+  color: rgba(230, 239, 251, 0.81);
+}
+
+.staff-augmentation
+.staff-augmentation__section--challenges
+.staff-augmentation__section-heading .eyebrow,
+.staff-augmentation
+.staff-augmentation__section--process
+.staff-augmentation__section-heading .eyebrow,
+.staff-augmentation
+.staff-augmentation__section--dark
+.staff-augmentation__section-heading .eyebrow,
+.staff-augmentation
+.staff-augmentation__callout .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 14px;
+  padding: 8px 16px;
+
+  color: #ffffff;
+  font-size: 0.83rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    110deg,
+    rgba(17, 132, 212, 0.41),
+    rgba(36, 190, 143, 0.26)
+  );
+
+  border: 1px solid rgba(153, 243, 218, 0.63);
+  border-radius: 999px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 6px 20px rgba(0, 0, 0, 0.09);
+}
+
+/* =========================================
+   BUYER CHALLENGES
+========================================= */
+
+.staff-augmentation__challenge-card {
+  position: relative;
+  isolation: isolate;
+
+  min-height: 210px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.57);
+
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 36px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.staff-augmentation__challenge-card::after {
+  content: "";
+  position: absolute;
+
+  left: 28px;
+  bottom: 0;
+  width: 58px;
+  height: 3px;
+
+  background: linear-gradient(90deg, #178beb, #2bd99b);
+  border-radius: 999px 999px 0 0;
+
+  transition: width 300ms ease;
+}
+
+.staff-augmentation__challenge-card
+.staff-augmentation__number {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+
+  color: #ffffff;
+  background: rgba(50, 139, 225, 0.28);
+
+  border: 1px solid rgba(157, 217, 255, 0.58);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(67, 157, 240, 0.08);
+}
+
+.staff-augmentation__challenge-card h3 {
+  color: #ffffff;
+}
+
+.staff-augmentation__challenge-card > p {
+  color: rgba(229, 239, 252, 0.80);
+}
+
+.staff-augmentation__challenge-card:hover {
+  transform: translateY(-7px);
+  background-color: rgba(30, 77, 130, 0.70);
+  border-color: rgba(110, 203, 255, 0.62);
+
+  box-shadow:
+    0 24px 48px rgba(0, 9, 28, 0.28),
+    0 0 22px rgba(30, 144, 255, 0.12);
+}
+
+.staff-augmentation__challenge-card:hover::after {
+  width: 105px;
+}
+
+/* =========================================
    ENGAGEMENT MODEL CARDS
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__model-card {
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 280px;
   padding: 30px;
+
+  background: linear-gradient(150deg, #ffffff, #f3f9ff);
+  border: 1px solid rgba(28, 109, 197, 0.19);
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(17, 77, 145, 0.05);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.staff-augmentation__model-card::after {
+  content: "";
+  position: absolute;
+
+  left: 30px;
+  bottom: 0;
+  width: 58px;
+  height: 3px;
+
+  background: linear-gradient(90deg, #178beb, #2bd99b);
+  border-radius: 999px 999px 0 0;
+
+  transition: width 280ms ease;
+}
+
+.staff-augmentation__model-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.staff-augmentation__model-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+
+  width: 46px;
+  height: 46px;
+
+  color: #1379c8;
+  background: linear-gradient(145deg, #deefff, #ecf8ff);
+
+  border: 1px solid rgba(26, 127, 214, 0.23);
+  border-radius: 13px;
+  box-shadow: 0 5px 12px rgba(16, 106, 194, 0.06);
+
+  transition: transform 280ms ease;
 }
 
 .staff-augmentation__pill {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 
-  margin-bottom: 18px;
-  padding: 6px 10px;
+  max-width: 100%;
+  padding: 7px 13px;
 
-  color: #179f6b;
+  color: #087766;
+  background: linear-gradient(
+    105deg,
+    rgba(8, 121, 186, 0.10),
+    rgba(30, 196, 117, 0.13)
+  );
 
-  background: #edf9f4;
-
+  border: 1px solid rgba(8, 121, 186, 0.27);
   border-radius: 999px;
 
-  font-size: 0.67rem;
+  font-size: 0.72rem;
   font-weight: 700;
-
+  letter-spacing: 0.055em;
+  line-height: 1.4;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
-/* =========================================================
+.staff-augmentation__model-card > p strong {
+  color: #102748;
+}
+
+.staff-augmentation__model-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(31, 132, 229, 0.58);
+  box-shadow: 0 22px 46px rgba(16, 88, 169, 0.15);
+}
+
+.staff-augmentation__model-card:hover
+.staff-augmentation__model-icon {
+  transform: translateY(-3px) scale(1.06);
+}
+
+.staff-augmentation__model-card:hover::after {
+  width: 105px;
+}
+
+/* =========================================
    WHITE-LABEL CALLOUT
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__callout {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
   gap: 32px;
-
   margin-top: 30px;
   padding: 34px;
 
   background: #102f60;
-
   border-radius: 10px;
 }
 
@@ -373,55 +761,38 @@
   max-width: 690px;
 }
 
-.staff-augmentation__callout .eyebrow {
-  display: inline-block;
-
-  margin-bottom: 10px;
-}
-
 .staff-augmentation__callout h3 {
   margin: 0;
-
   color: #ffffff;
-
   font-size: clamp(1.3rem, 2.2vw, 1.8rem);
   font-weight: 700;
-
   line-height: 1.25;
 }
 
 .staff-augmentation__callout p {
   margin: 12px 0 0;
-
-  color: rgba(255, 255, 255, 0.72);
-
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.84rem;
   line-height: 1.72;
 }
 
 .staff-augmentation__callout-link {
   display: inline-flex;
-
   flex: 0 0 auto;
-
   align-items: center;
   justify-content: center;
 
   gap: 9px;
-
   min-height: 44px;
-
   padding: 11px 17px;
 
   color: #102f60;
-
   background: #ffffff;
-
   border-radius: 5px;
 
   font-size: 0.76rem;
   font-weight: 700;
-
+  text-align: center;
   text-decoration: none;
 
   transition:
@@ -431,219 +802,853 @@
 
 .staff-augmentation__callout-link:hover {
   transform: translateY(-2px);
-
-  box-shadow:
-    0 8px 24px
-    rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================================================
-   DARK BENEFIT CARDS
-   ========================================================= */
-
-.staff-augmentation__dark-card {
-  min-width: 0;
-  height: 100%;
-
-  padding: 28px;
-
-  background:
-    rgba(255, 255, 255, 0.06);
-
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.1);
-
-  border-radius: 9px;
+.staff-augmentation__callout-link:focus-visible {
+  outline: 3px solid #67dfb9;
+  outline-offset: 3px;
 }
 
-.staff-augmentation__dark-card h3 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: 1rem;
-  font-weight: 700;
-
-  line-height: 1.4;
-}
-
-.staff-augmentation__dark-card p {
-  margin: 11px 0 0;
-
-  color: rgba(255, 255, 255, 0.7);
-
-  font-size: 0.82rem;
-  line-height: 1.7;
-}
-
-/* =========================================================
-   SPECIALIZATION CARDS
-   ========================================================= */
-
-.staff-augmentation__specialization-card {
-  padding: 27px;
-}
+/* =========================================
+   CHECK LISTS
+========================================= */
 
 .staff-augmentation__check-list {
   display: grid;
-
   gap: 11px;
 
   margin: 20px 0 0;
   padding: 0;
-
   list-style: none;
 }
 
 .staff-augmentation__check-list li {
   display: flex;
-
   align-items: flex-start;
-
   gap: 9px;
 
   color: #637084;
-
   font-size: 0.78rem;
   line-height: 1.55;
 }
 
 .staff-augmentation__check-list svg {
   flex: 0 0 auto;
-
   margin-top: 2px;
-
   color: #26c385;
 }
 
-/* =========================================================
+/* =========================================
+   DARK BENEFIT CARDS
+========================================= */
+
+.staff-augmentation__dark-card {
+  position: relative;
+  isolation: isolate;
+
+  min-width: 0;
+  height: 100%;
+  padding: 28px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.54);
+
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 38px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.staff-augmentation__dark-card h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.staff-augmentation__dark-card p {
+  margin: 11px 0 0;
+  color: rgba(228, 237, 250, 0.80);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.staff-augmentation__dark-card
+.staff-augmentation__number {
+  min-width: 39px;
+  min-height: 39px;
+  padding: 0;
+
+  color: #ffffff;
+  background: linear-gradient(
+    145deg,
+    rgba(116, 196, 255, 0.38),
+    rgba(30, 107, 205, 0.18)
+  );
+
+  border: 1px solid rgba(169, 222, 255, 0.68);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(72, 158, 243, 0.09);
+}
+
+.staff-augmentation__dark-card::after {
+  content: "";
+  position: absolute;
+
+  left: 28px;
+  bottom: 0;
+  width: 58px;
+  height: 3px;
+
+  background: linear-gradient(90deg, #178beb, #2bd99b);
+  border-radius: 999px 999px 0 0;
+
+  transition: width 300ms ease;
+}
+
+.staff-augmentation__dark-card:hover {
+  transform: translateY(-7px);
+  background-color: rgba(31, 83, 140, 0.74);
+  border-color: rgba(100, 198, 255, 0.79);
+
+  box-shadow:
+    0 26px 55px rgba(0, 10, 30, 0.36),
+    0 0 28px rgba(28, 144, 255, 0.16);
+}
+
+.staff-augmentation__dark-card:hover::after {
+  width: 105px;
+}
+
+/* =========================================
+   SPECIALIST COVERAGE
+   NEW EXPANDABLE PREMIUM DESIGN
+========================================= */
+
+.staff-augmentation__section--specializations {
+  position: relative;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      ellipse at 6% 15%,
+      rgba(42, 132, 225, 0.11),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 92% 85%,
+      rgba(37, 196, 131, 0.07),
+      transparent 42%
+    ),
+    linear-gradient(
+      135deg,
+      #edf4fc 0%,
+      #f7faff 48%,
+      #edf5fc 100%
+    );
+}
+
+.staff-augmentation__section--specializations
+.staff-augmentation__section-heading {
+  margin-bottom: 30px;
+}
+
+/* Toolbar above cards */
+
+.staff-augmentation__specialist-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 16px;
+  margin-bottom: 22px;
+  padding: 0 2px;
+}
+
+.staff-augmentation__specialist-count {
+  margin: 0;
+
+  color: #647993;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.staff-augmentation__specialist-count strong {
+  color: #0b447d;
+  font-weight: 800;
+}
+
+/* View all / Show less button */
+
+.staff-augmentation__specialist-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  min-height: 46px;
+  padding: 11px 18px;
+
+  color: #ffffff;
+  background: linear-gradient(
+    115deg,
+    #103965,
+    #145b9a
+  );
+
+  border: 1px solid rgba(35, 119, 202, 0.45);
+  border-radius: 10px;
+
+  box-shadow:
+    0 9px 20px rgba(14, 64, 120, 0.15);
+
+  font-family: inherit;
+  font-size: 0.81rem;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+
+  transition:
+    transform 240ms ease,
+    background 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.staff-augmentation__specialist-toggle svg {
+  flex: 0 0 auto;
+  color: #81e9c2;
+  transition: transform 240ms ease;
+}
+
+.staff-augmentation__specialist-toggle:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    115deg,
+    #14518c,
+    #1680bf
+  );
+
+  border-color: rgba(86, 179, 237, 0.70);
+
+  box-shadow:
+    0 14px 28px rgba(14, 64, 120, 0.23);
+}
+
+.staff-augmentation__specialist-toggle:hover svg {
+  transform: translateY(2px);
+}
+
+.staff-augmentation__specialist-toggle:focus-visible {
+  outline: 3px solid #28c89c;
+  outline-offset: 4px;
+}
+
+/* Specialist grid */
+
+.staff-augmentation__specialist-grid {
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Specialist cards */
+
+.staff-augmentation__specialization-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 270px;
+  padding: 26px;
+
+  background: linear-gradient(
+    150deg,
+    #ffffff 0%,
+    #f4f9ff 100%
+  );
+
+  border: 1px solid rgba(43, 117, 195, 0.22);
+  border-radius: 17px;
+
+  box-shadow:
+    0 8px 25px rgba(20, 75, 137, 0.065),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  transition:
+    transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* Subtle blue corner glow */
+
+.staff-augmentation__specialization-card::before {
+  content: "";
+
+  position: absolute;
+  top: -95px;
+  right: -95px;
+
+  width: 240px;
+  height: 240px;
+
+  background: radial-gradient(
+    circle,
+    rgba(50, 149, 235, 0.11),
+    transparent 68%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Bottom blue-green accent */
+
+.staff-augmentation__specialization-card::after {
+  content: "";
+
+  position: absolute;
+  left: 26px;
+  bottom: 0;
+
+  width: 54px;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #168de0,
+    #28ce99
+  );
+
+  border-radius: 999px 999px 0 0;
+
+  transition: width 300ms ease;
+}
+
+/* Card top row */
+
+.staff-augmentation__specialization-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.staff-augmentation__specialization-top
+.staff-augmentation__number {
+  min-width: 37px;
+  min-height: 37px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #0c639e;
+  background: linear-gradient(
+    140deg,
+    #e0efff,
+    #e8faf2
+  );
+
+  border: 1px solid rgba(43, 135, 207, 0.23);
+  border-radius: 50%;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 4px 10px rgba(32, 114, 197, 0.07);
+}
+
+/* Specialist category icons */
+
+.staff-augmentation__specialization-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+
+  width: 45px;
+  height: 45px;
+
+  color: #177bc0;
+  background: linear-gradient(
+    145deg,
+    #e7f3ff,
+    #f3faff
+  );
+
+  border: 1px solid rgba(30, 118, 200, 0.20);
+  border-radius: 13px;
+
+  box-shadow:
+    0 5px 12px rgba(25, 101, 185, 0.055);
+
+  transition:
+    transform 300ms ease,
+    background 300ms ease,
+    color 300ms ease;
+}
+
+/* Card headings */
+
+.staff-augmentation__specialization-card h3 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: #102748;
+  font-size: 1.04rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+/* Specialist roles */
+
+.staff-augmentation__specialization-card
+.staff-augmentation__check-list {
+  position: relative;
+  z-index: 1;
+
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.staff-augmentation__specialization-card
+.staff-augmentation__check-list li {
+  color: #536880;
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.staff-augmentation__specialization-card
+.staff-augmentation__check-list svg {
+  color: #16b981;
+}
+
+/* Specialist card hover */
+
+.staff-augmentation__specialization-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(34, 133, 218, 0.62);
+
+  box-shadow:
+    0 22px 43px rgba(20, 86, 160, 0.15),
+    0 0 0 1px rgba(22, 136, 222, 0.035);
+}
+
+.staff-augmentation__specialization-card:hover::after {
+  width: 110px;
+}
+
+.staff-augmentation__specialization-card:hover
+.staff-augmentation__specialization-icon {
+  transform: translateY(-3px) scale(1.06);
+
+  color: #0f649d;
+  background: linear-gradient(
+    145deg,
+    #d9edff,
+    #e3f9f1
+  );
+}
+
+/* Reveal cards 7–13 when expanded */
+
+.staff-augmentation__specialization-card:nth-child(n + 7) {
+  animation:
+    staff-specialization-reveal 340ms ease both;
+}
+
+@keyframes staff-specialization-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bottom collapse control */
+
+.staff-augmentation__specialist-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.staff-augmentation__specialist-toggle--secondary {
+  color: #114777;
+  background: #ffffff;
+
+  border-color: rgba(31, 117, 202, 0.30);
+
+  box-shadow:
+    0 6px 18px rgba(14, 64, 120, 0.07);
+}
+
+.staff-augmentation__specialist-toggle--secondary svg {
+  color: #168dba;
+}
+
+.staff-augmentation__specialist-toggle--secondary:hover {
+  color: #ffffff;
+  background: #145b9a;
+}
+
+/* =========================================
    GENERAL NOTES
-   ========================================================= */
+========================================= */
 
 .staff-augmentation__note {
   max-width: 830px;
-
   margin: 28px auto 0;
 
-  color: #7b8798;
-
-  font-size: 0.76rem;
-  line-height: 1.7;
-
+  color: #65768c;
+  font-size: 0.79rem;
+  line-height: 1.75;
   text-align: center;
 }
 
 .staff-augmentation__dark-note {
   max-width: 830px;
-
   margin: 28px auto 0;
 
-  color: rgba(255, 255, 255, 0.62);
-
-  font-size: 0.76rem;
-  line-height: 1.7;
-
+  color: rgba(231, 241, 253, 0.79);
+  font-size: 0.79rem;
+  line-height: 1.75;
   text-align: center;
 }
 
-/* =========================================================
-   SAFEGUARD CARDS
-   ========================================================= */
+/* =========================================
+   SECURITY & CONTINUITY
+========================================= */
+
+.staff-augmentation__section--safeguards {
+  background: linear-gradient(
+    135deg,
+    #edf4fc 0%,
+    #f6f9fe 52%,
+    #eaf3fc 100%
+  );
+}
 
 .staff-augmentation__safeguard {
-  display: flex;
+  position: relative;
+  isolation: isolate;
 
+  display: flex;
   align-items: flex-start;
 
+  min-width: 0;
+  height: 100%;
   gap: 17px;
+  padding: 28px;
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #ffffff, #f7fbff);
+
+  border: 1px solid rgba(54, 124, 195, 0.20);
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(17, 77, 145, 0.05);
+
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
 .staff-augmentation__safeguard > svg {
+  box-sizing: content-box;
   flex: 0 0 auto;
 
-  color: #26c385;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+
+  color: #1379c8;
+  background: linear-gradient(145deg, #deefff, #e3f9ef);
+
+  border: 1px solid rgba(26, 127, 214, 0.23);
+  border-radius: 13px;
 }
 
 .staff-augmentation__safeguard h3 {
   margin: 0;
+  color: #102748;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .staff-augmentation__safeguard p {
-  margin-top: 8px;
+  margin: 10px 0 0;
+  color: #637084;
+  font-size: 0.84rem;
+  line-height: 1.72;
 }
 
-/* =========================================================
-   STAFF AUGMENTATION PROCESS
-   ========================================================= */
+.staff-augmentation__safeguard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(31, 132, 229, 0.52);
+  box-shadow: 0 20px 38px rgba(23, 89, 165, 0.13);
+}
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.staff-augmentation__section--process {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 8% 14%,
+      rgba(23, 109, 198, 0.27),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 90% 86%,
+      rgba(29, 191, 143, 0.13),
+      transparent 36%
+    ),
+    linear-gradient(
+      125deg,
+      #07172f 0%,
+      #0b2750 52%,
+      #0d345b 100%
+    );
+}
+
+.staff-augmentation__section--process::before {
+  content: "";
+  position: absolute;
+
+  top: -185px;
+  right: -155px;
+  width: 460px;
+  height: 460px;
+
+  background: radial-gradient(
+    circle,
+    rgba(46, 142, 235, 0.17),
+    transparent 70%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.staff-augmentation__section--process > .container {
+  position: relative;
+  z-index: 1;
+}
 
 .staff-augmentation__process-grid {
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 20px;
+  align-items: stretch;
+  gap: 22px;
 }
 
 .staff-augmentation__process-card {
   position: relative;
+  isolation: isolate;
+
+  display: flex;
+  flex-direction: column;
 
   min-width: 0;
-
+  min-height: 275px;
   padding: 28px;
+  overflow: hidden;
 
-  background: #ffffff;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.54);
 
-  border: 1px solid #e1e7ef;
-  border-radius: 10px;
+  border: 1px solid rgba(157, 202, 255, 0.20);
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 38px rgba(1, 12, 31, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.staff-augmentation__process-card::before {
+  content: "";
+  position: absolute;
+
+  top: -90px;
+  right: -90px;
+  width: 230px;
+  height: 230px;
+
+  background: radial-gradient(
+    circle,
+    rgba(66, 157, 243, 0.15),
+    transparent 70%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.staff-augmentation__process-card::after {
+  content: "";
+  position: absolute;
+
+  left: 28px;
+  bottom: 0;
+  width: 62px;
+  height: 4px;
+
+  background: linear-gradient(90deg, #178beb, #2bd99b);
+  border-radius: 999px 999px 0 0;
+
+  box-shadow: 0 0 14px rgba(43, 217, 155, 0.20);
+  transition: width 300ms ease;
 }
 
 .staff-augmentation__process-number {
-  display: inline-flex;
+  position: relative;
+  z-index: 1;
 
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 
-  width: 36px;
-  height: 36px;
-
-  margin-bottom: 20px;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 25px;
 
   color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.075em;
+  line-height: 1;
 
-  background: #168ed1;
+  background: linear-gradient(
+    145deg,
+    rgba(116, 196, 255, 0.38),
+    rgba(30, 107, 205, 0.18)
+  );
 
+  border: 1px solid rgba(169, 222, 255, 0.68);
   border-radius: 50%;
 
-  font-size: 0.7rem;
-  font-weight: 700;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.43),
+    0 8px 24px rgba(11, 109, 225, 0.24),
+    0 0 0 5px rgba(72, 158, 243, 0.09);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.staff-augmentation__process-content {
+  position: relative;
+  z-index: 1;
 }
 
 .staff-augmentation__process-card h3 {
   margin: 0;
-
-  color: #102748;
-
-  font-size: 0.98rem;
+  color: #ffffff;
+  font-size: clamp(1.1rem, 1.5vw, 1.33rem);
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .staff-augmentation__process-card p {
-  margin: 10px 0 0;
-
-  color: #637084;
-
-  font-size: 0.8rem;
-  line-height: 1.67;
+  margin: 14px 0 0;
+  color: rgba(228, 237, 250, 0.80);
+  font-size: 0.88rem;
+  line-height: 1.75;
 }
 
-/* =========================================================
-   COMMERCIAL PLANNING / PRICING PLACEHOLDER
-   ========================================================= */
+.staff-augmentation__process-card:hover {
+  transform: translateY(-8px);
+  background-color: rgba(31, 83, 140, 0.74);
+  border-color: rgba(100, 198, 255, 0.79);
+
+  box-shadow:
+    0 26px 55px rgba(0, 10, 30, 0.36),
+    0 0 28px rgba(28, 144, 255, 0.16);
+}
+
+.staff-augmentation__process-card:hover::after {
+  width: 105px;
+}
+
+.staff-augmentation__process-card:hover
+.staff-augmentation__process-number {
+  transform: translateY(-3px) scale(1.06);
+
+  border-color: rgba(205, 239, 255, 0.95);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 12px 26px rgba(11, 109, 225, 0.36),
+    0 0 0 6px rgba(72, 158, 243, 0.17);
+}
+
+/* =========================================
+   COMMERCIAL PLANNING
+========================================= */
 
 .staff-augmentation__pricing-note {
   padding: 0 0 clamp(64px, 8vw, 110px);
-
   background: #ffffff;
 }
 
@@ -651,59 +1656,53 @@
   padding: clamp(32px, 5vw, 50px);
 
   text-align: center;
+  background: linear-gradient(135deg, #edf4fc, #f6f9fe);
 
-  background: #f5f7fb;
-
-  border: 1px solid #e1e7ef;
-  border-radius: 12px;
-}
-
-.staff-augmentation__pricing-box .eyebrow {
-  display: inline-block;
-
-  margin-bottom: 10px;
+  border: 1px solid rgba(54, 124, 195, 0.16);
+  border-radius: 16px;
 }
 
 .staff-augmentation__pricing-box h2 {
   margin: 0;
-
   color: #102748;
-
   font-size: clamp(1.7rem, 3vw, 2.35rem);
   font-weight: 700;
-
   line-height: 1.2;
 }
 
 .staff-augmentation__pricing-box p {
   max-width: 650px;
-
   margin: 15px auto 0;
-
   color: #637084;
-
   font-size: 0.88rem;
   line-height: 1.72;
 }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+.staff-augmentation__pricing-box
+.staff-augmentation__check-list {
+  max-width: 600px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.staff-augmentation__pricing-box
+.staff-augmentation__check-list li {
+  padding: 12px 14px;
+
+  background: #ffffff;
+  border: 1px solid rgba(54, 124, 195, 0.14);
+  border-radius: 8px;
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
 
 @media (max-width: 1050px) {
-  .staff-augmentation__grid--four {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-  .staff-augmentation__grid--three {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
+  .staff-augmentation__grid--four,
+  .staff-augmentation__grid--three,
   .staff-augmentation__process-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .staff-augmentation__overview {
@@ -711,9 +1710,9 @@
   }
 }
 
-/* =========================================================
-   MOBILE / SMALL TABLET
-   ========================================================= */
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
 
 @media (max-width: 760px) {
   .staff-augmentation__section {
@@ -722,7 +1721,6 @@
 
   .staff-augmentation__section-heading {
     margin-bottom: 30px;
-
     text-align: left;
   }
 
@@ -731,11 +1729,11 @@
     margin-right: 0;
   }
 
+  .staff-augmentation__overview,
   .staff-augmentation__grid--two,
   .staff-augmentation__grid--three,
   .staff-augmentation__grid--four,
-  .staff-augmentation__process-grid,
-  .staff-augmentation__overview {
+  .staff-augmentation__process-grid {
     grid-template-columns: 1fr;
   }
 
@@ -745,17 +1743,26 @@
 
   .staff-augmentation__card,
   .staff-augmentation__dark-card,
-  .staff-augmentation__process-card {
+  .staff-augmentation__process-card,
+  .staff-augmentation__safeguard {
     padding: 23px;
+  }
+
+  .staff-augmentation__audience-grid {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 18px;
+  }
+
+  .staff-augmentation__audience-card {
+    min-height: 86px;
+    padding: 19px 18px;
   }
 
   .staff-augmentation__callout {
     flex-direction: column;
-
     align-items: stretch;
-
     gap: 24px;
-
     padding: 26px;
   }
 
@@ -776,11 +1783,42 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  .staff-augmentation__pricing-box
+  .staff-augmentation__check-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .staff-augmentation__specialist-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .staff-augmentation__specialist-toggle {
+    width: 100%;
+  }
+
+  .staff-augmentation__specialization-card {
+    min-height: auto;
+    padding: 23px;
+  }
+
+  .staff-augmentation__specialization-card::after {
+    left: 23px;
+  }
+
+  .staff-augmentation__challenge-card::after,
+  .staff-augmentation__model-card::after,
+  .staff-augmentation__dark-card::after,
+  .staff-augmentation__process-card::after {
+    left: 23px;
+  }
 }
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+/* =========================================
+   RESPONSIVE — SMALL MOBILE
+========================================= */
 
 @media (max-width: 480px) {
   .staff-augmentation__section {
@@ -794,12 +1832,33 @@
 
   .staff-augmentation__card,
   .staff-augmentation__dark-card,
-  .staff-augmentation__process-card {
+  .staff-augmentation__process-card,
+  .staff-augmentation__safeguard {
     padding: 20px;
   }
 
   .staff-augmentation__overview-point {
     padding: 18px;
+  }
+
+  .staff-augmentation__audience-grid {
+    padding: 11px;
+    gap: 11px;
+  }
+
+  .staff-augmentation__audience-card {
+    gap: 12px;
+    padding: 17px 15px;
+  }
+
+  .staff-augmentation__audience-card > svg {
+    width: 17px;
+    height: 17px;
+    padding: 8px;
+  }
+
+  .staff-augmentation__model-top {
+    align-items: flex-start;
   }
 
   .staff-augmentation__callout {
@@ -809,5 +1868,95 @@
   .staff-augmentation__primary-link,
   .staff-augmentation__callout-link {
     width: 100%;
+  }
+
+  .staff-augmentation__pricing-box {
+    padding: 24px 20px;
+  }
+
+  .staff-augmentation__specialization-card {
+    padding: 20px;
+  }
+
+  .staff-augmentation__specialization-card::after {
+    left: 20px;
+  }
+
+  .staff-augmentation__challenge-card::after,
+  .staff-augmentation__model-card::after,
+  .staff-augmentation__dark-card::after,
+  .staff-augmentation__process-card::after {
+    left: 20px;
+  }
+
+  .staff-augmentation__process-card {
+    min-height: auto;
+  }
+
+  .staff-augmentation__process-number {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 22px;
+    font-size: 0.8rem;
+  }
+
+  .staff-augmentation
+  .staff-augmentation__section-heading .eyebrow,
+  .staff-augmentation
+  .staff-augmentation__overview-content .eyebrow,
+  .staff-augmentation
+  .staff-augmentation__pricing-box .eyebrow {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.075em;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .staff-augmentation__card,
+  .staff-augmentation__overview-point,
+  .staff-augmentation__audience-card,
+  .staff-augmentation__audience-card::before,
+  .staff-augmentation__audience-card > svg,
+  .staff-augmentation__challenge-card,
+  .staff-augmentation__challenge-card::after,
+  .staff-augmentation__model-icon,
+  .staff-augmentation__model-card::after,
+  .staff-augmentation__dark-card,
+  .staff-augmentation__dark-card::after,
+  .staff-augmentation__safeguard,
+  .staff-augmentation__process-card,
+  .staff-augmentation__process-number,
+  .staff-augmentation__process-card::after,
+  .staff-augmentation__specialization-card,
+  .staff-augmentation__specialization-card::after,
+  .staff-augmentation__specialization-icon,
+  .staff-augmentation__specialist-toggle,
+  .staff-augmentation__specialist-toggle svg {
+    transition: none;
+    animation: none;
+  }
+
+  .staff-augmentation__card:hover,
+  .staff-augmentation__overview-point:hover,
+  .staff-augmentation__audience-card:hover,
+  .staff-augmentation__audience-card:hover > svg,
+  .staff-augmentation__challenge-card:hover,
+  .staff-augmentation__dark-card:hover,
+  .staff-augmentation__safeguard:hover,
+  .staff-augmentation__process-card:hover,
+  .staff-augmentation__process-card:hover
+  .staff-augmentation__process-number,
+  .staff-augmentation__model-card:hover
+  .staff-augmentation__model-icon,
+  .staff-augmentation__specialization-card:hover,
+  .staff-augmentation__specialization-card:hover
+  .staff-augmentation__specialization-icon,
+  .staff-augmentation__specialist-toggle:hover {
+    transform: none;
   }
 }

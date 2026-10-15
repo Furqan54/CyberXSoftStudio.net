@@ -1,9 +1,16 @@
+
 import { Link } from "react-router-dom";
 
 import {
   ArrowRight,
   Check,
   CheckCircle2,
+  SearchCheck,
+  ClipboardCheck,
+  Code2,
+  UsersRound,
+  Workflow,
+  Settings2,
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
@@ -23,6 +30,23 @@ import {
 } from "./aiSoftwareData";
 
 import "./aiSoftware.css";
+
+/* ========================================
+   ENGAGEMENT OPTION ICONS
+======================================== */
+
+const engagementOptionIcons = [
+  SearchCheck,
+  ClipboardCheck,
+  Code2,
+  UsersRound,
+  Workflow,
+  Settings2,
+];
+
+/* ========================================
+   REUSABLE SECTION HEADING
+======================================== */
 
 function SectionHeading({
   eyebrow,
@@ -47,6 +71,7 @@ function SectionHeading({
 function AISoftwarePage() {
   return (
     <main className="ai-software">
+
       {/* ========================================
           HERO
       ======================================== */}
@@ -61,8 +86,7 @@ function AISoftwarePage() {
             path: "/services",
           },
           {
-            label:
-              "AI Software and Digital Solutions",
+            label: "AI Software and Digital Solutions",
           },
         ]}
         action={{
@@ -78,6 +102,7 @@ function AISoftwarePage() {
 
       <section className="ai-software__section">
         <div className="container ai-software__overview">
+
           <div className="ai-software__overview-content">
             <span className="eyebrow">
               Service Overview
@@ -123,32 +148,26 @@ function AISoftwarePage() {
             </h3>
 
             <div className="ai-software__outcomes-list">
-              {aiSoftwareOutcomes.map(
-                (outcome) => (
-                  <article
-                    className="ai-software__outcome"
-                    key={outcome.id}
-                  >
-                    <CheckCircle2
-                      size={21}
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                    />
+              {aiSoftwareOutcomes.map((outcome) => (
+                <article
+                  className="ai-software__outcome"
+                  key={outcome.id}
+                >
+                  <CheckCircle2
+                    size={21}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
 
-                    <div>
-                      <h4>
-                        {outcome.title}
-                      </h4>
-
-                      <p>
-                        {outcome.description}
-                      </p>
-                    </div>
-                  </article>
-                )
-              )}
+                  <div>
+                    <h4>{outcome.title}</h4>
+                    <p>{outcome.description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
+
         </div>
       </section>
 
@@ -158,6 +177,7 @@ function AISoftwarePage() {
 
       <section className="ai-software__section ai-software__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Who This Service Is For"
             title="For Teams Building, Modernizing, or Connecting Digital Products"
@@ -165,32 +185,33 @@ function AISoftwarePage() {
           />
 
           <div className="ai-software__audience-grid">
-            {aiSoftwareAudiences.map(
-              (audience) => (
-                <div
-                  className="ai-software__audience-card"
-                  key={audience}
-                >
-                  <Check
-                    size={16}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {aiSoftwareAudiences.map((audience) => (
+              <div
+                className="ai-software__audience-card"
+                key={audience}
+              >
+                <Check
+                  size={16}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>{audience}</span>
-                </div>
-              )
-            )}
+                <span>{audience}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           WHEN THIS SERVICE IS USEFUL
+          NAVY BACKGROUND + GLASS CARDS
       ======================================== */}
 
-      <section className="ai-software__section">
+      <section className="ai-software__section ai-software__section--use-cases">
         <div className="container">
+
           <SectionHeading
             eyebrow="When It Becomes Useful"
             title="Recognize When the Technology Needs to Change"
@@ -198,26 +219,22 @@ function AISoftwarePage() {
           />
 
           <div className="ai-software__grid ai-software__grid--two">
-            {aiSoftwareUseCases.map(
-              (item) => (
-                <article
-                  className="ai-software__card"
-                  key={item.id}
-                >
-                  <span className="ai-software__number">
-                    {String(item.id).padStart(
-                      2,
-                      "0"
-                    )}
-                  </span>
+            {aiSoftwareUseCases.map((item) => (
+              <article
+                className="ai-software__card ai-software__use-case-card"
+                key={item.id}
+              >
+                <span className="ai-software__number">
+                  {String(item.id).padStart(2, "0")}
+                </span>
 
-                  <h3>{item.title}</h3>
+                <h3>{item.title}</h3>
 
-                  <p>{item.description}</p>
-                </article>
-              )
-            )}
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -227,6 +244,7 @@ function AISoftwarePage() {
 
       <section className="ai-software__section ai-software__section--soft">
         <div className="container">
+
           <SectionHeading
             eyebrow="Core Services"
             title="What We Deliver"
@@ -234,40 +252,35 @@ function AISoftwarePage() {
           />
 
           <div className="ai-software__grid ai-software__grid--two">
-            {aiSoftwareCoreServices.map(
-              (service) => (
-                <article
-                  className="ai-software__card ai-software__service-card"
-                  key={service.id}
-                >
-                  <span className="ai-software__number">
-                    {String(
-                      service.id
-                    ).padStart(2, "0")}
-                  </span>
+            {aiSoftwareCoreServices.map((service) => (
+              <article
+                className="ai-software__card ai-software__service-card"
+                key={service.id}
+              >
+                <span className="ai-software__number">
+                  {String(service.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {service.title}
-                  </h3>
+                <h3>{service.title}</h3>
 
-                  <p>
-                    {service.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{service.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           CAPABILITIES
+          HIGH-CONTRAST PILL
       ======================================== */}
 
       <section className="ai-software__section ai-software__section--dark">
         <div className="container ai-software__capabilities-layout">
+
           <div className="ai-software__capabilities-copy">
-            <span className="eyebrow">
+            <span className="eyebrow ai-software__eyebrow--light">
               Capabilities
             </span>
 
@@ -285,34 +298,32 @@ function AISoftwarePage() {
           </div>
 
           <div className="ai-software__capabilities-grid">
-            {aiSoftwareCapabilities.map(
-              (capability) => (
-                <div
-                  className="ai-software__capability-item"
-                  key={capability}
-                >
-                  <Check
-                    size={15}
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  />
+            {aiSoftwareCapabilities.map((capability) => (
+              <div
+                className="ai-software__capability-item"
+                key={capability}
+              >
+                <Check
+                  size={15}
+                  strokeWidth={2}
+                  aria-hidden="true"
+                />
 
-                  <span>
-                    {capability}
-                  </span>
-                </div>
-              )
-            )}
+                <span>{capability}</span>
+              </div>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
-          DELIVERABLES
+          TYPICAL DELIVERABLES
       ======================================== */}
 
       <section className="ai-software__section">
         <div className="container">
+
           <SectionHeading
             eyebrow="Typical Deliverables"
             title="Practical Outputs From Discovery Through Release"
@@ -320,38 +331,33 @@ function AISoftwarePage() {
           />
 
           <div className="ai-software__grid ai-software__grid--three">
-            {aiSoftwareDeliverables.map(
-              (deliverable) => (
-                <article
-                  className="ai-software__card"
-                  key={deliverable.id}
-                >
-                  <span className="ai-software__number">
-                    {String(
-                      deliverable.id
-                    ).padStart(2, "0")}
-                  </span>
+            {aiSoftwareDeliverables.map((deliverable) => (
+              <article
+                className="ai-software__card"
+                key={deliverable.id}
+              >
+                <span className="ai-software__number">
+                  {String(deliverable.id).padStart(2, "0")}
+                </span>
 
-                  <h3>
-                    {deliverable.title}
-                  </h3>
+                <h3>{deliverable.title}</h3>
 
-                  <p>
-                    {deliverable.description}
-                  </p>
-                </article>
-              )
-            )}
+                <p>{deliverable.description}</p>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           ENGAGEMENT OPTIONS
+          PREMIUM ICON CARDS
       ======================================== */}
 
-      <section className="ai-software__section ai-software__section--soft">
+      <section className="ai-software__section ai-software__section--soft ai-software__section--engagement">
         <div className="container">
+
           <SectionHeading
             eyebrow="Engagement Options"
             title="Choose a Delivery Model That Fits the Requirement"
@@ -359,27 +365,38 @@ function AISoftwarePage() {
           />
 
           <div className="ai-software__grid ai-software__grid--three">
-            {aiSoftwareEngagementOptions.map(
-              (option) => (
+            {aiSoftwareEngagementOptions.map((option, index) => {
+              const Icon =
+                engagementOptionIcons[
+                  index % engagementOptionIcons.length
+                ];
+
+              return (
                 <article
-                  className="ai-software__card"
+                  className="ai-software__card ai-software__engagement-card"
                   key={option.id}
                 >
-                  <h3>
-                    {option.title}
-                  </h3>
+                  <div className="ai-software__engagement-icon">
+                    <Icon
+                      size={21}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </div>
 
-                  <p>
-                    {option.description}
-                  </p>
+                  <h3>{option.title}</h3>
+
+                  <p>{option.description}</p>
                 </article>
-              )
-            )}
+              );
+            })}
           </div>
+
+          {/* ENGAGEMENT CALLOUT */}
 
           <div className="ai-software__callout">
             <div>
-              <span className="eyebrow">
+              <span className="eyebrow ai-software__eyebrow--light">
                 Discovery First
               </span>
 
@@ -410,15 +427,18 @@ function AISoftwarePage() {
               />
             </Link>
           </div>
+
         </div>
       </section>
 
       {/* ========================================
           DELIVERY PROCESS
+          PREMIUM NAVY GLASSMORPHISM
       ======================================== */}
 
-      <section className="ai-software__section">
+      <section className="ai-software__section ai-software__section--delivery">
         <div className="container">
+
           <SectionHeading
             eyebrow="Delivery"
             title="How We Work"
@@ -426,31 +446,24 @@ function AISoftwarePage() {
           />
 
           <div className="ai-software__process-grid">
-            {aiSoftwareProcess.map(
-              (step) => (
-                <article
-                  className="ai-software__process-card"
-                  key={step.id}
-                >
-                  <span className="ai-software__process-number">
-                    {String(
-                      step.id
-                    ).padStart(2, "0")}
-                  </span>
+            {aiSoftwareProcess.map((step) => (
+              <article
+                className="ai-software__process-card"
+                key={step.id}
+              >
+                <span className="ai-software__process-number">
+                  {String(step.id).padStart(2, "0")}
+                </span>
 
-                  <div>
-                    <h3>
-                      {step.title}
-                    </h3>
+                <div className="ai-software__process-content">
+                  <h3>{step.title}</h3>
 
-                    <p>
-                      {step.description}
-                    </p>
-                  </div>
-                </article>
-              )
-            )}
+                  <p>{step.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
+
         </div>
       </section>
 
@@ -473,6 +486,7 @@ function AISoftwarePage() {
         buttonLabel="Book a Consultation"
         buttonPath="/contact"
       />
+
     </main>
   );
 }
