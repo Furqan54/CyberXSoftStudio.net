@@ -14,7 +14,7 @@ function StaffAugmentationHighlight() {
     <section className="staff-highlight">
       <div className="container staff-highlight__inner">
         <div className="staff-highlight__content">
-          <span className="staff-highlight__eyebrow">
+          <span className="eyebrow staff-highlight__eyebrow">
             Staff Augmentation
           </span>
 

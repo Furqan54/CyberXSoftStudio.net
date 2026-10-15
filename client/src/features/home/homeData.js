@@ -1,45 +1,54 @@
+
+/* =========================================
+   CLIENTS AND PARTNERS
+========================================= */
+
 export const clientsPartners = [
   {
     id: 1,
     name: "Guide to Pakistan",
-    logo: null,
+    logo: "/logos/guide-to-pakistan.png",
   },
   {
     id: 2,
     name: "Lagaam",
-    logo: null,
+    logo: "/logos/lagaam.png",
   },
   {
     id: 3,
     name: "Mediabuzz Global",
-    logo: null,
+    logo: "/logos/mediabuzz-global.png",
   },
   {
     id: 4,
-    name: "Government of Pakistan",
-    logo: null,
+    name: "Government of Pakistan (Ministry of Defence)",
+    logo: "/logos/ministry-of-defence.png",
   },
   {
     id: 5,
     name: "PEM-AIR",
-    logo: null,
+    logo: "/logos/pem-air.png",
   },
   {
     id: 6,
-    name: "AYUR Essentials",
-    logo: null,
+    name: "AYUR Essencia",
+    logo: "/logos/ayur-essencia.png",
   },
   {
     id: 7,
-    name: "ZALIM",
-    logo: null,
+    name: "Tactical Trading",
+    logo: "/logos/tactical-trading-recreated-gray.png",
   },
   {
     id: 8,
     name: "NextLevel Marketing",
-    logo: null,
+    logo: "/logos/nextlevel-marketing.png",
   },
 ];
+
+/* =========================================
+   AUDIENCE NEEDS
+========================================= */
 
 export const audienceNeeds = [
   {
@@ -77,6 +86,10 @@ export const audienceNeeds = [
   },
 ];
 
+/* =========================================
+   STAFF AUGMENTATION HIGHLIGHTS
+========================================= */
+
 export const staffAugmentationHighlights = [
   {
     id: 1,
@@ -99,6 +112,10 @@ export const staffAugmentationHighlights = [
       "Define confidentiality, intellectual property, access, performance review, continuity, and replacement terms before onboarding.",
   },
 ];
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
 
 export const whyChooseUsItems = [
   {
@@ -139,6 +156,10 @@ export const whyChooseUsItems = [
   },
 ];
 
+/* =========================================
+   OUR APPROACH STEPS
+========================================= */
+
 export const homeApproachSteps = [
   {
     id: 1,
@@ -176,6 +197,10 @@ export const homeApproachSteps = [
       "Measure performance and improve the solution as business needs change.",
   },
 ];
+
+/* =========================================
+   HOME PAGE FAQS
+========================================= */
 
 export const homeFaqs = [
   {

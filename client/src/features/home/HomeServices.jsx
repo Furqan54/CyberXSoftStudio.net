@@ -1,27 +1,17 @@
+
 import { NavLink } from "react-router-dom";
-import {
-  ArrowRight,
-  BrainCircuit,
-  Palette,
-  Shield,
-  Star,
-  Users,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { services } from "../services/servicesData";
-
-const serviceIcons = {
-  palette: Palette,
-  star: Star,
-  code: BrainCircuit,
-  shield: Shield,
-  users: Users,
-};
 
 function HomeServices() {
   return (
     <section className="home-services">
       <div className="container">
+        {/* =====================================
+            SECTION HEADER
+        ===================================== */}
+
         <div className="home-services__header">
           <div className="home-services__heading">
             <span className="eyebrow">
@@ -33,9 +23,10 @@ function HomeServices() {
             </h2>
 
             <p className="section-description">
-              Choose a focused service or combine capabilities into a coordinated
-              program. Each engagement is shaped around your priorities, operating
-              environment, timeline, and internal capacity.
+              Choose a focused service or combine capabilities into a
+              coordinated program. Each engagement is shaped around
+              your priorities, operating environment, timeline,
+              and internal capacity.
             </p>
           </div>
 
@@ -44,6 +35,7 @@ function HomeServices() {
             className="home-services__view-all"
           >
             View All Services
+
             <ArrowRight
               size={16}
               aria-hidden="true"
@@ -51,39 +43,52 @@ function HomeServices() {
           </NavLink>
         </div>
 
+        {/* =====================================
+            SERVICES GRID
+        ===================================== */}
+
         <div className="home-services__grid">
           {services.map((service) => {
-            const Icon =
-              serviceIcons[service.icon];
+            // servicesData already stores Lucide icon components.
+            const Icon = service.icon;
 
             return (
               <article
                 className="home-service-card"
                 key={service.id}
               >
+                {/* SERVICE ICON */}
+
                 <div className="home-service-card__icon">
                   {Icon && (
                     <Icon
-                      size={20}
+                      size={22}
                       strokeWidth={1.8}
                       aria-hidden="true"
                     />
                   )}
                 </div>
 
+                {/* SERVICE TITLE */}
+
                 <h3 className="home-service-card__title">
                   {service.homeTitle}
                 </h3>
 
+                {/* SERVICE DESCRIPTION */}
+
                 <p className="home-service-card__description">
                   {service.homeDescription}
                 </p>
+
+                {/* SERVICE LINK */}
 
                 <NavLink
                   to={`/services/${service.slug}`}
                   className="home-service-card__link"
                 >
                   Explore This Service
+
                   <ArrowRight
                     size={14}
                     aria-hidden="true"

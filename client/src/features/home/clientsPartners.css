@@ -1,0 +1,263 @@
+
+/* =========================================
+   HOME — CLIENTS AND PARTNERS
+========================================= */
+
+.clients-partners.clients-partners {
+  position: relative;
+
+  padding-block: 52px 58px;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(70, 156, 235, 0.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(37, 196, 131, 0.09),
+      transparent 40%
+    ),
+    linear-gradient(
+      125deg,
+      #d6e8fa 0%,
+      #e8f3ff 48%,
+      #cfe4f8 100%
+    );
+
+  border-top: 1px solid rgba(42, 112, 180, 0.12);
+  border-bottom: 1px solid rgba(42, 112, 180, 0.12);
+}
+
+/* =========================================
+   CLIENT ITEMS
+========================================= */
+
+.clients-partners .clients-partners__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 152px;
+
+  gap: 12px;
+  padding: 14px 10px;
+
+  text-align: center;
+}
+
+/* =========================================
+   COMPANY NAMES
+========================================= */
+
+.clients-partners__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 36px;
+
+  color: var(--color-text);
+
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.45;
+
+  text-align: center;
+}
+
+/* =========================================
+   DEFAULT LOGO FRAME
+========================================= */
+
+.clients-partners__logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 88px;
+
+  padding: 10px 14px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(38, 109, 180, 0.16);
+  border-radius: 12px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 60, 115, 0.06);
+
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+/* =========================================
+   LOGO IMAGES
+========================================= */
+
+.clients-partners .clients-partners__logo {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 70px;
+
+  object-fit: contain;
+  object-position: center;
+
+  filter: none;
+
+  transition: transform 250ms ease;
+}
+
+/* =========================================
+   MEDIABUZZ GLOBAL — DARK LOGO FRAME
+========================================= */
+
+.clients-partners
+.clients-partners__item--dark-logo
+.clients-partners__logo-frame {
+  background: #202020;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 6px 18px rgba(12, 31, 59, 0.13);
+}
+
+/* Preserve original logo colors */
+
+.clients-partners
+.clients-partners__item--dark-logo
+.clients-partners__logo {
+  filter: none;
+}
+
+/* =========================================
+   DEFAULT HOVER EFFECT
+========================================= */
+
+.clients-partners__item:hover
+.clients-partners__logo-frame {
+  transform: translateY(-3px);
+
+  background-color: #ffffff;
+
+  border-color: rgba(22, 118, 210, 0.40);
+
+  box-shadow:
+    0 12px 28px rgba(16, 70, 130, 0.13);
+}
+
+.clients-partners__item:hover
+.clients-partners__logo {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   MEDIABUZZ DARK HOVER
+========================================= */
+
+.clients-partners
+.clients-partners__item--dark-logo:hover
+.clients-partners__logo-frame {
+  background: #292929;
+
+  border-color: rgba(255, 176, 39, 0.55);
+
+  box-shadow:
+    0 12px 28px rgba(12, 31, 59, 0.24),
+    0 0 18px rgba(255, 174, 31, 0.10);
+}
+
+/* =========================================
+   PLACEHOLDER FALLBACK
+========================================= */
+
+.clients-partners .clients-partners__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 0;
+
+  padding: 0;
+
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .clients-partners .clients-partners__item {
+    min-height: 140px;
+  }
+
+  .clients-partners__logo-frame {
+    height: 82px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+  .clients-partners.clients-partners {
+    padding-block: 38px 44px;
+  }
+
+  .clients-partners .clients-partners__item {
+    min-height: 125px;
+
+    gap: 10px;
+    padding: 10px 4px;
+  }
+
+  .clients-partners__name {
+    min-height: 32px;
+    font-size: 0.72rem;
+  }
+
+  .clients-partners__logo-frame {
+    height: 72px;
+    padding: 7px;
+  }
+
+  .clients-partners .clients-partners__logo {
+    max-height: 58px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .clients-partners__logo-frame,
+  .clients-partners .clients-partners__logo {
+    transition: none;
+  }
+
+  .clients-partners__item:hover
+  .clients-partners__logo-frame,
+  .clients-partners__item:hover
+  .clients-partners__logo {
+    transform: none;
+  }
+}

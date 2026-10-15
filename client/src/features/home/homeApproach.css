@@ -1,98 +1,370 @@
+
 /* =========================================
-   Home Approach
+   HOME APPROACH — PREMIUM NAVY SECTION
 ========================================= */
 
 .home-approach {
+  position: relative;
+  isolation: isolate;
+
+  overflow: hidden;
+
   padding-block: var(--section-space-lg);
 
-  background: var(--color-white);
+  background:
+    radial-gradient(
+      ellipse at 8% 14%,
+      rgba(23, 109, 198, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 90% 86%,
+      rgba(29, 191, 143, 0.13),
+      transparent 36%
+    ),
+    linear-gradient(
+      125deg,
+      #07172f 0%,
+      #0b2750 52%,
+      #0d345b 100%
+    );
 }
+
+/* =========================================
+   DECORATIVE BACKGROUND LIGHTING
+========================================= */
+
+.home-approach::before {
+  content: "";
+
+  position: absolute;
+  top: -190px;
+  right: -140px;
+
+  width: 460px;
+  height: 460px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(49, 139, 243, 0.16),
+    transparent 68%
+  );
+
+  pointer-events: none;
+}
+
+.home-approach::after {
+  content: "";
+
+  position: absolute;
+  bottom: -240px;
+  left: -130px;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 196, 131, 0.10),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.home-approach > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
 
 .home-approach__header {
   max-width: 760px;
 
-  margin: 0 auto 52px;
+  margin: 0 auto 56px;
 
   text-align: center;
 }
 
-.home-approach__header .eyebrow {
-  margin-bottom: 14px;
+/* =========================================
+   EYEBROW PILL — DARK BACKGROUND
+========================================= */
+
+.home-approach .home-approach__header .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  margin-bottom: 18px;
+  padding: 9px 19px;
+
+  color: #ffffff;
+
+  font-size: 0.83rem;
+  font-weight: 800;
+  line-height: 1.35;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    110deg,
+    rgba(20, 127, 209, 0.34),
+    rgba(37, 196, 131, 0.20)
+  );
+
+  border: 1px solid rgba(118, 231, 197, 0.55);
+  border-radius: 999px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 6px 22px rgba(0, 0, 0, 0.10);
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.home-approach__header .section-title {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.18;
+
+  letter-spacing: -0.025em;
 }
 
 .home-approach__description {
   max-width: 680px;
 
-  margin: 16px auto 0;
+  margin: 18px auto 0;
 
-  color: var(--color-text-secondary);
+  color: rgba(229, 239, 252, 0.78);
 
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 0.96rem;
+  line-height: 1.8;
 }
 
 /* =========================================
-   Approach Grid
+   PROCESS GRID
 ========================================= */
 
 .home-approach__grid {
   display: grid;
-  grid-template-columns:
-    repeat(5, minmax(0, 1fr));
 
-  gap: 16px;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+
+  align-items: stretch;
+
+  gap: 22px;
 }
 
 /* =========================================
-   Approach Card
+   PREMIUM GLASSMORPHISM CARDS
 ========================================= */
 
 .home-approach__card {
   position: relative;
+  isolation: isolate;
 
   display: flex;
   flex-direction: column;
 
-  min-height: 280px;
+  min-width: 0;
+  min-height: 278px;
 
   overflow: hidden;
 
-  background: var(--color-background-soft);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.035)
+    ),
+    rgba(13, 40, 78, 0.54);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
+  border: 1px solid rgba(157, 202, 255, 0.19);
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 38px rgba(1, 12, 31, 0.17),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transform: translateY(0) scale(1);
 
   transition:
-    transform var(--transition-normal),
-    border-color var(--transition-normal),
-    box-shadow var(--transition-normal);
-}
-
-.home-approach__card:hover {
-  transform: translateY(-4px);
-
-  border-color: var(--color-border);
-
-  box-shadow: var(--shadow-sm);
+    transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease;
 }
 
 /* =========================================
-   Step Number
+   CARD DECORATIVE GLOW
+========================================= */
+
+.home-approach__card::before {
+  content: "";
+
+  position: absolute;
+  top: -85px;
+  right: -85px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(56, 151, 246, 0.13),
+    transparent 70%
+  );
+
+  opacity: 0.7;
+  pointer-events: none;
+
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease;
+}
+
+/* =========================================
+   BOTTOM GRADIENT ACCENT
+========================================= */
+
+.home-approach__card::after {
+  content: "";
+
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+
+  width: 62px;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #178beb,
+    #2bd99b
+  );
+
+  border-radius: 999px 999px 0 0;
+
+  box-shadow:
+    0 0 15px rgba(43, 217, 155, 0.20);
+
+  pointer-events: none;
+
+  transition:
+    width 300ms ease,
+    box-shadow 300ms ease;
+}
+
+/* =========================================
+   SMALL BLUE GLASS NUMBER CIRCLES
+   Desktop: 52px
 ========================================= */
 
 .home-approach__number {
-  padding: 22px 22px 16px;
+  position: relative;
 
-  color: #1676d2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  font-size: 0.72rem;
-  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
 
-  letter-spacing: 0.08em;
+  width: 52px;
+  height: 52px;
+
+  margin: 25px 28px 22px;
+  padding: 0;
+
+  color: #ffffff;
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  letter-spacing: 0.075em;
+  line-height: 1;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    rgba(116, 196, 255, 0.38),
+    rgba(30, 107, 205, 0.18)
+  );
+
+  border: 1px solid rgba(169, 222, 255, 0.68);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.43),
+    inset 0 -8px 18px rgba(6, 54, 125, 0.18),
+    0 8px 24px rgba(11, 109, 225, 0.24),
+    0 0 0 5px rgba(72, 158, 243, 0.09);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transform: translateY(0) scale(1);
+
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+/* Glass highlight */
+
+.home-approach__number::before {
+  content: "";
+
+  position: absolute;
+  inset: 4px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.17),
+    transparent 58%
+  );
+
+  pointer-events: none;
+}
+
+.home-approach__number span {
+  position: relative;
+  z-index: 1;
+
+  color: #ffffff;
 }
 
 /* =========================================
-   Card Content
+   CARD CONTENT
 ========================================= */
 
 .home-approach__card-content {
@@ -100,7 +372,7 @@
   flex: 1;
   flex-direction: column;
 
-  padding: 0 22px 24px;
+  padding: 0 28px 30px;
 }
 
 .home-approach__title-row {
@@ -108,69 +380,139 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  gap: 14px;
+  gap: 16px;
 }
+
+/* Card headings */
 
 .home-approach__title-row h3 {
-  color: var(--color-text);
+  margin: 0;
 
-  font-size: 1rem;
-  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
 
+  font-size: clamp(1.13rem, 1.6vw, 1.35rem);
+  font-weight: 700;
   line-height: 1.35;
+
+  letter-spacing: -0.015em;
 }
+
+/* =========================================
+   DIRECTIONAL ARROW ICON
+========================================= */
 
 .home-approach__title-row svg {
   flex-shrink: 0;
 
-  margin-top: 2px;
+  width: 34px;
+  height: 34px;
 
-  color: var(--color-accent-dark);
+  padding: 8px;
+
+  color: #68edbb;
+
+  background: rgba(42, 205, 154, 0.12);
+
+  border: 1px solid rgba(104, 237, 187, 0.22);
+  border-radius: 50%;
+
+  transform: translate(0, 0);
+
+  transition:
+    transform 300ms ease,
+    background-color 300ms ease,
+    border-color 300ms ease;
 }
+
+/* Card descriptions */
 
 .home-approach__card-content p {
-  margin-top: 18px;
+  margin-top: 16px;
 
-  color: var(--color-text-secondary);
+  color: rgba(228, 237, 250, 0.78);
 
-  font-size: 0.78rem;
-  line-height: 1.7;
+  font-size: 0.88rem;
+  line-height: 1.75;
 }
 
 /* =========================================
-   Connecting Accent
+   CARD HOVER EFFECTS
 ========================================= */
 
-.home-approach__card::after {
-  content: "";
+.home-approach__card:hover {
+  transform: translateY(-9px) scale(1.015);
 
-  position: absolute;
-  left: 22px;
-  bottom: 0;
+  background-color: rgba(31, 83, 140, 0.84);
 
-  width: 42px;
-  height: 3px;
+  border-color: rgba(100, 198, 255, 0.85);
 
-  background:
-    linear-gradient(
-      90deg,
-      #147fd1,
-      #25c483
-    );
+  box-shadow:
+    0 28px 65px rgba(0, 10, 30, 0.42),
+    0 0 30px rgba(28, 144, 255, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
 
-  border-radius: 999px 999px 0 0;
+/* Increase glow on hover */
+
+.home-approach__card:hover::before {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Expand bottom line on hover */
+
+.home-approach__card:hover::after {
+  width: 110px;
+
+  box-shadow:
+    0 0 20px rgba(43, 217, 155, 0.50);
 }
 
 /* =========================================
-   Responsive
+   NUMBER CIRCLE HOVER EFFECT
 ========================================= */
 
-@media (max-width: 1100px) {
+.home-approach__card:hover .home-approach__number {
+  transform: translateY(-3px) scale(1.06);
+
+  background-color: rgba(45, 141, 238, 0.42);
+
+  border-color: rgba(205, 239, 255, 0.95);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 12px 26px rgba(11, 109, 225, 0.36),
+    0 0 0 6px rgba(72, 158, 243, 0.17);
+}
+
+/* =========================================
+   ARROW HOVER EFFECT
+========================================= */
+
+.home-approach__card:hover .home-approach__title-row svg {
+  transform: translate(3px, 3px);
+
+  background-color: rgba(42, 205, 154, 0.24);
+
+  border-color: rgba(104, 237, 187, 0.55);
+}
+
+/* =========================================
+   RESPONSIVE — TABLETS
+========================================= */
+
+@media (max-width: 960px) {
   .home-approach__grid {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
   }
 }
+
+/* =========================================
+   RESPONSIVE — SMALL TABLETS
+========================================= */
 
 @media (max-width: 760px) {
   .home-approach__header {
@@ -179,22 +521,81 @@
     text-align: left;
   }
 
+  .home-approach__header .section-title {
+    margin-inline: 0;
+  }
+
   .home-approach__description {
     margin-inline: 0;
   }
 
   .home-approach__grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .home-approach__card {
+    min-height: 260px;
   }
 }
 
-@media (max-width: 520px) {
+/* =========================================
+   RESPONSIVE — MOBILE
+   Number Circle: 44px
+========================================= */
+
+@media (max-width: 560px) {
   .home-approach__grid {
     grid-template-columns: 1fr;
   }
 
   .home-approach__card {
-    min-height: auto;
+    min-height: 235px;
+
+    border-radius: 18px;
+  }
+
+  .home-approach__number {
+    width: 44px;
+    height: 44px;
+
+    margin: 22px 24px 20px;
+
+    font-size: 0.8rem;
+  }
+
+  .home-approach__card-content {
+    padding: 0 24px 27px;
+  }
+
+  .home-approach__card::after {
+    left: 24px;
+  }
+
+  .home-approach__title-row h3 {
+    font-size: 1.2rem;
+  }
+
+  .home-approach__card-content p {
+    font-size: 0.88rem;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-approach__card,
+  .home-approach__card::before,
+  .home-approach__card::after,
+  .home-approach__number,
+  .home-approach__title-row svg {
+    transition: none;
+  }
+
+  .home-approach__card:hover,
+  .home-approach__card:hover .home-approach__number,
+  .home-approach__card:hover .home-approach__title-row svg {
+    transform: none;
   }
 }

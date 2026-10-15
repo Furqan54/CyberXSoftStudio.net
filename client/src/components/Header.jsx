@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
@@ -8,9 +9,16 @@ import {
 
 import { mainNavigation } from "../config/navigation";
 
+import "./headerLogo.css";
+
 function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false);
+
+  const [
+    isMobileServicesOpen,
+    setIsMobileServicesOpen,
+  ] = useState(false);
 
   const location = useLocation();
 
@@ -20,17 +28,17 @@ function Header() {
   };
 
   /*
-    Close the mobile navigation whenever
-    the user navigates to another page.
-  */
+   * Close the mobile navigation whenever
+   * the user navigates to another page.
+   */
   useEffect(() => {
     closeMobileMenu();
   }, [location.pathname]);
 
   /*
-    Prevent the page behind the mobile menu
-    from scrolling while navigation is open.
-  */
+   * Prevent the page behind the mobile menu
+   * from scrolling while navigation is open.
+   */
   useEffect(() => {
     if (!isMobileMenuOpen) {
       document.body.style.overflow = "";
@@ -45,9 +53,9 @@ function Header() {
   }, [isMobileMenuOpen]);
 
   /*
-    Allow users to close the mobile menu
-    using the Escape key.
-  */
+   * Allow users to close the mobile menu
+   * using the Escape key.
+   */
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
@@ -58,31 +66,39 @@ function Header() {
     document.addEventListener("keydown", handleEscape);
 
     return () => {
-      document.removeEventListener("keydown", handleEscape);
+      document.removeEventListener(
+        "keydown",
+        handleEscape
+      );
     };
   }, []);
 
   return (
     <header className="site-header">
       <div className="container site-header__inner">
+
+        {/* =====================================
+            OFFICIAL CYBERX SOFT LOGO
+        ===================================== */}
+
         <NavLink
           to="/"
           className="site-header__logo"
           aria-label="CyberX Soft home"
           onClick={closeMobileMenu}
         >
-          {/*
-            LOGO PLACEHOLDER
-            Replace with the final CyberX Soft logo later.
-          */}
-          <span className="site-header__logo-main">
-            CXS
-          </span>
-
-          <span className="site-header__logo-sub">
-            CYBERX SOFT
-          </span>
+          <img
+            src="/logos/company-logo.png"
+            alt=""
+            className="site-header__logo-image"
+            loading="eager"
+            decoding="async"
+          />
         </NavLink>
+
+        {/* =====================================
+            DESKTOP NAVIGATION
+        ===================================== */}
 
         <nav
           className="site-header__desktop-nav"
@@ -153,6 +169,10 @@ function Header() {
           })}
         </nav>
 
+        {/* =====================================
+            HEADER ACTIONS
+        ===================================== */}
+
         <div className="site-header__actions">
           <NavLink
             to="/contact"
@@ -172,7 +192,9 @@ function Header() {
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() =>
-              setIsMobileMenuOpen((current) => !current)
+              setIsMobileMenuOpen(
+                (current) => !current
+              )
             }
           >
             {isMobileMenuOpen ? (
@@ -189,6 +211,10 @@ function Header() {
           </button>
         </div>
       </div>
+
+      {/* =====================================
+          MOBILE NAVIGATION
+      ===================================== */}
 
       <div
         id="mobile-navigation"
@@ -227,7 +253,9 @@ function Header() {
                       type="button"
                       className="site-header__mobile-service-toggle"
                       aria-label="Toggle services menu"
-                      aria-expanded={isMobileServicesOpen}
+                      aria-expanded={
+                        isMobileServicesOpen
+                      }
                       onClick={() =>
                         setIsMobileServicesOpen(
                           (current) => !current

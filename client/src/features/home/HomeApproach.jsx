@@ -1,3 +1,4 @@
+
 import { ArrowDownRight } from "lucide-react";
 
 import { homeApproachSteps } from "./homeData";
@@ -6,22 +7,37 @@ import "./homeApproach.css";
 
 function HomeApproach() {
   return (
-    <section className="home-approach">
+    <section
+      className="home-approach"
+      aria-labelledby="home-approach-title"
+    >
       <div className="container">
+        {/* ===================================
+            SECTION HEADING
+        =================================== */}
+
         <div className="home-approach__header">
           <span className="eyebrow">
             Our Approach
           </span>
 
-          <h2 className="section-title">
+          <h2
+            id="home-approach-title"
+            className="section-title"
+          >
             A Practical Path From Requirement to Result
           </h2>
 
           <p className="home-approach__description">
-            We move from business context and scope definition through visible
-            delivery, deployment, handover, and continuous improvement.
+            We move from business context and scope definition
+            through visible delivery, deployment, handover,
+            and continuous improvement.
           </p>
         </div>
+
+        {/* ===================================
+            PROCESS CARDS
+        =================================== */}
 
         <div className="home-approach__grid">
           {homeApproachSteps.map((step) => (
@@ -29,15 +45,17 @@ function HomeApproach() {
               className="home-approach__card"
               key={step.id}
             >
+              {/* Glassmorphism Number Circle */}
+
               <div className="home-approach__number">
-                {step.number}
+                <span>{step.number}</span>
               </div>
+
+              {/* Card Content */}
 
               <div className="home-approach__card-content">
                 <div className="home-approach__title-row">
-                  <h3>
-                    {step.title}
-                  </h3>
+                  <h3>{step.title}</h3>
 
                   <ArrowDownRight
                     size={19}
@@ -46,9 +64,7 @@ function HomeApproach() {
                   />
                 </div>
 
-                <p>
-                  {step.description}
-                </p>
+                <p>{step.description}</p>
               </div>
             </article>
           ))}

@@ -1,0 +1,64 @@
+
+/* =========================================
+   CYBERX SOFT — OFFICIAL HEADER LOGO
+========================================= */
+
+.site-header .site-header__logo {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 112px;
+
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* =========================================
+   LOGO IMAGE
+========================================= */
+
+.site-header .site-header__logo-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #ffffff;
+}
+
+/* =========================================
+   LOGO ACCESSIBILITY
+========================================= */
+
+.site-header .site-header__logo:focus-visible {
+  outline: 2px solid #1682c9;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .site-header .site-header__logo {
+    width: 100px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .site-header .site-header__logo {
+    width: 88px;
+  }
+}

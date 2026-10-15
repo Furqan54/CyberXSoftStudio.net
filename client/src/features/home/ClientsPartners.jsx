@@ -1,5 +1,7 @@
 import { clientsPartners } from "./homeData";
 
+import "./clientsPartners.css";
+
 function ClientsPartners() {
   return (
     <section
@@ -15,25 +17,64 @@ function ClientsPartners() {
         </h2>
 
         <div className="clients-partners__grid">
-          {clientsPartners.map((client) => (
-            <div
-              className="clients-partners__item"
-              key={client.id}
-            >
-              {client.logo ? (
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="clients-partners__logo"
-                  loading="lazy"
-                />
-              ) : (
-                <span className="clients-partners__placeholder">
+          {clientsPartners.map((client) => {
+            const isMediabuzz =
+              client.logo === "/logos/mediabuzz-global.png";
+
+            const isTacticalTrading =
+              client.logo ===
+              "/logos/tactical-trading-recreated-gray.png";
+
+            const logoFrameStyle = isMediabuzz
+              ? {
+                  background: "#202020",
+                  borderColor: "rgba(255, 181, 55, 0.35)",
+                }
+              : isTacticalTrading
+              ? {
+                  background: "#1f6a43",
+                  borderColor: "rgba(255, 255, 255, 0.18)",
+                }
+              : undefined;
+
+            return (
+              <div
+                className={`clients-partners__item ${
+                  isMediabuzz || isTacticalTrading
+                    ? "clients-partners__item--dark-logo"
+                    : ""
+                }`}
+                key={client.id}
+              >
+                <span className="clients-partners__name">
                   {client.name}
                 </span>
-              )}
-            </div>
-          ))}
+
+                <div
+                  className="clients-partners__logo-frame"
+                  style={logoFrameStyle}
+                >
+                  {client.logo ? (
+                    <img
+                      src={client.logo}
+                      alt=""
+                      className="clients-partners__logo"
+                      loading="lazy"
+                      decoding="async"
+                      style={{
+                        filter: "none",
+                        mixBlendMode: "normal",
+                      }}
+                    />
+                  ) : (
+                    <span className="clients-partners__placeholder">
+                      Logo coming soon
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -21,7 +22,7 @@ function HomeFinalCTA() {
           */}
 
           <div className="home-final-cta__content">
-            <span className="home-final-cta__eyebrow">
+            <span className="eyebrow home-final-cta__eyebrow">
               Start a Conversation
             </span>
 
