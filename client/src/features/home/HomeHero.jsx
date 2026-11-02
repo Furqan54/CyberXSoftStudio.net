@@ -2,6 +2,9 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import MediaImage from "../../components/MediaImage";
+import { pageMedia } from "../../config/media";
+
 import "../../styles/heroButtons.css";
 
 function HomeHero() {
@@ -51,20 +54,13 @@ function HomeHero() {
         </div>
 
         <div className="home-hero__visual">
-          {/*
-            IMAGE PLACEHOLDER — HOME HERO
-
-            Replace with approved imagery.
-
-            Recommended direction:
-            A business and delivery discussion with
-            subtle interface or systems context.
-
-            Keep the left side calm enough for headline copy.
-          */}
-
-          <div className="home-hero__image-placeholder">
-            <span>Home Hero Image</span>les 
+          <div className="home-hero__image">
+            <MediaImage
+              name={pageMedia.home.name}
+              position={pageMedia.home.position}
+              sizes="(max-width: 900px) 100vw, 45vw"
+              priority
+            />
           </div>
         </div>
       </div>

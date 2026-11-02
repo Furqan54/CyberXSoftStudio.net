@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { serviceMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
@@ -95,6 +96,8 @@ function DataCybersecurityPage() {
           path: "/contact",
         }}
         visualLabel="Data Cybersecurity and Digital Governance Hero Image"
+        image={serviceMedia["data-cybersecurity-digital-governance"].hero}
+        imagePosition={serviceMedia["data-cybersecurity-digital-governance"].position}
       />
 
       {/* ========================================

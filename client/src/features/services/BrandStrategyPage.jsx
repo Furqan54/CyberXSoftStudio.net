@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { serviceMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
@@ -94,6 +95,8 @@ function BrandStrategyPage() {
           path: "/contact",
         }}
         visualLabel="Brand Strategy & Digital Growth Hero Image"
+        image={serviceMedia["brand-strategy-digital-growth"].hero}
+        imagePosition={serviceMedia["brand-strategy-digital-growth"].position}
       />
 
       {/* ========================================

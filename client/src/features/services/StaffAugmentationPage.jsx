@@ -28,6 +28,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { serviceMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
@@ -121,6 +122,8 @@ function StaffAugmentationPage() {
           path: "/contact",
         }}
         showImagePlaceholder
+        image={serviceMedia["talent-augmentation-delivery-support"].hero}
+        imagePosition={serviceMedia["talent-augmentation-delivery-support"].position}
       />
 
       {/* SERVICE OVERVIEW */}

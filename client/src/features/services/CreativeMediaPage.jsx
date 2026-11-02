@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { serviceMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
@@ -92,6 +93,8 @@ function CreativeMediaPage() {
           path: "/contact",
         }}
         visualLabel="Creative Media Design and Animation Hero Image"
+        image={serviceMedia["creative-media-design-animation"].hero}
+        imagePosition={serviceMedia["creative-media-design-animation"].position}
       />
 
       {/* ========================================

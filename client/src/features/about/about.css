@@ -75,7 +75,13 @@
 
 /* Temporary image placeholder */
 
-.about-overview__image-placeholder {
+.about-overview__image .media-image {
+  position: absolute;
+  inset: 0;
+}
+
+.about-overview__image {
+  position: relative;
   aspect-ratio: 1.35 / 1;
   display: flex;
   align-items: center;
@@ -94,14 +100,6 @@
   border-radius: var(--radius-lg);
 }
 
-.about-overview__image-placeholder span {
-  padding: 16px;
-  font-size: 0.68rem;
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
-}
 
 /* Company Overview Content */
 

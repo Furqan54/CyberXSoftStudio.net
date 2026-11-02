@@ -1553,3 +1553,34 @@
     width: 100%;
   }
 }
+/* =========================================
+   Supplied artwork
+========================================= */
+
+.media-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.page-hero__split-media {
+  position: relative;
+
+  aspect-ratio: 1.25 / 1;
+
+  overflow: hidden;
+
+  background: #0c2a55;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(3, 12, 28, 0.35);
+}
+
+.page-hero__split-media .media-image {
+  position: absolute;
+  inset: 0;
+}

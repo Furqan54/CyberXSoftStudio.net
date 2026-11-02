@@ -2,6 +2,9 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import MediaImage from "../../components/MediaImage";
+import { pageMedia } from "../../config/media";
+
 import "./homeFinalCTA.css";
 
 function HomeFinalCTA() {
@@ -9,17 +12,13 @@ function HomeFinalCTA() {
     <section className="home-final-cta">
       <div className="container">
         <div className="home-final-cta__panel">
-          {/*
-            IMAGE PLACEHOLDER — HOME FINAL CTA
-
-            The CEO brief recommends a subtle abstract visual
-            showing connected paths resolving into a clear
-            focal point.
-
-            The current gradient treatment is temporary.
-            Replace it with the approved decorative visual
-            during the final image-production phase.
-          */}
+          <div className="home-final-cta__media" aria-hidden="true">
+            <MediaImage
+              name={pageMedia.homeCta.name}
+              position={pageMedia.homeCta.position}
+              sizes="(max-width: 900px) 100vw, 1100px"
+            />
+          </div>
 
           <div className="home-final-cta__content">
             <span className="eyebrow home-final-cta__eyebrow">

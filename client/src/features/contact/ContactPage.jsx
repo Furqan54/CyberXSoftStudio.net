@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { pageMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 
 import ContactForm from "./ContactForm";
@@ -66,6 +67,8 @@ function ContactPage() {
           },
         ]}
         showImagePlaceholder
+        image={pageMedia.contact.name}
+        imagePosition={pageMedia.contact.position}
       />
 
       {/* ========================================

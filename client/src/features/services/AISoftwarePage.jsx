@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { serviceMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
@@ -94,6 +95,8 @@ function AISoftwarePage() {
           path: "/contact",
         }}
         visualLabel="AI Software and Digital Solutions Hero Image"
+        image={serviceMedia["ai-software-digital-solutions"].hero}
+        imagePosition={serviceMedia["ai-software-digital-solutions"].position}
       />
 
       {/* ========================================

@@ -4,6 +4,7 @@ import {
 } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { pageMedia } from "../../config/media";
 import CTASection from "../../components/CTASection";
 
 import {
@@ -58,6 +59,8 @@ function WorkPage() {
           path: "/contact",
         }}
         visualLabel="Selected CyberX Soft Project Work Hero Image"
+        image={pageMedia.work.name}
+        imagePosition={pageMedia.work.position}
       />
 
       {/* ========================================

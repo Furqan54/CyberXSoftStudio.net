@@ -160,7 +160,13 @@
   Replace with the final editorial
   article image later.
 */
-.insight-card__image-placeholder {
+.insight-card__image .media-image {
+  position: absolute;
+  inset: 0;
+}
+
+.insight-card__image {
+  position: relative;
   aspect-ratio: 1.75 / 1;
 
   display: flex;
@@ -177,13 +183,6 @@
     );
 }
 
-.insight-card__image-placeholder span {
-  font-size: 0.65rem;
-  font-weight: var(--font-weight-semibold);
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 
 /* =========================================
    Card Content

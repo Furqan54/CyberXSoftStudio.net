@@ -258,3 +258,38 @@
     width: 100%;
   }
 }
+/* =========================================
+   Background artwork
+========================================= */
+
+.home-final-cta__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-final-cta__media .media-image {
+  position: absolute;
+  inset: 0;
+}
+
+/* Keep the text side calm and readable over the artwork. */
+.home-final-cta__media::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(6, 19, 38, 0.94) 0%,
+    rgba(6, 19, 38, 0.78) 45%,
+    rgba(6, 19, 38, 0.2) 100%
+  );
+}
+
+@media (max-width: 900px) {
+  .home-final-cta__media::after {
+    background: rgba(6, 19, 38, 0.82);
+  }
+}

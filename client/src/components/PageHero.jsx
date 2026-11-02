@@ -2,6 +2,8 @@
 import { ArrowRight, ChevronRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import MediaImage from "./MediaImage";
+
 import "../styles/heroButtons.css";
 
 function PageHero({
@@ -20,6 +22,12 @@ function PageHero({
 
   // Can be customized per page.
   visualLabel = null,
+
+  // Supplied artwork for the right-hand side.
+  // image is the file name without extension.
+  image = null,
+  imageAlt = "",
+  imagePosition = "50% 50%",
 }) {
   const resolvedVisualLabel =
     visualLabel ||
@@ -147,11 +155,23 @@ function PageHero({
 
           {splitVisual && (
             <div className="page-hero__split-visual">
-              <div className="page-hero__split-placeholder">
-                <span>
-                  {resolvedVisualLabel}
-                </span>
-              </div>
+              {image ? (
+                <div className="page-hero__split-media">
+                  <MediaImage
+                    name={image}
+                    alt={imageAlt}
+                    position={imagePosition}
+                    sizes="(max-width: 900px) 100vw, 45vw"
+                    priority
+                  />
+                </div>
+              ) : (
+                <div className="page-hero__split-placeholder">
+                  <span>
+                    {resolvedVisualLabel}
+                  </span>
+                </div>
+              )}
             </div>
           )}
         </div>

@@ -223,7 +223,13 @@
   IMAGE PLACEHOLDER
   Replace with the final service image later.
 */
-.service-showcase__image-placeholder {
+.service-showcase__image .media-image {
+  position: absolute;
+  inset: 0;
+}
+
+.service-showcase__image {
+  position: relative;
   aspect-ratio: 1.42 / 1;
 
   display: flex;
@@ -245,16 +251,6 @@
   border-radius: var(--radius-lg);
 }
 
-.service-showcase__image-placeholder span {
-  padding: 16px;
-
-  font-size: 0.72rem;
-  font-weight: var(--font-weight-semibold);
-
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
-}
 
 .service-showcase__image-number {
   position: absolute;

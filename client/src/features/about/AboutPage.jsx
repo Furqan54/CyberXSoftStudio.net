@@ -2,6 +2,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
+import MediaImage from "../../components/MediaImage";
+import { pageMedia } from "../../config/media";
 import CTASection from "../../components/CTASection";
 
 import MissionValues from "./MissionValues";
@@ -28,23 +30,19 @@ function AboutPage() {
           path: "/case-studies",
         }}
         showImagePlaceholder
+        image={pageMedia.about.name}
+        imagePosition={pageMedia.about.position}
       />
 
       <section className="about-overview">
         <div className="container about-overview__layout">
           <div className="about-overview__visual">
-            {/*
-              IMAGE PLACEHOLDER — COMPANY OVERVIEW
-
-              Replace with an authentic CyberX Soft office,
-              workshop, or team collaboration photograph.
-
-              Recommended aspect ratio: 3:2.
-            */}
-            <div className="about-overview__image-placeholder">
-              <span>
-                Company Overview Image
-              </span>
+            <div className="about-overview__image">
+              <MediaImage
+                name={pageMedia.aboutOverview.name}
+                position={pageMedia.aboutOverview.position}
+                sizes="(max-width: 900px) 100vw, 48vw"
+              />
             </div>
           </div>
 

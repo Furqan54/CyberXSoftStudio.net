@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 import PageHero from "../../components/PageHero";
+import { pageMedia } from "../../config/media";
 import FAQSection from "../../components/FAQSection";
 import CTASection from "../../components/CTASection";
 
@@ -38,6 +39,8 @@ function ServicesPage() {
           label: "Discuss Your Requirements",
           path: "/contact",
         }}
+        image={pageMedia.services.name}
+        imagePosition={pageMedia.services.position}
       />
 
       {/* Five service areas */}

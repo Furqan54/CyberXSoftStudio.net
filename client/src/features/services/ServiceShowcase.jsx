@@ -2,6 +2,9 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 
+import MediaImage from "../../components/MediaImage";
+import { serviceMedia } from "../../config/media";
+
 import {
   serviceOverviewBySlug,
 } from "./servicesOverviewData";
@@ -94,17 +97,14 @@ function ServiceShowcase({
       </div>
 
       <div className="service-showcase__visual">
-        {/*
-          IMAGE PLACEHOLDER — SERVICE OVERVIEW
-
-          Replace with the approved service image.
-          Recommended format: 4:3 landscape.
-
-          Images should show people, products, or
-          technology in the context of actual work.
-        */}
-        <div className="service-showcase__image-placeholder">
-          <span>Service Image Placeholder</span>
+        <div className="service-showcase__image">
+          {serviceMedia[service.slug] && (
+            <MediaImage
+              name={serviceMedia[service.slug].section}
+              position={serviceMedia[service.slug].position}
+              sizes="(max-width: 900px) 100vw, 48vw"
+            />
+          )}
         </div>
 
         <span className="service-showcase__image-number">

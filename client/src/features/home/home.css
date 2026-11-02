@@ -320,7 +320,13 @@
 
 }
 
-.home-hero__image-placeholder {
+.home-hero__image .media-image {
+  position: absolute;
+  inset: 0;
+}
+
+.home-hero__image {
+  position: relative;
 
   aspect-ratio: 1.18 / 1;
 
@@ -352,15 +358,6 @@
 
 }
 
-.home-hero__image-placeholder span {
-
-  font-size: 0.8rem;
-
-  letter-spacing: 0.08em;
-
-  text-transform: uppercase;
-
-}
 
 /* =========================================
 

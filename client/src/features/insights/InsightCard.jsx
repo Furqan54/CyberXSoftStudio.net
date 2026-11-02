@@ -1,16 +1,19 @@
+import MediaImage from "../../components/MediaImage";
+import { insightMedia } from "../../config/media";
+
 function InsightCard({ insight }) {
   const isComingSoon =
     insight.date === "Coming soon";
 
   return (
     <article className="insight-card">
-      {/**
-       * IMAGE PLACEHOLDER
-       * Replace this block with the final
-       * editorial article image later.
-       */}
-      <div className="insight-card__image-placeholder">
-        <span>Insight Image</span>
+      <div className="insight-card__image">
+        {insightMedia[insight.category] && (
+          <MediaImage
+            name={insightMedia[insight.category]}
+            sizes="(max-width: 700px) 100vw, 400px"
+          />
+        )}
       </div>
 
       <div className="insight-card__content">

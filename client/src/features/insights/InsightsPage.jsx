@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import PageHero from "../../components/PageHero";
+import { pageMedia } from "../../config/media";
 import CTASection from "../../components/CTASection";
 
 import InsightCard from "./InsightCard";
@@ -74,6 +75,8 @@ function InsightsPage() {
         ]}
         splitVisual
         visualLabel="Insights Editorial Hero Image"
+        image={pageMedia.insights.name}
+        imagePosition={pageMedia.insights.position}
       />
 
       {/* ========================================

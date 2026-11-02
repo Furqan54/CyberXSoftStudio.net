@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import PageHero from "../../components/PageHero";
+import { serviceMedia } from "../../config/media";
 import CTASection from "../../components/CTASection";
 
 import NotFoundPage from "../../app/NotFoundPage";
@@ -81,6 +82,8 @@ function ServiceDetailPage() {
           label: "Book a Consultation",
           path: "/contact",
         }}
+        image={serviceMedia[service.slug]?.hero}
+        imagePosition={serviceMedia[service.slug]?.position}
       />
 
       <ServiceOverview service={service} />
